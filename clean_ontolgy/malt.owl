@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base="https://rdf.ag/o/malt#"
+  xmlns="https://rdf.ag/o/malt#"
+  xmlns:gs1="https://gs1.org/voc/"
+  xmlns:schema="http://schema.org/"
+  xmlns:as="http://www.w3.org/ns/activitystreams#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:cereals="https://rdf.ag/o/cerealsToo#"
+  xmlns:dbpedia="http://dbpedia.org/resource/"
+  xmlns:bibo="http://purl.org/ontology/bibo/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:eurovoc="http://eurovoc.europa.eu/"
+  xmlns:sosa="http://www.w3.org/ns/sosa/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:malt="https://rdf.ag/o/malt#"
+  xmlns:geonames="http://sws.geonames.org/"
+  xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+  xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:prov="http://www.w3.org/ns/prov#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+  xmlns:time="http://www.w3.org/2006/time#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:void="http://rdfs.org/ns/void#"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:unit="http://www.qudt.org/2.1/vocab/unit"
+  xmlns:qudt="http://www.qudt.org/2.1/schema/qudt"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  
+
+  <owl:Ontology rdf:about="">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <vann:preferredNamespacePrefix>malt</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://rdf.ag/o/malt#</vann:preferredNamespaceUri>
+    <dcterms:title xml:lang="en">The Malts Ontology</dcterms:title>
+    <dcterms:title xml:lang="fr">L'Ontologie du Malt</dcterms:title>
+    <rdfs:label xml:lang="en">The Malts Ontology</rdfs:label>
+    <rdfs:label xml:lang="fr">L'Ontologie du Malt</rdfs:label>
+    <foaf:name xml:lang="en">The Malts Ontology</foaf:name>
+    <foaf:name xml:lang="fr">L'Ontologie du Malt</foaf:name>
+    <dcterms:description xml:lang="en">The Malts Ontology is an ontology created to represent data about malts.</dcterms:description>
+    <dcterms:description xml:lang="fr">L'ontologie du Malt est une ontologie créée pour représenter des données sur le malt.</dcterms:description>
+    <skos:definition xml:lang="en">The Malts Ontology is an ontology created to represent data about malts.</skos:definition>
+    <skos:definition xml:lang="fr">L'Ontologie du Malt est une ontologie créée pour représenter des données sur le malt.</skos:definition>
+    <rdfs:comment xml:lang="en">The Malts Ontology is an ontology created to represent data about malts.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">L'Ontologie du Malt est une ontologie créée pour représenter des données sur le malt.</rdfs:comment>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-24</dcterms:date>
+    <dcterms:rights>Dual license. All rights reserved.</dcterms:rights>
+    <dcterms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85080193"/>
+    <vs:term_status xml:lang="en">Stable</vs:term_status>
+    <vs:term_status xml:lang="fr">Stable</vs:term_status>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+    <dcterms:creator rdf:resource="#singer"/>
+    <dcterms:creator rdf:resource="#myra"/>
+    <dcterms:creator rdf:resource="#warren"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+    <owl:imports rdf:resource="http://www.w3.org/2006/time#"/>
+  </owl:Ontology>
+
+  <void:Dataset rdf:about="#datasetdefinition">
+    <rdf:type rdf:resource="https://schema.org/Dataset"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:title xml:lang="en">The Malts Ontology</dcterms:title>
+    <dcterms:title xml:lang="fr">L'Ontologie du Malt</dcterms:title>
+    <rdfs:label xml:lang="en">The Malts Ontology</rdfs:label>
+    <rdfs:label xml:lang="fr">L'Ontologie du Malt</rdfs:label>
+    <foaf:name xml:lang="en">The Malts Ontology</foaf:name>
+    <foaf:name xml:lang="fr">L'Ontologie du Malt</foaf:name>
+    <schema:name xml:lang="en">The Malts Ontology</schema:name>
+    <schema:name xml:lang="fr">L'Ontologie du Malt</schema:name>
+    <dcterms:description xml:lang="en">The Malts Ontology is an ontology created to represent data about malts.</dcterms:description>
+    <dcterms:description xml:lang="fr">L'Ontologie du Malt est une ontologie créée pour représenter des données sur le malt.</dcterms:description>
+    <skos:definition xml:lang="en">The Malts Ontology is an ontology created to represent data about malts.</skos:definition>
+    <skos:definition xml:lang="fr">L'Ontologie du Malt est une ontologie créée pour représenter des données sur le malt.</skos:definition>
+    <rdfs:comment xml:lang="en">The Malts Ontology is an ontology created to represent data about malts.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">L'Ontologie du Malt est une ontologie créée pour représenter des données sur le malt.</rdfs:comment>
+    <schema:description xml:lang="en">The Malts Ontology is an ontology created to represent data about malts.</schema:description>
+    <schema:description xml:lang="fr">L'Ontologie du Malt est une ontologie créée pour représenter des données sur le malt.</schema:description>
+    <schema:url>http://rdf.ag/o/malt-2021-03-24</schema:url>
+    <schema:identifier>https://rdf.ag/o/malt</schema:identifier>
+    <schema:license>https://creativecommons.org/licenses/by/3.0/</schema:license>
+    <schema:license>Dual license. All rights reserved.</schema:license>
+    <schema:creator rdf:resource="#myra"/>
+    <schema:creator rdf:resource="#warren"/>
+    <schema:creator rdf:resource="#singer"/>
+    <schema:keywords>Malts</schema:keywords>    
+    <schema:keywords>Brewing</schema:keywords>    
+    <schema:version>1.0</schema:version>
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/N3"/>
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/N-Triples"/>
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+    <schema:distribution>
+     <schema:DataDownload rdf:about="#maltXML">
+      <schema:encodingFormat>XML</schema:encodingFormat>
+      <schema:contentUrl>https://rdf.ag/o/malt-2021-03-24.owl</schema:contentUrl>
+     </schema:DataDownload>
+    </schema:distribution>
+    
+    <schema:distribution>   
+     <schema:DataDownload rdf:about="#maltXMLTTL">
+      <schema:encodingFormat>application/x-turtle</schema:encodingFormat>
+      <schema:contentUrl>https://rdf.ag/o/malt-2021-03-24.ttl</schema:contentUrl>
+     </schema:DataDownload>
+    </schema:distribution>
+    
+    <schema:distribution>   
+     <schema:DataDownload rdf:about="#maltXMLRDF">
+      <schema:encodingFormat>application/rdf+xml</schema:encodingFormat>
+      <schema:contentUrl>https://rdf.ag/o/malt-2021-03-24.owl</schema:contentUrl>
+     </schema:DataDownload>
+    </schema:distribution>   
+    
+    <schema:distribution>
+     <schema:DataDownload rdf:about="#maltJsonld">
+      <schema:encodingFormat>application/ld+json</schema:encodingFormat>
+      <schema:contentUrl>https://rdf.ag/o/malt-2021-03-24.jsonld</schema:contentUrl>
+     </schema:DataDownload>
+    </schema:distribution>   
+    <!-- Need to resolve better rdf for licenses. -->
+    <cc:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
+    <cc:license>Dual license. All rights reserved.</cc:license>
+    <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
+    <cc:attributionURL rdf:resource="http://rdf.ag/"/>
+    <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/malt-2021-03-24"/>
+    <void:triples>518</void:triples>
+    <void:entities>56</void:entities>
+    <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85080193"/>
+    <dcterms:creator rdf:resource="#myra"/>
+    <dcterms:creator rdf:resource="#singer"/>
+    <dcterms:creator rdf:resource="#warren"/>
+  </void:Dataset>
+  
+  <foaf:Organization rdf:about="#myra">
+   <rdf:type rdf:resource="https://schema.org/Organization"/>
+   <rdf:type rdf:resource="https://gs1.org/voc/Organization"/>
+   <gs1:organizationName>Myra Analytics</gs1:organizationName>
+   <foaf:name>Myra Analytics</foaf:name>
+   <schema:name>Myra Analytics</schema:name>
+   <rdfs:label>Myra Analytics</rdfs:label>
+   <schema:contactPoint>
+    <schema:ContactPoint rdf:about="#myraContactPoint">
+     <schema:contactType>customer service</schema:contactType>
+     <schema:email>info@myraanalytics.ca</schema:email>
+    </schema:ContactPoint>
+   </schema:contactPoint>
+  </foaf:Organization>
+  
+  <foaf:Person rdf:about="#singer">
+   <rdf:type rdf:resource="https://schema.org/Person"/>
+   <foaf:name>Jessica Singer</foaf:name>
+   <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </foaf:Person>
+  
+  <foaf:Person rdf:about="#warren">
+   <rdf:type rdf:resource="https://schema.org/Person"/>
+   <foaf:name>Rob Warren</foaf:name>
+   <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </foaf:Person>
+
+ <bibo:Collection rdf:about="#bibliography">
+  <rdfs:label xml:lang="en">The Malts Ontology</rdfs:label>
+  <rdfs:label xml:lang="fr">L'Ontologie du Malt</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+  <void:inDataset rdf:resource="#datasetdefinition"/>
+ </bibo:Collection>
+  
+ <!-- Malting Activities -->
+ <prov:Activity rdf:ID="MaltingActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    <rdfs:label xml:lang="en">Malting</rdfs:label>
+    <rdfs:label xml:lang="fr">Maltage</rdfs:label>
+    <skos:definition xml:lang="en">The process by which a grain (or sometimes pulse), usually barley, is transformed into malt. Usually involvolving a partial germination of the grains and then a drying or roasting portion of the process.</skos:definition>
+    <skos:definition xml:lang="fr">Processus par lequel un grain, généralement de l'orge, est transformé en malt. Impliquant généralement une germination partielle des grains, puis une partie de séchage ou de torréfaction du processus.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+</prov:Activity>
+ 
+ <prov:Activity rdf:ID="PaleAleMaltingActivity">
+    <rdfs:subClassOf rdf:resource="MaltingActivity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    <rdfs:label xml:lang="en">Pale Ale Malting</rdfs:label>
+    <rdfs:label xml:lang="fr">Maltage de la Bière Pâle</rdfs:label>
+    <skos:definition xml:lang="en"> The barley grain must be well and evenly modified (the part of the germination process where the endosperm breaks down), although slightly less well-modified grains lead to better head retention. Under-modified grains lead to problems with beer infiltration and instability, poor extract recoveries, and slow wort recovery rates.
+        
+        The grains must then be dried with cool and rapid airflow. The airflow temperature is then raised to 60-90˚C (140-194˚F) and then cured at a temperature of around 105˚C and are removed from the kiln until they have a moisture content of about 1%, although the acceptance higher delivered moisture contents (up to 4%) has reduced kilning costs.</skos:definition>
+    <skos:definition xml:lang="fr">Le grain d'orge doit être bien et uniformément modifié (la partie du processus de germination où l'endosperme se décompose), bien que des grains légèrement moins bien modifiés conduisent à une meilleure rétention de la tête. Les grains sous-modifiés entraînent des problèmes d'infiltration et d'instabilité de la bière, de mauvaises récupérations d'extrait et des taux de récupération du moût lents.
+        
+        Les grains doivent ensuite être séchés avec un flux d'air frais et rapide. La température du flux d'air est ensuite élevée à 60-90°C (140-194°F), puis durcie à une température d'environ 105°C et est retirée du four jusqu'à ce qu'elle ait une teneur en humidité d'environ 1%, bien que l'acceptation des teneurs plus élevées en humidité (jusqu'à 4%) ont réduit les coûts de cuisson.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+</prov:Activity>
+ 
+ <!-- TODO: Add types of malting activity -->
+ 
+ <!-- Malting Properties -->
+ <owl:datatypeProperty rdf:about="#diastaticPower">
+     <foaf:name xml:lang="en">Diastatic Power</foaf:name>
+     <foaf:name xml:lang="fr">Puissance Diastatique</foaf:name>
+     <rdfs:label xml:lang="en">DP</rdfs:label>
+     <skos:definition xml:lang="en">Diastatic power is a calculation of the amount of enzymatic activity in malts to convert starch into sugars with units in degrees Lintner (˚L). The main enzymes are alpha- and beta- amylase, alpha-glucosidase and limit dextrinase. The larger the diastic power, the more complete is the conversion of starch into fermentable sugars.</skos:definition>
+     <skos:definition xml:lang="fr">La puissance diastatique est un calcul de la quantité d'activité enzymatique dans les malts pour convertir l'amidon en sucres avec des unités en degrés Lovibond (˚L). Les principales enzymes sont l'alpha- et bêta-amylase, l'alpha-glucosidase et la dextrinase limite. Plus le pouvoir diastique est élevé, plus la conversion de l'amidon en sucres fermentescibles est complète.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Oliver2012"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+ 
+ <owl:datatypeProperty rdf:about="#maltMoistureContent">
+     <foaf:name xml:lang="en">Moisture Content</foaf:name>
+     <foaf:name xml:lang="fr">Teneur en Humidité</foaf:name>
+     <rdfs:label xml:lang="en">MC</rdfs:label>
+     <skos:definition xml:lang="en">Moisture content is the ratio of water to the weight of the solid material, expressed as a percentage.</skos:definition>
+     <skos:definition xml:lang="fr">La teneur en humidité est le rapport de l'eau au poids du matériau solide, exprimé en pourcentage.</skos:definition>
+     <rdfs:comment xml:lang="en">While the term 'moisture content' has the same meaning when referencing the amount of water in any solid material, the method by which to determine the moisture content can vary depending on the material. In terms of determining the moisture content in malts, the American Society of Brewing Chemists has a stardard testing procedure for moisture content.</rdfs:comment>
+     <rdfs:comment xml:lang="fr">Bien que le terme 'teneur en humidité' ait le même sens lorsqu'il fait référence à la quantité d'eau dans tout matériau solide, la méthode de détermination de la teneur en humidité peut varier en fonction du matériau. En ce qui concerne la détermination de la teneur en humidité des malts, l'American Society of Brewing Chemists a une procédure de test standard pour la teneur en humidité.</rdfs:comment>
+     <prov:hadPrimarySource rdf:resource="#Oliver2012"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+ 
+ <owl:datatypeProperty rdf:about="#maltProtein">
+     <foaf:name xml:lang="en">Total Soluble Protein to Total Proteins</foaf:name>
+     <foaf:name xml:lang="fr">Protéines Solubles Totales en Protéines Totales</foaf:name>
+     <rdfs:label xml:lang="en">SNR</rdfs:label>
+     <skos:definition xml:lang="en">Total Soluble Protein to Total Proteins ratio or S/T is related to the Total Soluble Nitrogen to Total Nitrogen ratio, as nitrogen is found in the amino acids that make up proteins. This is important for brewers as the enzymes that convert starch to sugars are composed of proteins. The nitrogen in the proteins that aren't enzymes provide vital nitrogen to be used by the yeast during the fermentation process.
+         
+         Proteins are also linked to foam formation, mouthfeel, flavor stability and can even contribute to the haziness of the beer.</skos:definition>
+     <skos:definition xml:lang="fr">Le rapport Protéines Solubles Totales/Protéines Totales ou S/T est lié au rapport azote soluble total sur azote total, car l'azote se trouve dans les acides aminés qui composent les protéines. Ceci est important pour les brasseurs car les enzymes qui convertissent l'amidon en sucres sont composées de protéines. L'azote contenu dans les protéines qui ne sont pas des enzymes fournit un azote vital à utiliser par la levure pendant le processus de fermentation.
+         
+         Les protéines sont également liées à la formation de mousse, à la sensation en bouche, à la stabilité de la saveur et peuvent même contribuer au flou de la bière.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Wiesen2011"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+
+ <owl:datatypeProperty rdf:about="#maltNitrogen">
+     <foaf:name xml:lang="en">Soluble Nitrogen Ratio</foaf:name>
+     <foaf:name xml:lang="fr">Rapport d'Azote Soluble</foaf:name>
+     <rdfs:label xml:lang="en">SNR</rdfs:label>
+     <skos:definition xml:lang="en">Total Soluble Nitrogen to Total Nitrogen ratio or SNR is related to the Total Soluble Protein to Total Proteins ratio, as nitrogen is found in the amino acids that make up proteins. This is important for brewers as the enzymes that convert starch to sugars are composed of proteins. The nitrogen in the proteins that aren't enzymes provide vital nitrogen to be used by the yeast during the fermentation process.
+         
+         Proteins are also linked to foam formation, mouthfeel, flavor stability and can even contribute to the haziness of the beer.</skos:definition>
+     <skos:definition xml:lang="fr">Le rapport de l'Azote Soluble Total à l'Azote Total ou SNR est lié au rapport des Protéines Solubles Totales aux Protéines Totales, car l'azote se trouve dans les acides aminés qui composent les protéines. Ceci est important pour les brasseurs car les enzymes qui convertissent l'amidon en sucres sont composées de protéines. L'azote contenu dans les protéines qui ne sont pas des enzymes fournit un azote vital à utiliser par la levure pendant le processus de fermentation.
+         
+         Les protéines sont également liées à la formation de mousse, à la sensation en bouche, à la stabilité de la saveur et peuvent même contribuer au flou de la bière.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Wiesen2011"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+ 
+ <owl:datatypeProperty rdf:about="maltColor">
+     <foaf:name xml:lang="en">Color</foaf:name>
+     <foaf:name xml:lang="fr">Couleur</foaf:name>
+     <skos:definition xml:lang="en">The color of malt is important in determining the final color of the finished beer. There are three common systems in determining beer color: Lovibond (˚L, not to be confused with degrees Lintner), SRM and EBC.</skos:definition>
+     <skos:definition xml:lang="fr">La couleur du malt est importante pour déterminer la couleur finale de la bière finie. Il existe trois systèmes courants pour déterminer la couleur de la bière: Lovibond (˚L, à ne pas confondre avec les degrés Lintner), SRM et EBC.  L'American Society of Brewing Chemists a adopté la méthode de référence standard (SRM) et les Européens ont développé la European Brewing Convention (EBC), les deux utilisant des méthodes différentes avec le spectrophotomètre.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Wiesen2011"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+ 
+ <owl:datatypeProperty rdf:about="#colorLovibond">
+     <rdfs:subPropertyOf rdf:resource="#maltColor"/>
+     <foaf:name xml:lang="en">Lovibond</foaf:name>
+     <rdfs:label>˚L</rdfs:label>
+     <skos:definition xml:lang="en">The Lovibond System was created in 1883 by J. W. Lovibond who compared beers to colored glass standards, but is limited based on the observer's vision. With the invention of the spectrophotometer, more standardized systems were formed.</skos:definition>
+     <skos:definition xml:lang="fr">Le système Lovibond a été créé en 1883 par J. W. Lovibond qui a comparé les bières aux standards de verre coloré, mais est limité en fonction de la vision de l'observateur. Avec l'invention du spectrophotomètre, des systèmes plus standardisés ont été formés.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Wiesen2011"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+ 
+ <owl:datatypeProperty rdf:about="#colorSRM">
+     <rdfs:subPropertyOf rdf:resource="#maltColor"/>
+     <foaf:name xml:lang="en">SRM</foaf:name>
+     <skos:definition xml:lang="en">The American Society of Brewing Chemists adopted the Standard Reference Method (SRM) with the developement of the spectrophotometer. This system uses a slightly different measuring method than European Brewing Convention (EBC), which also uses the spectrophotometer.</skos:definition>
+     <skos:definition xml:lang="fr">L'American Society of Brewing Chemists a adopté la méthode de référence standard (SRM) avec le développement du spectrophotomètre. Ce système utilise une méthode de mesure légèrement différente de celle de la European Brewing Convention (EBC), qui utilise également le spectrophotomètre.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Wiesen2011"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+ 
+ <owl:datatypeProperty rdf:about="#colorEBC">
+     <rdfs:subPropertyOf rdf:resource="#maltColor"/>
+     <foaf:name xml:lang="en">EBC</foaf:name>
+     <skos:definition xml:lang="en">The European Brewing Convention (EBC) adopted the Standard Reference Method (EBC) with the developement of the spectrophotometer. This system uses a slightly different measuring method than the American Society of Brewing Chemists, which also uses the spectrophotometer.</skos:definition>
+     <skos:definition xml:lang="fr">La European Brewing Convention (EBC) a adopté la méthode de référence standard (EBC) avec le développement du spectrophotomètre. Ce système utilise une méthode de mesure légèrement différente de celle de l'American Society of Brewing Chemists, qui utilise également le spectrophotomètre.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Wiesen2011"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:datatypeProperty>
+     
+ <!-- Malting Class -->
+ 
+ <owl:Class rdf:ID="MaltFoodProduct">
+     <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+     <rdf:type rdf:resource="https://gs1.org/voc/Product"/>
+     <rdf:type rdf:resource="http://schema.org/Product"/>
+     <rdfs:label xml:lang="en">Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt</rdfs:label>
+     <skos:definition xml:lang="en">A commercially available malt product.</skos:definition>
+     <skos:definition xml:lang="en">Un produit malt qui est vendu commercialement.</skos:definition>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <owl:Class rdf:ID="Malt">
+   <rdfs:label xml:lang="en">Malt</rdfs:label>
+   <rdfs:label xml:lang="fr">Malt</rdfs:label>
+   <skos:definition xml:lang="en">Malt is the result of the malting process by which a grain (or sometimes pulse), usually barley is partially germinated and then subjected to a drying or roasting process.
+       
+       Malt is an essential part of brewing beer. By starting the germination process of the grains (or pulses), enzymes are activated to start converting the starch in the seed into sugar (mainly maltose) and amino acids. Then the grains are dried or roasted to halt enzyme activity until the brewer is ready to brew the beer.</skos:definition>
+   <skos:definition xml:lang="fr">Le malt est le résultat du processus de maltage par lequel un grain (ou parfois des légumineuses), généralement de l'orge, est partiellement germé puis soumis à un processus de séchage ou de torréfaction.
+       
+       Le malt est un élément essentiel du brassage de la bière. En démarrant le processus de germination des grains (ou légumineuses), des enzymes sont activées pour commencer à convertir l'amidon de la graine en sucre (principalement maltose) et en acides aminés. Ensuite, les grains sont séchés ou torréfiés pour arrêter l'activité enzymatique jusqu'à ce que le brasseur soit prêt à brasser de la bière.</skos:definition>
+   <prov:hadPrimarySource rdf:resource="#Palmer2017"/>
+   <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="BarleyMalt">
+   <rdfs:subClassOf rdf:resource="#Malt"/>
+   <rdfs:label xml:lang="en">Barley Malt</rdfs:label>
+   <rdfs:label xml:lang="fr">Malt d'Orge</rdfs:label>
+   <skos:definition xml:lang="en">Malt that uses barley as a base.</skos:definition>
+   <skos:definition xml:lang="fr">Malt qui utilise de l'orge comme base.</skos:definition>
+   <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+</owl:Class>
+ 
+ <owl:Class rdf:ID="TwoRowBarleyMalt">
+    <rdfs:subClassOf rdf:resource="#BarleyMalt"/>
+    <rdfs:label xml:lang="en">Two-Row Barley Malt</rdfs:label>
+    <rdfs:label xml:lang="fr">Malt d'Orge à Deux Rangs</rdfs:label>
+    <skos:definition xml:lang="en">Malt that uses two-row barley as a base. Two-row barley is preferred for malting since the grains are often plumper than six-row barley grain due to the lower number of grains per head of barley.</skos:definition>
+    <skos:definition xml:lang="fr">Malt qui utilise de l'orge à deux rangs comme base. L'orge à deux rangs est préférée pour le maltage car les grains sont souvent plus charnus que les grains d'orge à six rangs en raison du nombre plus faible de grains par tête d'orge.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <owl:Class rdf:ID="PilsnerMalt">
+    <rdfs:subClassOf rdf:resource="#TwoRowBarleyMalt"/>
+    <rdfs:label xml:lang="en">Pilsner Malt</rdfs:label>
+    <rdfs:label xml:lang="fr">Malt de Pilsner</rdfs:label>
+    <skos:definition xml:lang="en">Pilsner, as well as other lager malts, have a very pale color and weak aromas. They are made with two-row barley (TN 1.52-1.84%, crude protein 9.5-11.5%) that is steeped to a moisture content of about 43%. The germination period is typically longer and cooler with a maximum temperature of 17˚C (62.6˚F). Once the grains have germinated they are then dried using cool and fast airflow until the moisture content is about 8%. The grains are then slowly cured with slow-rising temperatures that have a maximum of 70-85˚C (158-185˚F).</skos:definition>
+    <skos:definition xml:lang="fr">La Pilsner, ainsi que d'autres malts de bière blonde, ont une couleur très pâle et des arômes faibles. Ils sont fabriqués avec de l'orge à deux rangs (TN 1,52-1,84%, protéines brutes 9,5-11,5%) qui est trempé à une teneur en humidité d'environ 43%. La période de germination est généralement plus longue et plus fraîche avec une température maximale de 17°C (62.6°F). Une fois que les grains ont germé, ils sont ensuite séchés en utilisant un flux d'air frais et rapide jusqu'à ce que la teneur en humidité soit d'environ 8%. Les grains sont ensuite lentement durcis avec des températures à montée lente qui ont un maximum de 70-85°C (158-185°F).</skos:definition>
+    <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+ 
+ <owl:Class rdf:ID="PaleAleMalt">
+    <rdfs:subClassOf rdf:resource="#TwoRowBarleyMalt"/>
+    <rdfs:label xml:lang="en">Pale Ale Malt</rdfs:label>
+    <rdfs:label xml:lang="fr">Malt de Bière Pâle</rdfs:label>
+    <skos:definition xml:lang="en">Pale and mild ale malts are typically used to brew British-style ales. Low nitrogen (1.35-1.5%), two-row barley are typically used as a base for pale ale malts. Mild ale malts generally use two-row barley with higher percentages of nigtrogen (1.6-1.65%).
+        
+        Finished malts are typically darker than lager malts and more malty flavored, have about 4-6.5 EBC units, have a TSN value of 0.5-0.7%, and TSN:TN ratios of about 40%.</skos:definition>
+    <skos:definition xml:lang="fr">Les malts de bière pâles et doux sont généralement utilisés pour brasser des bières de style britannique. L'orge à deux rangs à faible teneur en azote (1,35 à 1.5%) est généralement utilisée comme base pour les malts de bière blonde. Les malts de bière légère utilisent généralement de l'orge à deux rangs avec des pourcentages plus élevés de nigtrogen (1.6-1.65%).
+                
+        Les malts finis sont généralement plus foncés que les malts lager et plus aromatisés au malt, ont environ 4-6.5 unités EBC, ont une valeur TSN de 0.5-0.7% et des ratios TSN: TN d'environ 40%.</skos:definition>
+    <rdfs:comment xml:lang="en">English malters typically favor local barley cultivars.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Les malters anglais préfèrent généralement les cultivars d'orge locaux.</rdfs:comment>
+    <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+ 
+ <owl:Class rdf:ID="marisOtterMalt">
+     <rdfs:subClassOf rdf:resource="#PaleAleMalt"/>
+     <rdfs:label xml:lang="en">Maris Otter Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt de Maris Otter</rdfs:label>
+     <skos:definition xml:lang="en">A pale ale malt that has a barley grain base of the cultivar Maris Otter.</skos:definition>
+     <skos:definition xml:lang="fr">Un malt de bière blonde à base de grains d'orge du cultivar Maris Otter.</skos:definition>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <owl:Class rdf:ID="MunichMalt">
+     <rdfs:subClassOf rdf:resource="#TwoRowBarleyMalt"/>
+     <rdfs:label xml:lang="en">Munich Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt de Munich</rdfs:label>
+     <rdfs:label xml:lang="de">Münchener Malz</rdfs:label>
+     <skos:definition xml:lang="en">Munich malts are typically used for Oktoberfest beers. They are darker malts (15-30 EBC) and rich in aroma due to longer kilning. Compared to pale malts, Munich malts are are not as fermentable, slower coversion times, and are poor in enzymes.</skos:definition>
+     <skos:definition xml:lang="fr">Les malts de Munich sont généralement utilisés pour les bières d'Oktoberfest. Ce sont des malts plus foncés (15-30 EBC) et riches en arômes en raison d'une cuisson plus longue. Comparés aux malts pâles, les malts de Munich ne sont pas aussi fermentescibles, ont des temps de conversion plus lents et sont pauvres en enzymes.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <!-- TODO: Add subclasses of Munich Malts as we get more data -->
+ 
+ <owl:Class rdf:ID="ViennaMalt">
+     <rdfs:subClassOf rdf:resource="#TwoRowBarleyMalt"/>
+     <rdfs:label xml:lang="en">Vienna Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt de Vienna</rdfs:label>
+     <rdfs:label xml:lang="de">Weiner Malz</rdfs:label>
+     <skos:definition xml:lang="en">Vienna malts fall between Pilsner and Munich malts in terms of color (5-10 EBC) and provide the coloring for golden brown lagers. Barley with higher protein content is often used. The malts are well but not over-modified, the drying process is long, using air recurculation in the kiln and the curing process is completed at around 90˚C (194˚F). Unlike caramalized malts, the endosperm is not liquified.</skos:definition>
+     <skos:definition xml:lang="fr">Les malts de Vienne se situent entre les malts Pilsner et Munich en termes de couleur (5-10 EBC) et fournissent la coloration pour les lagers brun doré. L'orge avec une teneur en protéines plus élevée est souvent utilisée. Les malts sont bons mais pas sur-modifiés, le processus de séchage est long, utilisant la recurculation de l'air dans le four et le processus de durcissement est terminé à environ 90°C (194°F). Contrairement aux malts caramalisés, l'endosperme n'est pas liquéfié.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <owl:Class rdf:ID="CaramelMalt">
+     <rdfs:subClassOf rdf:resource="#Malt"/>
+     <rdfs:label xml:lang="en">Caramel Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt au Caramel</rdfs:label>
+     <skos:definition xml:lang="en">Caramel malts are malts that are the result of the endosperm of the base grain being liquified during the malting process and can even crystalize. The moisture content of the final product is higher due to stewing process that occurs between germination and kilning. Caramel malts come in a variety of colors from 20 EBC to 500 EBC, which gives beers a golden caramel color. This malt adds a sweet, caramel or toffee aroma. These malts quickly lose their aroma while in storage so they must be used soon after manufacture.</skos:definition>
+     <skos:definition xml:lang="fr">Les malts de caramel sont des malts qui sont le résultat de la liquéfaction de l'endosperme du grain de base pendant le processus de maltage et peuvent même cristalliser. La teneur en humidité du produit final est plus élevée en raison du processus de cuisson qui se produit entre la germination et la cuisson. Les malts au caramel sont disponibles dans une variété de couleurs allant de 20 EBC à 500 EBC, ce qui donne aux bières une couleur caramel dorée. Ce malt ajoute un arôme sucré, caramel ou caramel. Ces malts perdent rapidement leur arôme au cours du stockage, ils doivent donc être utilisés peu de temps après leur fabrication.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+     
+     <!-- TODO: Add subclasses of Caramel Malts as we get more data, caramel malts have to do with the caramelization of the base grain so you can have an instance of a caramel malt that also an instance of two-row barley malt or wheat malt. -->
+     
+ <owl:Class rdf:ID="RoastedMalt">
+     <rdfs:subClassOf rdf:resource="#Malt"/>
+     <rdfs:label xml:lang="en">Roasted Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt Torréfié</rdfs:label>
+     <skos:definition xml:lang="en">Malts whose base grains undergo a roasting process in drums at high temperatures after germination. Roasted malts are often decribed as having bitter, rich or chocolate aroma, coloring that varies from 500-1400 EBC at the descretion of the operator and with little to no enzymatic activity. The husk of the finished grain must be polished and shiny, the endosperm must not be steely, charred or glassy, rather they should be friable.</skos:definition>
+     <skos:definition xml:lang="fr">Malts dont les grains de base subissent un processus de torréfaction en fûts à haute température après germination. Les malts torréfiés sont souvent décrits comme ayant un arôme amer, riche ou chocolaté, une coloration qui varie de 500-1400 EBC à la discrétion de l'opérateur et avec peu ou pas d'activité enzymatique. L'enveloppe du grain fini doit être polie et brillante, l'endosperme ne doit pas être d'acier, carbonisé ou vitreux, mais doit être friable.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <owl:Class rdf:ID="ChocolateMalt">
+     <rdfs:subClassOf rdf:resource="#RoastedMalt"/>
+     <rdfs:label xml:lang="en">Chocolate Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt au Chocolat</rdfs:label>
+     <skos:definition xml:lang="en">Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 500-1100 EBC.</skos:definition>
+     <skos:definition xml:lang="fr">Malts torréfiés qui ont un arôme quelque peu chocolaté et dont la coloration varie de 500-1100 EBC.</skos:definition>
+     <rdfs:comment xml:lang="en">For roasted malts, the classes Pale Chocolate Malt, Standard Chocolate Malt and Black Malt have the general ranges of EBC coloring assigned to each of these classes. It is important to note that there are significant gaps between these ranges despite all being in the same Roasted Malt class. This is due to the fact that much of the coloring is at the decretion of the operator of the roasting drum, therefore coloring may vary from malters or even between batches. In the end, it is the malters who decide under which class the product will be marketed.</rdfs:comment>
+     <rdfs:comment xml:lang="fr">Pour les malts torréfiés, les classes Malt au Chocolat Pâle, Malt au Chocolat Standard et Malt Noir ont les gammes générales de coloration EBC attribuées à chacune de ces classes. Il est important de noter qu'il existe des écarts importants entre ces gammes, bien qu'elles appartiennent toutes à la même classe de malt torréfié. Cela est dû au fait qu'une grande partie de la coloration est à la décrétion de l'opérateur du tambour de torréfaction, donc la coloration peut varier d'un malter ou même d'un lot à l'autre. En fin de compte, ce sont les malters qui décident sous quelle classe le produit sera commercialisé.</rdfs:comment>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <owl:Class rdf:ID="PaleChocolateMalt">
+     <rdfs:subClassOf rdf:resource="#ChocolateMalt"/>
+     <rdfs:label xml:lang="en">Pale Chocolate Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt au Chocolat Pâle</rdfs:label>
+     <skos:definition xml:lang="en">Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 500-600 EBC.</skos:definition>
+     <skos:definition xml:lang="fr">Malts torréfiés qui ont un arôme quelque peu chocolaté et dont la coloration varie de 500-600 EBC.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+</owl:Class>
+ 
+ <owl:Class rdf:ID="StandardChocolateMalt">
+     <rdfs:subClassOf rdf:resource="#ChocolateMalt"/>
+     <rdfs:label xml:lang="en">Standard Chocolate Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt au Chocolat Standard</rdfs:label>
+     <skos:definition xml:lang="en">Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 900-1100 EBC.</skos:definition>
+     <skos:definition xml:lang="fr">Malts torréfiés qui ont un arôme quelque peu chocolaté et dont la coloration varie de 900-1100 EBC.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+</owl:Class>
+ 
+ <owl:Class rdf:ID="BlackMalt">
+     <rdfs:subClassOf rdf:resource="#ChocolateMalt"/>
+     <rdfs:label xml:lang="en">Black Malt</rdfs:label>
+     <rdfs:label xml:lang="fr">Malt Noir</rdfs:label>
+     <skos:definition xml:lang="en">Black malts are used primarily in stouts and dark beers with a coloring of 1200-1400 ERB.</skos:definition>
+     <skos:definition xml:lang="fr">Les malts noirs sont principalement utilisés dans les stouts et les bières foncées avec une coloration de 1200-1400 ERB.</skos:definition>
+     <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+     <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+     
+ <owl:Class rdf:ID="SixRowBarleyMalt">
+    <rdfs:subClassOf rdf:resource="#BarleyMalt"/>
+    <rdfs:label xml:lang="en">Six-Row Barley Malt</rdfs:label>
+    <rdfs:label xml:lang="fr">Malt d'Orge à Six Rangs</rdfs:label>
+    <skos:definition xml:lang="en">Malt that uses six-row barley as a base.</skos:definition>
+    <skos:definition xml:lang="fr">Malt qui utilise de l'orge à six rangs comme base.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+  
+ <owl:Class rdf:ID="WheatMalt">
+    <rdfs:subClassOf rdf:resource="#Malt"/>
+    <rdfs:label xml:lang="en">Wheat Malt</rdfs:label>
+    <rdfs:label xml:lang="fr">Malt de Blé</rdfs:label>
+    <skos:definition xml:lang="en">Malt that uses wheat as a base.</skos:definition>
+    <skos:definition xml:lang="fr">Malt qui utilise du blé comme base.</skos:definition>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+ 
+ <owl:Class rdf:ID="AcidatedMalt">
+    <rdfs:subClassOf rdf:resource="#Malt"/>
+    <rdfs:label xml:lang="en">Acidated Malt</rdfs:label>
+    <rdfs:label xml:lang="en">Acid Malt</rdfs:label>
+    <rdfs:label xml:lang="fr">Malt Acidulé</rdfs:label>
+    <rdfs:label xml:lang="fr">Malt Acide</rdfs:label>
+    <skos:definition xml:lang="en">Through a few processing means, acidated malts are malts that are acidic and are used to lower the pH of mash to achieve more desireable enzymatic activity and to increase extract recovery.
+    
+    Acidation can be achieved through lactic acid fermentation after kilning, germinating macerated grain in anaerobic conditions until it becomes acidic, or by spraying green malt with Lactobacillus delbrückii (a lactic acid bacteria) and then held at 50˚C (122˚F) for 24-36h before kilning.</skos:definition>
+    <skos:definition xml:lang="fr">Grâce à quelques moyens de traitement, les malts acidulés sont des malts qui sont acides et sont utilisés pour abaisser le pH de la purée pour obtenir une activité enzymatique plus souhaitable et pour augmenter la récupération de l'extrait.
+        
+        L'acidation peut être obtenue par fermentation d'acide lactique après le séchage, la germination du grain macéré dans des conditions anaérobies jusqu'à ce qu'il devienne acide, ou par pulvérisation de malt vert avec Lactobacillus delbrückii (une bactérie lactique), puis maintenu à 50°C (122°F) pendant 24-36h avant la cuisson.</skos:definition>
+    <prov:hadPrimarySource rdf:resource="#Dennis-E.-Briggs1998MaltsandMalting"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+    <void:inDataset rdf:resource="#datasetdefinition"/>
+ </owl:Class>
+  
+
+  <bibo:Book xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Dennis-E.-Briggs1998MaltsandMalting">
+    <dcterms:title xmlns:dcterms="http://purl.org/dc/terms/">Malts and Malting</dcterms:title>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Dennis-E.-Briggs1998MaltsandMalting-bbf847f61c888382e74cb72f245810a0">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">Dennis E.</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Briggs</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+  </bibo:Book>
+  <bibo:Book xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Palmer2017">
+    <dcterms:title xmlns:dcterms="http://purl.org/dc/terms/">How to Brew: Everything You Need to Know to Brew Great Beer Every Time</dcterms:title>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Palmer2017-e4404a4c3d52bc99ec95528c6233d55e">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">John J.</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Palmer</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <bibo:numPages xmlns:bibo="http://purl.org/ontology/bibo/">43-46</bibo:numPages>
+    <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+  </bibo:Book>
+  <bibo:Book xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Oliver2012">
+    <dcterms:title xmlns:dcterms="http://purl.org/dc/terms/">The Oxford Companion to Beer</dcterms:title>
+    <dcterms:editor xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Oliver2012-63901b983163dde264eb06fb3f1b95bd">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">Garrett</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Oliver</foaf:lastName>
+      </foaf:Person>
+    </dcterms:editor>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="#Oliver2012-63901b983163dde264eb06fb3f1b95bd"/>
+    <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+  </bibo:Book>
+  <bibo:AcademicArticle xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Wiesen2011">
+    <dcterms:title xmlns:dcterms="http://purl.org/dc/terms/">Protein changes during malting and brewing with focus on haze and foam formation: A review</dcterms:title>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Wiesen2011-1b12e089d4da222d5c23c46e87d79bbb">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">Elisabeth</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Wiesen</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Wiesen2011-6c8feb80ce4c5006712a123a0a5020f7">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">Martina</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Gastl</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Wiesen2011-019e841ec7c96c6e6ef2555d722348eb">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">Thomas</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Becker</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <bibo:numPages xmlns:bibo="http://purl.org/ontology/bibo/">191-204</bibo:numPages>
+    <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+  </bibo:AcademicArticle>
+  <bibo:Book xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Mallett2014">
+    <dcterms:title xmlns:dcterms="http://purl.org/dc/terms/">Malt: A Practical Guide from Field to Brewhouse</dcterms:title>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#Mallett2014-37cb9c8413de0f7bf3663f3a7454c6de">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">John</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Mallett</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+  </bibo:Book>
+  <bibo:Book xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#FAO2009Barley-Malt-Beer">
+    <dcterms:title xmlns:dcterms="http://purl.org/dc/terms/">Barley, Malt, Beer: Agribusiness Handbook</dcterms:title>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#FAO2009Barley-Malt-Beer-0a38e7286ebbb560354992b3ce62be67">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/"></foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Food</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#FAO2009Barley-Malt-Beer-259a508576758f5511163978b3430f43">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">Agriculture Organization</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">United Nations</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+  </bibo:Book>
+  <bibo:Book xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#BrewersAssociation2019">
+    <dcterms:title xmlns:dcterms="http://purl.org/dc/terms/">National Beer Sales &amp; Production Data</dcterms:title>
+    <dcterms:creator xmlns:dcterms="http://purl.org/dc/terms/">
+      <foaf:Person xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#BrewersAssociation2019-537e9bae73ad8228d2b4a53fa3d5d839">
+        <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+        <foaf:firstName xmlns:foaf="http://xmlns.com/foaf/0.1/">Brewers</foaf:firstName>
+        <foaf:lastName xmlns:foaf="http://xmlns.com/foaf/0.1/">Association</foaf:lastName>
+      </foaf:Person>
+    </dcterms:creator>
+    <vs:term_status xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">Unstable</vs:term_status>
+  </bibo:Book>
+<!-- http/https compatibility -->
+<rdf:Description rdf:about="https://rdf.ag/o/malt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#AcidatedMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#AcidatedMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#BarleyMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#BarleyMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#bibliography">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#bibliography"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#BlackMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#BlackMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#BrewersAssociation2019">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#BrewersAssociation2019"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#BrewersAssociation2019-537e9bae73ad8228d2b4a53fa3d5d839">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#BrewersAssociation2019-537e9bae73ad8228d2b4a53fa3d5d839"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#CaramelMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#CaramelMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#ChocolateMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#ChocolateMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/maltColor">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/maltColor"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#colorEBC">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#colorEBC"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#colorLovibond">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#colorLovibond"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#colorSRM">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#colorSRM"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#datasetdefinition">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#datasetdefinition"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Dennis-E.-Briggs1998MaltsandMalting">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Dennis-E.-Briggs1998MaltsandMalting"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Dennis-E.-Briggs1998MaltsandMalting-bbf847f61c888382e74cb72f245810a0">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Dennis-E.-Briggs1998MaltsandMalting-bbf847f61c888382e74cb72f245810a0"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#diastaticPower">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#diastaticPower"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#FAO2009Barley-Malt-Beer">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#FAO2009Barley-Malt-Beer"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#FAO2009Barley-Malt-Beer-0a38e7286ebbb560354992b3ce62be67">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#FAO2009Barley-Malt-Beer-0a38e7286ebbb560354992b3ce62be67"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#FAO2009Barley-Malt-Beer-259a508576758f5511163978b3430f43">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#FAO2009Barley-Malt-Beer-259a508576758f5511163978b3430f43"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Mallett2014">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Mallett2014"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Mallett2014-37cb9c8413de0f7bf3663f3a7454c6de">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Mallett2014-37cb9c8413de0f7bf3663f3a7454c6de"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Malt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Malt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#MaltFoodProduct">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#MaltFoodProduct"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#MaltingActivity">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#MaltingActivity"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#maltJsonld">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#maltJsonld"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#maltMoistureContent">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#maltMoistureContent"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#maltNitrogen">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#maltNitrogen"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#maltProtein">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#maltProtein"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#maltXML">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#maltXML"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#maltXMLRDF">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#maltXMLRDF"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#maltXMLTTL">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#maltXMLTTL"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#marisOtterMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#marisOtterMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#MunichMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#MunichMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#myra">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#myra"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#myraContactPoint">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#myraContactPoint"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Oliver2012">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Oliver2012"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Oliver2012-63901b983163dde264eb06fb3f1b95bd">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Oliver2012-63901b983163dde264eb06fb3f1b95bd"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#PaleAleMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#PaleAleMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#PaleAleMaltingActivity">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#PaleAleMaltingActivity"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#PaleChocolateMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#PaleChocolateMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Palmer2017">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Palmer2017"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Palmer2017-e4404a4c3d52bc99ec95528c6233d55e">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Palmer2017-e4404a4c3d52bc99ec95528c6233d55e"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#PilsnerMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#PilsnerMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#RoastedMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#RoastedMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#singer">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#singer"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#SixRowBarleyMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#SixRowBarleyMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#StandardChocolateMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#StandardChocolateMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#TwoRowBarleyMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#TwoRowBarleyMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#ViennaMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#ViennaMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#warren">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#warren"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#WheatMalt">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#WheatMalt"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Wiesen2011">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Wiesen2011"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Wiesen2011-019e841ec7c96c6e6ef2555d722348eb">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Wiesen2011-019e841ec7c96c6e6ef2555d722348eb"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Wiesen2011-1b12e089d4da222d5c23c46e87d79bbb">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Wiesen2011-1b12e089d4da222d5c23c46e87d79bbb"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rdf.ag/o/malt#Wiesen2011-6c8feb80ce4c5006712a123a0a5020f7">
+ <owl:sameAs rdf:resource="http://rdf.ag/o/malt#Wiesen2011-6c8feb80ce4c5006712a123a0a5020f7"/>
+</rdf:Description>
+<!-- rdfs compatibility -->
+<rdf:Description rdf:about="#AcidatedMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#BarleyMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#BlackMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#CaramelMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#ChocolateMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#Malt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#MaltFoodProduct">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#marisOtterMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#MunichMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#PaleAleMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#PaleChocolateMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#PilsnerMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#RoastedMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#SixRowBarleyMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#StandardChocolateMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#TwoRowBarleyMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#ViennaMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="#WheatMalt">
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+</rdf:RDF>
