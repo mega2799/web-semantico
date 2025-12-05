@@ -171,6 +171,30 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#Malt -->
+
+    <rdfs:Datatype rdf:about="http://www.beerecipe.com/ontology#Malt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewingStep -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewingStep"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Yeast -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Yeast"/>
+    
+
+
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
@@ -584,7 +608,7 @@
     <!-- http://www.beerecipe.com/ontology#ebcColor -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#ebcColor">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Malt"/>
+        <rdfs:domain rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Color contribution in EBC units</rdfs:comment>
         <rdfs:label>EBC color</rdfs:label>
@@ -650,6 +674,7 @@
     <!-- http://www.beerecipe.com/ontology#glutenContent -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#glutenContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Indicates if the cereal contains gluten</rdfs:comment>
         <rdfs:label>gluten content</rdfs:label>
@@ -659,7 +684,9 @@
 
     <!-- http://www.beerecipe.com/ontology#hasBrewingStep -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasBrewingStep"/>
+    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasBrewingStep">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewingStep"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -814,7 +841,6 @@
     <!-- http://www.beerecipe.com/ontology#maltName -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#maltName">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Malt"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the malt</rdfs:comment>
         <rdfs:label>malt name</rdfs:label>
@@ -1137,14 +1163,6 @@
 * acidified FOODON:03460200
 * food hydrolyzation process FOODON:03460277</rdfs:comment>
         <rdfs:label xml:lang="en">corn sugar</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3486 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3486">
-        <owl:equivalentClass rdf:resource="https://rdf.ag/o/hops#Hops"/>
     </owl:Class>
     
 
@@ -1493,12 +1511,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
-    
-
-
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPARecipe -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPARecipe">
@@ -1591,12 +1603,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt"/>
     
 
 
@@ -2425,12 +2431,6 @@
     
 
 
-    <!-- https://rdf.ag/o/beer#PaleEuropeanBeer -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/beer#PaleEuropeanBeer"/>
-    
-
-
     <!-- https://rdf.ag/o/beer#PaleMaltyEuropeanLager -->
 
     <owl:Class rdf:about="https://rdf.ag/o/beer#PaleMaltyEuropeanLager">
@@ -2447,18 +2447,10 @@
     
 
 
-    <!-- https://rdf.ag/o/beer#Pilsner -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/beer#Pilsner"/>
-    
-
-
     <!-- https://rdf.ag/o/beer#Pilsner_GermanStyle -->
 
     <owl:Class rdf:about="https://rdf.ag/o/beer#Pilsner_GermanStyle">
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#GermanBeer"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#PaleEuropeanBeer"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#Pilsner"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/beer#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-2024-02-21"/>
         <rdfs:label xml:lang="en">German Style Pilsner</rdfs:label>
@@ -5807,12 +5799,6 @@
     
 
 
-    <!-- https://rdf.ag/o/hops#Humulus -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/hops#Humulus"/>
-    
-
-
     <!-- https://rdf.ag/o/hops#Rakau -->
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#Rakau">
@@ -5913,19 +5899,6 @@
         <skos:definition xml:lang="en">Malt is the result of the malting process by which a grain (or sometimes pulse), usually barley is partially germinated and then subjected to a drying or roasting process.
        
        Malt is an essential part of brewing beer. By starting the germination process of the grains (or pulses), enzymes are activated to start converting the starch in the seed into sugar (mainly maltose) and amino acids. Then the grains are dried or roasted to halt enzyme activity until the brewer is ready to brew the beer.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://rdf.ag/o/malt#MaltFoodProduct -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/malt#MaltFoodProduct">
-        <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
-        <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
-        <rdfs:label xml:lang="en">Malt</rdfs:label>
-        <rdfs:label xml:lang="fr">Malt</rdfs:label>
-        <skos:definition xml:lang="en">A commercially available malt product.</skos:definition>
-        <skos:definition xml:lang="en">Un produit malt qui est vendu commercialement.</skos:definition>
     </owl:Class>
     
 
@@ -6138,7 +6111,7 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop">
-        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+        <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Ahtanum</ontology:hopName>
         <rdfs:comment>American hop with floral, citrus and piney notes. Used for aroma</rdfs:comment>
@@ -6244,7 +6217,6 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat">
-        <rdf:type rdf:resource="https://rdf.ag/o/cerealstoo#CEHRW"/>
         <ontology:cerealName>Canada winter wheat</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:glutenContent>
     </owl:NamedIndividual>
@@ -6254,7 +6226,6 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt">
-        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt"/>
         <ontology:maltName>Caramalt</ontology:maltName>
         <ontology:ebc rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:ebc>
         <rdfs:comment>Crystal malt for body, sweetness and golden color</rdfs:comment>
@@ -6287,7 +6258,6 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop">
-        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Chinook</ontology:hopName>
         <rdfs:comment>American hop variety with piney, spicy character. High alpha acids for bittering</rdfs:comment>
@@ -6500,7 +6470,6 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt">
-        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt"/>
         <ontology:maltName>Extra Pale Malt</ontology:maltName>
         <ontology:ebc rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</ontology:ebc>
         <rdfs:comment>Base malt for pale ales and IPAs, provides fermentable sugars</rdfs:comment>
@@ -6624,7 +6593,7 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop">
-        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+        <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Nelson Sauvin</ontology:hopName>
         <rdfs:comment>New Zealand hop with distinctive white wine, gooseberry character. Signature BrewDog hop</rdfs:comment>
@@ -6937,7 +6906,7 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop">
-        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+        <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Simcoe</ontology:hopName>
         <rdfs:comment>American hop with passion fruit, pine and earthy character</rdfs:comment>
