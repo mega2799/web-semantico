@@ -6070,7 +6070,97 @@
      -->
 
     
+ <!-- =============================================== -->
+    <!-- COUNTRIES -->
+    <!-- =============================================== -->
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Scotland">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <ontology:isOriginOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Scotland</rdfs:label>
+        <rdfs:comment>Home of BrewDog brewery in Ellon, Aberdeenshire. Known for craft beer revolution and innovative brewing techniques.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#UnitedStates">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdfs:label>United States</rdfs:label>
+        <rdfs:comment>Origin of American hop varieties (Chinook, Simcoe, Ahtanum) and American IPA style. Major craft beer innovation hub.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NewZealand">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdfs:label>New Zealand</rdfs:label>
+        <rdfs:comment>Origin of Nelson Sauvin hop variety with distinctive white wine character. Known for unique southern hemisphere hop varieties.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#UnitedKingdom">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdfs:label>United Kingdom</rdfs:label>
+        <rdfs:comment>Origin of pale ale malt varieties and traditional British brewing techniques. Home to Maris Otter barley.</rdfs:comment>
+    </owl:NamedIndividual>
 
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashTun">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Mash Tun</rdfs:label>
+        <rdfs:comment>Insulated vessel for mashing grains at controlled temperatures to convert starches to fermentable sugars.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewKettle">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Brew Kettle</rdfs:label>
+        <rdfs:comment>Large pot or kettle for boiling wort with hops. Typically 25-30L capacity for homebrewing.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FermentationVessel">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Fermentation Vessel</rdfs:label>
+        <rdfs:comment>Airtight container (plastic bucket or glass carboy) for primary fermentation. Must hold at least 25L for this batch size.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#WortChiller">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Wort Chiller</rdfs:label>
+        <rdfs:comment>Immersion or counterflow chiller to rapidly cool wort from boiling to pitching temperature (18-20°C).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hydrometer">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Hydrometer</rdfs:label>
+        <rdfs:comment>Instrument to measure specific gravity of wort/beer, essential for calculating ABV and monitoring fermentation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Thermometer">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Brewing Thermometer</rdfs:label>
+        <rdfs:comment>Digital or analog thermometer (range 0-110°C) for monitoring mash, boil, and fermentation temperatures.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Airlock">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Airlock</rdfs:label>
+        <rdfs:comment>One-way valve allowing CO2 to escape during fermentation while preventing oxygen and contaminants from entering.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BottlingEquipment">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Bottling Equipment</rdfs:label>
+        <rdfs:comment>Bottles, caps, capper, and bottling wand for packaging finished beer. Alternative: kegging system.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sanitizer">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <ontology:isRequiredBy rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <rdfs:label>Sanitizer</rdfs:label>
+        <rdfs:comment>No-rinse sanitizer (e.g., Star San) essential for sanitizing all equipment that contacts wort/beer post-boil.</rdfs:comment>
+    </owl:NamedIndividual>
 
     <!-- http://www.beerecipe.com/ontology#US05_Yeast -->
 
@@ -6210,6 +6300,18 @@
         <ontology:recipeName>BrewDog Punk IPA</ontology:recipeName>
         <ontology:servingTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</ontology:servingTemperature>
         <ontology:totalBrewingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ontology:totalBrewingTime>
+
+        <!-- Equipment Required -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashTun"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewKettle"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FermentationVessel"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#WortChiller"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hydrometer"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Thermometer"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Airlock"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BottlingEquipment"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sanitizer"/>
+
     </owl:NamedIndividual>
     
 
@@ -6463,6 +6565,30 @@
         <ontology:recipeName>Easy Pale Ale</ontology:recipeName>
         <ontology:servingTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ontology:servingTemperature>
         <ontology:totalBrewingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</ontology:totalBrewingTime>
+            <!-- Equipment Required - Beginner Level All-Grain -->
+        <!-- Mashing (60 min) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashTun"/>
+        
+        <!-- Boiling (60 min) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewKettle"/>
+        
+        <!-- Cooling -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#WortChiller"/>
+        
+        <!-- Fermentation (10 days) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FermentationVessel"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Airlock"/>
+        
+        <!-- Conditioning (14 days) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BottlingEquipment"/>
+        
+        <!-- Measurement Tools -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hydrometer"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Thermometer"/>
+        
+        <!-- Sanitation -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sanitizer"/>
+
     </owl:NamedIndividual>
     
 
@@ -6535,6 +6661,30 @@
         <ontology:recipeName>GAS RIS (Russian Imperial Stout)</ontology:recipeName>
         <ontology:servingTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:servingTemperature>
         <ontology:totalBrewingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ontology:totalBrewingTime>
+          <!-- Equipment Required - Based on Brewing Steps -->
+        <!-- Step 1-3: Mash, MashOut, Sparge -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashTun"/>
+        
+        <!-- Step 4-5: Boil, Whirlpool -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewKettle"/>
+        
+        <!-- Step 6: Cooling -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#WortChiller"/>
+        
+        <!-- Step 7: Fermentation (21 days) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FermentationVessel"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Airlock"/>
+        
+        <!-- Step 8: Conditioning (60 days - long aging for Imperial Stout) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BottlingEquipment"/>
+        
+        <!-- Measurement Tools (used throughout) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hydrometer"/>
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Thermometer"/>
+        
+        <!-- Sanitation (essential for all brewing) -->
+        <ontology:requiresEquipment rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sanitizer"/>
+
     </owl:NamedIndividual>
     
 
