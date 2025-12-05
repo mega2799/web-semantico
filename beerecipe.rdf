@@ -170,6 +170,12 @@
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#float -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1137,6 +1143,16 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#BoilStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BoilStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Step where wort is boiled to sterilize and isomerize hop alpha acids.</rdfs:comment>
+        <rdfs:label>Boil Step</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#BrewingStep -->
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#BrewingStep">
@@ -1148,69 +1164,25 @@
     </owl:Class>
     
 
-<!-- MashStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#MashStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-    <rdfs:label>Mash Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Step where starches in the malt are converted into fermentable sugars.</rdfs:comment>
-    <rdfs:subClassOf>
-        <owl:Restriction>
-            <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
-            <owl:someValuesFrom>
-                <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:someValuesFrom>
-        </owl:Restriction>
-    </rdfs:subClassOf>
-</owl:Class>
 
-<!-- MashOutStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#MashOutStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
-    <rdfs:label>MashOut Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Step to stop enzymatic activity and raise mash temperature before lautering.</rdfs:comment>
-</owl:Class>
+    <!-- http://www.beerecipe.com/ontology#ConditioningStep -->
 
-<!-- SpargeStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#SpargeStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-    <rdfs:label>Sparge Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
-</owl:Class>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#ConditioningStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Maturation phase where beer flavors develop, clarifies, and stabilizes.</rdfs:comment>
+        <rdfs:label>Conditioning Step</rdfs:label>
+    </owl:Class>
+    
 
-<!-- BoilStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#BoilStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-    <rdfs:label>Boil Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Step where wort is boiled to sterilize and isomerize hop alpha acids.</rdfs:comment>
-</owl:Class>
 
-<!-- WhirlpoolStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#WhirlpoolStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-    <rdfs:label>Whirlpool Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Clarifies wort by separating hops and trub after boiling.</rdfs:comment>
-</owl:Class>
+    <!-- http://www.beerecipe.com/ontology#CoolingStep -->
 
-<!-- CoolingStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#CoolingStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-    <rdfs:label>Cooling Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Step to cool wort to yeast pitching temperature.</rdfs:comment>
-</owl:Class>
-
-<!-- FermentationStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#FermentationStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-    <rdfs:label>Fermentation Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
-</owl:Class>
-
-<!-- ConditioningStep -->
-<owl:Class rdf:about="http://www.beerecipe.com/ontology#ConditioningStep">
-    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-    <rdfs:label>Conditioning Step</rdfs:label>
-    <rdfs:comment xml:lang="en">Maturation phase where beer flavors develop, clarifies, and stabilizes.</rdfs:comment>
-</owl:Class>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#CoolingStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Step to cool wort to yeast pitching temperature.</rdfs:comment>
+        <rdfs:label>Cooling Step</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://www.beerecipe.com/ontology#Country -->
@@ -1261,6 +1233,16 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#FermentationStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#FermentationStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
+        <rdfs:label>Fermentation Step</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#FlavorProfile -->
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#FlavorProfile">
@@ -1285,6 +1267,32 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#MashOutStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#MashOutStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdfs:comment xml:lang="en">Step to stop enzymatic activity and raise mash temperature before lautering.</rdfs:comment>
+        <rdfs:label>MashOut Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#MashStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#MashStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Step where starches in the malt are converted into fermentable sugars.</rdfs:comment>
+        <rdfs:label>Mash Step</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#Recipe -->
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#Recipe">
@@ -1292,6 +1300,26 @@
         <rdfs:label xml:lang="en">Recipe</rdfs:label>
         <skos:definition xml:lang="en">A structured set of instructions and ingredients for brewing beer, including quantities, temperatures, timings, and expected beer characteristics such as ABV, IBU, and color.</skos:definition>
         <skos:example xml:lang="en">Easy Pale Ale: A beginner-friendly recipe using pale ale malt, Cascade hops, producing a 4.8% ABV beer with 30 IBU.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#SpargeStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#SpargeStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
+        <rdfs:label>Sparge Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#WhirlpoolStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#WhirlpoolStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Clarifies wort by separating hops and trub after boiling.</rdfs:comment>
+        <rdfs:label>Whirlpool Step</rdfs:label>
     </owl:Class>
     
 
@@ -6032,86 +6060,20 @@
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
         <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66.0</ontology:stepTemperature>
     </owl:NamedIndividual>
-    <!-- Mash -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardMash45min">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
-    <ontology:stepName>Mash</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Conversion of starches in the malt to fermentable sugars via enzymatic activity.</rdfs:comment>
-</owl:NamedIndividual>
+    
 
-<!-- MashOut -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
-    <ontology:stepName>MashOut</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging.</rdfs:comment>
-</owl:NamedIndividual>
 
-<!-- Sparge -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sparge20min">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
-    <ontology:stepName>Sparge</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
-</owl:NamedIndividual>
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Boil60min -->
 
-<!-- Boil -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Boil60min">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
-    <ontology:stepName>Boil</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds.</rdfs:comment>
-</owl:NamedIndividual>
-
-<!-- Whirlpool -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Whirlpool15min">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
-    <ontology:stepName>Whirlpool</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling.</rdfs:comment>
-</owl:NamedIndividual>
-
-<!-- Cooling -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CoolingToPitchTemp">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
-    <ontology:stepName>Cooling</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Rapidly cools the wort to the optimal fermentation temperature for pitching yeast.</rdfs:comment>
-</owl:NamedIndividual>
-
-<!-- Fermentation -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
-    <ontology:stepName>Fermentation</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">168</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
-</owl:NamedIndividual>
-
-<!-- Conditioning -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Conditioning14days">
-    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
-    <ontology:stepName>Conditioning</ontology:stepName>
-    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">336</ontology:stepDuration>
-    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:stepTemperature>
-    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
-    <rdfs:comment xml:lang="en">Maturation phase where flavors develop, beer clarifies and stabilizes.</rdfs:comment>
-</owl:NamedIndividual>
-
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Boil60min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
+        <ontology:stepName>Boil</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds.</rdfs:comment>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat -->
@@ -6153,6 +6115,169 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Conditioning14days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Conditioning14days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">336</ontology:stepDuration>
+        <ontology:stepName>Conditioning</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Maturation phase where flavors develop, beer clarifies and stabilizes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CoolingToPitchTemp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CoolingToPitchTemp">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:stepDuration>
+        <ontology:stepName>Cooling</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rapidly cools the wort to the optimal fermentation temperature for pitching yeast.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Boil60min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Boil60min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
+        <ontology:stepName>Boil</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Boil wort to sterilize, isomerize hops, and drive off volatiles for a clean pale ale flavor.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Conditioning14days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Conditioning14days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20160</ontology:stepDuration>
+        <ontology:stepName>Conditioning</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Maturation phase: flavors develop and beer clarifies.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_CoolingToPitchTemp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_CoolingToPitchTemp">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
+        <ontology:stepName>Cooling</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rapidly cool wort to yeast pitching temperature for clean fermentation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Fermentation10days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Fermentation10days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14400</ontology:stepDuration>
+        <ontology:stepName>Fermentation</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Primary fermentation: yeast converts sugars to alcohol and CO2 for a balanced pale ale.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Mash60min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Mash60min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdf:type>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
+        <ontology:stepName>Mash</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Convert malt starches to fermentable sugars for a balanced pale ale body.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_MashOut10min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_MashOut10min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashOutStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdf:type>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
+        <ontology:stepName>MashOut</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Stop enzymatic activity and prepare for lautering.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Sparge15min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Sparge15min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
+        <ontology:stepName>Sparge</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rinse grains to extract remaining sugars for a lighter, balanced pale ale.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Whirlpool10min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Whirlpool10min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40320</ontology:stepDuration>
+        <ontology:stepName>Whirlpool</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Separate hops and trub for clarity before cooling.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe">
@@ -6179,6 +6304,21 @@
         <ontology:recipeName>Easy Pale Ale</ontology:recipeName>
         <ontology:servingTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ontology:servingTemperature>
         <ontology:totalBrewingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</ontology:totalBrewingTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10080</ontology:stepDuration>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">168</ontology:stepDuration>
+        <ontology:stepName>Fermentation</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6252,6 +6392,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdf:type>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
+        <ontology:stepName>MashOut</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle">
@@ -6266,6 +6426,138 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt">
         <ontology:ebcColor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:ebcColor>
         <ontology:maltName>Pale Ale Malt</ontology:maltName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Boil90min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Boil90min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</ontology:stepDuration>
+        <ontology:stepName>Boil</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Conditioning28days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Conditioning28days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40320</ontology:stepDuration>
+        <ontology:stepName>Conditioning</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Maturation phase: flavors develop, beer clarifies and stabilizes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_CoolingToPitchTemp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_CoolingToPitchTemp">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</ontology:stepDuration>
+        <ontology:stepName>Cooling</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rapidly cool wort to yeast pitching temperature.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Fermentation14days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Fermentation14days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20160</ontology:stepDuration>
+        <ontology:stepName>Fermentation</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Primary fermentation: yeast converts sugars into alcohol and CO2.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Mash60min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Mash60min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdf:type>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
+        <ontology:stepName>Mash</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">68.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Conversion of starches in the malt to fermentable sugars via enzymatic activity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_MashOut10min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_MashOut10min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashOutStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdf:type>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
+        <ontology:stepName>MashOut</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Sparge20min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Sparge20min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
+        <ontology:stepName>Sparge</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Whirlpool15min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Whirlpool15min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
+        <ontology:stepName>Whirlpool</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6294,6 +6586,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sparge20min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sparge20min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
+        <ontology:stepName>Sparge</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardMash45min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardMash45min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</ontology:stepDuration>
+        <ontology:stepName>Mash</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Conversion of starches in the malt to fermentable sugars via enzymatic activity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#TripleHoppedIPA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#TripleHoppedIPA">
@@ -6302,6 +6620,19 @@
         <ontology:difficultyLevel>advanced</ontology:difficultyLevel>
         <ontology:estimatedABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.2</ontology:estimatedABV>
         <ontology:estimatedIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</ontology:estimatedIBU>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Whirlpool15min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Whirlpool15min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
+        <ontology:stepName>Whirlpool</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling.</rdfs:comment>
     </owl:NamedIndividual>
     
 
