@@ -176,6 +176,12 @@
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#float -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1427,6 +1433,16 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#BoilStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BoilStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Step where wort is boiled to sterilize and isomerize hop alpha acids.</rdfs:comment>
+        <rdfs:label>Boil Step</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#BrewingStep -->
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#BrewingStep">
@@ -1438,6 +1454,25 @@
     </owl:Class>
     
 
+
+    <!-- http://www.beerecipe.com/ontology#ConditioningStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#ConditioningStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Maturation phase where beer flavors develop, clarifies, and stabilizes.</rdfs:comment>
+        <rdfs:label>Conditioning Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#CoolingStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#CoolingStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Step to cool wort to yeast pitching temperature.</rdfs:comment>
+        <rdfs:label>Cooling Step</rdfs:label>
+    </owl:Class>
+    
 
     <!-- http://www.beerecipe.com/ontology#ConditioningStep -->
 
@@ -1503,6 +1538,16 @@
         <skos:definition xml:lang="en">Physical tools, vessels, instruments, and machinery used in the beer brewing process, including items for mashing, boiling, fermentation, temperature control, filtration, carbonation, and packaging.</skos:definition>
         <skos:example xml:lang="en">Basic equipment: Brew kettle, fermentation bucket, airlock, thermometer, hydrometer, bottles. Advanced equipment: Temperature-controlled fermentation chamber, counterflow chiller, conical fermenter, kegging system, pH meter. Professional equipment: Automated mash tun, brewhouse control system, bright beer tanks, centrifuge.</skos:example>
         <skos:note xml:lang="en">Equipment quality and capability directly impact beer quality, consistency, and the range of styles that can be produced. Some beer styles require specific equipment (e.g., lagers need temperature control, certain ales benefit from conical fermenters for dry hopping).</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#FermentationStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#FermentationStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
+        <rdfs:label>Fermentation Step</rdfs:label>
     </owl:Class>
     
 
@@ -1593,6 +1638,26 @@
         <rdfs:label xml:lang="en">Recipe</rdfs:label>
         <skos:definition xml:lang="en">A structured set of instructions and ingredients for brewing beer, including quantities, temperatures, timings, and expected beer characteristics such as ABV, IBU, and color.</skos:definition>
         <skos:example xml:lang="en">Easy Pale Ale: A beginner-friendly recipe using pale ale malt, Cascade hops, producing a 4.8% ABV beer with 30 IBU.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#SpargeStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#SpargeStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
+        <rdfs:label>Sparge Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#WhirlpoolStep -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#WhirlpoolStep">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:comment xml:lang="en">Clarifies wort by separating hops and trub after boiling.</rdfs:comment>
+        <rdfs:label>Whirlpool Step</rdfs:label>
     </owl:Class>
     
 
@@ -7673,6 +7738,26 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtterMalt">
         <ontology:ebcColor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:ebcColor>
         <ontology:maltName>Maris Otter Malt</ontology:maltName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdf:type>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
+        <ontology:stepName>MashOut</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging.</rdfs:comment>
     </owl:NamedIndividual>
     
 
