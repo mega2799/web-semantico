@@ -75,9 +75,21 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
     
 
 
@@ -265,7 +277,10 @@
     <!-- http://www.beerecipe.com/ontology#hasYeast -->
 
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasYeast">
+        <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
         <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isYeastOf"/>
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
     </owl:ObjectProperty>
     
 
@@ -1060,61 +1075,120 @@
 
     <!-- http://www.beerecipe.com/ontology#BeerStyle -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BeerStyle">
+        <rdfs:comment xml:lang="en">A beer style is a classification of beer based on various factors including appearance, flavor, ingredients, production method, history, and origin. Beer styles provide guidelines for acceptable ranges of characteristics such as color, bitterness, alcohol content, and aroma.</rdfs:comment>
+        <rdfs:label xml:lang="en">Beer Style</rdfs:label>
+        <skos:definition xml:lang="en">A categorization system for beer that defines characteristic ranges for properties like ABV, IBU, color (EBC/SRM), and typical flavor profiles. Styles are often defined by brewing organizations like BJCP or Brewers Association.</skos:definition>
+        <skos:example xml:lang="en">American IPA: 5.5-7.5% ABV, 40-70 IBU, characterized by prominent hop bitterness and citrus aroma from American hop varieties.</skos:example>
+        <skos:note xml:lang="en">Beer styles evolve over time and may vary between different classification systems. Modern craft brewing has also created many hybrid and experimental styles.</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#BrewingStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BrewingStep">
+        <rdfs:comment xml:lang="en">A brewing step represents a specific stage in the beer production process. Each step has defined parameters including duration, temperature, and specific instructions. Common steps include mashing, lautering, boiling, fermentation, and conditioning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Brewing Step</rdfs:label>
+        <skos:definition xml:lang="en">An individual procedural stage in the brewing process, characterized by specific time duration, temperature, order of execution, and detailed instructions that must be followed to achieve desired beer characteristics.</skos:definition>
+        <skos:example xml:lang="en">Mashing step: 66°C for 60 minutes, converting starches to fermentable sugars. Boiling step: 100°C for 60 minutes, sterilizing the wort and extracting hop bitterness.</skos:example>
+        <skos:note xml:lang="en">The order and precise execution of brewing steps is critical to achieving consistent, high-quality beer. Each step affects the final product&apos;s flavor, aroma, appearance, and stability.</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#Country -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Country"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Country">
+        <rdfs:comment xml:lang="en">A country represents a geographical and political entity that is the origin of brewing ingredients, beer styles, or brewing traditions. Different countries have distinct brewing histories, indigenous ingredients, and characteristic beer styles.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <skos:definition xml:lang="en">A nation state or geographical region that serves as the origin or source for brewing ingredients (hops, malts, yeast strains) or beer styles, often influencing the characteristics and traditions of beer production.</skos:definition>
+        <skos:example xml:lang="en">Germany: Origin of noble hops like Hallertau and Tettnanger, and beer styles like Pilsner and Weissbier. United States: Origin of high alpha acid hops like Cascade and Centennial, and styles like American IPA.</skos:example>
+        <skos:note xml:lang="en">Terroir and climate significantly affect the characteristics of brewing ingredients, particularly hops and barley varieties, making the country of origin an important attribute for ingredient selection.</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#DietaryRequirement -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#DietaryRequirement"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#DietaryRequirement">
+        <rdfs:comment xml:lang="en">Dietary requirements represent specific nutritional, health, or ethical restrictions that individuals may have regarding food and beverage consumption. In brewing, this includes considerations for allergens, animal products, and specific ingredients that certain populations avoid.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dietary Requirement</rdfs:label>
+        <skos:definition xml:lang="en">A classification of dietary restrictions or preferences that a beer recipe may satisfy, including but not limited to vegan, gluten-free, organic, low-calorie, or allergen-free requirements.</skos:definition>
+        <skos:example xml:lang="en">Gluten-free: Beer made with gluten-free grains like sorghum, rice, or certified gluten-free oats. Vegan: Beer produced without using animal-derived fining agents like isinglass or gelatin.</skos:example>
+        <skos:note xml:lang="en">Traditional beer brewing often uses animal-derived products for clarification (isinglass, gelatin) and may contain allergens (gluten from barley/wheat). Modern brewing techniques allow for production of beers meeting various dietary requirements.</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#DifficultyLevel -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#DifficultyLevel"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#DifficultyLevel">
+        <rdfs:comment xml:lang="en">The difficulty level of a beer recipe indicates the complexity of the brewing process, the precision required, the equipment needed, and the brewing experience necessary to successfully execute the recipe. It helps brewers select appropriate recipes for their skill level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Difficulty Level</rdfs:label>
+        <skos:definition xml:lang="en">A classification of brewing complexity typically ranging from beginner to expert, based on factors such as number of ingredients, precision of temperature control required, complexity of brewing steps, fermentation management, and specialized equipment needs.</skos:definition>
+        <skos:example xml:lang="en">Beginner: Simple pale ale with single malt, single hop, basic fermentation. Intermediate: Multi-grain beer with hop schedule and temperature-controlled fermentation. Advanced: Barrel-aged sour beer with multiple microorganism fermentation and extended aging. Expert: Spontaneously fermented lambic with coolship and multi-year aging in wood.</skos:example>
+        <skos:note xml:lang="en">Difficulty assessment considers technical complexity, time commitment, equipment requirements, ingredient sourcing, and margin for error. Some styles like lagers may be technically simple but require extended time and precise temperature control.</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#Equipment -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Equipment"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Equipment">
+        <rdfs:comment xml:lang="en">Brewing equipment encompasses all tools, vessels, and instruments required to execute a beer recipe. Equipment ranges from basic household items for beginner brewing to specialized professional-grade machinery for advanced techniques and commercial production.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+        <skos:definition xml:lang="en">Physical tools, vessels, instruments, and machinery used in the beer brewing process, including items for mashing, boiling, fermentation, temperature control, filtration, carbonation, and packaging.</skos:definition>
+        <skos:example xml:lang="en">Basic equipment: Brew kettle, fermentation bucket, airlock, thermometer, hydrometer, bottles. Advanced equipment: Temperature-controlled fermentation chamber, counterflow chiller, conical fermenter, kegging system, pH meter. Professional equipment: Automated mash tun, brewhouse control system, bright beer tanks, centrifuge.</skos:example>
+        <skos:note xml:lang="en">Equipment quality and capability directly impact beer quality, consistency, and the range of styles that can be produced. Some beer styles require specific equipment (e.g., lagers need temperature control, certain ales benefit from conical fermenters for dry hopping).</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#FlavorProfile -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#FlavorProfile"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#FlavorProfile">
+        <rdfs:comment xml:lang="en">A flavor profile describes the characteristic tastes, aromas, and sensory attributes of an ingredient or finished beer. For ingredients, it indicates the contribution they make to the final beer. Flavor profiles help brewers select appropriate ingredients to achieve desired beer characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flavor Profile</rdfs:label>
+        <skos:definition xml:lang="en">A structured description of sensory characteristics including taste (bitter, sweet, sour, salty, umami), aroma compounds (fruity, floral, piney, spicy, earthy), mouthfeel, and overall flavor impression contributed by an ingredient or present in a finished beer.</skos:definition>
+        <skos:example xml:lang="en">Cascade hops: Citrus (grapefruit, orange), floral, slightly spicy aroma with moderate bitterness. Munich malt: Bread crust, toasty, slightly sweet malt flavor with amber color contribution. Saison yeast: Fruity esters (banana, pear), peppery phenols, dry finish.</skos:example>
+        <skos:note xml:lang="en">Flavor profiles are subjective and can vary based on usage levels, combination with other ingredients, and brewing techniques. Professional flavor profiling uses standardized vocabulary from systems like the Beer Flavor Wheel or Sensory Lexicon.</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#Ingredient -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Ingredient">
+        <rdfs:comment xml:lang="en">An ingredient is any substance added during the brewing process that contributes to the final beer&apos;s characteristics. The four essential ingredients are water, malt (or other fermentable grains), hops, and yeast, though many additional ingredients can be used for flavor, color, or functional purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ingredient</rdfs:label>
+        <skos:definition xml:lang="en">A component substance used in beer production that contributes to flavor, aroma, color, body, fermentable sugars, bitterness, preservation, or other characteristics of the finished beer. Ingredients include malted and unmalted grains, hops, yeast, water, and adjuncts.</skos:definition>
+        <skos:example xml:lang="en">Primary ingredients: Pale malt (base fermentables and flavor), Cascade hops (bitterness and aroma), ale yeast (fermentation and esters), water (solvent and mineral content). Adjuncts: Lactose (body and sweetness), coriander (spice flavor), orange peel (citrus aroma), oak chips (wood character).</skos:example>
+        <skos:note xml:lang="en">The German Reinheitsgebot (Beer Purity Law of 1516) traditionally limited beer ingredients to water, barley, and hops (yeast was not yet understood). Modern brewing uses a vast array of ingredients, though some traditional styles still adhere to these restrictions.</skos:note>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#Recipe -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Recipe">
+        <rdfs:comment xml:lang="en">A beer recipe describes the complete process and ingredients needed to produce a specific type of beer. It includes information about malts, hops, yeast, water chemistry, brewing steps, and expected characteristics of the final product.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recipe</rdfs:label>
+        <skos:definition xml:lang="en">A structured set of instructions and ingredients for brewing beer, including quantities, temperatures, timings, and expected beer characteristics such as ABV, IBU, and color.</skos:definition>
+        <skos:example xml:lang="en">Easy Pale Ale: A beginner-friendly recipe using pale ale malt, Cascade hops, producing a 4.8% ABV beer with 30 IBU.</skos:example>
+    </owl:Class>
     
 
 
     <!-- http://www.beerecipe.com/ontology#Yeast -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Yeast">
+        <rdfs:comment xml:lang="en">Yeast is a single-celled microorganism (fungus) essential for beer fermentation. Yeast converts fermentable sugars into alcohol and carbon dioxide, while producing flavor compounds (esters, phenols) that significantly influence the beer&apos;s character. Different yeast strains produce distinct flavor profiles and are categorized primarily into ale yeasts (Saccharomyces cerevisiae) and lager yeasts (Saccharomyces pastorianus).</rdfs:comment>
+        <rdfs:label xml:lang="en">Yeast</rdfs:label>
+        <skos:definition xml:lang="en">A living microorganism ingredient used to ferment wort into beer, converting sugars to alcohol and CO2, while contributing characteristic flavors, aromas, and determining fermentation characteristics such as temperature range, attenuation, and flocculation.</skos:definition>
+        <skos:example xml:lang="en">Ale yeast (S. cerevisiae): Ferments at 15-24°C, produces fruity esters, top-fermenting. Lager yeast (S. pastorianus): Ferments at 7-13°C, produces clean flavor profile, bottom-fermenting. Belgian yeast: Produces spicy phenols and fruity esters. Kveik: Norwegian farmhouse yeast, ferments at high temperatures (25-40°C).</skos:example>
+        <skos:note xml:lang="en">Yeast is often called the most important ingredient in brewing as it not only produces alcohol but dramatically influences the beer&apos;s flavor profile. Wild yeasts and bacteria (Brettanomyces, Lactobacillus, Pediococcus) are used in sour and wild beer production.</skos:note>
+    </owl:Class>
     
 
 
@@ -5834,6 +5908,15 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#US05_Yeast -->
+
+    <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#US05_Yeast">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <ontology:ingredientName>Safale US-05 Dry Ale Yeast</ontology:ingredientName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AmericanIPA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AmericanIPA">
@@ -5911,6 +5994,7 @@
         <ontology:hasHop rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CascadeHop"/>
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt"/>
         <ontology:hasStyle rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle"/>
+        <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#US05_Yeast"/>
         <ontology:difficultyLevel>beginner</ontology:difficultyLevel>
         <ontology:estimatedABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</ontology:estimatedABV>
         <ontology:estimatedIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:estimatedIBU>
@@ -5948,8 +6032,6 @@
         <ontology:estimatedIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</ontology:estimatedIBU>
     </owl:NamedIndividual>
     
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
