@@ -1357,7 +1357,7 @@
     <!-- http://purl.obolibrary.org/obo/FOODON_00001178 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001178">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient"/>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/foodon/releases/2025-08-01/foodon.owl</obo:IAO_0000412>
         <rdfs:label xml:lang="en">honey food product</rdfs:label>
@@ -1379,7 +1379,7 @@
     <!-- http://purl.obolibrary.org/obo/FOODON_03301475 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301475">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/foodon/releases/2025-08-01/foodon.owl</obo:IAO_0000412>
@@ -1399,7 +1399,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3486">
         <owl:equivalentClass rdf:resource="https://rdf.ag/o/hops#Hops"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
     </owl:Class>
     
@@ -1620,7 +1620,7 @@
     <!-- http://www.beerecipe.com/ontology#Yeast -->
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#Yeast">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:comment xml:lang="en">Yeast is a single-celled microorganism (fungus) essential for beer fermentation. Yeast converts fermentable sugars into alcohol and carbon dioxide, while producing flavor compounds (esters, phenols) that significantly influence the beer&apos;s character. Different yeast strains produce distinct flavor profiles and are categorized primarily into ale yeasts (Saccharomyces cerevisiae) and lager yeasts (Saccharomyces pastorianus).</rdfs:comment>
         <rdfs:label xml:lang="en">Yeast</rdfs:label>
         <skos:definition xml:lang="en">A living microorganism ingredient used to ferment wort into beer, converting sugars to alcohol and CO2, while contributing characteristic flavors, aromas, and determining fermentation characteristics such as temperature range, attenuation, and flocculation.</skos:definition>
@@ -1717,7 +1717,7 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
     </owl:Class>
     
 
@@ -1767,7 +1767,7 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
     </owl:Class>
     
 
@@ -2012,7 +2012,7 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RiceWheat -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RiceWheat">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
     </owl:Class>
     
@@ -3544,7 +3544,7 @@
     <!-- https://rdf.ag/o/cerealstoo#ADU -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#ADU">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#DUWH"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
@@ -3568,7 +3568,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CEHRW -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CEHRW">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#HardWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
@@ -3594,7 +3594,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CERS -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CERS">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SpringWheat"/>
@@ -3613,7 +3613,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CESRW -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CESRW">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SoftWheat"/>
@@ -3633,7 +3633,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CEWW -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CEWW">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SoftWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#WhiteWheat"/>
@@ -3653,7 +3653,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CNHR -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CNHR">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#HardWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
@@ -3673,7 +3673,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CPSR -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CPSR">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SpringWheat"/>
@@ -3692,7 +3692,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CPSW -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CPSW">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SpringWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#WhiteWheat"/>
@@ -3711,7 +3711,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CWES -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CWES">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#HardWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
@@ -3731,7 +3731,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CWHWS -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CWHWS">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#HardWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SpringWheat"/>
@@ -3751,7 +3751,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CWRS -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CWRS">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#HardWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
@@ -3771,7 +3771,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CWRW -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CWRW">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#HardWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#RedWheat"/>
@@ -3791,7 +3791,7 @@
     <!-- https://rdf.ag/o/cerealstoo#CWSWS -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CWSWS">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SoftWheat"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#SpringWheat"/>
@@ -3811,7 +3811,7 @@
     <!-- https://rdf.ag/o/cerealstoo#DU -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#DU">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#DUWH"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
@@ -3829,7 +3829,7 @@
     <!-- https://rdf.ag/o/cerealstoo#DUWH -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#DUWH">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
@@ -3846,7 +3846,7 @@
     <!-- https://rdf.ag/o/cerealstoo#HADU -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#HADU">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#DUWH"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
@@ -3864,7 +3864,7 @@
     <!-- https://rdf.ag/o/cerealstoo#HardWheat -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#HardWheat">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
@@ -3881,7 +3881,7 @@
     <!-- https://rdf.ag/o/cerealstoo#RedWheat -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#RedWheat">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
@@ -3897,7 +3897,7 @@
     <!-- https://rdf.ag/o/cerealstoo#SoftWheat -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#SoftWheat">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
@@ -3914,7 +3914,7 @@
     <!-- https://rdf.ag/o/cerealstoo#SpringWheat -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#SpringWheat">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
@@ -3930,7 +3930,7 @@
     <!-- https://rdf.ag/o/cerealstoo#WhiteWheat -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#WhiteWheat">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
@@ -3946,7 +3946,7 @@
     <!-- https://rdf.ag/o/cerealstoo#WinterWheat -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#WinterWheat">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
@@ -3963,7 +3963,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#CTZ">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsColumbus"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsTomahawk"/>
@@ -3982,7 +3982,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#Hops">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
         <rdfs:label xml:lang="fr">Houblon</rdfs:label>
@@ -3998,7 +3998,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsAdmiral">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4019,7 +4018,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsAhtanum">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4040,7 +4038,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsAmarillo">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4061,7 +4058,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsApollo">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4082,7 +4079,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsAquila">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:comment xml:lang="en">As of 1996, this hop cultivar is no longer being sold commercially due to its high cohumulone content.</rdfs:comment>
@@ -4103,7 +4100,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsAramis">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4124,7 +4121,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsBanner">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:comment xml:lang="en">Due to severe mildew problems, this hop has been abandoned from further research.</rdfs:comment>
         <rdfs:comment xml:lang="fr">En raison de graves problèmes de moisissure, ce houblon a été abandonné des recherches ultérieures.</rdfs:comment>
@@ -4144,7 +4141,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsBelma">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4165,7 +4162,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsBobek">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4188,7 +4185,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsBramlingCross">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4209,7 +4206,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsBravo">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:label xml:lang="en">Bravo</rdfs:label>
         <skos:definition xml:lang="fr">Bravo a été développé par Hopsteiner au Golden Gate Roza Hop Ranches à Prosser, Washington, États-Unis, breveté et publié en 2006 pour son profil alpha élevé.</skos:definition>
@@ -4228,7 +4225,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsBrewersGold">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4249,7 +4246,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsBullion">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4270,7 +4267,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCalypso">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4291,7 +4288,7 @@
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCanterburyGolding">
         <owl:equivalentClass rdf:resource="https://rdf.ag/o/hops#HopsEastKentGolding"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsEastKentGolding"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsGolding"/>
@@ -4309,7 +4306,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCascade">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4332,7 +4329,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCascadeUS">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCascade"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -4355,7 +4352,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCashmere">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4381,7 +4378,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCeleia">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4402,7 +4399,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCentennial">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4430,7 +4427,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsChallenger">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4452,7 +4449,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsChinook">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4478,7 +4475,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCitra">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4499,7 +4496,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4520,7 +4517,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster_AUS">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -4543,7 +4540,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster_California">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -4564,7 +4561,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster_EarlyCluster">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -4584,7 +4581,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster_Gargoyle">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster_California"/>
@@ -4605,7 +4602,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster_Ivanhoe">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster_California"/>
@@ -4627,7 +4624,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster_L16">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster_Yakima"/>
@@ -4649,7 +4646,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCluster_Yakima">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -4670,7 +4667,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsColumbia">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4692,7 +4689,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsColumbus">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4711,7 +4708,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsComet">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4733,7 +4730,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsCrystal">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4755,7 +4752,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsDana">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4778,7 +4775,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsDelta">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4800,7 +4797,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsEastKentGolding">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCanterburyGolding"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsGolding"/>
@@ -4830,7 +4827,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsEastwellGolding">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsGolding"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -4850,7 +4847,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsEkuanot">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4873,7 +4870,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsElDorado">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4898,7 +4895,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsEroica">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4920,7 +4917,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsEroica_vf">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsEroica"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -4942,7 +4939,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsFalconersFlight">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCascade"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCentennial"/>
@@ -4968,7 +4965,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsFirstGold">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -4989,7 +4986,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsFuggle">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5006,7 +5003,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsFuggle_H">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsFuggle"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsFuggle_US"/>
@@ -5027,7 +5024,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsFuggle_Tetraploid">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsFuggle"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsFuggle_US"/>
@@ -5048,7 +5045,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsFuggle_UK">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsFuggle"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5070,7 +5067,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsFuggle_US">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsFuggle"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5087,7 +5084,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGalaxy">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5108,7 +5105,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGalena">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5130,7 +5127,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGalenaVF">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsGalena"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5148,7 +5145,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGlacier">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5167,7 +5164,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGolding">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5183,7 +5180,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGoldingBC">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCanterburyGolding"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsEastKentGolding"/>
@@ -5203,7 +5200,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGoldingNZ">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCanterburyGolding"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsEastKentGolding"/>
@@ -5224,7 +5221,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGoldingUS">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCanterburyGolding"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsEastKentGolding"/>
@@ -5256,7 +5253,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsGreenBullet">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5277,7 +5274,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHallertau">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:comment xml:lang="fr">La raison de deux numéros d&apos;accession USDA semble être deux échantillons différents du même houblon - Hallertau/Hallertau Mittelfrüher, provenant de deux régions différentes.</rdfs:comment>
@@ -5302,7 +5299,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHallertau_Blanc">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCascade"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5324,7 +5321,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHallertau_Gold">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5345,7 +5342,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHallertau_Merkur">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5368,7 +5365,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHallertau_NZ">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5392,7 +5389,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHallertau_Tradition">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5415,7 +5412,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHallertau_US">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5438,7 +5435,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHelga">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5459,7 +5456,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHerkules">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsTaurus"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5481,7 +5478,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHersbrucker">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5507,7 +5504,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHersbrucker_E">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5527,7 +5524,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHersbrucker_Pure">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5546,7 +5543,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHersbrucker_Red-Stem">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5565,7 +5562,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHorizon">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5587,7 +5584,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsHuellMelon">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5609,7 +5606,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsJarrylo">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5631,7 +5628,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsJester">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5652,7 +5649,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsLiberty">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5676,7 +5673,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMagnum">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -5699,7 +5696,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMagnumUS">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsMagnum"/>
@@ -5723,7 +5720,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMandarinaBavaria">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5744,7 +5741,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMeridian">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5765,7 +5762,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMillennium">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5786,7 +5783,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMosaic">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5809,7 +5806,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMotueka">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5832,7 +5829,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMountHood">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5855,7 +5852,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsMountRainier">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5875,7 +5872,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsNelsonSauvin">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5896,7 +5893,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsNewport">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5923,7 +5920,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsNorthdown">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5945,7 +5942,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsNorthernBrewer">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5966,7 +5963,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsNorthernBrewer_US">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5985,7 +5982,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsNugget">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6011,7 +6008,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsOlympic">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6033,7 +6030,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPacificGem">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6054,7 +6051,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPacificJade">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:comment xml:lang="en">Pacific Jade was trademarked, however it now has a status of Status: 602 - Abandoned-Failure To Respond Or Late Response according to Justia Trademarks.</rdfs:comment>
@@ -6078,7 +6075,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPacifica">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsHallertau"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6103,7 +6100,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPerle">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6124,7 +6121,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPerle_US">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6145,7 +6142,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPethamGolding">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsGolding"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6165,7 +6162,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPioneer">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6186,7 +6183,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPolaris">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6207,7 +6204,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsPrideofRingwood">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6228,7 +6225,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsProgress">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6249,7 +6246,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSaaz">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6271,7 +6268,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSaaz_US">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsSaaz"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6294,7 +6291,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSantiam">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6316,7 +6313,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSaphir">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6356,7 +6353,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSimcoe">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6377,7 +6374,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSorachiAce">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6400,7 +6397,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSpalter">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6422,7 +6419,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSpalterSelect">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6445,7 +6442,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsStrisselspalt">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6490,7 +6487,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSummer">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6511,7 +6508,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsSummit">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6532,7 +6529,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTarget">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6554,7 +6551,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTarget_VF">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsTarget"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6577,7 +6574,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTaurus">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6597,7 +6594,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTeamaker">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6622,7 +6619,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTettnanger">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6646,7 +6643,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTettnanger_A">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsTettnanger"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6666,7 +6663,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTettnanger_B">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsTettnanger"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6686,7 +6683,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTettnanger_CH">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6705,7 +6702,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTettnanger_US">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsTettnanger_CH"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6725,7 +6722,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTomahawk">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6744,7 +6741,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsTriplePearl">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6766,7 +6763,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsUltra">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6787,7 +6784,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsVanguard">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6808,7 +6805,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsWaiiti">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6829,7 +6826,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsWaimea">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6850,7 +6847,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsWakatu">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:comment xml:lang="fr">Ce houblon a le statut de marque 602 - Abandonné - Échec de réponse ou réponse tardive</rdfs:comment>
@@ -6873,7 +6870,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsWarrior">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6895,7 +6892,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsWhitbreadGolding">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsGolding"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -6916,7 +6913,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsWillamette">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6954,7 +6951,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsZeus">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6981,7 +6978,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#Rakau">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3486"/>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:comment xml:lang="fr">La marque déposée de Rakau a le statut 602 - Abandonné - Défaut de réponse ou réponse tardive.</rdfs:comment>
@@ -7004,7 +7000,6 @@
     <!-- https://rdf.ag/o/malt#AcidatedMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#AcidatedMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
@@ -7025,7 +7020,7 @@
     <!-- https://rdf.ag/o/malt#BarleyMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#BarleyMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
@@ -7040,7 +7035,7 @@
     <!-- https://rdf.ag/o/malt#CaramelMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#CaramelMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
@@ -7055,7 +7050,7 @@
     <!-- https://rdf.ag/o/malt#ChocolateMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#ChocolateMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#RoastedMalt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
@@ -7073,7 +7068,7 @@
     <!-- https://rdf.ag/o/malt#Malt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#Malt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
         <rdfs:label xml:lang="en">Malt</rdfs:label>
@@ -7104,7 +7099,7 @@
     <!-- https://rdf.ag/o/malt#MunichMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#MunichMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#BarleyMalt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#TwoRowBarleyMalt"/>
@@ -7122,7 +7117,7 @@
     <!-- https://rdf.ag/o/malt#PaleAleMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#PaleAleMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#BarleyMalt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#TwoRowBarleyMalt"/>
@@ -7163,7 +7158,7 @@
     <!-- https://rdf.ag/o/malt#PilsnerMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#PilsnerMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#BarleyMalt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#TwoRowBarleyMalt"/>
@@ -7180,7 +7175,7 @@
     <!-- https://rdf.ag/o/malt#RoastedMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#RoastedMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
@@ -7195,7 +7190,7 @@
     <!-- https://rdf.ag/o/malt#SixRowBarleyMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#SixRowBarleyMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#BarleyMalt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
@@ -7211,7 +7206,7 @@
     <!-- https://rdf.ag/o/malt#TwoRowBarleyMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#TwoRowBarleyMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#BarleyMalt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
@@ -7227,7 +7222,7 @@
     <!-- https://rdf.ag/o/malt#ViennaMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#ViennaMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#BarleyMalt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#TwoRowBarleyMalt"/>
@@ -7245,7 +7240,7 @@
     <!-- https://rdf.ag/o/malt#WheatMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#WheatMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
@@ -7260,7 +7255,7 @@
     <!-- https://rdf.ag/o/malt#marisOtterMalt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#marisOtterMalt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#BarleyMalt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#PaleAleMalt"/>
