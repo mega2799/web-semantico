@@ -152,6 +152,12 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#Cereal -->
+
+    <rdfs:Datatype rdf:about="http://www.beerecipe.com/ontology#Cereal"/>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#Hop -->
 
     <rdfs:Datatype rdf:about="http://www.beerecipe.com/ontology#Hop"/>
@@ -345,7 +351,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isProducedBy">
         <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#producesBeer"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Beer"/>
         <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
     </owl:ObjectProperty>
     
@@ -427,7 +432,6 @@
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#producesBeer">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Beer"/>
     </owl:ObjectProperty>
     
 
@@ -622,7 +626,6 @@
     <!-- http://www.beerecipe.com/ontology#glutenContent -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#glutenContent">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Cereal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Indicates if the cereal contains gluten</rdfs:comment>
         <rdfs:label>gluten content</rdfs:label>
@@ -817,6 +820,17 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#maxAttenuation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#maxAttenuation">
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Maximum expected attenuation as percentage (numeric value).</rdfs:comment>
+        <rdfs:label xml:lang="en">maxAttenuation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#maxIBU -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#maxIBU">
@@ -839,6 +853,17 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#minAttenuation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#minAttenuation">
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Minimum expected attenuation as percentage (numeric value, e.g. 68 or 0.68 depending on convention).</rdfs:comment>
+        <rdfs:label xml:lang="en">minAttenuation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#minIBU -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#minIBU">
@@ -846,6 +871,17 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Minimum IBU for this beer style</rdfs:comment>
         <rdfs:label>minimum IBU</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#optimalTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#optimalTemperature">
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Optimal fermentation temperature (degrees Celsius).</rdfs:comment>
+        <rdfs:label xml:lang="en">optimalTemperature</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1012,6 +1048,28 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#yeastDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#yeastDescription">
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Short description of yeast characteristics, flavors and typical uses.</rdfs:comment>
+        <rdfs:label xml:lang="en">yeastDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#yeastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#yeastName">
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Human-readable name of the yeast strain.</rdfs:comment>
+        <rdfs:label xml:lang="en">yeastName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1067,12 +1125,6 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Beer -->
-
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Beer"/>
-    
-
-
     <!-- http://www.beerecipe.com/ontology#BeerStyle -->
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#BeerStyle">
@@ -1095,6 +1147,70 @@
         <skos:note xml:lang="en">The order and precise execution of brewing steps is critical to achieving consistent, high-quality beer. Each step affects the final product&apos;s flavor, aroma, appearance, and stability.</skos:note>
     </owl:Class>
     
+
+<!-- MashStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#MashStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <rdfs:label>Mash Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Step where starches in the malt are converted into fermentable sugars.</rdfs:comment>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+            <owl:someValuesFrom>
+                <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:someValuesFrom>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<!-- MashOutStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#MashOutStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+    <rdfs:label>MashOut Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Step to stop enzymatic activity and raise mash temperature before lautering.</rdfs:comment>
+</owl:Class>
+
+<!-- SpargeStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#SpargeStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <rdfs:label>Sparge Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
+</owl:Class>
+
+<!-- BoilStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#BoilStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <rdfs:label>Boil Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Step where wort is boiled to sterilize and isomerize hop alpha acids.</rdfs:comment>
+</owl:Class>
+
+<!-- WhirlpoolStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#WhirlpoolStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <rdfs:label>Whirlpool Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Clarifies wort by separating hops and trub after boiling.</rdfs:comment>
+</owl:Class>
+
+<!-- CoolingStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#CoolingStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <rdfs:label>Cooling Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Step to cool wort to yeast pitching temperature.</rdfs:comment>
+</owl:Class>
+
+<!-- FermentationStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#FermentationStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <rdfs:label>Fermentation Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
+</owl:Class>
+
+<!-- ConditioningStep -->
+<owl:Class rdf:about="http://www.beerecipe.com/ontology#ConditioningStep">
+    <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <rdfs:label>Conditioning Step</rdfs:label>
+    <rdfs:comment xml:lang="en">Maturation phase where beer flavors develop, clarifies, and stabilizes.</rdfs:comment>
+</owl:Class>
 
 
     <!-- http://www.beerecipe.com/ontology#Country -->
@@ -1183,6 +1299,7 @@
     <!-- http://www.beerecipe.com/ontology#Yeast -->
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#Yeast">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:comment xml:lang="en">Yeast is a single-celled microorganism (fungus) essential for beer fermentation. Yeast converts fermentable sugars into alcohol and carbon dioxide, while producing flavor compounds (esters, phenols) that significantly influence the beer&apos;s character. Different yeast strains produce distinct flavor profiles and are categorized primarily into ale yeasts (Saccharomyces cerevisiae) and lager yeasts (Saccharomyces pastorianus).</rdfs:comment>
         <rdfs:label xml:lang="en">Yeast</rdfs:label>
         <skos:definition xml:lang="en">A living microorganism ingredient used to ferment wort into beer, converting sugars to alcohol and CO2, while contributing characteristic flavors, aromas, and determining fermentation characteristics such as temperature range, attenuation, and flocculation.</skos:definition>
@@ -1232,7 +1349,9 @@
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    </owl:Class>
     
 
 
@@ -1553,34 +1672,11 @@
     
 
 
-    <!-- https://rdf.ag/o/beer#AmericanBeer -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/beer#AmericanBeer"/>
-    
-
-
-    <!-- https://rdf.ag/o/beer#AmericanPaleAle -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/beer#AmericanPaleAle">
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#AmericanBeer"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#PaleAle"/>
-        <void:inDataset rdf:resource="https://rdf.ag/o/beer#datasetdefinition"/>
-        <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/beer-2024-02-21"/>
-        <rdfs:label xml:lang="en">APA</rdfs:label>
-        <rdfs:label xml:lang="en">American Pale Ale</rdfs:label>
-        <rdfs:label xml:lang="en">New World Pale Ale</rdfs:label>
-        <rdfs:label xml:lang="fr">Pale Ale Américaine</rdfs:label>
-        <rdfs:label xml:lang="en">Pale American Ale</rdfs:label>
-        <skos:definition xml:lang="en">American Pale Ale is based on the English Pale Ale style however rather than the woody aromas of English hops, American IPAs use American hops that are usually more citrus and piney. These ales are pale and typically of average strength and are moderately malty and bitter.</skos:definition>
-        <skos:definition xml:lang="fr">L&apos;American Pale Ale est basée sur le style English Pale Ale, mais plutôt que les arômes boisés du houblon anglais, les IPA américaines utilisent des houblons américains qui sont généralement plus d&apos;agrumes et de pin. Ces bières sont pâles et généralement de force moyenne et sont modérément maltées et amères.</skos:definition>
-        <foaf:name>American Pale Ale</foaf:name>
-    </owl:Class>
-    
-
-
     <!-- https://rdf.ag/o/beer#AmericanPorterandStout -->
 
-    <owl:Class rdf:about="https://rdf.ag/o/beer#AmericanPorterandStout"/>
+    <owl:Class rdf:about="https://rdf.ag/o/beer#AmericanPorterandStout">
+        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#Stout"/>
+    </owl:Class>
     
 
 
@@ -1588,7 +1684,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/beer#AmericanWildAle">
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#Ale"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#AmericanBeer"/>
+        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#PaleAle"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/beer#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/beer-2024-02-21"/>
         <rdfs:label xml:lang="fr">Ale Sauvage Américain</rdfs:label>
@@ -1723,7 +1819,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/beer#CreamAle">
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#Ale"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#AmericanBeer"/>
+        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#PaleAle"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/beer#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/beer-2024-02-21"/>
         <rdfs:label xml:lang="en">Cream Ale</rdfs:label>
@@ -2029,7 +2125,9 @@
 
     <!-- https://rdf.ag/o/beer#Lager -->
 
-    <owl:Class rdf:about="https://rdf.ag/o/beer#Lager"/>
+    <owl:Class rdf:about="https://rdf.ag/o/beer#Lager">
+        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#Beer"/>
+    </owl:Class>
     
 
 
@@ -2369,7 +2467,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/beer#StrongAmericanAle">
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#Ale"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#AmericanBeer"/>
+        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/beer#PaleAle"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/beer#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/beer-2024-02-21"/>
         <rdfs:label xml:lang="fr">Ale Américaine Forte</rdfs:label>
@@ -2530,19 +2628,9 @@
     
 
 
-    <!-- https://rdf.ag/o/cerealstoo#CEAD -->
+    <!-- https://rdf.ag/o/cerealstoo#CEBRW -->
 
-    <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CEAD">
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#Durum"/>
-        <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
-        <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
-        <rdfs:label xml:lang="fr">Blé Dur Ambré de l&apos;Est Canadien</rdfs:label>
-        <rdfs:label xml:lang="en">Canada Eastern Amber Durum</rdfs:label>
-        <skos:definition xml:lang="fr">CEAD a trois qualités de mouture et a des rendements élevés en semoule avec une excellente qualité pour les pâtes et le couscous.</skos:definition>
-        <skos:definition xml:lang="en">CEAD has three milling grades and has high yields in semolina with excellent quality for pasta and couscous.</skos:definition>
-        <prov:hadPrimarySource rdf:resource="https://rdf.ag/o/cerealstoo#CanadianGrainCommission2019Canadian-Wheat-Classes"/>
-        <foaf:name>CEAD</foaf:name>
-    </owl:Class>
+    <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CEBRW"/>
     
 
 
@@ -2561,6 +2649,12 @@
         <prov:hadPrimarySource rdf:resource="https://rdf.ag/o/cerealstoo#CanadianGrainCommission2019Canadian-Wheat-Classes"/>
         <foaf:name>CEHRW</foaf:name>
     </owl:Class>
+    
+
+
+    <!-- https://rdf.ag/o/cerealstoo#CEOAT -->
+
+    <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CEOAT"/>
     
 
 
@@ -2665,24 +2759,6 @@
         <skos:definition xml:lang="fr">Les CPSW sont des blés de printemps blancs avec deux grades de mouture et une pâte moyenne. Ils sont principalement utilisés pour les chapatis, les nouilles et les pains plats.</skos:definition>
         <prov:hadPrimarySource rdf:resource="https://rdf.ag/o/cerealstoo#CanadianGrainCommission2019Canadian-Wheat-Classes"/>
         <foaf:name>CPSW</foaf:name>
-    </owl:Class>
-    
-
-
-    <!-- https://rdf.ag/o/cerealstoo#CWAD -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#CWAD">
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#Durum"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/cerealstoo#HardWheat"/>
-        <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
-        <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/cerealstoo-2021-02-18"/>
-        <rdfs:label xml:lang="fr">Blé Dur Ambré de l&apos;Ouest Canadien</rdfs:label>
-        <rdfs:label xml:lang="en">Canada Western Amber Durum</rdfs:label>
-        <skos:definition xml:lang="en">CWAD wheats are durum wheats that have four milling grades and they have high yields of semolina with excellent pasta-making quality. They are primarily used for couscous, semolina and for pasta.</skos:definition>
-        <skos:definition xml:lang="fr">Les blés CWAD sont des blés durs qui ont quatre grades de mouture et ils ont des rendements élevés de semoule avec une excellente qualité de fabrication de pâtes. Ils sont principalement utilisés pour le couscous, la semoule et les pâtes.</skos:definition>
-        <prov:hadPrimarySource rdf:resource="https://rdf.ag/o/cerealstoo#CanadianGrainCommission2018"/>
-        <prov:hadPrimarySource rdf:resource="https://rdf.ag/o/cerealstoo#CanadianGrainCommission2019Canadian-Wheat-Classes"/>
-        <foaf:name>CWAD</foaf:name>
     </owl:Class>
     
 
@@ -2809,12 +2885,6 @@
     
 
 
-    <!-- https://rdf.ag/o/cerealstoo#Durum -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#Durum"/>
-    
-
-
     <!-- https://rdf.ag/o/cerealstoo#HADU -->
 
     <owl:Class rdf:about="https://rdf.ag/o/cerealstoo#HADU">
@@ -2927,7 +2997,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#CTZ">
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsColumbus"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsProducts"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsTomahawk"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsZeus"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
@@ -2943,7 +3012,7 @@
     <!-- https://rdf.ag/o/hops#Hops -->
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#Hops">
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Humulus"/>
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
         <rdfs:label xml:lang="fr">Houblon</rdfs:label>
@@ -3806,7 +3875,6 @@
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCluster"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsColumbus"/>
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsCrystal"/>
-        <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#HopsProducts"/>
         <rdfs:label xml:lang="en">Falconer&apos;s Flight®</rdfs:label>
         <skos:definition xml:lang="fr">Falconer&apos;s Flight® est le mélange exclusif de Hopunion LLC des houblons &quot;7 C&quot; du nord-ouest du Pacifique, ainsi que quelques autres variétés expérimentales qui ont également été développées par Hopunion. Les houblons &quot;7 C&quot; sont: Cascade, Centennial, Chinook, Citra®, Cluster, Columbus et Crystal.</skos:definition>
         <skos:definition xml:lang="en">Falconer&apos;s Flight® is Hopunion LLC&apos;s proprietary blend of &apos;the 7C&apos; hops of the Pacific Northwest, along with a few other experimental varieties that were also developed by Hopunion. The &apos;7 C&apos; hops are: Cascade, Centennial, Chinook, Citra®, Cluster, Columbus and Crystal.</skos:definition>
@@ -4935,12 +5003,6 @@
     
 
 
-    <!-- https://rdf.ag/o/hops#HopsProducts -->
-
-    <owl:Class rdf:about="https://rdf.ag/o/hops#HopsProducts"/>
-    
-
-
     <!-- https://rdf.ag/o/hops#HopsProgress -->
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsProgress">
@@ -5712,6 +5774,7 @@
     <!-- https://rdf.ag/o/malt#Malt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#Malt">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
         <rdfs:label xml:lang="en">Malt</rdfs:label>
@@ -5911,8 +5974,25 @@
     <!-- http://www.beerecipe.com/ontology#US05_Yeast -->
 
     <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#US05_Yeast">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
         <ontology:ingredientName>Safale US-05 Dry Ale Yeast</ontology:ingredientName>
+        <ontology:maxAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.82</ontology:maxAttenuation>
+        <ontology:minAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.78</ontology:minAttenuation>
+        <ontology:optimalTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</ontology:optimalTemperature>
+        <ontology:yeastDescription>Neutral, well-balanced American ale yeast producing clean and crisp profiles; suitable for a wide range of ales including American Pale Ale, IPA and stouts.</ontology:yeastDescription>
+        <ontology:yeastName>SafAle US-05</ontology:yeastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#WLP007_Yeast -->
+
+    <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#WLP007_Yeast">
+        <ontology:ingredientName>WLP007 Dry English Ale</ontology:ingredientName>
+        <ontology:maxAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</ontology:maxAttenuation>
+        <ontology:minAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</ontology:minAttenuation>
+        <ontology:optimalTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:optimalTemperature>
+        <ontology:yeastDescription>Highly attenuative English ale yeast producing dry, clean finishes. Suitable for stouts and strong ales.</ontology:yeastDescription>
+        <ontology:yeastName>WLP007 Dry English Ale</ontology:yeastName>
     </owl:NamedIndividual>
     
 
@@ -5938,6 +6018,7 @@
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
         <ontology:stepName>Boil</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
     </owl:NamedIndividual>
     
 
@@ -5951,7 +6032,86 @@
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
         <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66.0</ontology:stepTemperature>
     </owl:NamedIndividual>
-    
+    <!-- Mash -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardMash45min">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+    <ontology:stepName>Mash</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Conversion of starches in the malt to fermentable sugars via enzymatic activity.</rdfs:comment>
+</owl:NamedIndividual>
+
+<!-- MashOut -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+    <ontology:stepName>MashOut</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging.</rdfs:comment>
+</owl:NamedIndividual>
+
+<!-- Sparge -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sparge20min">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+    <ontology:stepName>Sparge</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">76.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
+</owl:NamedIndividual>
+
+<!-- Boil -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Boil60min">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
+    <ontology:stepName>Boil</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds.</rdfs:comment>
+</owl:NamedIndividual>
+
+<!-- Whirlpool -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Whirlpool15min">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+    <ontology:stepName>Whirlpool</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling.</rdfs:comment>
+</owl:NamedIndividual>
+
+<!-- Cooling -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CoolingToPitchTemp">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+    <ontology:stepName>Cooling</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Rapidly cools the wort to the optimal fermentation temperature for pitching yeast.</rdfs:comment>
+</owl:NamedIndividual>
+
+<!-- Fermentation -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+    <ontology:stepName>Fermentation</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">168</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
+</owl:NamedIndividual>
+
+<!-- Conditioning -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Conditioning14days">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+    <ontology:stepName>Conditioning</ontology:stepName>
+    <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">336</ontology:stepDuration>
+    <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:stepTemperature>
+    <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
+    <rdfs:comment xml:lang="en">Maturation phase where flavors develop, beer clarifies and stabilizes.</rdfs:comment>
+</owl:NamedIndividual>
+
 
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat -->
@@ -5985,6 +6145,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChocolateMalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChocolateMalt">
+        <ontology:maltName>Chocolate Malt</ontology:maltName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe">
@@ -5995,10 +6163,91 @@
         <ontology:hasIngredient rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt"/>
         <ontology:hasStyle rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle"/>
         <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#US05_Yeast"/>
+        <ontology:author>Unknown</ontology:author>
+        <ontology:batchSize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:batchSize>
+        <ontology:boilingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:boilingTime>
+        <ontology:conditioningDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</ontology:conditioningDuration>
         <ontology:difficultyLevel>beginner</ontology:difficultyLevel>
         <ontology:estimatedABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</ontology:estimatedABV>
+        <ontology:estimatedEBC rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:estimatedEBC>
         <ontology:estimatedIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:estimatedIBU>
+        <ontology:fermentationDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontology:fermentationDuration>
+        <ontology:finalGravity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.01</ontology:finalGravity>
+        <ontology:mashingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:mashingTime>
+        <ontology:originalGravity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.048</ontology:originalGravity>
+        <ontology:recipeDescription>Fresh and balanced American Pale Ale with Cascade hops.</ontology:recipeDescription>
         <ontology:recipeName>Easy Pale Ale</ontology:recipeName>
+        <ontology:servingTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ontology:servingTemperature>
+        <ontology:totalBrewingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</ontology:totalBrewingTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FlakedOats -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FlakedOats">
+        <rdf:type rdf:resource="https://rdf.ag/o/cerealstoo#CEOAT"/>
+        <ontology:cerealName>Flaked Oats</ontology:cerealName>
+        <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:glutenContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <ontology:hasCereal rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FlakedOats"/>
+        <ontology:hasCereal rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter"/>
+        <ontology:hasCereal rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RoastedBarley"/>
+        <ontology:hasHop rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop"/>
+        <ontology:hasMalt rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChocolateMalt"/>
+        <ontology:hasStyle rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RussianImperialStout"/>
+        <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#WLP007_Yeast"/>
+        <ontology:author>Brewing Ben (Brewer&apos;s Friend)</ontology:author>
+        <ontology:batchSize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ontology:batchSize>
+        <ontology:boilingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</ontology:boilingTime>
+        <ontology:conditioningDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:conditioningDuration>
+        <ontology:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</ontology:creationDate>
+        <ontology:difficultyLevel>advanced</ontology:difficultyLevel>
+        <ontology:estimatedABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.82</ontology:estimatedABV>
+        <ontology:estimatedEBC rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</ontology:estimatedEBC>
+        <ontology:estimatedIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</ontology:estimatedIBU>
+        <ontology:fermentationDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</ontology:fermentationDuration>
+        <ontology:finalGravity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.027</ontology:finalGravity>
+        <ontology:isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:isGlutenFree>
+        <ontology:isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:isVegan>
+        <ontology:mashingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:mashingTime>
+        <ontology:originalGravity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.109</ontology:originalGravity>
+        <ontology:recipeDescription>Russian Imperial Stout — ricetta all-grain ad alta gravità con maris otter, roasted barley, chocolate malts e flaked oats. Versione ricetta pubblicata su Brewer&apos;s Friend.</ontology:recipeDescription>
+        <ontology:recipeName>GAS RIS (Russian Imperial Stout)</ontology:recipeName>
+        <ontology:servingTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:servingTemperature>
+        <ontology:totalBrewingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ontology:totalBrewingTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop">
+        <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
+        <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.5</ontology:alphaAcidPercentage>
+        <ontology:hopName>Magnum</ontology:hopName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtterMalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtterMalt">
+        <ontology:ebcColor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:ebcColor>
+        <ontology:maltName>Maris Otter Malt</ontology:maltName>
     </owl:NamedIndividual>
     
 
@@ -6015,9 +6264,32 @@
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt">
-        <rdf:type rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <ontology:ebcColor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:ebcColor>
         <ontology:maltName>Pale Ale Malt</ontology:maltName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RoastedBarley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RoastedBarley">
+        <rdf:type rdf:resource="https://rdf.ag/o/cerealstoo#CEBRW"/>
+        <ontology:cerealName>Roasted Barley</ontology:cerealName>
+        <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:glutenContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RussianImperialStout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RussianImperialStout">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <ontology:maxABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:maxABV>
+        <ontology:maxIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</ontology:maxIBU>
+        <ontology:minABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ontology:minABV>
+        <ontology:minIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:minIBU>
+        <ontology:styleDescription>Rich, intense, full-bodied stout with strong roasted and dark fruit notes.</ontology:styleDescription>
+        <ontology:styleName>Russian Imperial Stout</ontology:styleName>
     </owl:NamedIndividual>
     
 
@@ -6032,6 +6304,8 @@
         <ontology:estimatedIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</ontology:estimatedIBU>
     </owl:NamedIndividual>
     
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
