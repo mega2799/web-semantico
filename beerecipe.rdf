@@ -53,6 +53,12 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#ebc -->
+
+    <owl:AnnotationProperty rdf:about="http://www.beerecipe.com/ontology#ebc"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
@@ -1379,6 +1385,7 @@
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#Yeast">
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:comment xml:lang="en">Yeast is a single-celled microorganism (fungus) essential for beer fermentation. Yeast converts fermentable sugars into alcohol and carbon dioxide, while producing flavor compounds (esters, phenols) that significantly influence the beer&apos;s character. Different yeast strains produce distinct flavor profiles and are categorized primarily into ale yeasts (Saccharomyces cerevisiae) and lager yeasts (Saccharomyces pastorianus).</rdfs:comment>
         <rdfs:label xml:lang="en">Yeast</rdfs:label>
         <skos:definition xml:lang="en">A living microorganism ingredient used to ferment wort into beer, converting sugars to alcohol and CO2, while contributing characteristic flavors, aromas, and determining fermentation characteristics such as temperature range, attenuation, and flocculation.</skos:definition>
@@ -1430,6 +1437,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal">
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
     </owl:Class>
     
 
@@ -1481,6 +1489,32 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPARecipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPARecipe">
+        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasHop"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://rdf.ag/o/hops#Hops"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1557,6 +1591,12 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt"/>
     
 
 
@@ -3100,6 +3140,7 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#Hops">
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
         <rdfs:label xml:lang="fr">Houblon</rdfs:label>
@@ -6071,6 +6112,16 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#WLP001_Yeast -->
+
+    <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#WLP001_Yeast">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <rdfs:comment>Clean, versatile ale yeast. Perfect for American IPAs</rdfs:comment>
+        <rdfs:label>WLP001 California Ale Yeast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#WLP007_Yeast -->
 
     <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#WLP007_Yeast">
@@ -6080,6 +6131,18 @@
         <ontology:optimalTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:optimalTemperature>
         <ontology:yeastDescription>Highly attenuative English ale yeast producing dry, clean finishes. Suitable for stouts and strong ales.</ontology:yeastDescription>
         <ontology:yeastName>WLP007 Dry English Ale</ontology:yeastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+        <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ontology:alphaAcidPercentage>
+        <ontology:hopName>Ahtanum</ontology:hopName>
+        <rdfs:comment>American hop with floral, citrus and piney notes. Used for aroma</rdfs:comment>
+        <rdfs:label>Ahtanum</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6141,12 +6204,61 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <ontology:hasHop rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop"/>
+        <ontology:hasHop rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop"/>
+        <ontology:hasHop rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop"/>
+        <ontology:hasHop rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop"/>
+        <ontology:hasMalt rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt"/>
+        <ontology:hasMalt rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt"/>
+        <ontology:hasStyle rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA"/>
+        <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#WLP001_Yeast"/>
+        <ontology:producesBeer rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer"/>
+        <untitled-ontology-4:hasWater rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"/>
+        <ontology:author>BrewDog</ontology:author>
+        <ontology:batchSize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:batchSize>
+        <ontology:boilingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:boilingTime>
+        <ontology:conditioningDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</ontology:conditioningDuration>
+        <ontology:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-04-15</ontology:creationDate>
+        <ontology:difficultyLevel>intermediate</ontology:difficultyLevel>
+        <ontology:estimatedABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.6</ontology:estimatedABV>
+        <ontology:estimatedEBC rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</ontology:estimatedEBC>
+        <ontology:estimatedIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</ontology:estimatedIBU>
+        <ontology:fermentationDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontology:fermentationDuration>
+        <ontology:finalGravity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.012</ontology:finalGravity>
+        <ontology:isGlutenFree rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:isGlutenFree>
+        <ontology:isVegan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:isVegan>
+        <ontology:mashingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</ontology:mashingTime>
+        <ontology:originalGravity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.054</ontology:originalGravity>
+        <ontology:recipeDescription>Post Modern Classic. Layered with new world hops to create an explosion of tropical fruit and an all-out riot of grapefruit, pineapple and lychee before a spiky bitter finish. This is the beer that started it all - and it&apos;s not done yet.</ontology:recipeDescription>
+        <ontology:recipeName>BrewDog Punk IPA</ontology:recipeName>
+        <ontology:servingTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</ontology:servingTemperature>
+        <ontology:totalBrewingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ontology:totalBrewingTime>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat">
         <rdf:type rdf:resource="https://rdf.ag/o/cerealstoo#CEHRW"/>
         <ontology:cerealName>Canada winter wheat</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:glutenContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt"/>
+        <ontology:maltName>Caramalt</ontology:maltName>
+        <ontology:ebc rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:ebc>
+        <rdfs:comment>Crystal malt for body, sweetness and golden color</rdfs:comment>
+        <rdfs:label>Caramalt</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6168,6 +6280,18 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RiceWheat"/>
         <ontology:cerealName>Rice Wheat</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:glutenContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+        <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
+        <ontology:hopName>Chinook</ontology:hopName>
+        <rdfs:comment>American hop variety with piney, spicy character. High alpha acids for bittering</rdfs:comment>
+        <rdfs:label>Chinook</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6373,6 +6497,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Malt"/>
+        <ontology:maltName>Extra Pale Malt</ontology:maltName>
+        <ontology:ebc rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</ontology:ebc>
+        <rdfs:comment>Base malt for pale ales and IPAs, provides fermentable sugars</rdfs:comment>
+        <rdfs:label>Extra Pale Malt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days">
@@ -6434,6 +6570,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA"/>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop">
@@ -6479,6 +6621,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+        <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:alphaAcidPercentage>
+        <ontology:hopName>Nelson Sauvin</ontology:hopName>
+        <rdfs:comment>New Zealand hop with distinctive white wine, gooseberry character. Signature BrewDog hop</rdfs:comment>
+        <rdfs:label>Nelson Sauvin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle">
@@ -6493,6 +6647,133 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt">
         <ontology:ebcColor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:ebcColor>
         <ontology:maltName>Pale Ale Malt</ontology:maltName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Boil60min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Boil60min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
+        <ontology:stepName>Boil</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">60 minute boil with hop additions at 60min (bittering), 15min and flameout (aroma)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Conditioning14days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Conditioning14days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20160</ontology:stepDuration>
+        <ontology:stepName>Conditioning</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Cold conditioning for clarity and carbonation</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Cooling30min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Cooling30min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:stepDuration>
+        <ontology:stepName>Cooling</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rapidly cool wort to yeast pitching temperature</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Fermentation10days -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Fermentation10days">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14400</ontology:stepDuration>
+        <ontology:stepName>Fermentation</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Primary fermentation with dry hop addition on day 4</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Mash65min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Mash65min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</ontology:stepDuration>
+        <ontology:stepName>Mash</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Single infusion mash to convert starches to fermentable sugars</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_MashOut10min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_MashOut10min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashOutStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
+        <ontology:stepName>MashOut</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Stop enzymatic activity and prepare for lautering</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Sparge15min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Sparge15min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
+        <ontology:stepName>Sparge</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Rinse grains to extract remaining sugars</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Whirlpool20min -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Whirlpool20min">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"/>
+        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
+        <ontology:stepName>Whirlpool</ontology:stepName>
+        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:stepOrder>
+        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80.0</ontology:stepTemperature>
+        <rdfs:comment xml:lang="en">Whirlpool at 80°C with hop additions for enhanced aroma</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -6649,6 +6930,18 @@
         <ontology:minIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:minIBU>
         <ontology:styleDescription>Rich, intense, full-bodied stout with strong roasted and dark fruit notes.</ontology:styleDescription>
         <ontology:styleName>Russian Imperial Stout</ontology:styleName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hops"/>
+        <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
+        <ontology:hopName>Simcoe</ontology:hopName>
+        <rdfs:comment>American hop with passion fruit, pine and earthy character</rdfs:comment>
+        <rdfs:label>Simcoe</rdfs:label>
     </owl:NamedIndividual>
     
 
