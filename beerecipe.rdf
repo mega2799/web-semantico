@@ -218,6 +218,21 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#hasBeerStyle -->
+
+    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasBeerStyle">
+        <rdfs:domain rdf:resource="https://rdf.ag/o/beer#Beer"/>
+        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isProducedBy"/>
+            <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasStyle"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Style of the beer, inferred from the recipe that produces it</rdfs:comment>
+        <rdfs:label>has beer style</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#hasBrewingStep -->
 
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasBrewingStep">
@@ -318,17 +333,6 @@
         <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
     </owl:ObjectProperty>
     
-
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasBeerStyle">
-    <rdfs:domain rdf:resource="https://rdf.ag/o/beer#Beer"/>
-    <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
-    <rdfs:label>has beer style</rdfs:label>
-    <rdfs:comment>Style of the beer, inferred from the recipe that produces it</rdfs:comment>
-    <owl:propertyChainAxiom rdf:parseType="Collection">
-        <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isProducedBy"/>
-        <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasStyle"/>
-    </owl:propertyChainAxiom>
-</owl:ObjectProperty>
 
 
     <!-- http://www.beerecipe.com/ontology#hasYeast -->
