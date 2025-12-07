@@ -242,6 +242,7 @@
     <!-- http://www.beerecipe.com/ontology#hasDifficultyLevel -->
 
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasDifficultyLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
         <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#DifficultyLevel"/>
         <rdfs:comment>Connects a recipe to its difficulty level classification</rdfs:comment>
@@ -254,6 +255,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasFlavorProfile">
         <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isFlavorOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#FlavorProfile"/>
         <rdfs:comment>Connects an ingredient to its flavor profile (citrus, pine, floral, etc.)</rdfs:comment>
@@ -298,6 +300,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasOriginCountry">
         <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isOriginOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
         <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Country"/>
         <rdfs:comment>Connects an ingredient to its country of origin</rdfs:comment>
@@ -477,6 +480,7 @@
     <!-- http://www.beerecipe.com/ontology#requiresEquipment -->
 
     <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#requiresEquipment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
         <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
         <rdfs:comment>Connects a recipe to the equipment required</rdfs:comment>
@@ -491,6 +495,17 @@
         <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
         <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#mustPrecede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#mustPrecede">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
     </owl:ObjectProperty>
     
 
@@ -6338,6 +6353,7 @@
         <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
         <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
         <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
+        <untitled-ontology-4:mustPrecede rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_MashOut10min"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
         <ontology:stepName>Boil</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
