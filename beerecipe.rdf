@@ -6088,6 +6088,9 @@
         <ontology:optimalTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</ontology:optimalTemperature>
         <ontology:yeastDescription>Neutral, well-balanced American ale yeast producing clean and crisp profiles; suitable for a wide range of ales including American Pale Ale, IPA and stouts.</ontology:yeastDescription>
         <ontology:yeastName>SafAle US-05</ontology:yeastName>
+            <rdfs:comment>Clean, neutral American ale yeast producing crisp profiles with medium attenuation, ideal for hop-forward beers.</rdfs:comment>
+    <rdfs:label>Safale US-05</rdfs:label>
+
     </owl:NamedIndividual>
     
 
@@ -6202,7 +6205,11 @@
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Bran_russinaImperialStout -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Bran_russinaImperialStout"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Bran_russinaImperialStout">
+        <rdf:type rdf:resource="https://rdf.ag/o/beer#Beer"/>
+    <rdfs:comment>Full-bodied Russian Imperial Stout with intense roasted malt character, 10.82% ABV and 64 IBU.</rdfs:comment>
+    <rdfs:label>Russian Imperial Stout</rdfs:label>
+</owl:NamedIndividual>
     
 
 
@@ -6289,6 +6296,9 @@
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</ontology:alphaAcidPercentage>
         <ontology:hopName>Cascade</ontology:hopName>
+            <rdfs:comment>Classic American aroma hop with floral and citrus (grapefruit) character, signature hop of American Pale Ales.</rdfs:comment>
+    <rdfs:label>Cascade</rdfs:label>
+
     </owl:NamedIndividual>
     
 
@@ -6611,9 +6621,11 @@
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA"/>
-    
-
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA">
+    <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <rdfs:comment>India Pale Ale: hop-forward beer style with pronounced bitterness and citrus/tropical fruit aromas, typically 5.5-7.5% ABV.</rdfs:comment>
+    <rdfs:label>IPA</rdfs:label>
+</owl:NamedIndividual>
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop -->
 
@@ -6621,13 +6633,20 @@
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.5</ontology:alphaAcidPercentage>
         <ontology:hopName>Magnum</ontology:hopName>
+            <rdfs:comment>German high-alpha bittering hop with clean, neutral bitterness and mild hop aroma, excellent for high-gravity beers.</rdfs:comment>
+    <rdfs:label>Magnum</rdfs:label>
+
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"/>
+    <rdfs:comment>Premium British two-row spring barley variety prized for its rich, malty flavor and excellent extract efficiency.</rdfs:comment>
+    <rdfs:label>Maris Otter</rdfs:label>
+</owl:NamedIndividual>
     
 
 
@@ -6713,7 +6732,11 @@
 
     <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer">
+        <rdf:type rdf:resource="https://rdf.ag/o/beer#Beer"/>
+    <rdfs:comment>BrewDog's flagship craft beer: post-modern pale ale with tropical fruit character, 5.6% ABV and 40 IBU.</rdfs:comment>
+    <rdfs:label>Punk IPA</rdfs:label>
+</owl:NamedIndividual>
     
 
 
@@ -7099,6 +7122,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water">
         <rdf:type rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"/>
+            <rdfs:comment>Brewing water - the primary ingredient in beer, comprising 90-95% of the final product. Water chemistry significantly affects beer flavor.</rdfs:comment>
+    <rdfs:label>Water</rdfs:label>
+
     </owl:NamedIndividual>
     
 
