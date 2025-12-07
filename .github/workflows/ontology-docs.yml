@@ -36,7 +36,6 @@ jobs:
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  #   github_token: ${{ secrets.GITHUB_TOKEN }}
+                  key: ${{ github.sha }}
                   publish_dir: ./docs
-                  cname: your-domain.com # Optional: se hai un dominio custom
-
