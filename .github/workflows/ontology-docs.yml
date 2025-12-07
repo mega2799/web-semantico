@@ -24,7 +24,10 @@ jobs:
             - name: Download WIDOCO
               run: |
                   wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
+<<<<<<< HEAD
 
+=======
+>>>>>>> 095b23d (Fix WIDOCO download URL in ontology-docs.yml)
             - name: Generate documentation
               run: |
                   ls -lah; java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
@@ -40,3 +43,4 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./docs
                   cname: your-domain.com # Optional: se hai un dominio custom
+
