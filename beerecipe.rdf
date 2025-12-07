@@ -319,6 +319,17 @@
     </owl:ObjectProperty>
     
 
+    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasBeerStyle">
+    <rdfs:domain rdf:resource="https://rdf.ag/o/beer#Beer"/>
+    <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <rdfs:label>has beer style</rdfs:label>
+    <rdfs:comment>Style of the beer, inferred from the recipe that produces it</rdfs:comment>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isProducedBy"/>
+        <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasStyle"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+
 
     <!-- http://www.beerecipe.com/ontology#hasYeast -->
 
@@ -495,17 +506,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
         <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#mustPrecede -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#mustPrecede">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
     </owl:ObjectProperty>
     
 
@@ -6353,7 +6353,6 @@
         <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
         <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
         <ontology:isStepOf rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"/>
-        <untitled-ontology-4:mustPrecede rdf:resource="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_MashOut10min"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
         <ontology:stepName>Boil</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
