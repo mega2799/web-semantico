@@ -1,12 +1,14 @@
-@prefix : <http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#> .
+@prefix : <https://mega2799.github.io/web-semantico/index-en.html#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#> .
+@base <https://mega2799.github.io/web-semantico/index-en.html#> .
 
-<http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4> rdf:type owl:Ontology .
+<https://mega2799.github.io/web-semantico/index-en.html> rdf:type owl:Ontology ;
+                                                          rdfs:label "Beerecipe" ;
+                                                          :description "An ontology to follow and study about beer-recipes" .
 
 #################################################################
 #    Annotation properties
@@ -36,11 +38,6 @@
                                                          rdfs:label "database_cross_reference" .
 
 
-###  http://www.w3.org/2000/01/rdf-schema#label
-rdfs:label rdfs:label "label"@en ,
-                      "label" .
-
-
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
@@ -67,6 +64,10 @@ rdfs:label rdfs:label "label"@en ,
 
 ###  http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://mega2799.github.io/web-semantico/index-en.html#description
+:description rdf:type owl:AnnotationProperty .
 
 
 ###  https://rdf.ag/o/hops#alphaAcidsContent
@@ -105,24 +106,24 @@ rdfs:label rdfs:label "label"@en ,
 <http://www.beerecipe.com/ontology#Malt> rdf:type rdfs:Datatype .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewingStep
-:BrewingStep rdf:type rdfs:Datatype .
-
-
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water
-:Water rdf:type rdfs:Datatype .
-
-
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Yeast
-:Yeast rdf:type rdfs:Datatype .
-
-
 ###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#float
 xsd:float rdf:type rdfs:Datatype .
+
+
+###  https://mega2799.github.io/web-semantico/index-en.html#BrewingStep
+:BrewingStep rdf:type rdfs:Datatype .
+
+
+###  https://mega2799.github.io/web-semantico/index-en.html#Water
+:Water rdf:type rdfs:Datatype .
+
+
+###  https://mega2799.github.io/web-semantico/index-en.html#Yeast
+:Yeast rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -333,7 +334,7 @@ xsd:float rdf:type rdfs:Datatype .
                                                       rdfs:label "requires equipment" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#hasWater
+###  https://mega2799.github.io/web-semantico/index-en.html#hasWater
 :hasWater rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.beerecipe.com/ontology#hasIngredient> ;
           rdfs:domain <http://www.beerecipe.com/ontology#Recipe> ;
@@ -997,7 +998,7 @@ xsd:float rdf:type rdfs:Datatype .
                                           <http://www.w3.org/2004/02/skos/core#note> "Yeast is often called the most important ingredient in brewing as it not only produces alcohol but dramatically influences the beer's flavor profile. Wild yeasts and bacteria (Brettanomyces, Lactobacillus, Pediococcus) are used in sour and wild beer production."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AdvancedRecipe
+###  https://mega2799.github.io/web-semantico/index-en.html#AdvancedRecipe
 :AdvancedRecipe rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                            [ rdf:type owl:Restriction ;
@@ -1010,7 +1011,7 @@ xsd:float rdf:type rdfs:Datatype .
                 rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BeginnerRecipe
+###  https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe
 :BeginnerRecipe rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                            [ rdf:type owl:Restriction ;
@@ -1023,13 +1024,13 @@ xsd:float rdf:type rdfs:Datatype .
                 rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal
+###  https://mega2799.github.io/web-semantico/index-en.html#Cereal
 :Cereal rdf:type owl:Class ;
         rdfs:subClassOf <http://www.beerecipe.com/ontology#Ingredient> ;
         owl:disjointWith <https://rdf.ag/o/malt#Malt> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExpertRecipe
+###  https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe
 :ExpertRecipe rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                          [ rdf:type owl:Restriction ;
@@ -1042,12 +1043,12 @@ xsd:float rdf:type rdfs:Datatype .
               rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient
+###  https://mega2799.github.io/web-semantico/index-en.html#FoodIngredient
 :FoodIngredient rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.beerecipe.com/ontology#Ingredient> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GlutenFreeRecipe
+###  https://mega2799.github.io/web-semantico/index-en.html#GlutenFreeRecipe
 :GlutenFreeRecipe rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                              [ rdf:type owl:Restriction ;
@@ -1063,7 +1064,7 @@ xsd:float rdf:type rdfs:Datatype .
                   rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPARecipe
+###  https://mega2799.github.io/web-semantico/index-en.html#IPARecipe
 :IPARecipe rdf:type owl:Class ;
            rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> ,
                            [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
@@ -1077,7 +1078,7 @@ xsd:float rdf:type rdfs:Datatype .
                            ] .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ImperialBeer
+###  https://mega2799.github.io/web-semantico/index-en.html#ImperialBeer
 :ImperialBeer rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                          [ rdf:type owl:Restriction ;
@@ -1095,7 +1096,7 @@ xsd:float rdf:type rdfs:Datatype .
               rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IntermediateRecipe
+###  https://mega2799.github.io/web-semantico/index-en.html#IntermediateRecipe
 :IntermediateRecipe rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                                [ rdf:type owl:Restriction ;
@@ -1108,7 +1109,7 @@ xsd:float rdf:type rdfs:Datatype .
                     rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#LowAlcoholBeer
+###  https://mega2799.github.io/web-semantico/index-en.html#LowAlcoholBeer
 :LowAlcoholBeer rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                            [ rdf:type owl:Restriction ;
@@ -1126,12 +1127,12 @@ xsd:float rdf:type rdfs:Datatype .
                 rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RiceWheat
+###  https://mega2799.github.io/web-semantico/index-en.html#RiceWheat
 :RiceWheat rdf:type owl:Class ;
            rdfs:subClassOf :Cereal .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SessionBeer
+###  https://mega2799.github.io/web-semantico/index-en.html#SessionBeer
 :SessionBeer rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                         [ rdf:type owl:Restriction ;
@@ -1151,7 +1152,7 @@ xsd:float rdf:type rdfs:Datatype .
              rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardBeer
+###  https://mega2799.github.io/web-semantico/index-en.html#StandardBeer
 :StandardBeer rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                          [ rdf:type owl:Restriction ;
@@ -1171,7 +1172,7 @@ xsd:float rdf:type rdfs:Datatype .
               rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StrongBeer
+###  https://mega2799.github.io/web-semantico/index-en.html#StrongBeer
 :StrongBeer rdf:type owl:Class ;
             owl:equivalentClass [ owl:intersectionOf ( <http://www.beerecipe.com/ontology#Recipe>
                                                        [ rdf:type owl:Restriction ;
@@ -1191,7 +1192,7 @@ xsd:float rdf:type rdfs:Datatype .
             rdfs:subClassOf <http://www.beerecipe.com/ontology#Recipe> .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water
+###  https://mega2799.github.io/web-semantico/index-en.html#Water
 :Water rdf:type owl:Class ;
        rdfs:subClassOf <http://www.beerecipe.com/ontology#Ingredient> .
 
@@ -4834,7 +4835,7 @@ xsd:float rdf:type rdfs:Datatype .
                                                  <http://www.beerecipe.com/ontology#yeastName> "WLP007 Dry English Ale" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop
+###  https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop
 :AhtanumHop rdf:type owl:NamedIndividual ,
                      <https://rdf.ag/o/hops#Hops> ;
             <http://www.beerecipe.com/ontology#alphaAcidPercentage> "6.0"^^xsd:float ;
@@ -4843,7 +4844,7 @@ xsd:float rdf:type rdfs:Datatype .
             rdfs:label "Ahtanum" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Airlock
+###  https://mega2799.github.io/web-semantico/index-en.html#Airlock
 :Airlock rdf:type owl:NamedIndividual ,
                   <http://www.beerecipe.com/ontology#Equipment> ;
          <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -4851,7 +4852,7 @@ xsd:float rdf:type rdfs:Datatype .
          rdfs:label "Airlock" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AmericanIPA
+###  https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA
 :AmericanIPA rdf:type owl:NamedIndividual ,
                       <http://www.beerecipe.com/ontology#BeerStyle> ;
              <http://www.beerecipe.com/ontology#maxABV> "7.5"^^xsd:float ;
@@ -4862,7 +4863,7 @@ xsd:float rdf:type rdfs:Datatype .
              <http://www.beerecipe.com/ontology#styleName> "American IPA" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BeginnerBoil60min
+###  https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min
 :BeginnerBoil60min rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#BrewingStep> ;
                    <http://www.beerecipe.com/ontology#stepDuration> 60 ;
@@ -4871,7 +4872,7 @@ xsd:float rdf:type rdfs:Datatype .
                    <http://www.beerecipe.com/ontology#stepTemperature> "100.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BeginnerMash45min
+###  https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min
 :BeginnerMash45min rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#BrewingStep> ;
                    <http://www.beerecipe.com/ontology#stepDuration> 45 ;
@@ -4880,7 +4881,7 @@ xsd:float rdf:type rdfs:Datatype .
                    <http://www.beerecipe.com/ontology#stepTemperature> "66.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Boil60min
+###  https://mega2799.github.io/web-semantico/index-en.html#Boil60min
 :Boil60min rdf:type owl:NamedIndividual ,
                     <http://www.beerecipe.com/ontology#BoilStep> ;
            <http://www.beerecipe.com/ontology#stepDuration> 60 ;
@@ -4890,7 +4891,7 @@ xsd:float rdf:type rdfs:Datatype .
            rdfs:comment "Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BottlingEquipment
+###  https://mega2799.github.io/web-semantico/index-en.html#BottlingEquipment
 :BottlingEquipment rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#Equipment> ;
                    <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -4898,14 +4899,14 @@ xsd:float rdf:type rdfs:Datatype .
                    rdfs:label "Bottling Equipment" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Bran_russinaImperialStout
+###  https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout
 :Bran_russinaImperialStout rdf:type owl:NamedIndividual ,
                                     <https://rdf.ag/o/beer#Beer> ;
                            rdfs:comment "Full-bodied Russian Imperial Stout with intense roasted malt character, 10.82% ABV and 64 IBU." ;
                            rdfs:label "Russian Imperial Stout" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe
+###  https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe
 :BrewDog_PunkIPA_Recipe rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#Recipe> ;
                         <http://www.beerecipe.com/ontology#hasHop> :AhtanumHop ,
@@ -4948,7 +4949,7 @@ xsd:float rdf:type rdfs:Datatype .
                         <http://www.beerecipe.com/ontology#totalBrewingTime> 300 .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewKettle
+###  https://mega2799.github.io/web-semantico/index-en.html#BrewKettle
 :BrewKettle rdf:type owl:NamedIndividual ,
                      <http://www.beerecipe.com/ontology#Equipment> ;
             <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -4956,13 +4957,13 @@ xsd:float rdf:type rdfs:Datatype .
             rdfs:label "Brew Kettle" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat
+###  https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat
 :CanadaWinterWheat rdf:type owl:NamedIndividual ;
                    <http://www.beerecipe.com/ontology#cerealName> "Canada winter wheat" ;
                    <http://www.beerecipe.com/ontology#glutenContent> "false"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt
+###  https://mega2799.github.io/web-semantico/index-en.html#Caramalt
 :Caramalt rdf:type owl:NamedIndividual ;
           <http://www.beerecipe.com/ontology#maltName> "Caramalt" ;
           <http://www.beerecipe.com/ontology#ebc> 30 ;
@@ -4970,7 +4971,7 @@ xsd:float rdf:type rdfs:Datatype .
           rdfs:label "Caramalt" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CascadeHop
+###  https://mega2799.github.io/web-semantico/index-en.html#CascadeHop
 :CascadeHop rdf:type owl:NamedIndividual ,
                      <https://rdf.ag/o/hops#Hops> ;
             <http://www.beerecipe.com/ontology#alphaAcidPercentage> "5.5"^^xsd:float ;
@@ -4979,7 +4980,7 @@ xsd:float rdf:type rdfs:Datatype .
             rdfs:label "Cascade" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal_RiceWheat
+###  https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat
 :Cereal_RiceWheat rdf:type owl:NamedIndividual ,
                            :Cereal ,
                            :RiceWheat ;
@@ -4987,7 +4988,7 @@ xsd:float rdf:type rdfs:Datatype .
                   <http://www.beerecipe.com/ontology#glutenContent> "false"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop
+###  https://mega2799.github.io/web-semantico/index-en.html#ChinookHop
 :ChinookHop rdf:type owl:NamedIndividual ;
             <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.0"^^xsd:float ;
             <http://www.beerecipe.com/ontology#hopName> "Chinook" ;
@@ -4995,12 +4996,12 @@ xsd:float rdf:type rdfs:Datatype .
             rdfs:label "Chinook" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChocolateMalt
+###  https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt
 :ChocolateMalt rdf:type owl:NamedIndividual ;
                <http://www.beerecipe.com/ontology#maltName> "Chocolate Malt" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Conditioning14days
+###  https://mega2799.github.io/web-semantico/index-en.html#Conditioning14days
 :Conditioning14days rdf:type owl:NamedIndividual ,
                              <http://www.beerecipe.com/ontology#BrewingStep> ,
                              <http://www.beerecipe.com/ontology#ConditioningStep> ;
@@ -5011,7 +5012,7 @@ xsd:float rdf:type rdfs:Datatype .
                     rdfs:comment "Maturation phase where flavors develop, beer clarifies and stabilizes."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CoolingToPitchTemp
+###  https://mega2799.github.io/web-semantico/index-en.html#CoolingToPitchTemp
 :CoolingToPitchTemp rdf:type owl:NamedIndividual ,
                              <http://www.beerecipe.com/ontology#BrewingStep> ,
                              <http://www.beerecipe.com/ontology#CoolingStep> ;
@@ -5022,7 +5023,7 @@ xsd:float rdf:type rdfs:Datatype .
                     rdfs:comment "Rapidly cools the wort to the optimal fermentation temperature for pitching yeast."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Boil60min
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_Boil60min
 :EPA_Boil60min rdf:type owl:NamedIndividual ,
                         <http://www.beerecipe.com/ontology#BoilStep> ,
                         <http://www.beerecipe.com/ontology#BrewingStep> ;
@@ -5034,7 +5035,7 @@ xsd:float rdf:type rdfs:Datatype .
                rdfs:comment "Boil wort to sterilize, isomerize hops, and drive off volatiles for a clean pale ale flavor."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Conditioning14days
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_Conditioning14days
 :EPA_Conditioning14days rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#BrewingStep> ,
                                  <http://www.beerecipe.com/ontology#ConditioningStep> ;
@@ -5046,7 +5047,7 @@ xsd:float rdf:type rdfs:Datatype .
                         rdfs:comment "Maturation phase: flavors develop and beer clarifies."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_CoolingToPitchTemp
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_CoolingToPitchTemp
 :EPA_CoolingToPitchTemp rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#BrewingStep> ,
                                  <http://www.beerecipe.com/ontology#CoolingStep> ;
@@ -5058,7 +5059,7 @@ xsd:float rdf:type rdfs:Datatype .
                         rdfs:comment "Rapidly cool wort to yeast pitching temperature for clean fermentation."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Fermentation10days
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_Fermentation10days
 :EPA_Fermentation10days rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#BrewingStep> ,
                                  <http://www.beerecipe.com/ontology#FermentationStep> ;
@@ -5070,7 +5071,7 @@ xsd:float rdf:type rdfs:Datatype .
                         rdfs:comment "Primary fermentation: yeast converts sugars to alcohol and CO2 for a balanced pale ale."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Mash60min
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_Mash60min
 :EPA_Mash60min rdf:type owl:NamedIndividual ,
                         <http://www.beerecipe.com/ontology#BrewingStep> ,
                         <http://www.beerecipe.com/ontology#MashStep> ,
@@ -5086,7 +5087,7 @@ xsd:float rdf:type rdfs:Datatype .
                rdfs:comment "Convert malt starches to fermentable sugars for a balanced pale ale body."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_MashOut10min
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_MashOut10min
 :EPA_MashOut10min rdf:type owl:NamedIndividual ,
                            <http://www.beerecipe.com/ontology#BrewingStep> ,
                            <http://www.beerecipe.com/ontology#MashOutStep> ,
@@ -5103,7 +5104,7 @@ xsd:float rdf:type rdfs:Datatype .
                   rdfs:comment "Stop enzymatic activity and prepare for lautering."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Sparge15min
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_Sparge15min
 :EPA_Sparge15min rdf:type owl:NamedIndividual ,
                           <http://www.beerecipe.com/ontology#BrewingStep> ,
                           <http://www.beerecipe.com/ontology#SpargeStep> ;
@@ -5115,7 +5116,7 @@ xsd:float rdf:type rdfs:Datatype .
                  rdfs:comment "Rinse grains to extract remaining sugars for a lighter, balanced pale ale."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Whirlpool10min
+###  https://mega2799.github.io/web-semantico/index-en.html#EPA_Whirlpool10min
 :EPA_Whirlpool10min rdf:type owl:NamedIndividual ,
                              <http://www.beerecipe.com/ontology#BrewingStep> ,
                              <http://www.beerecipe.com/ontology#WhirlpoolStep> ;
@@ -5128,7 +5129,7 @@ xsd:float rdf:type rdfs:Datatype .
                     rdfs:comment "Separate hops and trub for clarity before cooling."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe
+###  https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe
 :EasyPaleAleRecipe rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#Recipe> ;
                    <http://www.beerecipe.com/ontology#hasCereal> :CanadaWinterWheat ,
@@ -5156,7 +5157,7 @@ xsd:float rdf:type rdfs:Datatype .
                    <http://www.beerecipe.com/ontology#totalBrewingTime> 360 .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt
+###  https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt
 :ExtraPaleMalt rdf:type owl:NamedIndividual ;
                <http://www.beerecipe.com/ontology#maltName> "Extra Pale Malt" ;
                <http://www.beerecipe.com/ontology#ebc> 5.5 ;
@@ -5164,7 +5165,7 @@ xsd:float rdf:type rdfs:Datatype .
                rdfs:label "Extra Pale Malt" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days
+###  https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days
 :Fermentation7days rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#BrewingStep> ,
                             <http://www.beerecipe.com/ontology#FermentationStep> ;
@@ -5176,7 +5177,7 @@ xsd:float rdf:type rdfs:Datatype .
                    rdfs:comment "Yeast converts sugars into alcohol and CO2; primary fermentation phase."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FermentationVessel
+###  https://mega2799.github.io/web-semantico/index-en.html#FermentationVessel
 :FermentationVessel rdf:type owl:NamedIndividual ,
                              <http://www.beerecipe.com/ontology#Equipment> ;
                     <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -5184,13 +5185,13 @@ xsd:float rdf:type rdfs:Datatype .
                     rdfs:label "Fermentation Vessel" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FlakedOats
+###  https://mega2799.github.io/web-semantico/index-en.html#FlakedOats
 :FlakedOats rdf:type owl:NamedIndividual ;
             <http://www.beerecipe.com/ontology#cerealName> "Flaked Oats" ;
             <http://www.beerecipe.com/ontology#glutenContent> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout
+###  https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout
 :GAS_RussianImperialStout rdf:type owl:NamedIndividual ,
                                    <http://www.beerecipe.com/ontology#Recipe> ;
                           <http://www.beerecipe.com/ontology#hasCereal> :FlakedOats ,
@@ -5223,7 +5224,7 @@ xsd:float rdf:type rdfs:Datatype .
                           <http://www.beerecipe.com/ontology#totalBrewingTime> 180 .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hydrometer
+###  https://mega2799.github.io/web-semantico/index-en.html#Hydrometer
 :Hydrometer rdf:type owl:NamedIndividual ,
                      <http://www.beerecipe.com/ontology#Equipment> ;
             <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -5231,14 +5232,14 @@ xsd:float rdf:type rdfs:Datatype .
             rdfs:label "Hydrometer" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA
+###  https://mega2799.github.io/web-semantico/index-en.html#IPA
 :IPA rdf:type owl:NamedIndividual ,
               <http://www.beerecipe.com/ontology#BeerStyle> ;
      rdfs:comment "India Pale Ale: hop-forward beer style with pronounced bitterness and citrus/tropical fruit aromas, typically 5.5-7.5% ABV." ;
      rdfs:label "IPA" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop
+###  https://mega2799.github.io/web-semantico/index-en.html#MagnumHop
 :MagnumHop rdf:type owl:NamedIndividual ,
                     <https://rdf.ag/o/hops#Hops> ;
            <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.5"^^xsd:float ;
@@ -5247,20 +5248,20 @@ xsd:float rdf:type rdfs:Datatype .
            rdfs:label "Magnum" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter
+###  https://mega2799.github.io/web-semantico/index-en.html#MarisOtter
 :MarisOtter rdf:type owl:NamedIndividual ,
                      :Cereal ;
             rdfs:comment "Premium British two-row spring barley variety prized for its rich, malty flavor and excellent extract efficiency." ;
             rdfs:label "Maris Otter" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtterMalt
+###  https://mega2799.github.io/web-semantico/index-en.html#MarisOtterMalt
 :MarisOtterMalt rdf:type owl:NamedIndividual ;
                 <http://www.beerecipe.com/ontology#ebcColor> 8 ;
                 <http://www.beerecipe.com/ontology#maltName> "Maris Otter Malt" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min
+###  https://mega2799.github.io/web-semantico/index-en.html#MashOut10min
 :MashOut10min rdf:type owl:NamedIndividual ,
                        <http://www.beerecipe.com/ontology#BrewingStep> ,
                        <http://www.beerecipe.com/ontology#MashStep> ,
@@ -5275,7 +5276,7 @@ xsd:float rdf:type rdfs:Datatype .
               rdfs:comment "Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashTun
+###  https://mega2799.github.io/web-semantico/index-en.html#MashTun
 :MashTun rdf:type owl:NamedIndividual ,
                   <http://www.beerecipe.com/ontology#Equipment> ;
          <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -5283,7 +5284,7 @@ xsd:float rdf:type rdfs:Datatype .
          rdfs:label "Mash Tun" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop
+###  https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop
 :NelsonSauvinHop rdf:type owl:NamedIndividual ,
                           <https://rdf.ag/o/hops#Hops> ;
                  <http://www.beerecipe.com/ontology#alphaAcidPercentage> "12.0"^^xsd:float ;
@@ -5292,33 +5293,33 @@ xsd:float rdf:type rdfs:Datatype .
                  rdfs:label "Nelson Sauvin" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NewZealand
+###  https://mega2799.github.io/web-semantico/index-en.html#NewZealand
 :NewZealand rdf:type owl:NamedIndividual ,
                      <http://www.beerecipe.com/ontology#Country> ;
             rdfs:comment "Origin of Nelson Sauvin hop variety with distinctive white wine character. Known for unique southern hemisphere hop varieties." ;
             rdfs:label "New Zealand" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle
+###  https://mega2799.github.io/web-semantico/index-en.html#PaleAle
 :PaleAle rdf:type owl:NamedIndividual ,
                   <http://www.beerecipe.com/ontology#BeerStyle> ;
          <http://www.beerecipe.com/ontology#styleName> "Pale Ale" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt
+###  https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt
 :PaleAleMalt rdf:type owl:NamedIndividual ;
              <http://www.beerecipe.com/ontology#ebcColor> 6 ;
              <http://www.beerecipe.com/ontology#maltName> "Pale Ale Malt" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer
 :PunkIPA_Beer rdf:type owl:NamedIndividual ,
                        <https://rdf.ag/o/beer#Beer> ;
               rdfs:comment "BrewDog's flagship craft beer: post-modern pale ale with tropical fruit character, 5.6% ABV and 40 IBU." ;
               rdfs:label "Punk IPA" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Boil60min
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Boil60min
 :PunkIPA_Boil60min rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#BoilStep> ,
                             <http://www.beerecipe.com/ontology#BrewingStep> ;
@@ -5330,7 +5331,7 @@ xsd:float rdf:type rdfs:Datatype .
                    rdfs:comment "60 minute boil with hop additions at 60min (bittering), 15min and flameout (aroma)"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Conditioning14days
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Conditioning14days
 :PunkIPA_Conditioning14days rdf:type owl:NamedIndividual ,
                                      <http://www.beerecipe.com/ontology#BrewingStep> ,
                                      <http://www.beerecipe.com/ontology#ConditioningStep> ;
@@ -5342,7 +5343,7 @@ xsd:float rdf:type rdfs:Datatype .
                             rdfs:comment "Cold conditioning for clarity and carbonation"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Cooling30min
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Cooling30min
 :PunkIPA_Cooling30min rdf:type owl:NamedIndividual ,
                                <http://www.beerecipe.com/ontology#BrewingStep> ,
                                <http://www.beerecipe.com/ontology#CoolingStep> ;
@@ -5354,7 +5355,7 @@ xsd:float rdf:type rdfs:Datatype .
                       rdfs:comment "Rapidly cool wort to yeast pitching temperature"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Fermentation10days
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Fermentation10days
 :PunkIPA_Fermentation10days rdf:type owl:NamedIndividual ,
                                      <http://www.beerecipe.com/ontology#BrewingStep> ,
                                      <http://www.beerecipe.com/ontology#FermentationStep> ;
@@ -5366,7 +5367,7 @@ xsd:float rdf:type rdfs:Datatype .
                             rdfs:comment "Primary fermentation with dry hop addition on day 4"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Mash65min
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Mash65min
 :PunkIPA_Mash65min rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#BrewingStep> ,
                             <http://www.beerecipe.com/ontology#MashStep> ;
@@ -5378,7 +5379,7 @@ xsd:float rdf:type rdfs:Datatype .
                    rdfs:comment "Single infusion mash to convert starches to fermentable sugars"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_MashOut10min
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_MashOut10min
 :PunkIPA_MashOut10min rdf:type owl:NamedIndividual ,
                                <http://www.beerecipe.com/ontology#BrewingStep> ,
                                <http://www.beerecipe.com/ontology#MashOutStep> ,
@@ -5391,7 +5392,7 @@ xsd:float rdf:type rdfs:Datatype .
                       rdfs:comment "Stop enzymatic activity and prepare for lautering"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Sparge15min
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Sparge15min
 :PunkIPA_Sparge15min rdf:type owl:NamedIndividual ,
                               <http://www.beerecipe.com/ontology#BrewingStep> ,
                               <http://www.beerecipe.com/ontology#SpargeStep> ;
@@ -5403,7 +5404,7 @@ xsd:float rdf:type rdfs:Datatype .
                      rdfs:comment "Rinse grains to extract remaining sugars"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Whirlpool20min
+###  https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Whirlpool20min
 :PunkIPA_Whirlpool20min rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#BrewingStep> ,
                                  <http://www.beerecipe.com/ontology#WhirlpoolStep> ;
@@ -5415,7 +5416,7 @@ xsd:float rdf:type rdfs:Datatype .
                         rdfs:comment "Whirlpool at 80°C with hop additions for enhanced aroma"@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Boil90min
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_Boil90min
 :RIS_Boil90min rdf:type owl:NamedIndividual ,
                         <http://www.beerecipe.com/ontology#BoilStep> ,
                         <http://www.beerecipe.com/ontology#BrewingStep> ;
@@ -5427,7 +5428,7 @@ xsd:float rdf:type rdfs:Datatype .
                rdfs:comment "Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Conditioning28days
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_Conditioning28days
 :RIS_Conditioning28days rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#BrewingStep> ,
                                  <http://www.beerecipe.com/ontology#ConditioningStep> ;
@@ -5438,7 +5439,7 @@ xsd:float rdf:type rdfs:Datatype .
                         rdfs:comment "Maturation phase: flavors develop, beer clarifies and stabilizes."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_CoolingToPitchTemp
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_CoolingToPitchTemp
 :RIS_CoolingToPitchTemp rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#BrewingStep> ,
                                  <http://www.beerecipe.com/ontology#CoolingStep> ;
@@ -5450,7 +5451,7 @@ xsd:float rdf:type rdfs:Datatype .
                         rdfs:comment "Rapidly cool wort to yeast pitching temperature."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Fermentation14days
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_Fermentation14days
 :RIS_Fermentation14days rdf:type owl:NamedIndividual ,
                                  <http://www.beerecipe.com/ontology#BrewingStep> ,
                                  <http://www.beerecipe.com/ontology#FermentationStep> ;
@@ -5462,7 +5463,7 @@ xsd:float rdf:type rdfs:Datatype .
                         rdfs:comment "Primary fermentation: yeast converts sugars into alcohol and CO2."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Mash60min
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_Mash60min
 :RIS_Mash60min rdf:type owl:NamedIndividual ,
                         <http://www.beerecipe.com/ontology#BrewingStep> ,
                         <http://www.beerecipe.com/ontology#MashStep> ,
@@ -5478,7 +5479,7 @@ xsd:float rdf:type rdfs:Datatype .
                rdfs:comment "Conversion of starches in the malt to fermentable sugars via enzymatic activity."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_MashOut10min
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_MashOut10min
 :RIS_MashOut10min rdf:type owl:NamedIndividual ,
                            <http://www.beerecipe.com/ontology#BrewingStep> ,
                            <http://www.beerecipe.com/ontology#MashOutStep> ,
@@ -5495,7 +5496,7 @@ xsd:float rdf:type rdfs:Datatype .
                   rdfs:comment "Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Sparge20min
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_Sparge20min
 :RIS_Sparge20min rdf:type owl:NamedIndividual ,
                           <http://www.beerecipe.com/ontology#BrewingStep> ,
                           <http://www.beerecipe.com/ontology#SpargeStep> ;
@@ -5507,7 +5508,7 @@ xsd:float rdf:type rdfs:Datatype .
                  rdfs:comment "Rinse the grains to extract remaining sugars and increase wort yield."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Whirlpool15min
+###  https://mega2799.github.io/web-semantico/index-en.html#RIS_Whirlpool15min
 :RIS_Whirlpool15min rdf:type owl:NamedIndividual ,
                              <http://www.beerecipe.com/ontology#BrewingStep> ,
                              <http://www.beerecipe.com/ontology#WhirlpoolStep> ;
@@ -5519,13 +5520,13 @@ xsd:float rdf:type rdfs:Datatype .
                     rdfs:comment "Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RoastedBarley
+###  https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley
 :RoastedBarley rdf:type owl:NamedIndividual ;
                <http://www.beerecipe.com/ontology#cerealName> "Roasted Barley" ;
                <http://www.beerecipe.com/ontology#glutenContent> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RussianImperialStout
+###  https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout
 :RussianImperialStout rdf:type owl:NamedIndividual ,
                                <http://www.beerecipe.com/ontology#BeerStyle> ;
                       <http://www.beerecipe.com/ontology#maxABV> "12.0"^^xsd:float ;
@@ -5536,7 +5537,7 @@ xsd:float rdf:type rdfs:Datatype .
                       <http://www.beerecipe.com/ontology#styleName> "Russian Imperial Stout" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sanitizer
+###  https://mega2799.github.io/web-semantico/index-en.html#Sanitizer
 :Sanitizer rdf:type owl:NamedIndividual ,
                     <http://www.beerecipe.com/ontology#Equipment> ;
            <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -5544,7 +5545,7 @@ xsd:float rdf:type rdfs:Datatype .
            rdfs:label "Sanitizer" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Scotland
+###  https://mega2799.github.io/web-semantico/index-en.html#Scotland
 :Scotland rdf:type owl:NamedIndividual ,
                    <http://www.beerecipe.com/ontology#Country> ;
           <http://www.beerecipe.com/ontology#isOriginOf> :BrewDog_PunkIPA_Recipe ;
@@ -5552,7 +5553,7 @@ xsd:float rdf:type rdfs:Datatype .
           rdfs:label "Scotland" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop
+###  https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop
 :SimcoeHop rdf:type owl:NamedIndividual ,
                     <https://rdf.ag/o/hops#Hops> ;
            <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.0"^^xsd:float ;
@@ -5561,7 +5562,7 @@ xsd:float rdf:type rdfs:Datatype .
            rdfs:label "Simcoe" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sparge20min
+###  https://mega2799.github.io/web-semantico/index-en.html#Sparge20min
 :Sparge20min rdf:type owl:NamedIndividual ,
                       <http://www.beerecipe.com/ontology#SpargeStep> ;
              <http://www.beerecipe.com/ontology#stepDuration> 20 ;
@@ -5571,7 +5572,7 @@ xsd:float rdf:type rdfs:Datatype .
              rdfs:comment "Rinse the grains to extract remaining sugars and increase wort yield."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardMash45min
+###  https://mega2799.github.io/web-semantico/index-en.html#StandardMash45min
 :StandardMash45min rdf:type owl:NamedIndividual ,
                             <http://www.beerecipe.com/ontology#MashStep> ;
                    <http://www.beerecipe.com/ontology#stepDuration> 45 ;
@@ -5581,7 +5582,7 @@ xsd:float rdf:type rdfs:Datatype .
                    rdfs:comment "Conversion of starches in the malt to fermentable sugars via enzymatic activity."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Thermometer
+###  https://mega2799.github.io/web-semantico/index-en.html#Thermometer
 :Thermometer rdf:type owl:NamedIndividual ,
                       <http://www.beerecipe.com/ontology#Equipment> ;
              <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -5589,7 +5590,7 @@ xsd:float rdf:type rdfs:Datatype .
              rdfs:label "Brewing Thermometer" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#TripleHoppedIPA
+###  https://mega2799.github.io/web-semantico/index-en.html#TripleHoppedIPA
 :TripleHoppedIPA rdf:type owl:NamedIndividual ;
                  <http://www.beerecipe.com/ontology#hasStyle> :AmericanIPA ;
                  <http://www.beerecipe.com/ontology#difficultyLevel> "advanced" ;
@@ -5597,26 +5598,26 @@ xsd:float rdf:type rdfs:Datatype .
                  <http://www.beerecipe.com/ontology#estimatedIBU> 65 .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#UnitedKingdom
+###  https://mega2799.github.io/web-semantico/index-en.html#UnitedKingdom
 :UnitedKingdom rdf:type owl:NamedIndividual ,
                         <http://www.beerecipe.com/ontology#Country> ;
                rdfs:comment "Origin of pale ale malt varieties and traditional British brewing techniques. Home to Maris Otter barley." ;
                rdfs:label "United Kingdom" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#UnitedStates
+###  https://mega2799.github.io/web-semantico/index-en.html#UnitedStates
 :UnitedStates rdf:type owl:NamedIndividual ,
                        <http://www.beerecipe.com/ontology#Country> ;
               rdfs:comment "Origin of American hop varieties (Chinook, Simcoe, Ahtanum) and American IPA style. Major craft beer innovation hub." ;
               rdfs:label "United States" .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water
+###  https://mega2799.github.io/web-semantico/index-en.html#Water
 :Water rdf:type owl:NamedIndividual ,
                 :Water .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Whirlpool15min
+###  https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min
 :Whirlpool15min rdf:type owl:NamedIndividual ,
                          <http://www.beerecipe.com/ontology#WhirlpoolStep> ;
                 <http://www.beerecipe.com/ontology#stepDuration> 15 ;
@@ -5626,7 +5627,7 @@ xsd:float rdf:type rdfs:Datatype .
                 rdfs:comment "Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling."@en .
 
 
-###  http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#WortChiller
+###  https://mega2799.github.io/web-semantico/index-en.html#WortChiller
 :WortChiller rdf:type owl:NamedIndividual ,
                       <http://www.beerecipe.com/ontology#Equipment> ;
              <http://www.beerecipe.com/ontology#isRequiredBy> :BrewDog_PunkIPA_Recipe ;
@@ -5708,6 +5709,10 @@ xsd:float rdf:type rdfs:Datatype .
 
 <http://www.beerecipe.com/ontology#producesBeer> rdfs:comment "Connects a recipe to the beer it produces. A recipe produces exactly one type of beer." ;
                                                  rdfs:label "produces beer" .
+
+
+rdfs:label rdfs:label "label"@en ,
+                      "label" .
 
 
 :Water rdfs:comment "Brewing water - the primary ingredient in beer, comprising 90-95% of the final product. Water chemistry significantly affects beer flavor." ;

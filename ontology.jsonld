@@ -32,7 +32,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.beerecipe.com/ontology#hasCereal"
@@ -424,10 +424,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Water"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#hasWater"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#hasWater"
   } ]
 }, {
   "@id" : "_:genid81",
@@ -491,7 +491,7 @@
     "@value" : "honey food product"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#FoodIngredient"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/FOODON_00001260",
@@ -520,7 +520,7 @@
     "@value" : "corn sugar"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#FoodIngredient"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000114",
@@ -1041,7 +1041,7 @@
     "@value" : "The name of the cereal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "cereal name"
@@ -1194,7 +1194,7 @@
     "@value" : "Indicates if the cereal contains gluten"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "gluten content"
@@ -1239,7 +1239,7 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.beerecipe.com/ontology#BrewingStep"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewingStep"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#isStepOf"
@@ -1257,7 +1257,7 @@
     "@value" : "has cereal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   }, {
     "@id" : "http://www.beerecipe.com/ontology#Cereal"
   } ],
@@ -1452,7 +1452,7 @@
     "@value" : "Indicates that a cereal is used in a recipe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is cereal of"
@@ -2107,10 +2107,51 @@
     "@value" : "database_cross_reference"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "label"
+  }, {
+    "@value" : "label"
+  } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AdvancedRecipe",
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#float",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#hadPrimarySource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Beerecipe"
+  } ],
+  "https://mega2799.github.io/web-semantico/index-en.html#description" : [ {
+    "@value" : "An ontology to follow and study about beer-recipes"
+  } ]
+}, {
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#AdvancedRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -2119,7 +2160,7 @@
     "@id" : "_:genid17"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#alphaAcidPercentage" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -2138,10 +2179,10 @@
     "@value" : "Ahtanum"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Airlock",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Airlock",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -2153,7 +2194,7 @@
     "@value" : "Airlock"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AmericanIPA",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#maxABV" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -2181,7 +2222,7 @@
     "@id" : "http://www.beerecipe.com/ontology#BeerStyle"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BeginnerBoil60min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2202,7 +2243,7 @@
     "@id" : "http://www.beerecipe.com/ontology#BrewingStep"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BeginnerMash45min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -2223,7 +2264,7 @@
     "@id" : "http://www.beerecipe.com/ontology#BrewingStep"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BeginnerRecipe",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -2232,7 +2273,7 @@
     "@id" : "_:genid21"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Boil60min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Boil60min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2257,10 +2298,10 @@
     "@value" : "Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BottlingEquipment",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BottlingEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -2272,7 +2313,7 @@
     "@value" : "Bottling Equipment"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Bran_russinaImperialStout",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://rdf.ag/o/beer#Beer"
@@ -2284,7 +2325,7 @@
     "@value" : "Russian Imperial Stout"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#author" : [ {
     "@value" : "BrewDog"
@@ -2329,21 +2370,21 @@
     "@value" : "1.012"
   } ],
   "http://www.beerecipe.com/ontology#hasHop" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AhtanumHop"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ChinookHop"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop"
   } ],
   "http://www.beerecipe.com/ontology#hasMalt" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Caramalt"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt"
   } ],
   "http://www.beerecipe.com/ontology#hasStyle" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#IPA"
   } ],
   "http://www.beerecipe.com/ontology#hasYeast" : [ {
     "@id" : "http://www.beerecipe.com/ontology#WLP001_Yeast"
@@ -2365,7 +2406,7 @@
     "@value" : "1.054"
   } ],
   "http://www.beerecipe.com/ontology#producesBeer" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer"
   } ],
   "http://www.beerecipe.com/ontology#recipeDescription" : [ {
     "@value" : "Post Modern Classic. Layered with new world hops to create an explosion of tropical fruit and an all-out riot of grapefruit, pineapple and lychee before a spiky bitter finish. This is the beer that started it all - and it's not done yet."
@@ -2374,23 +2415,23 @@
     "@value" : "BrewDog Punk IPA"
   } ],
   "http://www.beerecipe.com/ontology#requiresEquipment" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Airlock"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Airlock"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BottlingEquipment"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BottlingEquipment"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewKettle"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewKettle"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FermentationVessel"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#FermentationVessel"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hydrometer"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Hydrometer"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashTun"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MashTun"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sanitizer"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Sanitizer"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Thermometer"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Thermometer"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#WortChiller"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#WortChiller"
   } ],
   "http://www.beerecipe.com/ontology#servingTemperature" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -2400,17 +2441,17 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "300"
   } ],
-  "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#hasWater" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
+  } ],
+  "https://mega2799.github.io/web-semantico/index-en.html#hasWater" : [ {
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Water"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewKettle",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewKettle",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -2422,10 +2463,10 @@
     "@value" : "Brew Kettle"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewingStep",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewingStep",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#cerealName" : [ {
     "@value" : "Canada winter wheat"
@@ -2435,7 +2476,7 @@
     "@value" : "false"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Caramalt",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Caramalt",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#ebc" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2451,7 +2492,7 @@
     "@value" : "Caramalt"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CascadeHop",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#CascadeHop",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#alphaAcidPercentage" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -2470,7 +2511,7 @@
     "@value" : "Cascade"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Ingredient"
@@ -2479,7 +2520,7 @@
     "@id" : "https://rdf.ag/o/malt#Malt"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal_RiceWheat",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#cerealName" : [ {
     "@value" : "Rice Wheat"
@@ -2489,12 +2530,12 @@
     "@value" : "false"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RiceWheat"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RiceWheat"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChinookHop",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ChinookHop",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#alphaAcidPercentage" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -2510,13 +2551,13 @@
     "@value" : "Chinook"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChocolateMalt",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#maltName" : [ {
     "@value" : "Chocolate Malt"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Conditioning14days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Conditioning14days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2543,7 +2584,7 @@
     "@value" : "Maturation phase where flavors develop, beer clarifies and stabilizes."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CoolingToPitchTemp",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#CoolingToPitchTemp",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2570,10 +2611,10 @@
     "@value" : "Rapidly cools the wort to the optimal fermentation temperature for pitching yeast."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Boil60min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_Boil60min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2600,10 +2641,10 @@
     "@value" : "Boil wort to sterilize, isomerize hops, and drive off volatiles for a clean pale ale flavor."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Conditioning14days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_Conditioning14days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2630,10 +2671,10 @@
     "@value" : "Maturation phase: flavors develop and beer clarifies."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_CoolingToPitchTemp",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_CoolingToPitchTemp",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2660,10 +2701,10 @@
     "@value" : "Rapidly cool wort to yeast pitching temperature for clean fermentation."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Fermentation10days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_Fermentation10days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2690,10 +2731,10 @@
     "@value" : "Primary fermentation: yeast converts sugars to alcohol and CO2 for a balanced pale ale."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Mash60min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_Mash60min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2722,10 +2763,10 @@
     "@value" : "Convert malt starches to fermentable sugars for a balanced pale ale body."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_MashOut10min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_MashOut10min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2756,10 +2797,10 @@
     "@value" : "Stop enzymatic activity and prepare for lautering."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Sparge15min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_Sparge15min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2786,10 +2827,10 @@
     "@value" : "Rinse grains to extract remaining sugars for a lighter, balanced pale ale."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EPA_Whirlpool10min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EPA_Whirlpool10min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2819,7 +2860,7 @@
     "@value" : "Separate hops and trub for clarity before cooling."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#EasyPaleAleRecipe",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#author" : [ {
     "@value" : "Unknown"
@@ -2860,18 +2901,18 @@
     "@value" : "1.01"
   } ],
   "http://www.beerecipe.com/ontology#hasCereal" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CanadaWinterWheat"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal_RiceWheat"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat"
   } ],
   "http://www.beerecipe.com/ontology#hasHop" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#CascadeHop"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#CascadeHop"
   } ],
   "http://www.beerecipe.com/ontology#hasMalt" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt"
   } ],
   "http://www.beerecipe.com/ontology#hasStyle" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PaleAle"
   } ],
   "http://www.beerecipe.com/ontology#hasYeast" : [ {
     "@id" : "http://www.beerecipe.com/ontology#US05_Yeast"
@@ -2898,14 +2939,14 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "360"
   } ],
-  "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#hasWater" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
+  } ],
+  "https://mega2799.github.io/web-semantico/index-en.html#hasWater" : [ {
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Water"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExpertRecipe",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -2914,7 +2955,7 @@
     "@id" : "_:genid25"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ExtraPaleMalt",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#ebc" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2930,7 +2971,7 @@
     "@value" : "Extra Pale Malt"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Fermentation7days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2960,10 +3001,10 @@
     "@value" : "Yeast converts sugars into alcohol and CO2; primary fermentation phase."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FermentationVessel",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#FermentationVessel",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -2975,7 +3016,7 @@
     "@value" : "Fermentation Vessel"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FlakedOats",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#FlakedOats",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#cerealName" : [ {
     "@value" : "Flaked Oats"
@@ -2985,13 +3026,13 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FoodIngredient",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#FoodIngredient",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Ingredient"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#author" : [ {
     "@value" : "Brewing Ben (Brewer's Friend)"
@@ -3036,20 +3077,20 @@
     "@value" : "1.027"
   } ],
   "http://www.beerecipe.com/ontology#hasCereal" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#FlakedOats"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#FlakedOats"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MarisOtter"
   }, {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RoastedBarley"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley"
   } ],
   "http://www.beerecipe.com/ontology#hasHop" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MagnumHop"
   } ],
   "http://www.beerecipe.com/ontology#hasMalt" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ChocolateMalt"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt"
   } ],
   "http://www.beerecipe.com/ontology#hasStyle" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#hasYeast" : [ {
     "@id" : "http://www.beerecipe.com/ontology#WLP007_Yeast"
@@ -3071,7 +3112,7 @@
     "@value" : "1.109"
   } ],
   "http://www.beerecipe.com/ontology#producesBeer" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Bran_russinaImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#recipeDescription" : [ {
     "@value" : "Russian Imperial Stout — ricetta all-grain ad alta gravità con maris otter, roasted barley, chocolate malts e flaked oats. Versione ricetta pubblicata su Brewer's Friend."
@@ -3087,14 +3128,14 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "180"
   } ],
-  "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#hasWater" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
+  } ],
+  "https://mega2799.github.io/web-semantico/index-en.html#hasWater" : [ {
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Water"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GlutenFreeRecipe",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GlutenFreeRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3103,10 +3144,10 @@
     "@id" : "_:genid29"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Hydrometer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Hydrometer",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -3118,7 +3159,7 @@
     "@value" : "Hydrometer"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPA",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#IPA",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#BeerStyle"
@@ -3130,7 +3171,7 @@
     "@value" : "IPA"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IPARecipe",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#IPARecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3138,7 +3179,7 @@
     "@id" : "_:genid34"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#ImperialBeer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#ImperialBeer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3147,7 +3188,7 @@
     "@id" : "_:genid38"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#IntermediateRecipe",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#IntermediateRecipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3156,7 +3197,7 @@
     "@id" : "_:genid45"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#LowAlcoholBeer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#LowAlcoholBeer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3165,7 +3206,7 @@
     "@id" : "_:genid49"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MagnumHop",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MagnumHop",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#alphaAcidPercentage" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -3184,10 +3225,10 @@
     "@value" : "Magnum"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtter",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MarisOtter",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Premium British two-row spring barley variety prized for its rich, malty flavor and excellent extract efficiency."
@@ -3196,7 +3237,7 @@
     "@value" : "Maris Otter"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MarisOtterMalt",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MarisOtterMalt",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#ebcColor" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3206,7 +3247,7 @@
     "@value" : "Maris Otter Malt"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashOut10min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MashOut10min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3235,10 +3276,10 @@
     "@value" : "Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#MashTun",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#MashTun",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -3250,7 +3291,7 @@
     "@value" : "Mash Tun"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NelsonSauvinHop",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#alphaAcidPercentage" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -3269,7 +3310,7 @@
     "@value" : "Nelson Sauvin"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#NewZealand",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#NewZealand",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Country"
@@ -3281,7 +3322,7 @@
     "@value" : "New Zealand"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAle",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PaleAle",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#styleName" : [ {
     "@value" : "Pale Ale"
@@ -3290,7 +3331,7 @@
     "@id" : "http://www.beerecipe.com/ontology#BeerStyle"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PaleAleMalt",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#ebcColor" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3300,7 +3341,7 @@
     "@value" : "Pale Ale Malt"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Beer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://rdf.ag/o/beer#Beer"
@@ -3312,10 +3353,10 @@
     "@value" : "Punk IPA"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Boil60min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Boil60min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3342,10 +3383,10 @@
     "@value" : "60 minute boil with hop additions at 60min (bittering), 15min and flameout (aroma)"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Conditioning14days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Conditioning14days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3372,10 +3413,10 @@
     "@value" : "Cold conditioning for clarity and carbonation"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Cooling30min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Cooling30min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3402,10 +3443,10 @@
     "@value" : "Rapidly cool wort to yeast pitching temperature"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Fermentation10days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Fermentation10days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3432,10 +3473,10 @@
     "@value" : "Primary fermentation with dry hop addition on day 4"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Mash65min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Mash65min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3462,10 +3503,10 @@
     "@value" : "Single infusion mash to convert starches to fermentable sugars"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_MashOut10min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_MashOut10min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3494,10 +3535,10 @@
     "@value" : "Stop enzymatic activity and prepare for lautering"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Sparge15min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Sparge15min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3524,10 +3565,10 @@
     "@value" : "Rinse grains to extract remaining sugars"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#PunkIPA_Whirlpool20min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Whirlpool20min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3554,10 +3595,10 @@
     "@value" : "Whirlpool at 80°C with hop additions for enhanced aroma"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Boil90min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_Boil90min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3584,7 +3625,7 @@
     "@value" : "Sterilizes the wort, isomerizes hop alpha acids, and drives off unwanted volatile compounds."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Conditioning28days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_Conditioning28days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3611,10 +3652,10 @@
     "@value" : "Maturation phase: flavors develop, beer clarifies and stabilizes."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_CoolingToPitchTemp",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_CoolingToPitchTemp",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3641,10 +3682,10 @@
     "@value" : "Rapidly cool wort to yeast pitching temperature."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Fermentation14days",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_Fermentation14days",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3671,10 +3712,10 @@
     "@value" : "Primary fermentation: yeast converts sugars into alcohol and CO2."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Mash60min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_Mash60min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3703,10 +3744,10 @@
     "@value" : "Conversion of starches in the malt to fermentable sugars via enzymatic activity."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_MashOut10min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_MashOut10min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3737,10 +3778,10 @@
     "@value" : "Stop enzymatic activity and raise mash temperature to prepare for lautering or sparging."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Sparge20min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_Sparge20min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3767,10 +3808,10 @@
     "@value" : "Rinse the grains to extract remaining sugars and increase wort yield."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RIS_Whirlpool15min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RIS_Whirlpool15min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isStepOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#GAS_RussianImperialStout"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"
   } ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3797,13 +3838,13 @@
     "@value" : "Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RiceWheat",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RiceWheat",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RoastedBarley",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#cerealName" : [ {
     "@value" : "Roasted Barley"
@@ -3813,7 +3854,7 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#RussianImperialStout",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#maxABV" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -3841,10 +3882,10 @@
     "@id" : "http://www.beerecipe.com/ontology#BeerStyle"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sanitizer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Sanitizer",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -3856,10 +3897,10 @@
     "@value" : "Sanitizer"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Scotland",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Scotland",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isOriginOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Country"
@@ -3871,7 +3912,7 @@
     "@value" : "Scotland"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SessionBeer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#SessionBeer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3880,7 +3921,7 @@
     "@id" : "_:genid56"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#SimcoeHop",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#alphaAcidPercentage" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
@@ -3899,7 +3940,7 @@
     "@value" : "Simcoe"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Sparge20min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Sparge20min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3924,7 +3965,7 @@
     "@value" : "Rinse the grains to extract remaining sugars and increase wort yield."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardBeer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#StandardBeer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3933,7 +3974,7 @@
     "@id" : "_:genid65"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StandardMash45min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#StandardMash45min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3958,7 +3999,7 @@
     "@value" : "Conversion of starches in the malt to fermentable sugars via enzymatic activity."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#StrongBeer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#StrongBeer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
@@ -3967,10 +4008,10 @@
     "@id" : "_:genid74"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Thermometer",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Thermometer",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -3982,7 +4023,7 @@
     "@value" : "Brewing Thermometer"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#TripleHoppedIPA",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#TripleHoppedIPA",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#difficultyLevel" : [ {
     "@value" : "advanced"
@@ -3996,10 +4037,10 @@
     "@value" : "65"
   } ],
   "http://www.beerecipe.com/ontology#hasStyle" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#AmericanIPA"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#UnitedKingdom",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#UnitedKingdom",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Country"
@@ -4011,7 +4052,7 @@
     "@value" : "United Kingdom"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#UnitedStates",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#UnitedStates",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Country"
@@ -4023,10 +4064,10 @@
     "@value" : "United States"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Water",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype", "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Water"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Brewing water - the primary ingredient in beer, comprising 90-95% of the final product. Water chemistry significantly affects beer flavor."
@@ -4038,7 +4079,7 @@
     "@id" : "http://www.beerecipe.com/ontology#Ingredient"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Whirlpool15min",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#stepDuration" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -4063,10 +4104,10 @@
     "@value" : "Separates hops and trub from the wort via vortexing; helps clarify the wort before cooling."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#WortChiller",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#WortChiller",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.beerecipe.com/ontology#isRequiredBy" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#BrewDog_PunkIPA_Recipe"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Equipment"
@@ -4078,55 +4119,23 @@
     "@value" : "Wort Chiller"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Yeast",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Yeast",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
-  "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#hasWater",
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://mega2799.github.io/web-semantico/index-en.html#hasWater",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.beerecipe.com/ontology#Recipe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Water"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Water"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.beerecipe.com/ontology#hasIngredient"
   } ]
-}, {
-  "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "label"
-  }, {
-    "@value" : "label"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2001/XMLSchema#date",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "http://www.w3.org/2001/XMLSchema#float",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#example",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#historyNote",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#note",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/ns/prov#hadPrimarySource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://xmlns.com/foaf/0.1/name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://rdf.ag/o/MaltingActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -6484,7 +6493,7 @@
     "@value" : "Durum Wheat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "fr",
@@ -6601,7 +6610,7 @@
     "@value" : "Hard Wheat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "fr",
@@ -6632,7 +6641,7 @@
     "@value" : "Red Wheat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "fr",
@@ -6689,7 +6698,7 @@
     "@value" : "Soft Wheat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "fr",
@@ -6720,7 +6729,7 @@
     "@value" : "Spring Wheat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -6749,7 +6758,7 @@
     "@value" : "White Wheat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "fr",
@@ -6778,7 +6787,7 @@
     "@value" : "Winter Wheat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#Cereal"
+    "@id" : "https://mega2799.github.io/web-semantico/index-en.html#Cereal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "fr",
