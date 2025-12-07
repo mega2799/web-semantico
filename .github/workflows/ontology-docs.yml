@@ -24,8 +24,7 @@ jobs:
 
             - name: Download WIDOCO
               run: |
-                  wget https://github.com/dgarijo/Widoco/releases/tag/v1.4.25#:~:text=widoco%2D1.4.25%2Djar%2Dwith%2Ddependencies_JDK%2D11.jar
-
+                  wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
             - name: Generate documentation
               run: |
                   ls -lah; java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar.jar \
@@ -41,3 +40,4 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./docs
                   cname: your-domain.com # Optional: se hai un dominio custom
+
