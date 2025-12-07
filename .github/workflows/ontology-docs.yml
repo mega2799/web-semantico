@@ -22,13 +22,9 @@ jobs:
                   distribution: "temurin"
                   java-version: "11"
 
-            - name: Download WIDOCO
-              run: |
-                  wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
-
             - name: Generate documentation
               run: |
-                  ls -lah; java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar.jar \
+                  ls -lah; java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
                   -ontFile beerecipe.rdf \
                   -outFolder docs \
                   -rewriteAll \
