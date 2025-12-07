@@ -24,11 +24,11 @@ jobs:
     
     - name: Download WIDOCO
       run: |
-        wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies.jar
+        wget https://github.com/dgarijo/Widoco/releases/tag/v1.4.25#:~:text=widoco%2D1.4.25%2Djar%2Dwith%2Ddependencies_JDK%2D11.jar
     
     - name: Generate documentation
       run: |
-        java -jar widoco-1.4.25-jar-with-dependencies.jar \
+        java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
           -ontFile beerecipe.rdf \
           -outFolder docs \
           -rewriteAll \
