@@ -1,0 +1,1732 @@
+\documentclass[12pt,a4paper]{article}
+
+% -----------------------------------------------------
+% PACKAGES
+% -----------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{alltt}
+\usepackage{dirtree}
+
+\geometry{margin=3cm}
+
+\title{Estensione dell'ontologia della birra Recipe per la modellazione di ricette birre artigianali}
+\author{Matteo Santoro \\ Corso diSi \\ Università di Cesena}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+% -----------------------------------------------------
+\section{Introduzione}
+% -----------------------------------------------------
+
+% Breve presentazione del progetto, obiettivi e contesto.
+% Descrizione del dominio scelto: modellazione delle ricette culinarie.
+% Motivazioni della scelta e breve panoramica delle tecnologie Semantic Web.
+
+Questo report ha come obbiettivo la realizzazione di un'ontologia sulle ricette delle birre artigianali. La nuova ontologia BeeRecipe permette di consultare dati relativi alle varie tipologie di birre e della loro composizione.
+
+Nei capitoli successivi si esploreranno tutte le fasi che hanno portato alla creazione di BeeRecipe.
+Si parte da un’analisi di dominio, in cui si esploreranno gli obiettivi, per poi continuare con una
+descrizione dettagliata della struttura dell’ontologia, andando a trattare classi, proprietà, restrizioni, etc...
+
+Si analizzeranno le ontologie importate, le regole SWRL e le tecnologie utilizzate,
+fino ad individuare le possibili query SPARQL.
+
+
+% -----------------------------------------------------
+\section{Analisi del dominio}
+% -----------------------------------------------------
+
+%##-----------------------------------------------------
+\subsection{Obbiettivi}
+%##-----------------------------------------------------
+
+Si riportano di seguito gli obiettivi di quest'ontologia:
+
+\begin{itemize}
+    \item \textbf{Modellazione del concetto di ricetta di birra artigianale} - Rappresentare in modo strutturato tutti gli elementi che compongono una ricetta: ingredienti (malti, luppoli, cereali, lieviti), quantità, tempi e temperature di lavorazione.
+    
+    \item \textbf{Classificazione delle birre per stile} - Collegare le ricette agli stili birrari tradizionali (IPA, Stout, Lager, etc.) con le relative caratteristiche organolettiche.
+    
+    \item \textbf{Tracciabilità degli ingredienti} - Permettere di risalire alle proprietà specifiche di ogni ingrediente utilizzato, dalle varietà di luppolo alle tipologie di malto e cereali.
+    
+    \item \textbf{Sistema di raccomandazione} - Consentire di trovare ricette in base a criteri specifici come livello di difficoltà, gradazione alcolica, amarezza, ingredienti disponibili o profilo aromatico desiderato.
+    
+    \item \textbf{Riusabilità e estensibilità} - Garantire che l'ontologia sia facilmente integrabile con altre ontologie del dominio food \& beverage e aggiornabile con nuovi stili, ingredienti e tecniche di produzione.
+\end{itemize}
+
+\subsection{Analisi target users}
+
+Si sono identificate persone fittizie per comprendere quali fossero le esigenze principali nella ricerca e creazione di ricette di birra artigianale.
+
+\subsubsection{Personas: Marco}
+
+Marco è un homebrewer principiante di 28 anni che ha appena ricevuto in regalo un kit per la produzione casalinga di birra. Non ha esperienza nella birrificazione ma è molto curioso e vorrebbe iniziare con ricette semplici, con pochi ingredienti e che non richiedano attrezzature professionali. Marco cerca ricette per birre dai sapori classici e bilanciati, con una gradazione alcolica moderata (4-5\%) e che utilizzino ingredienti facilmente reperibili.
+
+\subsubsection{Personas: Elena}
+
+Elena è una birraio professionista di 35 anni che gestisce un microbirrificio artigianale. Ha una conoscenza approfondita delle tecniche di birrificazione e cerca costantemente ispirazione per creare nuove ricette sperimentali. Elena è particolarmente interessata alle birre ad alta fermentazione con profili luppolati complessi e vorrebbe esplorare combinazioni innovative di luppoli americani e neozelandesi. Ha bisogno di ricette dettagliate che specifichino tempistiche precise di luppolatura e parametri tecnici come IBU (International Bitterness Units) e EBC (scala del colore).
+
+\subsubsection{Personas: Davide}
+
+Davide è un appassionato di birre artigianali di 42 anni, celiaco, che ha dovuto rinunciare a molte delle sue birre preferite a causa dell'intolleranza al glutine. Ora vuole imparare a produrre birre gluten-free in casa utilizzando cereali alternativi come sorgo, miglio o riso. Davide cerca ricette specifiche che non utilizzino orzo o frumento ma che mantengano comunque un buon corpo e profilo aromatico. Preferisce birre chiare e dissetanti con gradazione alcolica contenuta, ideali per l'estate.Riprova
+
+% % -----------------------------------------------------
+% \section{Tecnologie e vocabolari utilizzati}
+% % -----------------------------------------------------
+
+% \subsection{RDF e RDFS}
+% Descrizione del ruolo di RDF e RDFS nel progetto.
+
+% \subsection{OWL}
+% Cenni sull'uso di OWL per la modellazione della conoscenza e il ragionamento.
+
+% \subsection{BeeRecipe}
+% Breve introduzione a BeeRecipe e ai concetti riutilizzati.
+
+% \subsection{Altri vocabolari collegati}
+% Schema.org, QUDT, Time Ontology, ecc.
+
+
+\section{Ontologie Utilizzate}
+
+Questo capitolo presenta le ontologie esistenti che sono state integrate e utilizzate come fondamento per la modellazione del concetto di ricetta di birra artigianale. Ciascuna ontologia contribuisce con specifici domini di conoscenza relativi agli ingredienti, ai processi e alle caratteristiche organolettiche della birra.
+
+\subsection{Beer Ontology}
+
+La Beer Ontology\footnote{\url{https://rdf.ag/o/beer}} è un'ontologia RDFS/OWL che modella gli stili di birra, gli ingredienti e i processi di produzione birraria. L'ontologia è stata sviluppata con l'obiettivo primario di fornire tracciabilità degli ingredienti, controllo dei processi e identificazione degli stili in modo linguisticamente neutro.
+
+L'ontologia definisce gli stili di birra basandosi sugli ingredienti e sui processi di produzione utilizzati, evitando così confusione tra stili generalmente accettati e termini di marketing. Gli stili sono organizzati gerarchicamente come specializzazioni di categorie più ampie: ad esempio, le Pale Ales costituiscono una famiglia che include IPA (India Pale Ale), APA (American Pale Ale) e English Pale Ales.
+
+La Beer Ontology classifica le birre in due macro-categorie principali basate sul tipo di fermentazione:
+\begin{itemize}
+    \item \textbf{Ale}: birre prodotte con lieviti a fermentazione alta (\textit{top-fermenting}), caratterizzate da profili aromatici fruttati
+    \item \textbf{Lager}: birre prodotte con lieviti a fermentazione bassa (\textit{bottom-fermenting}), tipicamente più pulite e meno fruttate
+\end{itemize}
+
+L'ontologia include inoltre informazioni su microbirrifici, brewery contract, e craft brewery, fornendo un vocabolario completo per descrivere l'intera filiera produttiva. La documentazione è disponibile in inglese e francese, garantendo accessibilità a una vasta comunità internazionale.
+
+\subsection{Hops Ontology}
+
+La Hops Ontology\footnote{\url{https://rdf.ag/o/hops}} è un'ontologia specializzata nella rappresentazione delle varietà di luppolo e delle loro proprietà chimiche e organolettiche. L'ontologia è stata sviluppata per facilitare la tracciabilità del luppolo e aiutare i birrai a selezionare le varietà più appropriate per ottenere i profili aromatici desiderati.
+
+Il luppolo rappresenta uno degli ingredienti più critici nella produzione birraria moderna, contribuendo all'amaro, all'aroma e alla stabilità della schiuma. La Hops Ontology cataloga centinaia di varietà di luppolo, documentando per ciascuna:
+
+\begin{itemize}
+    \item \textbf{Proprietà chimiche}: contenuto di acidi alfa (alpha acids), acidi beta, oli essenziali
+    \item \textbf{Lineage genetico}: parentela tra varietà, programmi di breeding
+    \item \textbf{Caratteristiche organolettiche}: profili aromatici (citrico, floreale, erbaceo, resinoso)
+    \item \textbf{Origine geografica}: paese e regione di coltivazione, effetti del terroir
+    \item \textbf{Usi tipici}: bittering, aroma, dual-purpose
+\end{itemize}
+
+Un aspetto fondamentale dell'ontologia è il riconoscimento dell'importanza del terroir: luppoli della stessa varietà genetica possono presentare profili aromatici molto diversi a seconda del clima e del suolo in cui sono coltivati. L'ontologia include riferimenti alla USDA per i numeri di accesso delle varietà e collegamenti a database tassonomici come NCBITaxon.
+
+La Hops Ontology definisce le varietà di luppolo come sottoclassi piuttosto che istanze della classe \texttt{Hop}, permettendo di associare dati specifici provenienti da diversi coltivatori e annate. L'ontologia è completamente conforme agli standard OWL/RDFS e fa riferimento a vocabolari noti come Schema.org e GS1.
+
+\subsection{Malt Ontology}
+
+La Malt Ontology\footnote{\url{https://rdf.ag/o/malt}} modella i tipi di malto e i processi di maltazione utilizzati nella produzione birraria. Il malto è un ingrediente fondamentale che determina colore, corpo, schiuma, aroma e sapore della birra finita.
+
+L'ontologia classifica i malti secondo due criteri principali:
+\begin{enumerate}
+    \item \textbf{Tipo di cereale di origine}: Barley Malt, Wheat Malt
+    \item \textbf{Processo di produzione}: Munich Malt, Pilsner Malt, Caramel Malt, Chocolate Malt, Black Malt, Roasted Malt
+\end{enumerate}
+
+Particolare attenzione è dedicata ai parametri tecnici dei malti, essenziali per i birrai:
+\begin{itemize}
+    \item Colore espresso in unità EBC (European Brewery Convention)
+    \item Potere diastasico (capacità enzimatica)
+    \item Contenuto di azoto totale (TN) e azoto solubile totale (TSN)
+    \item Rapporto TSN/TN
+    \item Potenziale di estrazione
+\end{itemize}
+
+L'ontologia riconosce che la maltazione, nonostante i progressi tecnologici e scientifici, rimane in parte un'arte, specialmente nel settore delle birre artigianali. Le proprietà associate a un lotto di malto possono variare tra produzioni dello stesso prodotto, influenzando la consistenza del prodotto finale. Questa ontologia mira proprio a fornire maggiore tracciabilità e informazioni per supportare produttori di birra di piccola e media scala.
+
+La Malt Ontology fa riferimento a standard come FOODON per le classi equivalenti, utilizza GS1 e Schema.org per le misurazioni, PROV per la provenienza e documentazione, e il Time Ontology per il supporto temporale. I cereali utilizzati per specifici tipi di malto sono referenziati dalla CerealsToo Ontology.
+
+\subsection{CerealsToo Ontology}
+
+La CerealsToo Ontology\footnote{\url{https://rdf.ag/o/cerealstoo}} è specializzata nella modellazione di cereali e grani, con particolare focus sulle varietà utilizzate per la produzione di malto. L'ontologia fornisce identificazione ontologica precisa di varietà specifiche di colture, considerando varietà convenzionali, organiche e storiche.
+
+L'ontologia si concentra principalmente sul frumento (\textit{Triticum spp.}), data la sua importanza come una delle colture più coltivate al mondo, ma include anche altri cereali rilevanti per la produzione di malto come l'orzo. Il frumento viene categorizzato secondo multiple dimensioni:
+
+\begin{itemize}
+    \item \textbf{Durezza}: Hard wheat vs. Soft wheat
+    \item \textbf{Ciclo}: Spring wheat vs. Winter wheat
+    \item \textbf{Colore}: Red wheat vs. White wheat
+    \item \textbf{Tipologia}: Durum wheat (per pasta) vs. Common wheat (per pane)
+\end{itemize}
+
+L'ontologia include riferimenti dettagliati a:
+\begin{itemize}
+    \item Patrimonio genetico e caratteristiche fenotipiche
+    \item Status di registrazione in Canada (Canadian Grain Commission) e USA (USDA)
+    \item Numeri di accesso USDA (CV numbers per cultivar, CN numbers per varietà canadesi)
+    \item Classificazioni FAO (Food and Agriculture Organization)
+\end{itemize}
+
+La separazione concettuale tra CerealsToo Ontology e Malt Ontology è giustificata dalla complessità del processo di trasformazione: i cereali sono materiali naturali o coltivati, mentre i malti sono prodotti trasformati attraverso processi complessi di germinazione, essicazione e tostatura. Questa separazione permette di mantenere chiara la distinzione tra materia prima e prodotto lavorato.
+
+L'ontologia è sia human-readable che machine-readable, si basa su tassonomie biologiche e fa riferimento a classificazioni governative. L'obiettivo è fornire tracciabilità completa dalla produzione agricola fino al consumo finale, colmando il gap di conoscenza tra consumatori e produttori.
+
+\subsection{FoodOn}
+
+FoodOn\footnote{\url{http://foodon.org}} è un'ontologia completa e facilmente accessibile che descrive gli alimenti dalla produzione agricola (\textit{farm}) al consumo (\textit{fork}).
+
+L'ontologia contiene oltre 9.600 categorie generiche di prodotti alimentari e fornisce il vocabolario necessario per descrivere alimenti in modo dettagliato e non ambiguo.
+
+
+Nel contesto di questo progetto, FoodOn viene utilizzata per:
+\begin{enumerate}
+    \item Collegare gli ingredienti della birra (malto, luppolo, cereali) alla più ampia categoria di alimenti
+    \item Standardizzare la terminologia relativa ai prodotti alimentari fermentati
+    \item Fornire annotazioni semantiche coerenti con altre applicazioni nel dominio alimentare
+    \item Abilitare l'interoperabilità con database nutrizionali e sistemi di tracciabilità alimentare
+\end{enumerate}
+
+La presenza di FoodOn nel progetto permette di posizionare le ricette di birra artigianale all'interno del più ampio ecosistema della produzione e consumo alimentare, facilitando future integrazioni con sistemi di gestione della filiera alimentare e applicazioni di food pairing.
+
+% -----------------------------------------------------
+\section{Analisi del dominio}
+% -----------------------------------------------------
+
+Descrizione del concetto di ricetta.
+Identificazione delle entità principali (ingredienti, passaggi, strumenti, ecc.).
+Relazioni principali nel dominio.
+
+\subsection{Classi importate}
+\subsubsection{Birra}
+ \begin{figure}[!htb]
+    \centering 
+    \includegraphics[width=12cm]{beer_classes.jpg}
+    \caption{Tipologie di birre importate}
+    \label{beer_classes}
+\end{figure}
+\newpage
+\subsubsection{Luppolo}
+ \begin{figure}[!htb]
+    \centering 
+    \includegraphics[width=12cm]{hops_classes.jpg}
+    \caption{Tipologie di luppoli importati}
+    \label{hops_classes}
+\end{figure}
+\newpage
+\subsubsection{Cereali}
+ \begin{figure}[!htb]
+    \centering 
+    \includegraphics[width=12cm]{cereals_classes.jpg}
+    \caption{Tipologie di cereali importati}
+    \label{cereals_classes}
+\end{figure}
+\newpage
+\subsubsection{Malti}
+ \begin{figure}[!htb]
+    \centering 
+    \includegraphics[width=12cm]{malts_classes.jpg}
+    \caption{Tipologie di malti importati}
+    \label{malts_classes}
+\end{figure}
+
+
+
+% -----------------------------------------------------
+\section{Progettazione dell'ontologia}
+% -----------------------------------------------------
+
+\subsection{Estensione RDFS}
+% Classi introdotte, nuove proprietà, collegamenti con FoodOn e altri vocabolari.
+
+L'ontologia BeeRecipe è stata sviluppata estendendo e integrando quattro ontologie esistenti nel dominio birrario. In questa sezione si descrivono le classi introdotte, le nuove proprietà definite e i collegamenti stabiliti con i vocabolari importati.
+
+\subsubsection{Classi principali introdotte}
+
+Le classi fondamentali dell'ontologia BeeRecipe sono state progettate per modellare in modo completo il processo di creazione di una birra artigianale:
+
+\begin{itemize}
+    \item \texttt{Recipe}: classe centrale dell'ontologia che rappresenta una ricetta di birra artigianale. Ogni istanza di questa classe contiene tutte le informazioni necessarie per produrre una specifica tipologia di birra, includendo ingredienti, parametri tecnici, fasi di lavorazione e caratteristiche organolettiche.
+    
+    \item \texttt{BrewingStep}: rappresenta le singole fasi del processo di birrificazione (ammostamento, bollitura, fermentazione, condizionamento). Questa classe permette di modellare la sequenzialità e i parametri specifici di ogni fase produttiva.
+
+\begin{verbatim}
+BrewingStep
+|-- MashStep
+|   |-- Mash
+|   +-- MashOut
+|-- SpargeStep
+|   +-- Sparge
+|-- BoilStep
+|   +-- Boil
+|-- WhirlpoolStep
+|-- CoolingStep
+|-- FermentationStep
++-- ConditioningStep
+\end{verbatim}
+    \item \texttt{Equipment}: modella l'attrezzatura necessaria per la produzione birraria, permettendo di distinguere tra strumentazione base per homebrewer e attrezzatura professionale avanzata.
+    
+    \item \texttt{FlavorProfile}: classe che definisce i profili aromatici degli ingredienti (citrus, pine, floral, earthy, caramel, chocolate, etc.), essenziale per caratterizzare sensorialmente le ricette.
+    
+    \item \texttt{Country}: rappresenta i paesi di origine degli ingredienti, particolarmente rilevante per luppoli e malti dove la provenienza geografica influenza significativamente le caratteristiche organolettiche.
+    
+    \item \texttt{DietaryRequirement}: modella le esigenze dietetiche specifiche (vegan, gluten-free, low-alcohol, alcohol-free), permettendo di classificare e filtrare le ricette in base a requisiti alimentari particolari.
+    
+    \item \texttt{DifficultyLevel}: classe di supporto per categorizzare le ricette secondo il livello di difficoltà (beginner, intermediate, advanced, expert), facilitando la ricerca da parte di utilizzatori con diverse competenze.
+\end{itemize}
+
+\subsubsection{Classi importate e integrate}
+
+BeeRecipe integra classi provenienti da quattro ontologie specializzate:
+
+\begin{itemize}
+    \item \textbf{Beer Ontology}: sono state importate le classi \texttt{Beer} e \texttt{BeerStyle}, che permettono di collegare ogni ricetta allo stile birrario di riferimento (IPA, Stout, Lager, Weizen, etc.) e alla birra prodotta. L'integrazione di questa ontologia garantisce l'aderenza agli standard di classificazione internazionali come il Beer Judge Certification Program (BJCP).
+    
+    \item \textbf{Hops Ontology}: la classe \texttt{Hop} importata modella i luppoli con tutte le loro caratteristiche distintive (contenuto di acidi alfa, profilo aromatico, origine geografica). Questa ontologia fornisce una tassonomia dettagliata delle varietà luppolatorie disponibili a livello mondiale.
+    
+    \item \textbf{Malt Ontology}: la classe \texttt{Malt} rappresenta i malti utilizzati nelle ricette, con particolare attenzione alle proprietà che influenzano colore, corpo e sapore della birra (grado Lovibond, potere diastatico, contenuto proteico).
+    
+    \item \textbf{Cereals Ontology}: la classe \texttt{Cereal} è fondamentale per modellare sia i cereali tradizionali (orzo, frumento) sia quelli alternativi utilizzati nelle ricette gluten-free (sorgo, miglio, riso, avena). Questa integrazione risponde alle esigenze della persona Davide identificata nell'analisi dei requisiti.
+\end{itemize}
+
+Inoltre, è stata introdotta la classe \texttt{Yeast} per rappresentare i lieviti, componente essenziale non coperta dalle ontologie importate. I lieviti sono caratterizzati da proprietà come temperatura ottimale di fermentazione, range di attenuazione e tolleranza alcolica.
+
+\subsubsection{Gerarchia delle classi}
+
+La classe \texttt{Ingredient} funge da superclasse astratta per tutti gli ingredienti utilizzabili nelle ricette:
+
+
+\begin{verbatim}
+Ingredient
+|-- Hop
+|-- Malt
+|-- Cereal
+|-- Yeast
+|-- FoodIngredient (FOOODON)
++-- Water
+\end{verbatim}
+
+Questa struttura gerarchica permette di definire proprietà comuni a tutti gli ingredienti (come \texttt{ingredientName}, \texttt{quantity}, \texttt{unit}) mantenendo al contempo la possibilità di specializzare ogni sottoclasse con attributi specifici.
+
+\subsubsection{Object Properties definite}
+
+Le Object Properties costituiscono il cuore semantico dell'ontologia, definendo le relazioni tra le diverse entità:
+
+\paragraph{Relazioni Recipe-Ingredient:}
+\begin{itemize}
+    \item \texttt{hasIngredient}: proprietà generale che collega una ricetta a un ingrediente generico
+    \item \texttt{hasHop}, \texttt{hasMalt}, \texttt{hasWater}, \texttt{hasCereal}, \texttt{hasYeast}: sottoproprietà specializzate di \texttt{hasIngredient} che permettono query più specifiche
+    \item Inverse properties: \texttt{isIngredientOf}, \texttt{isHopOf}, \texttt{isMaltOf}, etc.
+\end{itemize}
+
+\paragraph{Relazioni Recipe-Beer/Style:}
+\begin{itemize}
+    \item \texttt{producesBeer}: collega una ricetta alla birra prodotta (proprietà funzionale: una ricetta produce esattamente una birra)
+    \item \texttt{hasStyle}: associa la ricetta allo stile birrario di riferimento
+    \item Inverse properties: \texttt{isProducedBy}, \texttt{isStyleOf}
+\end{itemize}
+
+\paragraph{Relazioni di processo e attrezzatura:}
+\begin{itemize}
+    \item \texttt{hasBrewingStep}: connette una ricetta alle sue fasi di produzione
+    \item \texttt{requiresEquipment}: specifica l'attrezzatura necessaria
+    \item Inverse properties: \texttt{isStepOf}, \texttt{isRequiredBy}
+\end{itemize}
+
+\paragraph{Relazioni di caratterizzazione:}
+\begin{itemize}
+    \item \texttt{hasFlavorProfile}: associa ingredienti ai loro profili aromatici
+    \item \texttt{hasOriginCountry}: indica la provenienza geografica degli ingredienti
+    \item \texttt{isSuitableFor}: collega ricette a requisiti dietetici specifici
+\end{itemize}
+
+\paragraph{Relazioni di similarità e sostituzione:}
+\begin{itemize}
+    \item \texttt{isSubstituteOf}: proprietà simmetrica che indica ingredienti intercambiabili
+    \item \texttt{isSimilarTo}: proprietà simmetrica e transitiva per ricette affini
+\end{itemize}
+
+\subsubsection{Data Properties definite}
+
+Le Data Properties permettono di associare valori letterali alle istanze:
+
+\paragraph{Proprietà della Recipe:}
+Parametri identificativi e descrittivi (\texttt{recipeName}, \texttt{recipeDescription}, \texttt{author}, \texttt{creationDate}), parametri tecnici fondamentali (\texttt{estimatedABV}, \texttt{estimatedIBU}, \texttt{estimatedEBC}, \texttt{originalGravity}, \texttt{finalGravity}), parametri di produzione (\texttt{batchSize}, \texttt{totalBrewingTime}, \texttt{mashingTime}, \texttt{boilingTime}, \texttt{fermentationDuration}, \texttt{conditioningDuration}), e classificazioni (\texttt{difficultyLevel}, \texttt{servingTemperature}, \texttt{isVegan}, \texttt{isGlutenFree}).
+
+\paragraph{Proprietà degli Ingredient:}
+Attributi comuni (\texttt{ingredientName}, \texttt{quantity}, \texttt{unit}), proprietà specifiche dei luppoli (\texttt{hopName}, \texttt{alphaAcidPercentage}, \texttt{additionTime}), dei malti (\texttt{maltName}, \texttt{ebcColor}), dei cereali (\texttt{cerealName}, \texttt{glutenContent}), e dei lieviti (\texttt{yeastName}, \texttt{optimalTemperature}, \texttt{minAttenuation}, \texttt{maxAttenuation}).
+
+\paragraph{Proprietà dei BrewingStep:}
+\texttt{stepName}, \texttt{stepOrder}, \texttt{stepDuration}, \texttt{stepTemperature}, \texttt{stepInstructions} permettono di descrivere completamente ogni fase del processo produttivo.
+
+\paragraph{Proprietà dei BeerStyle:}
+\texttt{styleName}, \texttt{styleDescription}, range di parametri tecnici (\texttt{minABV}, \texttt{maxABV}, \texttt{minIBU}, \texttt{maxIBU}) che definiscono i confini di ogni stile secondo gli standard internazionali.
+
+
+\subsection{Costruzione in OWL}
+% Restrizioni, classi equivalenti, disgiunzioni, proprietà inverse.
+
+L'ontologia BeeRecipe utilizza il linguaggio OWL 2 (Web Ontology Language) per esprimere vincoli e relazioni complesse che vanno oltre le capacità espressive di RDFS. In questa sezione si descrivono le principali costruzioni OWL implementate.
+
+\subsubsection{Restrizioni sulle classi}
+
+Le restrizioni permettono di definire vincoli necessari e sufficienti per l'appartenenza a una classe:
+
+\paragraph{Restrizioni esistenziali (some):}
+Definiscono condizioni necessarie per l'appartenenza a una classe.
+
+\begin{verbatim}
+Recipe SubClassOf (hasIngredient some Ingredient)
+\end{verbatim}
+
+Questa restrizione impone che ogni istanza di \texttt{Recipe} debba avere almeno un ingrediente. Una ricetta senza ingredienti non è considerata valida dall'ontologia.
+
+\begin{verbatim}
+Recipe SubClassOf (hasStyle exactly 1 BeerStyle)
+\end{verbatim}
+
+Ogni ricetta deve appartenere esattamente a uno stile birrario, evitando ambiguità nella classificazione.
+
+\paragraph{Vincoli sulla classe Recipe}
+
+La classe \texttt{Recipe} è stata arricchita con una serie di restrizioni che definiscono i requisiti minimi per una ricetta di birra artigianale ben formata.
+
+\subparagraph{Numero minimo di ingredienti:}
+
+\begin{verbatim}
+Recipe
+ and ('has cereal' min 1 Cereal)
+ and ('has hop' min 1 Hops)
+ and ('has malt' min 1 Malt)
+ and (hasWater min 1 Water)
+ and (hasYeast exactly 1 Yeast)
+ \end{verbatim}
+
+Questa restrizione di cardinalità minima richiede che ogni ricetta utilizzi almeno quattro ingredienti distinti. Questo vincolo riflette la realtà della birrificazione, dove una ricetta minimale necessita tipicamente di: almeno un luppolo (per l'amaro e l'aroma), almeno un malto (per gli zuccheri fermentescibili), un lievito (per la fermentazione) e cereali e acqua (per il corpo e il volume). Tale vincolo previene la creazione di ricette incomplete o non realistiche.
+
+\subparagraph{Produzione univoca di birra:}
+
+\begin{verbatim}
+Recipe SubClassOf (producesBeer exactly 1 Beer)
+\end{verbatim}
+
+La restrizione di cardinalità esatta impone che ogni ricetta produca esattamente una birra. Questo vincolo è coerente con la proprietà funzionale di \texttt{producesBeer} e modella la relazione uno-a-uno tra ricetta e prodotto finale. Una ricetta non può produrre zero birre (sarebbe incompleta) né multiple birre distinte (richiederebbe ricette separate).
+
+\subparagraph{Appartenenza univoca a uno stile:}
+
+\begin{verbatim}
+Recipe SubClassOf (hasStyle exactly 1 BeerStyle)
+\end{verbatim}
+
+Ogni ricetta deve appartenere esattamente a uno stile birrario. Questo vincolo evita ambiguità nella classificazione: una ricetta non può essere contemporaneamente una IPA e uno Stout, né può essere priva di classificazione stilistica. La cardinalità esatta garantisce sia l'esistenza della relazione (almeno uno stile) sia la sua unicità (al massimo uno stile).
+
+\subparagraph{Utilizzo univoco del lievito:}
+
+\begin{alltt}
+Recipe
+ and ('has cereal' min 1 Cereal)
+ and ('has hop' min 1 Hops)
+ and ('has malt' min 1 Malt)
+ and (hasWater min 1 Water)
+\textbf{ and (hasYeast exactly 1 Yeast)}
+\end{alltt}
+
+Nella pratica birraria tradizionale, una ricetta utilizza tipicamente un solo ceppo di lievito per la fermentazione primaria. Questa restrizione riflette tale pratica, richiedendo che ogni ricetta specifichi esattamente un lievito. Sebbene esistano tecniche avanzate con lieviti multipli (co-fermentazione o fermentazioni sequenziali), per semplicità didattica e per coprire il caso d'uso più comune, si è scelto di imporre l'utilizzo di un singolo lievito.
+
+\subparagraph{Presenza obbligatoria di luppoli:}
+
+\paragraph{Gerarchia e compatibilità dei vincoli}
+
+È importante notare che le restrizioni specifiche su luppoli e malti sono compatibili e complementari con il vincolo generale sul numero minimo di ingredienti. Se una ricetta soddisfa \texttt{hasHop min 1}, \texttt{hasMalt min 1} e \texttt{hasYeast exactly 1}, ha già almeno tre ingredienti. Il quarto ingrediente può essere un cereale aggiuntivo, un secondo luppolo, un secondo malto, e acqua.
+
+Le proprietà specifiche \texttt{hasHop}, \texttt{hasMalt}, \texttt{hasYeast}, \texttt{hasWater} sono definite come sottoproprietà di \texttt{hasIngredient}, garantendo che il reasoner riconosca automaticamente che un'asserzione \texttt{hasHop(?r, ?h)} implica \texttt{hasIngredient(?r, ?h)}.
+
+\paragraph{Verifica di consistenza tramite reasoning}
+
+Queste restrizioni permettono al reasoner di verificare automaticamente la consistenza delle ricette:
+
+\begin{itemize}
+    \item Una ricetta priva di luppoli viene identificata come \textbf{inconsistente}, poiché viola la restrizione \texttt{hasHop min 1}.
+    
+    \item Una ricetta che dichiara di produrre due birre diverse viene rilevata come \textbf{inconsistente}, violando la cardinalità esatta di \texttt{producesBeer}.
+    
+    \item Una ricetta con meno di quattro ingredienti viene segnalata come \textbf{incompleta}, non soddisfacendo il vincolo \texttt{hasIngredient min 4}.
+    
+    \item Una ricetta senza stile definito o con multipli stili viene identificata come \textbf{malformata}, violando \texttt{hasStyle exactly 1}.
+\end{itemize}
+
+Durante il popolamento dell'ontologia, il reasoner (Pellet o HermiT) verifica costantemente che ogni istanza di \texttt{Recipe} soddisfi tutti questi vincoli. Se un individuo viola anche solo una restrizione, l'intero individual viene marcato come inconsistente e evidenziato in rosso nell'interfaccia di Protégé, permettendo al modellatore di identificare e correggere rapidamente gli errori.
+
+\paragraph{Benefici per i casi d'uso}
+
+Questi vincoli strutturali supportano direttamente i casi d'uso identificati nell'analisi dei requisiti:
+
+\begin{itemize}
+    \item \textbf{Per Marco (principiante)}: I vincoli garantiscono che le ricette trovate siano sempre complete e producibili, evitando di proporre ricette con ingredienti mancanti.
+    
+    \item \textbf{Per Elena (professionista)}: La validazione automatica assicura che le ricette sperimentali mantengano una struttura base corretta, anche quando si esplorano combinazioni innovative di ingredienti.
+    
+    \item \textbf{Per Davide (celiaco)}: Combinati con le inferenze su ricette gluten-free, i vincoli assicurano che anche le ricette alternative rispettino i requisiti strutturali fondamentali della birrificazione.
+\end{itemize}
+
+
+\paragraph{Restrizioni di cardinalità:}
+Permettono di specificare il numero esatto, minimo o massimo di relazioni.
+
+\begin{verbatim}
+IPARecipe SubClassOf Recipe
+IPARecipe SubClassOf (hasHop min 2 Hop)
+\end{verbatim}
+
+Una ricetta di tipo IPA deve utilizzare almeno due varietà di luppolo, riflettendo la caratteristica luppolatura marcata di questo stile.
+
+\paragraph{Restrizioni con valori di data properties:}
+OWL permette di definire restrizioni anche sui valori delle data properties:
+
+\begin{verbatim}
+IPARecipe SubClassOf (estimatedIBU some xsd:int[>= 40]) TO_IMPLEMENT
+\end{verbatim}
+
+Questa restrizione impone che le ricette IPA abbiano un valore di IBU di almeno 40, rispettando gli standard dello stile.
+
+\begin{verbatim}
+GlutenFreeRecipe SubClassOf Recipe
+GlutenFreeRecipe SubClassOf (hasIngredient only 
+    (not (hasCereal some (glutenContent value true))))  TO_IMPLEMENT
+\end{verbatim}
+
+Le ricette gluten-free possono utilizzare solo ingredienti che non contengano cereali con glutine, garantendo la conformità alle esigenze dietetiche della persona Davide.
+
+\subsubsection{Classi equivalenti}
+
+Le classi equivalenti permettono di definire condizioni necessarie e sufficienti per l'appartenenza a una classe:
+
+\begin{verbatim}
+BeginnerRecipe EquivalentTo (Recipe and (difficultyLevel value "beginner"))
+\end{verbatim}
+
+Una ricetta è equivalente alla classe \texttt{BeginnerRecipe} se e solo se ha \texttt{difficultyLevel} impostato su "beginner". Questo permette al reasoner di classificare automaticamente le ricette in base alla loro difficoltà.
+
+\begin{verbatim}
+HighAlcoholBeer EquivalentTo (Recipe and (estimatedABV some xsd:float[>= 7.0]))
+\end{verbatim}
+
+Definisce automaticamente come "birre ad alta gradazione" tutte le ricette con ABV superiore o uguale al 7\%.
+
+\begin{verbatim}
+VeganRecipe EquivalentTo (Recipe and (isVegan value true))
+\end{verbatim}
+
+Classifica automaticamente le ricette vegane, facilitando le query di ricerca.
+
+\subsubsection{Classi disgiunte}
+Le disgiunzioni dichiarano che due classi non possono avere istanze in comune, prevenendo inconsistenze logiche:
+
+\begin{verbatim}
+DisjointClasses(Hop, Malt, Cereal, Yeast)    TO_IMPLEMENT
+\end{verbatim}
+
+Questa asserzione garantisce che un ingrediente non possa essere simultaneamente un luppolo e un malto, riflettendo la realtà fisica del dominio.
+
+\begin{verbatim}
+DisjointClasses(BeginnerRecipe, AdvancedRecipe, ExpertRecipe)  
+\end{verbatim}
+
+Una ricetta non può appartenere a più livelli di difficoltà contemporaneamente.
+
+\begin{verbatim}
+DisjointClasses(AleStyle, LagerStyle, LambicStyle)  TO_IMPLEMENT
+\end{verbatim}
+
+Le famiglie principali di stili birrari sono mutuamente esclusive: una birra è Ale, Lager o Lambic, ma non può appartenere a più famiglie.
+
+\subsubsection{Proprietà inverse}
+
+Le proprietà inverse sono state definite sistematicamente per tutte le object properties principali:
+
+\begin{verbatim}
+hasIngredient inverseOf isIngredientOf
+producesBeer inverseOf isProducedBy
+hasStyle inverseOf isStyleOf
+hasBrewingStep inverseOf isStepOf
+requiresEquipment inverseOf isRequiredBy
+hasFlavorProfile inverseOf isFlavorOf
+hasOriginCountry inverseOf isOriginOf
+\end{verbatim}
+
+Le proprietà inverse permettono di navigare l'ontologia bidirezionalmente e abilitano il reasoner a inferire automaticamente le relazioni inverse. Ad esempio, se si asserisce:
+
+\begin{verbatim}
+AmericanIPA_Recipe hasHop Cascade_Hop
+\end{verbatim}
+
+Il reasoner inferisce automaticamente:
+
+\begin{verbatim}
+Cascade_Hop isHopOf AmericanIPA_Recipe
+\end{verbatim}
+
+\subsubsection{Caratteristiche delle proprietà}
+
+Alcune object properties sono state dichiarate con caratteristiche specifiche:
+
+\paragraph{Proprietà funzionali:}
+Una proprietà funzionale può avere al massimo un valore per ogni individuo.
+
+\begin{verbatim}
+producesBeer: FunctionalProperty
+hasStyle: FunctionalProperty
+\end{verbatim}
+
+Questo garantisce che ogni ricetta produca esattamente una birra e appartenga a un solo stile.
+
+\paragraph{Proprietà simmetriche:}
+Se $(a, b)$ è nella relazione, allora anche $(b, a)$ è nella relazione.
+
+\begin{verbatim}
+isSubstituteOf: SymmetricProperty
+isSimilarTo: SymmetricProperty
+\end{verbatim}
+
+Se il luppolo Cascade può sostituire il Centennial, allora anche il Centennial può sostituire il Cascade.
+
+\paragraph{Proprietà transitive:}
+Se $(a, b)$ e $(b, c)$ sono nella relazione, allora anche $(a, c)$ è nella relazione.
+
+\begin{verbatim}
+isSimilarTo: TransitiveProperty
+\end{verbatim}
+
+Se la ricetta A è simile a B, e B è simile a C, allora A è simile a C. Questa transitività permette di costruire catene di raccomandazioni.
+
+\subsubsection{Reasoning e inferenze}
+
+L'utilizzo di OWL 2 permette di sfruttare reasoner automatici (Pellet, HermiT, ELK) per:
+
+\begin{enumerate}
+    \item \textbf{Verifica di consistenza}: il reasoner controlla che non esistano contraddizioni logiche nell'ontologia (ad esempio, una ricetta che sia simultaneamente beginner ed expert).
+    
+    \item \textbf{Classificazione automatica}: grazie alle classi equivalenti e alle restrizioni, il reasoner può classificare automaticamente le ricette in sottoclassi specifiche senza che l'utente debba farlo manualmente.
+    
+    \item \textbf{Inferenza di nuove relazioni}: il reasoner deduce automaticamente le proprietà inverse, le relazioni transitive e simmetriche, arricchendo il grafo di conoscenza.
+    
+    \item \textbf{Individuazione di inconsistenze}: se un individuo viola una restrizione (ad esempio, una ricetta IPA con IBU inferiore a 40), il reasoner lo identifica come inconsistente.
+\end{enumerate}
+
+
+\subsection{Scelte di modellazione}
+% Motivazioni e alternative considerate.
+
+In questa sezione si discutono le principali decisioni di design dell'ontologia BeeRecipe, motivando le scelte effettuate e presentando le alternative considerate.
+
+\subsubsection{Modellazione degli ingredienti nelle ricette}
+
+\paragraph{Problema:}
+Un ingrediente (ad esempio, il luppolo Cascade) ha proprietà intrinseche (alpha acid percentage, origine) ma anche proprietà contestuali che dipendono dalla ricetta specifica (quantità, timing di aggiunta, scopo dell'utilizzo).
+
+\paragraph{Alternative considerate:}
+
+\textbf{Approccio 1 - Proprietà dirette sulla classe Ingredient:}
+Definire \texttt{quantity}, \texttt{unit}, \texttt{additionTime} come data properties di \texttt{Ingredient}.
+
+\textit{Vantaggi}: Semplicità implementativa, modello più immediato.
+
+\textit{Svantaggi}: Lo stesso ingrediente non può avere quantità diverse in ricette diverse. Cascade dovrebbe essere duplicato per ogni ricetta, perdendo l'identità dell'ingrediente stesso.
+
+\textbf{Approccio 2 - Pattern di reificazione con RecipeIngredient:}
+Creare una classe intermedia \texttt{RecipeIngredient} che rappresenta "l'uso di un ingrediente in una ricetta specifica".
+
+\begin{verbatim}
+Recipe --usesIngredient--> RecipeIngredient --hasIngredientType--> Hop
+RecipeIngredient: quantity, unit, additionTime, purpose
+\end{verbatim}
+
+\textit{Vantaggi}: Separazione netta tra proprietà intrinseche e contestuali. Un ingrediente mantiene la sua identità. Massima flessibilità ed espressività.
+
+\textit{Svantaggi}: Maggiore complessità, query SPARQL più articolate, più difficile per utenti non esperti.
+
+\textbf{Approccio 3 - Proprietà dirette ma istanze duplicate (scelto):}
+Mantenere le proprietà contestuali su \texttt{Ingredient} ma creare istanze specifiche per ogni utilizzo (es: \texttt{Cascade\_IPA\_Bittering}, \texttt{Cascade\_IPA\_Aroma}).
+
+\textit{Vantaggi}: Bilanciamento tra semplicità e espressività. Query SPARQL più semplici. Adatto al contesto educativo del progetto.
+
+\textit{Svantaggi}: Possibile ridondanza di informazioni. Necessità di mantenere coerenza tra istanze dello stesso ingrediente.
+
+\paragraph{Scelta finale:}
+Per questo progetto si è optato per l'\textbf{Approccio 3}, privilegiando la semplicità d'uso e la facilità di interrogazione tramite SPARQL, aspetti fondamentali considerando che l'ontologia è destinata anche a homebrewer non necessariamente esperti di tecnologie semantiche.
+
+\subsubsection{Granularità delle fasi di produzione}
+
+\paragraph{Problema:}
+Definire il livello di dettaglio appropriato per modellare il processo di birrificazione.
+
+\paragraph{Alternative considerate:}
+
+\textbf{Modellazione semplificata}: Poche fasi macro (Mashing, Boiling, Fermentation).
+
+\textbf{Modellazione dettagliata}: Fasi specifiche con sottofasi (Mashing con strike temperature, protein rest, saccharification rest, mash-out; Boiling con timing specifici per ogni aggiunta di luppolo; Fermentation con primary, secondary, dry hopping; Conditioning con carbonation e aging).
+
+\paragraph{Scelta finale:}
+Si è adottata una \textbf{modellazione intermedia} con la possibilità di estensione. La classe \texttt{BrewingStep} è sufficientemente generica da permettere entrambi gli approcci: ricette per principianti possono avere poche fasi macro, mentre ricette professionali possono dettagliare ogni passaggio. La proprietà \texttt{stepOrder} garantisce la sequenzialità.
+
+\subsubsection{Sistema di unità di misura}
+
+\paragraph{Problema:}
+Gli ingredienti birrari possono essere misurati in diverse unità (grammi, kg, once, libbre per ingredienti solidi; litri, ml, galloni per liquidi).
+
+\paragraph{Alternative considerate:}
+
+\textbf{Unità standardizzate}: Imporre un'unica unità (es: grammi e litri) con conversioni obbligatorie.
+
+\textbf{Unità libere con data property stringa}: Lasciare \texttt{unit} come stringa libera, permettendo qualsiasi valore.
+
+\textbf{Ontologia delle unità di misura}: Importare un'ontologia specializzata come QUDT (Quantities, Units, Dimensions and Data Types).
+
+\paragraph{Scelta finale:}
+Si è scelto l'approccio delle \textbf{unità libere con valori suggeriti}, utilizzando una data property \texttt{unit} di tipo stringa con valori raccomandati (grams, kg, liters, ml, oz, lbs) documentati nell'ontologia. Questa scelta offre flessibilità mantenendo un livello base di standardizzazione, senza aggiungere la complessità di un'ontologia esterna per un aspetto non critico del dominio.
+
+\subsubsection{Modellazione degli stili birrari}
+
+\paragraph{Problema:}
+Gli stili birrari sono organizzati gerarchicamente (famiglie come Ale, Lager; sottofamiglie come IPA, Stout; stili specifici come American IPA, English IPA).
+
+\paragraph{Alternative considerate:}
+
+\textbf{Gerarchia di classi}: Creare una tassonomia \texttt{BeerStyle} $\rightarrow$ \texttt{AleStyle} $\rightarrow$ \texttt{IPAStyle} $\rightarrow$ \texttt{AmericanIPAStyle}.
+
+\textit{Vantaggi}: Massima espressività OWL, reasoning automatico sulla gerarchia.
+
+\textit{Svantaggi}: Difficile manutenzione, ontologia molto grande, complessità eccessiva per il caso d'uso.
+
+\textbf{Istanze piatte con proprietà}: Tutti gli stili come istanze di \texttt{BeerStyle}, con object property \texttt{belongsToFamily} verso \texttt{BeerFamily}.
+
+\textit{Vantaggi}: Flessibilità, facilità di aggiunta di nuovi stili, query più semplici.
+
+\textit{Svantaggi}: Minore potere espressivo, nessun reasoning automatico sulla gerarchia.
+
+\paragraph{Scelta finale:}
+Si è optato per l'\textbf{approccio con istanze}, importando la classificazione degli stili dalla Beer Ontology esistente. Questo permette di aggiornare facilmente la lista degli stili e di mantenere l'ontologia allineata agli standard internazionali (BJCP) senza dover modificare la struttura delle classi.
+
+\subsubsection{Gestione delle ricette gluten-free}
+
+\paragraph{Problema:}
+Modellare in modo efficace le ricette adatte a celiaci, considerando sia i cereali utilizzati sia eventuali contaminazioni.
+
+\paragraph{Alternative considerate:}
+
+\textbf{Classe separata GlutenFreeRecipe}: Creare una sottoclasse di \texttt{Recipe} disgiunzione da altre tipologie.
+
+\textbf{Data property booleana}: Utilizzare \texttt{isGlutenFree} come flag semplice.
+
+\textbf{Restrizione OWL con inferenza}: Definire \texttt{GlutenFreeRecipe} come classe equivalente che usa solo cereali senza glutine.
+
+\paragraph{Scelta finale:}
+È stato implementato un \textbf{approccio ibrido}: la data property \texttt{isGlutenFree} per query semplici e veloci, combinata con una classe equivalente OWL che definisce formalmente i requisiti:
+
+\begin{verbatim}
+GlutenFreeRecipe EquivalentTo 
+    (Recipe and (hasIngredient only 
+        (not (hasCereal some (glutenContent value true)))))
+\end{verbatim}
+
+Questo permette sia query SPARQL dirette sia reasoning automatico per verificare la coerenza delle ricette dichiarate gluten-free.
+
+\subsubsection{Livelli di difficoltà}
+
+\paragraph{Problema:}
+Classificare le ricette per difficoltà in modo oggettivo e utilizzabile.
+
+\paragraph{Alternative considerate:}
+
+\textbf{Valutazione soggettiva}: Lasciare all'autore la libertà di assegnare un livello di difficoltà arbitrario.
+
+\textbf{Calcolo automatico}: Definire regole SWRL che calcolano la difficoltà basandosi su parametri oggettivi (numero di ingredienti, complessità delle fasi, parametri tecnici critici).
+
+\textbf{Sistema misto}: Difficoltà dichiarata + validazione automatica.
+
+\paragraph{Scelta finale:}
+Inizialmente si utilizza una \textbf{classificazione manuale} con valori standardizzati (beginner, intermediate, advanced, expert), con l'obiettivo futuro di implementare regole SWRL per suggerire automaticamente il livello di difficoltà basandosi su metriche oggettive come:
+\begin{itemize}
+    \item Numero di ingredienti diversi
+    \item Numero di fasi di produzione
+    \item Complessità dei parametri (controllo preciso di temperatura, pH, timing)
+    \item Necessità di attrezzatura avanzata
+    \item Durata totale del processo
+\end{itemize}
+
+\subsubsection{Integrazione con ontologie esterne}
+
+\paragraph{Problema:}
+Decidere quali ontologie importare e come gestire eventuali sovrapposizioni o inconsistenze.
+
+\paragraph{Scelta finale:}
+Sono state importate quattro ontologie specializzate (Beer, Hops, Malt, Cereals) attraverso il meccanismo di \texttt{owl:imports}. Per evitare conflitti:
+\begin{itemize}
+    \item Le classi importate non sono state modificate, mantenendo l'integrità delle ontologie originali
+    \item Sono state create nuove object properties per collegare le entità BeeRecipe con quelle importate
+    \item In caso di sovrapposizioni concettuali, si è data precedenza alle ontologie specializzate (es: per i luppoli si usa Hops Ontology anziché ridefinire tutto)
+    \item Il namespace \texttt{http://www.beerecipe.com/ontology\#} è stato scelto per distinguere chiaramente le entità native da quelle importate
+\end{itemize}
+
+Questa strategia garantisce \textbf{riusabilità}, \textbf{interoperabilità} e \textbf{manutenibilità}, obiettivi fondamentali dichiarati nell'analisi dei requisiti.
+
+\subsubsection{Considerazioni sulle performance}
+
+Tutte le scelte di modellazione sono state valutate anche considerando le performance di reasoning e query:
+\begin{itemize}
+    \item Le restrizioni OWL sono state limitate a quelle strettamente necessarie per evitare reasoning eccessivamente costoso
+    \item Le proprietà transitive sono usate con parsimonia (solo per \texttt{isSimilarTo})
+    \item La profondità della gerarchia delle classi è mantenuta ridotta (massimo 2-3 livelli)
+    \item Il numero di proprietà inverse è bilanciato tra espressività e overhead computazionale
+\end{itemize}
+
+Queste scelte rendono l'ontologia \textbf{scalabile} e utilizzabile anche con dataset di dimensioni considerevoli (centinaia di ricette, migliaia di ingredienti).
+% -----------------------------------------------------
+\section{Dataset RDF di esempio}
+% -----------------------------------------------------
+
+Struttura del dataset creato.
+Esempi di istanze (ricette, ingredienti, passaggi).
+Eventuali problemi di modellazione risolti.
+
+% -----------------------------------------------------
+\section{Ragionamento automatico}
+% -----------------------------------------------------
+
+\subsection{Strategia di Popolamento dell'Ontologia e Inferenze}
+
+\subsubsection{Principi di Modellazione}
+
+La popolazione dell'ontologia è stata condotta seguendo il principio dell'\textit{Open World Assumption} (OWA), fondamentale in OWL. Secondo questo paradigma, l'assenza di un'asserzione non implica la sua falsità: ciò che non è esplicitamente dichiarato è semplicemente sconosciuto, non falso. Questo si contrappone alla \textit{Closed World Assumption} tipica dei database relazionali, dove tutto ciò che non è presente è considerato falso.
+
+In questo contesto, la strategia adottata prevede di asserire esplicitamente solo i \textbf{fatti base e indipendenti}, lasciando al reasoner il compito di inferire automaticamente le \textbf{conseguenze logiche} derivanti dalle definizioni di classi, proprietà e assiomi dell'ontologia. Questo approccio presenta diversi vantaggi:
+
+\begin{itemize}
+    \item \textbf{Riduzione della ridondanza}: evita la duplicazione di informazioni che possono essere dedotte automaticamente
+    \item \textbf{Prevenzione di inconsistenze}: minimizza il rischio di asserzioni contraddittorie inserite manualmente
+    \item \textbf{Manutenibilità}: modifiche alla struttura dell'ontologia si propagano automaticamente alle inferenze
+    \item \textbf{Dimostrazione della potenza del ragionamento}: evidenzia le capacità deduttive di OWL 2
+\end{itemize}
+
+\subsubsection{Criteri di Asserzione vs Inferenza}
+
+La distinzione tra ciò che deve essere asserito esplicitamente e ciò che può essere inferito segue criteri semantici e logici precisi.
+
+\paragraph{Fatti da Asserire Esplicitamente}
+
+Vengono asseriti manualmente tutti i dati che rappresentano \textit{conoscenza primaria} non derivabile da altre informazioni:
+
+\begin{itemize}
+    \item \textbf{Parametri caratteristici delle ricette}: ABV, IBU, gravità originale e finale, durate di fermentazione e conditioning
+    \item \textbf{Relazioni tra ricette e stili}: ogni ricetta viene associata esplicitamente al suo stile birrario
+    \item \textbf{Composizione delle ricette}: ingredienti (luppoli, malti, lieviti, cereali) e loro quantità
+    \item \textbf{Sequenza di produzione}: associazione degli step di brewing alle ricette attraverso \texttt{isStepOf}
+    \item \textbf{Requisiti di equipaggiamento}: strumenti necessari per la realizzazione di ciascuna ricetta
+\end{itemize}
+
+\paragraph{Conoscenza Inferita Automaticamente}
+
+Il reasoner deduce automaticamente diverse tipologie di informazioni:
+
+\subparagraph{Proprietà Inverse}
+Grazie alla dichiarazione \texttt{owl:inverseOf}, il reasoner inferisce automaticamente la direzione opposta di ogni relazione. Ad esempio:
+
+\begin{alltt}
+\textit{Asserito:}
+  EPA\_Boil60min isStepOf EasyPaleAleRecipe
+
+\textit{Inferito:}
+  EasyPaleAleRecipe hasBrewingStep EPA\_Boil60min
+\end{alltt}
+
+Analogamente, per l'equipaggiamento:
+
+\begin{alltt}
+\textit{Asserito:}
+  PunkIPA\_Recipe requiresEquipment Kettle
+
+\textit{Inferito:}
+  Kettle isRequiredBy PunkIPA\_Recipe
+\end{alltt}
+
+\subparagraph{Property Chain Axioms}
+Come descritto nella sezione sulle inferenze complesse, la property chain permette la propagazione dello stile dalla ricetta alla birra prodotta:
+
+\begin{alltt}
+\textit{Asserito:}
+  BrewdogRecipe hasStyle IPA
+  BrewdogRecipe producesBeer PunkIPA
+
+\textit{Inferito (tramite property chain):}
+  PunkIPA hasBeerStyle IPA
+\end{alltt}
+
+\subparagraph{Classificazioni Automatiche}
+Se nell'ontologia fossero definite classi equivalenti basate su restrizioni (ad esempio, \texttt{StrongBeer} definita come birra con ABV $\geq$ 7.0), il reasoner classificherebbe automaticamente le ricette nelle appropriate categorie senza bisogno di asserzioni esplicite.
+
+\subsubsection{Gestione delle Relazioni tra Entità}
+
+\paragraph{Brewing Steps}
+
+Gli step di birrificazione sono modellati come entità dipendenti dalla ricetta. La scelta di asserire la relazione \texttt{isStepOf} piuttosto che \texttt{hasBrewingStep} riflette la semantica del dominio: uno step "appartiene" concettualmente a una specifica ricetta e non ha significato autonomo al di fuori di essa.
+
+Ogni individual rappresentante uno step (es. \texttt{EPA\_Mash60min}, \texttt{EPA\_Boil60min}) viene collegato alla rispettiva ricetta attraverso la proprietà \texttt{isStepOf}. Il reasoner inferisce automaticamente la relazione inversa, permettendo di interrogare l'ontologia in entrambe le direzioni senza duplicazione di dati.
+
+% Inserire qui eventualmente una figura che mostra gli step di una ricetta
+
+\paragraph{Equipment}
+
+A differenza degli step, l'equipaggiamento è modellato come entità \textit{condivisa} tra più ricette. Un singolo individual come \texttt{Kettle} o \texttt{FermentationVessel} può essere richiesto da diverse ricette.
+
+La direzione semantica corretta è quella della ricetta che "richiede" l'equipaggiamento (\texttt{requiresEquipment}), non viceversa. Questa scelta modellistica riflette il fatto che:
+
+\begin{itemize}
+    \item L'equipaggiamento esiste indipendentemente dalle ricette
+    \item È la ricetta che dipende dall'equipaggiamento, non il contrario
+    \item Più ricette possono condividere lo stesso equipaggiamento
+\end{itemize}
+
+Anche in questo caso, la proprietà inversa \texttt{isRequiredBy} viene inferita automaticamente, permettendo query che identificano quali ricette richiedono un determinato strumento.
+
+% Inserire qui eventualmente una figura che mostra le relazioni equipment-ricette
+
+\subsubsection{Tabella Riepilogativa}
+
+La Tabella~\ref{tab:assertion-inference} riassume la distinzione tra fatti asseriti e fatti inferiti, evidenziando le giustificazioni per ciascuna scelta modellistica.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{5cm}|p{2.5cm}|p{6cm}|}
+\hline
+\textbf{Fatto} & \textbf{Tipo} & \textbf{Giustificazione} \\
+\hline
+\texttt{Recipe hasStyle IPA} & Asserito & Dato primario non derivabile \\
+\hline
+\texttt{Beer hasBeerStyle IPA} & Inferito & Conseguenza della property chain axiom \\
+\hline
+\texttt{Step isStepOf Recipe} & Asserito & Relazione compositiva fondamentale \\
+\hline
+\texttt{Recipe hasBrewingStep Step} & Inferito & Proprietà inversa di \texttt{isStepOf} \\
+\hline
+\texttt{Recipe requiresEquipment Kettle} & Asserito & Requisito esplicito della ricetta \\
+\hline
+\texttt{Kettle isRequiredBy Recipe} & Inferito & Proprietà inversa di \texttt{requiresEquipment} \\
+\hline
+\texttt{Recipe estimatedABV 5.6} & Asserito & Parametro caratteristico misurato \\
+\hline
+\texttt{Recipe hasHop Cascade} & Asserito & Composizione della ricetta \\
+\hline
+\texttt{Cascade isHopOf Recipe} & Inferito & Proprietà inversa di \texttt{hasHop} \\
+\hline
+\end{tabular}
+\caption{Distinzione tra fatti asseriti e inferiti nell'ontologia}
+\label{tab:assertion-inference}
+\end{table}
+
+\subsubsection{Vantaggi dell'Approccio Adottato}
+
+Questa strategia di popolamento dimostra la comprensione dei principi fondamentali di OWL 2 e del ragionamento ontologico:
+
+\begin{enumerate}
+    \item \textbf{Efficienza nella gestione dei dati}: il numero di triple asserite manualmente è significativamente inferiore al totale delle triple disponibili dopo il ragionamento
+    \item \textbf{Coerenza garantita}: le inferenze sono logicamente corrette per costruzione, eliminando possibili errori umani nell'inserimento manuale
+    \item \textbf{Scalabilità}: l'aggiunta di nuove ricette richiede solo l'asserzione dei fatti base, mentre tutte le relazioni derivate vengono calcolate automaticamente
+    \item \textbf{Flessibilità}: modifiche agli assiomi dell'ontologia (ad esempio, l'aggiunta di nuove property chains) si riflettono immediatamente su tutte le inferenze senza necessità di modificare i dati
+    \item \textbf{Interrogabilità}: le query SPARQL possono sfruttare sia le triple asserite che quelle inferite, aumentando l'espressività delle interrogazioni
+\end{enumerate}
+
+% Inserire qui eventualmente una figura comparativa: grafo prima/dopo reasoning
+
+\subsubsection{Verifiche di Consistenza}
+
+L'utilizzo del reasoner non si limita alla generazione di nuove triple, ma include anche la \textit{verifica di consistenza} dell'ontologia. Il reasoner controlla che non esistano contraddizioni logiche, come ad esempio:
+
+\begin{itemize}
+    \item Violazioni di vincoli di disgiunzione (ad esempio, una ricetta classificata sia come Ale che come Lager, se questi sono dichiarati disgiunti)
+    \item Violazioni di restrizioni di cardinalità (ad esempio, più di uno stile associato a una ricetta se \texttt{hasStyle} è dichiarata funzionale)
+    \item Violazioni di domini e range delle proprietà
+\end{itemize}
+
+Durante lo sviluppo dell'ontologia, il reasoner HermiT è stato eseguito regolarmente per garantire che tutte le asserzioni fossero logicamente coerenti con la struttura dell'ontologia definita.
+
+\subsection{Gestione delle restrizioni complesse su data properties}
+
+\paragraph{Problema:}
+Durante l'implementazione dell'inferenza per ricette gluten-free, si è 
+riscontrato un limite tecnico dei reasoner OWL. La definizione semanticamente 
+corretta:
+
+\begin{verbatim}
+GlutenFreeRecipe EquivalentTo 
+    (Recipe and (hasCereal only (glutenContent value false)))
+\end{verbatim}
+
+utilizza un quantificatore universale (\texttt{only}, AllValuesFrom) su una 
+data property. Questa costruzione, sebbene valida in OWL 2, non è gestita 
+correttamente da alcuni reasoner come Pellet.
+
+\paragraph{Alternative valutate:}
+
+\textbf{Alternativa 1 - Quantificatore esistenziale:}
+
+
+\begin{verbatim}
+GlutenFreeRecipe EquivalentTo 
+    (Recipe and (hasCereal some (glutenContent value false)))
+\end{verbatim}
+
+\textit{Vantaggio}: Supportato da tutti i reasoner.
+
+\textit{Svantaggio}: Semantica incorretta - classifica come gluten-free anche 
+ricette che usano ALCUNI cereali senza glutine ma anche cereali con glutine.
+
+\textbf{Alternativa 2 - Cambio di reasoner:}
+Utilizzo di HermiT invece di Pellet, che offre un supporto migliore per 
+restrizioni complesse su data properties.
+
+\textbf{Alternativa 3 - Approccio ibrido OWL + SWRL:}
+Combinazione di una definizione OWL con \texttt{some} e regole SWRL per 
+escludere ricette contenenti cereali con glutine.
+
+\paragraph{Scelta finale:}
+[TODO inserisco il contrario con il some e se c'è almeno 1 con true allora non è gluten free]
+
+Questa esperienza evidenzia un limite pratico delle ontologie OWL: non tutte 
+le costruzioni teoricamente valide sono implementate uniformemente dai 
+reasoner. La scelta della soluzione dipende dal trade-off tra eleganza 
+formale, supporto dei tool e correttezza semantica.
+
+
+
+TODO testare questo
+% Descrizione delle inferenze realizzate.
+% Dimostrazione con un reasoner (Hermit, Pellet, Fact++).
+% Esempio di casi: ricette vegetariane, classificazioni automatiche, ecc.
+
+\paragraph{Reasoning e inferenze attese}
+L'ontologia \textit{BeeRecipe} consente l'esecuzione di diverse forme di reasoning basate sulle 
+classi e proprietà definite. In primo luogo, mediante l'uso delle proprietà \texttt{hasIngredient} 
+e delle sue sottoproprietà (\texttt{hasHop}, \texttt{hasMalt}, \texttt{hasCereal}, \texttt{hasYeast}), 
+il reasoner è in grado di classificare automaticamente una ricetta in base alla presenza o assenza 
+di determinati ingredienti. Ad esempio, definendo la classe \texttt{GlutenContainingIngredient} 
+come equivalente a cereali con un valore di \texttt{glutenContent} maggiore di zero, e la classe 
+\texttt{GlutenFreeRecipe} come ricette che non utilizzano ingredienti appartenenti a tale classe, 
+il reasoner può inferire quali ricette siano effettivamente gluten-free.
+
+Analogamente, attraverso le proprietà dei dati come \texttt{difficultyLevel} ed \texttt{estimatedABV}, 
+è possibile definire regole SWRL per classificare automaticamente le ricette in classi come 
+\texttt{BeginnerFriendlyRecipe}, ad esempio quando la difficoltà è ``easy'' o il contenuto alcolico 
+stimato è inferiore a una certa soglia. Il reasoner, applicando queste regole, è quindi in grado 
+di arricchire dinamicamente la tassonomia delle ricette con categorie derivate.
+
+Infine, grazie alla proprietà \texttt{hasBrewingStep} e ai valori associati alle fasi (\texttt{stepOrder}, 
+\texttt{stepTemperature}, \texttt{stepDuration}), è possibile verificare la coerenza strutturale 
+di una ricetta, assicurando che i passi siano ordinati correttamente o che non vi siano incongruenze 
+nei parametri tecnici. I test di reasoning attesi comprendono quindi la corretta classificazione 
+delle ricette per stile, difficoltà e requisiti dietetici, nonché la validazione di coerenza degli 
+step di produzione, permettendo così di verificare che l'ontologia sia semanticamente consistente 
+e adeguata ai casi d'uso previsti.
+
+\subsection{Inferenza tramite Property Chain}
+
+Una delle inferenze più significative implementate nell'ontologia riguarda la propagazione automatica dello stile dalla ricetta alla birra prodotta. Inizialmente, l'ontologia prevedeva che ogni \texttt{Recipe} potesse essere associata a un \texttt{BeerStyle} tramite la proprietà \texttt{hasStyle}, e che ogni ricetta potesse produrre una \texttt{Beer} attraverso la proprietà funzionale \texttt{producesBeer}. Tuttavia, non esisteva un meccanismo automatico per trasferire l'informazione dello stile dalla ricetta alla birra risultante.
+
+Per risolvere questa limitazione, è stata introdotta una nuova object property \texttt{hasBeerStyle} con dominio \texttt{Beer} e range \texttt{BeerStyle}. La caratteristica fondamentale di questa proprietà è l'utilizzo di una \textit{property chain axiom} definita come segue:
+
+\begin{equation}
+\texttt{hasBeerStyle} \sqsubseteq \texttt{isProducedBy} \circ \texttt{hasStyle}
+\end{equation}
+
+ \begin{figure}[!htb]
+    \centering 
+    \includegraphics[width=9cm]{beerStyle inference_b.png}
+    \caption{Object property}
+    \label{beer_classes}
+\end{figure}
+Questo assioma stabilisce che se una birra $B$ è prodotta da una ricetta $R$ (\texttt{B isProducedBy R}), e la ricetta $R$ ha uno stile $S$ (\texttt{R hasStyle S}), allora il reasoner inferisce automaticamente che la birra $B$ ha lo stile $S$ (\texttt{B hasBeerStyle S}).
+
+È importante notare che la proprietà \texttt{hasStyle} originale, essendo dichiarata come \texttt{FunctionalProperty}, non poteva essere direttamente utilizzata con property chain axioms a causa delle restrizioni di OWL 2 sulle proprietà "non-simple". Per questo motivo, è stata creata la proprietà separata \texttt{hasBeerStyle} specificamente per le istanze di \texttt{Beer}, mantenendo così la semantica funzionale su \texttt{Recipe} e permettendo al contempo l'inferenza automatica.
+
+Un esempio concreto: dato l'individual \texttt{BrewdogRecipe} con le asserzioni \texttt{hasStyle IPA} e \texttt{producesBeer PunkIPA}, il reasoner inferisce automaticamente \texttt{PunkIPA hasBeerStyle IPA}, senza necessità di asserzione esplicita.
+
+ \begin{figure}[!htb]
+    \centering 
+    \includegraphics[width=9cm]{beerStyle inference_a.png}
+    \caption{Esempio}
+    \label{beer_classes}
+\end{figure}
+
+% -----------------------------------------------------
+\section{Query SPARQL}
+% -----------------------------------------------------
+
+
+\subsection{Ricerca e Filtro delle Ricette}
+
+La prima query permette di ottenere una panoramica completa di tutte le ricette presenti nell'ontologia, recuperando i parametri fondamentali che caratterizzano ogni birra: nome, grado alcolico stimato (ABV), amarezza (IBU), livello di difficoltà e autore. I risultati sono ordinati in ordine decrescente per ABV, facilitando l'identificazione delle birre più forti.
+
+\begin{alltt}
+PREFIX ontology: <http://www.beerecipe.com/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?recipeName ?abv ?ibu ?difficulty ?author
+WHERE \{
+  ?recipe a ontology:Recipe ;
+          ontology:recipeName ?recipeName ;
+          ontology:estimatedABV ?abv ;
+          ontology:estimatedIBU ?ibu ;
+          ontology:difficultyLevel ?difficulty ;
+          ontology:author ?author .
+\}
+ORDER BY DESC(?abv)
+\end{alltt}
+
+Una variante più specifica di questa query permette di identificare ricette adatte ai principianti, filtrando per livello di difficoltà "beginner" e selezionando solo le birre con gradazione alcolica inferiore a 6\%. Questa query è particolarmente utile per homebrewer alle prime armi che desiderano iniziare con ricette più semplici e meno impegnative.
+
+\begin{alltt}
+PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+SELECT ?recipeName ?abv ?ibu ?description
+WHERE \{
+  ?recipe a ontology:Recipe ;
+          ontology:recipeName ?recipeName ;
+          ontology:estimatedABV ?abv ;
+          ontology:estimatedIBU ?ibu ;
+          ontology:difficultyLevel "beginner" ;
+          ontology:recipeDescription ?description .
+  FILTER (?abv < 6.0)
+\}
+ORDER BY ?abv
+\end{alltt}
+
+\subsection{Analisi degli Ingredienti}
+
+La terza query esplora la relazione tra ricette e luppoli ad alta amarezza, identificando tutte le ricette che utilizzano luppoli con percentuale di alfa-acidi superiore al 10\%. Questo tipo di analisi è fondamentale per comprendere come l'amarezza finale di una birra sia influenzata dalla scelta dei luppoli utilizzati. La query restituisce il nome della ricetta, il nome del luppolo, la sua percentuale di alfa-acidi e l'IBU stimato finale.
+
+\begin{alltt}
+PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+SELECT ?recipeName ?hopName ?alphaAcid ?ibu
+WHERE \{
+  ?recipe a ontology:Recipe ;
+          ontology:recipeName ?recipeName ;
+          ontology:hasHop ?hop ;
+          ontology:estimatedIBU ?ibu .
+  ?hop ontology:hopName ?hopName ;
+       ontology:alphaAcidPercentage ?alphaAcid .
+  FILTER (?alphaAcid > 10.0)
+\}
+ORDER BY DESC(?alphaAcid)
+\end{alltt}
+
+\subsection{Esplorazione dei Processi di Produzione}
+
+Per analizzare in dettaglio il processo di birrificazione di una specifica ricetta, è stata implementata una query che recupera tutti i brewing steps in ordine sequenziale. Questa query è particolarmente utile per visualizzare l'intero workflow produttivo, includendo nome dello step, ordine di esecuzione, durata, temperatura e commenti descrittivi. L'uso della clausola \texttt{OPTIONAL} per il commento permette di gestire step che potrebbero non avere annotazioni aggiuntive.
+
+\begin{alltt}
+PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+SELECT ?stepName ?stepOrder ?duration ?temperature ?comment
+WHERE \{
+  ?recipe ontology:recipeName "BrewDog Punk IPA" .
+  ?step ontology:isStepOf ?recipe ;
+        ontology:stepName ?stepName ;
+        ontology:stepOrder ?stepOrder ;
+        ontology:stepDuration ?duration ;
+        ontology:stepTemperature ?temperature .
+  OPTIONAL \{ ?step rdfs:comment ?comment \}
+\}
+ORDER BY ?stepOrder
+\end{alltt}
+
+\subsection{Analisi Comparative e Metriche Derivate}
+
+Un aspetto importante nella valutazione delle ricette birrarie riguarda i parametri di fermentazione. La query seguente confronta le caratteristiche fermentative di diverse ricette, estraendo densità iniziale (OG), densità finale (FG), ABV e le durate di fermentazione primaria e conditioning. Questo permette di identificare pattern comuni e differenze significative tra stili diversi.
+
+\begin{alltt}
+PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+SELECT ?recipeName ?og ?fg ?abv ?fermentationDays ?conditioningDays
+WHERE \{
+  ?recipe a ontology:Recipe ;
+          ontology:recipeName ?recipeName ;
+          ontology:originalGravity ?og ;
+          ontology:finalGravity ?fg ;
+          ontology:estimatedABV ?abv ;
+          ontology:fermentationDuration ?fermentationDays ;
+          ontology:conditioningDuration ?conditioningDays .
+\}
+ORDER BY DESC(?abv)
+\end{alltt}
+
+Una metrica particolarmente interessante per i birrai è il tempo totale necessario per completare una ricetta. La query seguente calcola questo valore sommando il tempo di brewing (in minuti), la fermentazione e il conditioning (convertiti da giorni a minuti), e presenta il risultato finale in giorni. Questo tipo di calcolo dimostra la capacità di SPARQL di eseguire operazioni aritmetiche sui dati recuperati.
+
+\begin{alltt}
+PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+SELECT ?recipeName ?totalBrewingTime ?fermentationDays ?conditioningDays
+       ((?totalBrewingTime + (?fermentationDays * 1440) + 
+         (?conditioningDays * 1440)) / 1440 AS ?totalDays)
+WHERE \{
+  ?recipe a ontology:Recipe ;
+          ontology:recipeName ?recipeName ;
+          ontology:totalBrewingTime ?totalBrewingTime ;
+          ontology:fermentationDuration ?fermentationDays ;
+          ontology:conditioningDuration ?conditioningDays .
+\}
+ORDER BY ?totalDays
+\end{alltt}
+
+\subsection{Bilanciamento e Profili Sensoriali}
+
+L'ultima query calcola il rapporto IBU/ABV, una metrica comunemente utilizzata per valutare il bilanciamento tra amarezza e contenuto alcolico. Un rapporto elevato indica una birra molto amara rispetto alla sua gradazione alcolica, tipico di stili come le IPA, mentre un rapporto basso caratterizza birre più maltate e dolci. Il filtro \texttt{FILTER (?abv > 0)} previene divisioni per zero e garantisce la validità dei risultati.
+
+\begin{alltt}
+PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+SELECT ?recipeName ?ibu ?abv 
+       ((?ibu / ?abv) AS ?bitternessRatio)
+WHERE \{
+  ?recipe a ontology:Recipe ;
+          ontology:recipeName ?recipeName ;
+          ontology:estimatedIBU ?ibu ;
+          ontology:estimatedABV ?abv .
+  FILTER (?abv > 0)
+\}
+ORDER BY DESC(?bitternessRatio)
+\end{alltt}
+
+Queste query dimostrano la versatilità dell'ontologia sviluppata e la sua capacità di supportare interrogazioni complesse che spaziano dalla semplice ricerca di ricette all'analisi quantitativa di metriche derivate, fornendo uno strumento potente per homebrewer, professionisti del settore e ricercatori interessati al dominio della birrificazione.
+
+
+
+% \begin{alltt}
+
+% # ===============================================
+% # 1. TROVA TUTTE LE RICETTE CON I LORO PARAMETRI BASE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT ?recipeName ?abv ?ibu ?difficulty ?author
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedABV ?abv ;
+%           ontology:estimatedIBU ?ibu ;
+%           ontology:difficultyLevel ?difficulty ;
+%           ontology:author ?author .
+% }
+% ORDER BY DESC(?abv)
+
+% # ===============================================
+% # 2. RICETTE PER PRINCIPIANTI CON BASSO ABV
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?abv ?ibu ?description
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedABV ?abv ;
+%           ontology:estimatedIBU ?ibu ;
+%           ontology:difficultyLevel "beginner" ;
+%           ontology:recipeDescription ?description .
+%   FILTER (?abv < 6.0)
+% }
+% ORDER BY ?abv
+
+% # ===============================================
+% # 4. RICETTE CHE USANO LUPPOLI AD ALTA AMAREZZA (>10% alpha)
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?hopName ?alphaAcid ?ibu
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:hasHop ?hop ;
+%           ontology:estimatedIBU ?ibu .
+%   ?hop ontology:hopName ?hopName ;
+%        ontology:alphaAcidPercentage ?alphaAcid .
+%   FILTER (?alphaAcid > 10.0)
+% }
+% ORDER BY DESC(?alphaAcid)
+
+% # ===============================================
+% # 6. BREWING STEPS DI UNA RICETTA SPECIFICA (in ordine)
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?stepName ?stepOrder ?duration ?temperature ?comment
+% WHERE {
+%   ?recipe ontology:recipeName "BrewDog Punk IPA" .
+%   ?step ontology:isStepOf ?recipe ;
+%         ontology:stepName ?stepName ;
+%         ontology:stepOrder ?stepOrder ;
+%         ontology:stepDuration ?duration ;
+%         ontology:stepTemperature ?temperature .
+%   OPTIONAL { ?step rdfs:comment ?comment }
+% }
+% ORDER BY ?stepOrder
+
+% # ===============================================
+% # 8. CONFRONTA PARAMETRI DI FERMENTAZIONE TRA RICETTE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?og ?fg ?abv ?fermentationDays ?conditioningDays
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:originalGravity ?og ;
+%           ontology:finalGravity ?fg ;
+%           ontology:estimatedABV ?abv ;
+%           ontology:fermentationDuration ?fermentationDays ;
+%           ontology:conditioningDuration ?conditioningDays .
+% }
+% ORDER BY DESC(?abv)
+
+% # ===============================================
+% # 10. RICETTE CON TEMPO TOTALE DI PRODUZIONE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?totalBrewingTime ?fermentationDays ?conditioningDays
+%        ((?totalBrewingTime + (?fermentationDays * 1440) + (?conditioningDays * 1440)) / 1440 AS ?totalDays)
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:totalBrewingTime ?totalBrewingTime ;
+%           ontology:fermentationDuration ?fermentationDays ;
+%           ontology:conditioningDuration ?conditioningDays .
+% }
+% ORDER BY ?totalDays
+
+
+% # ===============================================
+% # 15. RICETTE CON IBU/ABV RATIO (Bitterness Balance)
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?ibu ?abv 
+%        ((?ibu / ?abv) AS ?bitternessRatio)
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedIBU ?ibu ;
+%           ontology:estimatedABV ?abv .
+%   FILTER (?abv > 0)
+% }
+% ORDER BY DESC(?bitternessRatio)
+
+% \end{alltt}
+
+
+% \begin{alltt}
+%     # ===============================================
+% # 1. TROVA TUTTE LE RICETTE CON I LORO PARAMETRI BASE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT ?recipeName ?abv ?ibu ?difficulty ?author
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedABV ?abv ;
+%           ontology:estimatedIBU ?ibu ;
+%           ontology:difficultyLevel ?difficulty ;
+%           ontology:author ?author .
+% }
+% ORDER BY DESC(?abv)
+
+% # ===============================================
+% # 2. RICETTE PER PRINCIPIANTI CON BASSO ABV
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?abv ?ibu ?description
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedABV ?abv ;
+%           ontology:estimatedIBU ?ibu ;
+%           ontology:difficultyLevel "beginner" ;
+%           ontology:recipeDescription ?description .
+%   FILTER (?abv < 6.0)
+% }
+% ORDER BY ?abv
+
+% # ===============================================
+% # 3. TROVA TUTTI I LUPPOLI USATI E LE LORO CARATTERISTICHE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT DISTINCT ?hopName ?alphaAcid ?description
+% WHERE {
+%   ?hop a ontology:Hops ;
+%        ontology:hopName ?hopName ;
+%        ontology:alphaAcidPercentage ?alphaAcid ;
+%        rdfs:comment ?description .
+% }
+% ORDER BY DESC(?alphaAcid)
+
+% # ===============================================
+% # 4. RICETTE CHE USANO LUPPOLI AD ALTA AMAREZZA (>10% alpha)
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?hopName ?alphaAcid ?ibu
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:hasHop ?hop ;
+%           ontology:estimatedIBU ?ibu .
+%   ?hop ontology:hopName ?hopName ;
+%        ontology:alphaAcidPercentage ?alphaAcid .
+%   FILTER (?alphaAcid > 10.0)
+% }
+% ORDER BY DESC(?alphaAcid)
+
+% # ===============================================
+% # 5. CONTA INGREDIENTI PER OGNI RICETTA
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName 
+%        (COUNT(DISTINCT ?malt) AS ?numMalts)
+%        (COUNT(DISTINCT ?hop) AS ?numHops)
+%        (COUNT(DISTINCT ?cereal) AS ?numCereals)
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName .
+%   OPTIONAL { ?recipe ontology:hasMalt ?malt }
+%   OPTIONAL { ?recipe ontology:hasHop ?hop }
+%   OPTIONAL { ?recipe ontology:hasCereal ?cereal }
+% }
+% GROUP BY ?recipeName
+
+% # ===============================================
+% # 6. BREWING STEPS DI UNA RICETTA SPECIFICA (in ordine)
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?stepName ?stepOrder ?duration ?temperature ?comment
+% WHERE {
+%   ?recipe ontology:recipeName "BrewDog Punk IPA" .
+%   ?step ontology:isStepOf ?recipe ;
+%         ontology:stepName ?stepName ;
+%         ontology:stepOrder ?stepOrder ;
+%         ontology:stepDuration ?duration ;
+%         ontology:stepTemperature ?temperature .
+%   OPTIONAL { ?step rdfs:comment ?comment }
+% }
+% ORDER BY ?stepOrder
+
+% # ===============================================
+% # 7. EQUIPMENT NECESSARIO PER RICETTE INTERMEDIATE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT DISTINCT ?recipeName ?equipmentName
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:difficultyLevel "intermediate" ;
+%           ontology:requiresEquipment ?equipment .
+%   ?equipment rdfs:label ?equipmentName .
+% }
+% ORDER BY ?recipeName ?equipmentName
+
+% # ===============================================
+% # 8. CONFRONTA PARAMETRI DI FERMENTAZIONE TRA RICETTE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?og ?fg ?abv ?fermentationDays ?conditioningDays
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:originalGravity ?og ;
+%           ontology:finalGravity ?fg ;
+%           ontology:estimatedABV ?abv ;
+%           ontology:fermentationDuration ?fermentationDays ;
+%           ontology:conditioningDuration ?conditioningDays .
+% }
+% ORDER BY DESC(?abv)
+
+% # ===============================================
+% # 9. STILI DI BIRRA E LORO RICETTE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT ?styleName ?recipeName ?abv ?ibu
+% WHERE {
+%   ?recipe ontology:hasStyle ?style ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedABV ?abv ;
+%           ontology:estimatedIBU ?ibu .
+%   ?style rdfs:label ?styleName .
+% }
+% ORDER BY ?styleName
+
+% # ===============================================
+% # 10. RICETTE CON TEMPO TOTALE DI PRODUZIONE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?totalBrewingTime ?fermentationDays ?conditioningDays
+%        ((?totalBrewingTime + (?fermentationDays * 1440) + (?conditioningDays * 1440)) / 1440 AS ?totalDays)
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:totalBrewingTime ?totalBrewingTime ;
+%           ontology:fermentationDuration ?fermentationDays ;
+%           ontology:conditioningDuration ?conditioningDays .
+% }
+% ORDER BY ?totalDays
+
+% # ===============================================
+% # 11. TROVA RICETTE VEGANE E SENZA GLUTINE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?isVegan ?isGlutenFree ?abv
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedABV ?abv .
+%   OPTIONAL { ?recipe ontology:isVegan ?isVegan }
+%   OPTIONAL { ?recipe ontology:isGlutenFree ?isGlutenFree }
+%   FILTER (?isVegan = true || ?isGlutenFree = true)
+% }
+
+% # ===============================================
+% # 12. MALTI E IL LORO COLORE EBC
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT DISTINCT ?maltName ?ebc ?description
+% WHERE {
+%   ?malt a ontology:Malt ;
+%         ontology:maltName ?maltName ;
+%         ontology:ebc ?ebc .
+%   OPTIONAL { ?malt rdfs:comment ?description }
+% }
+% ORDER BY ?ebc
+
+% # ===============================================
+% # 13. RICETTE PER PAESE DI ORIGINE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT ?countryName ?recipeName ?author
+% WHERE {
+%   ?country a ontology:Country ;
+%            rdfs:label ?countryName ;
+%            ontology:isOriginOf ?recipe .
+%   ?recipe ontology:recipeName ?recipeName ;
+%           ontology:author ?author .
+% }
+% ORDER BY ?countryName
+
+% # ===============================================
+% # 14. BIRRE PRODOTTE E LE LORO RICETTE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT ?beerName ?recipeName ?styleName ?abv
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:producesBeer ?beer ;
+%           ontology:hasStyle ?style ;
+%           ontology:estimatedABV ?abv .
+%   ?beer rdfs:label ?beerName .
+%   ?style rdfs:label ?styleName .
+% }
+
+% # ===============================================
+% # 15. RICETTE CON IBU/ABV RATIO (Bitterness Balance)
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?ibu ?abv 
+%        ((?ibu / ?abv) AS ?bitternessRatio)
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedIBU ?ibu ;
+%           ontology:estimatedABV ?abv .
+%   FILTER (?abv > 0)
+% }
+% ORDER BY DESC(?bitternessRatio)
+
+% # ===============================================
+% # 16. TROVA STEP DI TIPO SPECIFICO (es: tutti i Mash steps)
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?stepName ?temperature ?duration
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName .
+%   ?step a ontology:MashStep ;
+%         ontology:isStepOf ?recipe ;
+%         ontology:stepName ?stepName ;
+%         ontology:stepTemperature ?temperature ;
+%         ontology:stepDuration ?duration .
+% }
+% ORDER BY ?recipeName ?duration
+
+% # ===============================================
+% # 17. EQUIPMENT CONDIVISO TRA RICETTE
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+% PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+% SELECT ?equipmentName (COUNT(DISTINCT ?recipe) AS ?usedInRecipes)
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:requiresEquipment ?equipment .
+%   ?equipment rdfs:label ?equipmentName .
+% }
+% GROUP BY ?equipmentName
+% ORDER BY DESC(?usedInRecipes)
+
+% # ===============================================
+% # 18. RICETTE CON COLORE (EBC) IN UN RANGE SPECIFICO
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName ?ebc ?styleName
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName ;
+%           ontology:estimatedEBC ?ebc ;
+%           ontology:hasStyle ?style .
+%   ?style rdfs:label ?styleName .
+%   FILTER (?ebc >= 10 && ?ebc <= 30)  # Birre ambrate/dorate
+% }
+% ORDER BY ?ebc
+
+% # ===============================================
+% # 19. DURATA TOTALE BREWING STEPS PER RICETTA
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipeName (SUM(?duration) AS ?totalStepMinutes)
+% WHERE {
+%   ?recipe a ontology:Recipe ;
+%           ontology:recipeName ?recipeName .
+%   ?step ontology:isStepOf ?recipe ;
+%         ontology:stepDuration ?duration .
+%   FILTER (?duration < 1000)  # Escludi fermentation/conditioning (in minuti)
+% }
+% GROUP BY ?recipeName
+% ORDER BY DESC(?totalStepMinutes)
+
+% # ===============================================
+% # 20. TROVA RICETTE SIMILI PER COMPLESSITÀ E ABV
+% # ===============================================
+% PREFIX ontology: <http://www.beerecipe.com/ontology#>
+
+% SELECT ?recipe1Name ?recipe2Name ?difficulty ?abv1 ?abv2
+% WHERE {
+%   ?recipe1 a ontology:Recipe ;
+%            ontology:recipeName ?recipe1Name ;
+%            ontology:difficultyLevel ?difficulty ;
+%            ontology:estimatedABV ?abv1 .
+  
+%   ?recipe2 a ontology:Recipe ;
+%            ontology:recipeName ?recipe2Name ;
+%            ontology:difficultyLevel ?difficulty ;
+%            ontology:estimatedABV ?abv2 .
+  
+%   FILTER (?recipe1 != ?recipe2)
+%   FILTER (ABS(?abv1 - ?abv2) < 1.0)  # ABV simile (±1%)
+% }
+% ORDER BY ?difficulty ?abv1
+% \end{alltt}
+
+% \begin{alltt}
+%     �� Categorie di Query:
+% �� Ricerca Base (1-2):
+
+% Elenco ricette con parametri
+% Filtraggio per difficoltà e ABV
+
+% �� Ingredienti (3-5, 12):
+
+% Analisi luppoli e alpha acids
+% Malti e colori EBC
+% Conteggio ingredienti per ricetta
+
+% ⚙️ Processo di Produzione (6, 16, 19):
+
+% Brewing steps in ordine
+% Analisi step specifici (Mash, Boil, etc.)
+% Durata totale degli step
+
+% ��️ Equipment (7, 17):
+
+% Equipment per difficoltà
+% Equipment condiviso tra ricette
+
+% �� Analisi Comparativa (8, 10, 15, 18, 20):
+
+% Confronto fermentazione
+% Tempo totale produzione
+% IBU/ABV ratio (bitterness balance)
+% Ricette simili per caratteristiche
+
+% ��️ Relazioni (9, 13, 14):
+
+% Stili e ricette
+% Paesi di origine
+% Birre prodotte
+
+% �� Filtri Dietetici (11):
+
+% Ricette vegane/gluten-free
+% \end{alltt}
+% Esempi di interrogazioni significative sul dataset.
+% Motivazioni e risultati.
+
+% -----------------------------------------------------
+\section{Conclusioni e sviluppi futuri}
+% -----------------------------------------------------
+
+Riassunto dei risultati.
+Possibili estensioni dell'ontologia.
+Impatto del lavoro e applicazioni future.
+
+% -----------------------------------------------------
+\section*{Bibliografia}
+% -----------------------------------------------------
+
+Stile bibliografico scelto (manuale o BibTeX).
+Riferimenti alle ontologie e ai paper.
+
+\end{document}
