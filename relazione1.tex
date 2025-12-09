@@ -1,19 +1,3 @@
-% \documentclass{article}
-% \usepackage{graphicx} % Required for inserting images
-
-% \title{WS-proj 1}
-% \author{matteo.santoro6 }
-% \date{November 2025}
-
-% \begin{document}
-
-% \maketitle
-
-% \section{Introduction}
-
-% \end{document}
-
-
 \documentclass[a4paper,12pt]{article}
 
 % --- Pacchetti di base ---
@@ -56,7 +40,7 @@
   \vspace*{3cm}
   {\Large Università di Bologna}\\[0.3cm]
   {\large Corso di Web Semantico}\\[2cm]
-  {\LARGE \textbf{Analisi dell’Ontologia della Birra}}\\[0.5cm]
+  {\LARGE \textbf{Analisi dell'Ontologia della Birra}}\\[0.5cm]
   {\large Caso di studio: Beer Ontology}\\[1.5cm]
   {\large Studente: Matteo Santoro}\\[0.3cm]
   {\large Matricola: 1086420}\\[3cm]
@@ -72,106 +56,117 @@ Il Web Semantico mira a rendere i contenuti del Web interpretabili non solo dagl
 Le ontologie svolgono un ruolo fondamentale in questo contesto, fornendo una rappresentazione formale della conoscenza tramite concetti, relazioni e proprietà.
 
 In questo elaborato viene analizzata la \textbf{Beer Ontology}\footnote{\url{https://rdf.ag/o/beer-en.html}}, un esempio didattico di ontologia sviluppata per descrivere il dominio della birra, dei birrifici e delle loro caratteristiche. 
-L’obiettivo è comprendere la struttura, gli standard del Web Semantico impiegati e le potenzialità offerte.
+L'obiettivo è comprendere la struttura, gli standard del Web Semantico impiegati e le potenzialità offerte.
 
 % --- 2. Contesto generale ---
 \section{Contesto generale}
 La \textit{Beer Ontology} fa parte del più ampio insieme di ontologie pubblicate sul portale \href{https://rdf.ag}{rdf.ag}, una collezione di risorse RDF e OWL sviluppate per scopi accademici e didattici nel contesto del Web Semantico. 
-Il portale fornisce un insieme di vocabolari interconnessi, progettati per illustrare le principali tecniche di modellazione della conoscenza, l’uso dei namespace e l’integrazione semantica tra domini differenti.
+Il portale fornisce un insieme di vocabolari interconnessi, progettati per illustrare le principali tecniche di modellazione della conoscenza, l'uso dei namespace e l'integrazione semantica tra domini differenti.
 
 In questo ecosistema, la \textit{Beer Ontology} rappresenta un dominio specifico — quello della produzione e classificazione della birra — e viene utilizzata come esempio pratico per dimostrare come concetti del mondo reale possano essere formalizzati attraverso linguaggi semantici standard come RDF e OWL. 
 Essa descrive entità come birrifici, stili di birra, ingredienti, caratteristiche organolettiche e relazioni di produzione, permettendo così di esplorare il potenziale del Web Semantico su un dominio concreto ma facilmente comprensibile.
 
-Le finalità principali dell’ontologia e del progetto di cui fa parte sono:
+L'ontologia è stata sviluppata da \textbf{Rob Warren} nell'ambito di PSW Applied Research Inc. e rilasciata con licenza Creative Commons 3.0 (più una licenza commerciale aggiuntiva). La versione più recente è la 1.3 del 21 febbraio 2024.
+
+Le finalità principali dell'ontologia e del progetto di cui fa parte sono:
 \begin{itemize}
-  \item fornire un caso di studio accessibile per l’apprendimento della modellazione semantica;
-  \item mostrare l’interoperabilità dei dati attraverso l’uso di namespace condivisi e vocabolari riutilizzabili;
-  \item consentire l’applicazione di tecniche di inferenza automatica tramite motori OWL, per derivare conoscenza implicita;
+  \item fornire tracciabilità per birre e ingredienti, controllo di processo e identificazione degli stili in modo neutro rispetto alla lingua;
+  \item fornire un caso di studio accessibile per l'apprendimento della modellazione semantica;
+  \item mostrare l'interoperabilità dei dati attraverso l'uso di namespace condivisi e vocabolari riutilizzabili (GS1, schema.org, QUDT, SOSA/SSN);
+  \item consentire l'applicazione di tecniche di inferenza automatica tramite motori OWL, per derivare conoscenza implicita;
   \item favorire la sperimentazione con strumenti del Web Semantico come Protégé e SPARQL.
 \end{itemize}
 
 Grazie alla sua semplicità e chiarezza concettuale, la \textit{Beer Ontology} si presta come punto di partenza ideale per comprendere i principi della rappresentazione della conoscenza e le buone pratiche di progettazione ontologica promosse dal Web Semantico.
 
-
-% % --- 3. Strumenti e linguaggi del Web Semantico utilizzati ---
-% \section{Strumenti e linguaggi del Web Semantico}
-% L’ontologia impiega diversi standard fondamentali del Web Semantico:
-% \begin{description}
-%   \item[RDF:] per rappresentare le informazioni sotto forma di triple soggetto–predicato–oggetto;
-%   \item[RDFS:] per definire le classi e le relazioni di base;
-%   \item[OWL:] per estendere la semantica e consentire ragionamenti più complessi;
-%   \item[SPARQL:] per interrogare i dati RDF;
-%   \item[IRI e namespace:] per garantire l’univocità dei concetti.
-% \end{description}
-
-% Esempio di frammento RDF in formato Turtle:
-
-% \begin{lstlisting}[language=turtle, caption={Esempio RDF in Turtle}]
-% @prefix beer: <http://purl.org/ontology/beer/> .
-
-% beer:Guinness a beer:Stout ;
-%     beer:brewedBy beer:GuinnessBrewery ;
-%     beer:hasAlcoholContent "4.2"^^xsd:float .
-% \end{lstlisting}
-
-\section{Struttura concettuale dell’ontologia}
+\section{Struttura concettuale dell'ontologia}
 La Beer Ontology organizza la conoscenza relativa al dominio della birra in modo modulare e pragmatico. 
 La progettazione privilegia chiarezza d'uso e riutilizzabilità dei vocaboli, rendendo esplicite molte scelte anche quando l'inferenza potrebbe derivarle automaticamente. 
 L'ontologia si articola principalmente attorno a tre costrutti strutturali maggiori: \emph{Beer Styles} (stili di birra), \emph{Beer Organizations} (organizzazioni produttrici) e \emph{Packaging} (imballaggio/prodotto commerciale).\footnote{Vedi la descrizione completa su \url{https://rdf.ag/o/beer-en.html\#organization}.}
 
 \subsection{Classi principali}
-Le classi di alto livello definite nell’ontologia includono, tra le altre:
+Le classi di alto livello definite nell'ontologia includono, tra le altre:
 \begin{itemize}
-  \item \textbf{Beer} — rappresenta la sostanza/alimento fermentato (il prodotto “birra” nella sua essenza);
+  \item \textbf{Beer} — rappresenta la sostanza/alimento fermentato (il prodotto "birra" nella sua essenza), definita come sottoclasse di \texttt{schema:ProductGroup};
   \item \textbf{Brewery} — l'organizzazione o il luogo fisico dove la birra viene prodotta (birrificio);
-  \item \textbf{BeerStyle} — tassonomia degli stili di birra (es. \emph{Lager}, \emph{Ale}, \emph{Stout});
-  % \item \textbf{Ingredient} — elementi costitutivi della birra (malto, luppolo, lievito, acqua, ecc.);
-  % \item \textbf{Country} — entità geografica/paese di origine;
-  \item \textbf{BeerProduct} / \textbf{BeverageProduct} — il prodotto commerciale confezionato (distinto dalla sostanza pura).
+  \item \textbf{BeerStyle} — tassonomia degli stili di birra (es. \emph{Lager}, \emph{Ale}, \emph{Stout}), organizzati gerarchicamente;
+  \item \textbf{BeerProduct} / \textbf{BeverageProduct} — il prodotto commerciale confezionato (distinto dalla sostanza pura), definito come sottoclasse di \texttt{schema:Product} e \texttt{gs1:Product}.
 \end{itemize}
 
 \subsection{Tre costrutti strutturali}
 \paragraph{Beer Styles.}
 Gli \emph{stili} sono definiti in base a ingredienti e processi di produzione. 
-Questa scelta serve a evitare confusione tra stili “scientifici/tecnici” e termini di marketing. 
-Gli stili sono modellati come sottoclassi specializzate (ad esempio \texttt{BrownAle} come specializzazione di una classe più generale), permettendo inferenze di tipo gerarchico. 
+Questa scelta serve a evitare confusione tra stili "scientifici/tecnici" e termini di marketing. 
+Gli stili sono modellati come sottoclassi specializzate (ad esempio \texttt{BrownAle} come specializzazione di \texttt{Ale}), permettendo inferenze di tipo gerarchico. 
 Alcuni punti salienti:
 \begin{itemize}
   \item \textit{Brown Ale} — viene specificato come termine descrittivo: il colore dipende dal tipo e dalla quantità di malto, più che dal nome stesso.
-  \item \textit{English vs British} — l’ontologia usa spesso \textit{English Style} come naming (es. foaf:name) per convenzione terminologica.
-  \item \textit{Lagers vs Ales} — la distinzione è basata su caratteristiche biologiche/di processo (fermentazione con lieviti “bottom” vs “top”) anziché su luoghi geografici.
-  \item \textit{Non-Beers} — bevande affini come sidro e idromele sono incluse per comodità d’uso ma classificate come non-beer (non derivano dalla fermentazione dei malti).
+  \item \textit{English vs British} — l'ontologia usa spesso \textit{English Style} come naming (es. foaf:name) per convenzione terminologica.
+  \item \textit{Lagers vs Ales} — la distinzione è basata su caratteristiche biologiche/di processo (fermentazione con lieviti "bottom" vs "top") anziché su luoghi geografici.
+  \item \textit{Non-Beers} — bevande affini come sidro e idromele sono incluse per comodità d'uso ma classificate come non-beer (non derivano dalla fermentazione dei malti).
 \end{itemize}
 
 \paragraph{Beer Making Organizations.}
-La classe \texttt{Brewery} rappresenta organizzazioni o luoghi fisici di produzione; qui sono modellati attributi come paese, nome commerciale, e relazioni con le birre prodotte tramite proprietà oggetto quali \texttt{brewedBy} (Beer → Brewery).
+La classe \texttt{Brewery} rappresenta organizzazioni o luoghi fisici di produzione. Essa estende \texttt{schema:Organization}, \texttt{foaf:Organization} e \texttt{gs1:Organization}, permettendo l'uso di un ampio ecosistema di vocabolari per descrivere attributi come paese, nome commerciale e indirizzo.
 
 \paragraph{Packaging (imballaggio e prodotto commerciale).}
-L’ontologia distingue in modo esplicito la \emph{birra} (la sostanza) dal \emph{beer product} (unità commerciale confezionata). Il modello del packaging cerca un compromesso tra completezza descrittiva e semplicità operativa:
+L'ontologia distingue in modo esplicito la \emph{birra} (la sostanza) dal \emph{beer product} (unità commerciale confezionata). Il modello del packaging cerca un compromesso tra completezza descrittiva e semplicità operativa:
 \begin{itemize}
-  \item sono disponibili misurazioni multiple (sistema imperiale e metrico) per le stesse dimensioni; le unità vengono identificate con standard quali UN/ECE Recommendation No.21 e il vocabolario \texttt{quot};
-  \item la rappresentazione delle quantità commerciali utilizza concetti mutuati da GS1 e \texttt{schema.org}; per misure nominali o ingegneristiche si porge attenzione all'interoperabilità con ontologie per misure (es. SOSA/SSN);
+  \item sono disponibili misurazioni multiple (sistema imperiale e metrico) per le stesse dimensioni; le unità vengono identificate con standard quali UN/ECE Recommendation No.21 e QUDT;
+  \item la rappresentazione delle quantità commerciali utilizza concetti mutuati da GS1 e \texttt{schema.org}; per misure nominali o ingegneristiche si fa uso di SOSA/SSN;
   \item sono modellati alcuni contenitori tipici (keg, lattine da 355\,ml, lattine da 473\,ml). Materiale del contenitore e dettagli di sealing non sono ancora modellati in questa versione.
   \item \textit{Compound packaging} (es. six-packs, case da 24) è prevista per sviluppi futuri.
 \end{itemize}
 
-\subsection{Proprietà principali (concettuali)}
-La Beer Ontology descrive le principali relazioni tra le entità del dominio, senza definire nomi concreti di proprietà. Tra i concetti principali troviamo:
+\subsection{Proprietà e relazioni nella Beer Ontology}
 
+\subsubsection{Nota critica: assenza di proprietà formalmente definite}
+Un aspetto fondamentale da sottolineare è che la \textbf{Beer Ontology non definisce formalmente proprietà specifiche del dominio della birra}. 
+
+Analizzando il file OWL/Turtle dell'ontologia, non si trova alcuna definizione di:
 \begin{itemize}
-  \item Collegamento tra \textbf{Beer} e il birrificio che la produce (\textit{Brewery}) — concettualmente rappresenta chi produce la birra.
-  \item Associazione tra \textbf{Beer} e il suo stile (\textit{BeerStyle}) — utile per classificare le birre secondo ingredienti e processo di fermentazione.
-  \item Collegamento tra \textbf{Beer} e gli ingredienti principali (\textit{Ingredient}) — consente di modellare la composizione della birra.
-  \item Informazioni sul contenuto alcolico e altre caratteristiche organolettiche — descritte come valori numerici o qualitativi.
-  \item Collegamento tra \textbf{Beer} e il suo packaging commerciale (\textit{BeerProduct}) — rappresenta il contenitore e le quantità nominali.
+  \item \texttt{owl:ObjectProperty} o \texttt{owl:DatatypeProperty} per concetti come \texttt{brewedBy}, \texttt{hasStyle}, \texttt{hasIngredient}, \texttt{hasAlcoholContent}, ecc.
 \end{itemize}
 
-\noindent
-\textbf{Nota:} queste relazioni vanno considerate come concettuali e descrittive. La versione OWL pubblica della Beer Ontology contiene le classi e i concetti principali, ma non fornisce URI concreti di proprietà oggetto o dati. Queste informazioni servono come guida alla modellazione semantica e all’integrazione con vocabolari esterni (es. \texttt{schema.org}, \texttt{GS1}, \texttt{SOSA/SSN}).
+L'unica proprietà formalmente definita nell'ontologia è:
+\begin{itemize}
+  \item \texttt{gs1:packaging} — una \texttt{owl:ObjectProperty} importata dal vocabolario GS1, usata per collegare un \texttt{BeerProduct} al suo contenitore.
+\end{itemize}
 
+\subsubsection{Proprietà usate negli esempi}
+Nella documentazione HTML ufficiale, gli esempi di markup mostrano l'uso di diverse proprietà, ma queste:
+\begin{enumerate}
+  \item \textbf{Non sono definite come proprietà OWL nell'ontologia stessa}
+  \item Sono semplicemente \textbf{URI utilizzati negli esempi} come convenzione pratica
+  \item Includono:
+  \begin{itemize}
+    \item \texttt{beer:brewedBy} — collegamento tra birra e birrificio
+    \item \texttt{beer:abvValue} — contenuto alcolico (alcohol by volume)
+    \item \texttt{beer:nominalCapacity} — capacità nominale di un contenitore
+  \end{itemize}
+\end{enumerate}
 
+\subsubsection{Proprietà da vocabolari esterni}
+Per descrivere le relazioni tra le entità, l'ontologia si affida principalmente a \textbf{proprietà definite in vocabolari esterni standard}:
+\begin{itemize}
+  \item \textbf{schema.org}: \texttt{schema:manufacturer}, \texttt{schema:hasVariant}, \texttt{schema:address}, \texttt{schema:description}
+  \item \textbf{GS1}: \texttt{gs1:brand}, \texttt{gs1:manufacturer}, \texttt{gs1:packaging}
+  \item \textbf{Dublin Core}: \texttt{dcterms:creator}, \texttt{dcterms:description}
+  \item \textbf{FOAF}: \texttt{foaf:name}, \texttt{foaf:maker}
+  \item \textbf{RDF/RDFS}: \texttt{rdf:type}, \texttt{rdfs:label}
+\end{itemize}
 
+\subsubsection{Implicazioni di questa scelta progettuale}
+Questa scelta di non definire proprietà specifiche ma di riutilizzare vocabolari esistenti:
+\begin{itemize}
+  \item \textbf{Pro}: Massimizza l'interoperabilità con altri dataset del Web Semantico
+  \item \textbf{Pro}: Evita la proliferazione di proprietà ridondanti
+  \item \textbf{Pro}: Facilita l'integrazione con sistemi esistenti (e-commerce, inventario, ecc.)
+  \item \textbf{Contro}: Può creare ambiguità su quale proprietà usare per una data relazione
+  \item \textbf{Contro}: Gli esempi mostrano URI (come \texttt{beer:brewedBy}) che non hanno definizione formale
+\end{itemize}
 
+La documentazione HTML suggerisce agli utenti che vogliono registrare una relazione senza impegnarsi in una proprietà specifica di usare \texttt{beer:brewedBy}, descrivendola come "facilmente comprensibile" e capace di "allinearsi con la maggior parte dei casi ontologici". Tuttavia, questa proprietà rimane una convenzione pragmatica piuttosto che un elemento formalmente definito dell'ontologia.
 
 \newpage
 \begin{figure}[!h]
@@ -190,99 +185,73 @@ La Beer Ontology descrive le principali relazioni tra le entità del dominio, se
 
 \subsection{Distinzione tra Beer e BeerProduct}
 Una scelta modelluale importante è la distinzione concettuale tra la \texttt{Beer} (sostanza/entità organolettica) e il \texttt{BeerProduct} (unità commerciale confezionata). 
+
+In termini di vocabolario schema.org, una \texttt{Beer} è un \texttt{schema:ProductGroup} che ha \texttt{BeerProduct} come varianti tramite la proprietà \texttt{schema:hasVariant}. Questo essenzialmente mette in relazione la birra come prodotto astratto con la sua disponibilità materializzata come prodotto consumabile discreto, collegando il \texttt{BeerProduct} al suo contenitore usando la proprietà \texttt{gs1:packaging}.
+
 Questa separazione permette di:
 \begin{itemize}
   \item associare a \texttt{BeerProduct} metadati commerciali (branding, prezzo, codice GS1, inventario) senza confondere tali informazioni con le proprietà organolettiche della bevanda;
   \item interoperare con vocabolari e standard di commercio elettronico (es. GS1, \texttt{schema.org}) per scopi pratici come catalogazione o commercio.
 \end{itemize}
 
-
 \subsection{Scelte di modellazione e implicazioni pratiche}
 \begin{itemize}
-  \item \textbf{Esplicitazione versus inferenza:} l’ontologia dichiara spesso tipi e classi in modo esplicito anche quando la stessa informazione potrebbe essere ricavata tramite reasoner — scelta che facilita l’uso “out-of-the-box” senza dover necessariamente eseguire un motore di inferenza.
-  \item \textbf{Riuso di vocaboli esterni:} per unità di misura, quantità e aspetti commerciali l’ontologia fa riferimento a vocabolari consolidati (UN/ECE, \texttt{quot}, GS1, \texttt{schema.org}, SOSA/SSN), aumentando l’interoperabilità con altri dataset.
-  \item \textbf{Estendibilità:} la struttura a moduli (stili, organizzazioni, packaging) facilita l’estensione futura: ad esempio aggiungendo dettagli su materiali dei contenitori, processi di produzione regionali, o collegamenti a dataset quali DBpedia/Wikidata.
+  \item \textbf{Esplicitazione versus inferenza:} l'ontologia dichiara spesso tipi e classi in modo esplicito anche quando la stessa informazione potrebbe essere ricavata tramite reasoner — scelta che facilita l'uso "out-of-the-box" senza dover necessariamente eseguire un motore di inferenza.
+  \item \textbf{Riuso di vocaboli esterni:} per unità di misura, quantità e aspetti commerciali l'ontologia fa riferimento a vocabolari consolidati (UN/ECE, QUDT, GS1, \texttt{schema.org}, SOSA/SSN), aumentando l'interoperabilità con altri dataset.
+  \item \textbf{Estendibilità:} la struttura a moduli (stili, organizzazioni, packaging) facilita l'estensione futura: ad esempio aggiungendo dettagli su materiali dei contenitori, processi di produzione regionali, o collegamenti a dataset quali DBpedia/Wikidata.
 \end{itemize}
 
-\subsection{Esempio (Turtle)}
-Un piccolo frammento esemplificativo in Turtle che mette insieme alcune delle entità e proprietà sopra descritte:
+\subsection{Esempio (Turtle) corretto}
+Un piccolo frammento esemplificativo in Turtle che utilizza proprietà effettivamente disponibili o comunemente usate negli esempi:
+
 \begin{lstlisting}[language=turtle,caption={Esempio di istanza in Turtle}]
-@prefix beer: <http://purl.org/ontology/beer/> .
+@prefix beer: <https://rdf.ag/o/beer#> .
+@prefix schema: <http://schema.org/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix gs1: <https://gs1.org/voc/> .
 
-beer:Guinness a beer:Beer ;
-    beer:hasStyle beer:Stout ;
+# La birra come prodotto astratto
+beer:Guinness a beer:Beer, beer:Stout ;
+    rdfs:label "Guinness" ;
+    schema:description "A classic Irish dry stout" .
+
+# Il prodotto commerciale specifico
+beer:GuinnessCan473 a beer:BeerProduct, beer:Stout ;
+    rdfs:label "Guinness, 473ml Can" ;
+    beer:abvValue "4.2"^^xsd:float ;
     beer:brewedBy beer:GuinnessBrewery ;
-    beer:hasAlcoholContent "4.2"^^xsd:float ;
-    beer:hasPackaging beer:GuinnessCan355 .
+    gs1:packaging beer:can473 .
 
-beer:GuinnessCan355 a beer:BeerProduct ;
-    beer:netContent "355"^^xsd:integer ;
-    beer:netContentUnit "ml" .
+# Relazione tra birra astratta e prodotto concreto
+beer:Guinness schema:hasVariant beer:GuinnessCan473 .
 \end{lstlisting}
 
+\textbf{Nota importante:} In questo esempio, \texttt{beer:brewedBy} e \texttt{beer:abvValue} sono URI usati per convenienza pratica, ma non sono formalmente definiti come proprietà OWL nell'ontologia. In un'applicazione reale, sarebbe preferibile usare proprietà da vocabolari standard come \texttt{schema:manufacturer} o definire esplicitamente queste proprietà in un'estensione dell'ontologia.
+
 \subsection{Aspetti non coperti e sviluppi futuri}
-L’attuale versione non copre ancora in modo esaustivo:
+L'attuale versione non copre ancora in modo esaustivo:
 \begin{itemize}
   \item il materiale dei contenitori e il rivestimento interno delle lattine (rilevante per riciclo e interazioni chimiche);
   \item una tassonomia dettagliata degli ingredienti agricoli e delle loro varietà;
-  \item il supporto esteso per packaging complessi e catalogazione logistica completa.
+  \item il supporto esteso per packaging complessi e catalogazione logistica completa;
+  \item una definizione formale e completa di proprietà specifiche del dominio della birra.
 \end{itemize}
 Questi temi sono candidati naturali per estensioni successive, mantenendo la compatibilità con i vocabolari esterni citati.
 
-
-% % --- 4. Struttura concettuale dell'ontologia ---
-% \section{Struttura concettuale dell’ontologia}
-% L’ontologia definisce un insieme di concetti principali:
-
-% \begin{itemize}
-%   \item \textbf{Beer} – rappresenta il prodotto birra;
-%   \item \textbf{Brewery} – il produttore o birrificio;
-%   \item \textbf{BeerStyle} – la categoria o stile di birra (es. Lager, Ale);
-%   \item \textbf{Ingredient} – gli elementi che compongono la birra;
-%   \item \textbf{Country} – il luogo di origine.
-% \end{itemize}
-
-% \newpage
-% \begin{figure}[!h]
-%     \caption{Tipologie di birra}
-%     \centering
-%     \includegraphics[width=150mm]{beer_tpes.png}
-%     \label{fig:label}
-% \end{figure}
-% \begin{figure}[!h]
-%     \caption{Birrifici}
-%     \centering
-%     \includegraphics[width=150mm]{birrifici.png}
-%     \label{fig:label}
-% \end{figure}
-% \newpage
-
-% \newpage
-
-
-% Le relazioni principali includono:
-% \begin{itemize}
-%   \item \texttt{brewedBy} – collega una birra al suo birrificio;
-%   \item \texttt{hasStyle} – collega una birra al suo stile;
-%   %\item \texttt{hasAlcoholContent} – descrive un valore numerico;
-%   %\item \texttt{hasIngredient} – collega la birra agli ingredienti.
-% \end{itemize}
-
 \section{Casi reali e applicazioni della Beer Ontology}
-La \textbf{Beer Ontology}\footnote{\url{https://rdf.ag/o/beer-en.html}} è una delle ontologie pubblicate nel portale \texttt{rdf.ag}, sviluppata da PSW Applied Research Inc. e rilasciata con licenza Creative Commons 3.0. 
+La \textbf{Beer Ontology}\footnote{\url{https://rdf.ag/o/beer-en.html}} è una delle ontologie pubblicate nel portale \texttt{rdf.ag}, sviluppata da Rob Warren nell'ambito di PSW Applied Research Inc. 
 Il suo scopo, dichiarato ufficialmente, è di ``fornire tracciabilità per birre e ingredienti, controllo di processo e identificazione degli stili in modo neutro rispetto alla lingua''.  
-Essa fa parte di un ecosistema più ampio di ontologie per l’agroalimentare, integrato con standard industriali come \texttt{GS1}, \texttt{schema.org}, \texttt{SOSA/SSN} e \texttt{QUDT} per rappresentare unità di misura e packaging.
+Essa fa parte di un ecosistema più ampio di ontologie per l'agroalimentare, integrato con standard industriali come \texttt{GS1}, \texttt{schema.org}, \texttt{SOSA/SSN} e \texttt{QUDT} per rappresentare unità di misura e packaging.
 
 \subsection{Esempi ufficiali e struttura di riferimento}
-La documentazione\footnote{\url{https://rdf.ag/o/beer-2024-02-21.html}} include esempi concreti di modellazione, come la \textit{ACME Brewery}, una birreria fittizia usata per illustrare l’uso di classi e proprietà in scenari realistici (\texttt{Beer}, \texttt{Brewery}, \texttt{BeerStyle}, \texttt{Packaging}).  
+La documentazione\footnote{\url{https://rdf.ag/o/beer-2024-02-21.html}} include esempi concreti di modellazione, come la \textit{ACME Brewery}, una birreria fittizia usata per illustrare l'uso di classi e proprietà in scenari realistici (\texttt{Beer}, \texttt{Brewery}, \texttt{BeerStyle}, \texttt{Packaging}).  
 La versione più recente (v1.3, febbraio 2024) distingue chiaramente tra:
 \begin{itemize}
   \item \textbf{Beer Styles} — organizzati in sottoclassi (Ale, Lager, ecc.) in base a ingredienti e processo di fermentazione;
   \item \textbf{Beer Making Organizations} — rappresentazioni di birrifici come entità produttive;
-  \item \textbf{Packaging} — modellazione semantica di contenitori, dimensioni e unità, basata su GS1 e \texttt{quot ontology}.
+  \item \textbf{Packaging} — modellazione semantica di contenitori, dimensioni e unità, basata su GS1 e QUDT.
 \end{itemize}
-Inoltre, l’ontologia distingue tra \textit{Beer} (sostanza) e \textit{Beer Product} (unità commerciale pronta per la vendita), importando concetti da \texttt{schema.org} e vocabolari per il commercio elettronico.
+Inoltre, l'ontologia distingue tra \textit{Beer} (sostanza) e \textit{Beer Product} (unità commerciale pronta per la vendita), importando concetti da \texttt{schema.org} e vocabolari per il commercio elettronico.
 
 \subsection{Progetti e ricerche correlate}
 La Beer Ontology è stata impiegata o presa a modello in diversi contesti di ricerca:
@@ -293,48 +262,47 @@ La Beer Ontology è stata impiegata o presa a modello in diversi contesti di ric
 \end{itemize}
 
 \subsection{Osservazioni finali}
-L’ontologia della birra si distingue per la sua forte aderenza agli standard industriali e per l’obiettivo di connettere produttori, trasformatori e distributori in un unico grafo semantico.  
-Nonostante la maggior parte dei casi d’uso sia ancora accademica o sperimentale, essa rappresenta un riferimento pratico per la modellazione semantica nel settore alimentare, in particolare come base per l’interoperabilità tra tracciabilità, etichettatura e commercio elettronico.
-
-
+L'ontologia della birra si distingue per la sua forte aderenza agli standard industriali e per l'obiettivo di connettere produttori, trasformatori e distributori in un unico grafo semantico.  
+Nonostante la maggior parte dei casi d'uso sia ancora accademica o sperimentale, essa rappresenta un riferimento pratico per la modellazione semantica nel settore alimentare, in particolare come base per l'interoperabilità tra tracciabilità, etichettatura e commercio elettronico.
 
 % --- 6. Valutazione critica ---
 \section{Valutazione e punti di forza/debolezza}
 \subsection*{Punti di forza}
 \begin{itemize}
-  \item Chiarezza nella struttura concettuale;
-  \item Buon uso delle relazioni OWL;
-  \item Facilità di estensione a nuovi domini.
+  \item Chiarezza nella struttura concettuale e nella gerarchia delle classi;
+  \item Forte integrazione con vocabolari standard del Web Semantico (GS1, schema.org, QUDT, SOSA/SSN);
+  \item Distinzione efficace tra birra come sostanza e prodotto commerciale;
+  \item Facilità di estensione a nuovi stili e organizzazioni produttive;
+  \item Esempi pratici ben documentati (ACME Brewery).
 \end{itemize}
 
 \subsection*{Debolezze}
 \begin{itemize}
-  \item Ontologia datata e con copertura limitata;
+  \item Assenza di proprietà formalmente definite per relazioni specifiche del dominio (brewedBy, hasStyle, ecc.);
+  \item Copertura limitata degli ingredienti e dei processi di produzione;
   \item Mancanza di collegamenti a dataset esterni come DBpedia o Wikidata;
-  \item Assenza di metadati sulle fonti.
+  \item Assenza di metadati dettagliati sulle fonti e la provenance dei dati;
+  \item Documentazione incompleta sui materiali dei contenitori e compound packaging.
 \end{itemize}
 
 \subsection*{Possibili estensioni}
 \begin{itemize}
-  \item Aggiunta di una tassonomia di ingredienti più dettagliata;
-  \item Collegamento a dataset geografici per la localizzazione dei birrifici;
-  \item Integrazione con dati di recensioni e valutazioni.
+  \item Definizione formale di un set di proprietà specifiche del dominio (Object Properties e Datatype Properties);
+  \item Aggiunta di una tassonomia di ingredienti più dettagliata con collegamenti a ontologie agricole;
+  \item Collegamento a dataset geografici per la localizzazione dei birrifici (GeoNames, DBpedia);
+  \item Integrazione con dati di recensioni e valutazioni (schema.org/Review);
+  \item Modellazione completa del compound packaging e dei materiali dei contenitori;
+  \item Linking con knowledge base esterne (DBpedia, Wikidata) per arricchimento semantico.
 \end{itemize}
 
 % --- 7. Conclusione ---
 \section{Conclusione}
-L’analisi della Beer Ontology ha permesso di comprendere l’importanza delle ontologie come strumento per rappresentare la conoscenza in modo formale e interoperabile.  
-Nonostante la semplicità del dominio, il progetto illustra efficacemente i principi del Web Semantico e le potenzialità dei linguaggi RDF e OWL per l’integrazione e l’inferenza dei dati.
+L'analisi della Beer Ontology ha permesso di comprendere l'importanza delle ontologie come strumento per rappresentare la conoscenza in modo formale e interoperabile.  
+Nonostante la semplicità del dominio, il progetto illustra efficacemente i principi del Web Semantico e le potenzialità dei linguaggi RDF e OWL per l'integrazione e l'inferenza dei dati.
 
-% % --- 8. Appendice (facoltativa) ---
-% \appendix
-% \section*{Appendice}
-% \addcontentsline{toc}{section}{Appendice}
-% \begin{itemize}
-%   \item Screenshot della visualizzazione in Protégé.
-%   \item Frammenti OWL o Turtle aggiuntivi.
-%   \item Altri esempi di query SPARQL.
-% \end{itemize}
+Un aspetto particolarmente interessante emerso dall'analisi è la scelta progettuale di non definire proprietà specifiche del dominio, ma di fare affidamento su vocabolari esterni consolidati. Questa strategia massimizza l'interoperabilità ma richiede agli utenti una maggiore consapevolezza nell'uso delle proprietà appropriate per descrivere le relazioni tra le entità.
+
+L'ontologia rappresenta un esempio concreto di come standards industriali (GS1, QUDT) possano essere integrati con vocabolari semantici generici (schema.org, FOAF) per creare un sistema di descrizione coerente e riutilizzabile, applicabile non solo al settore della birra ma potenzialmente estendibile ad altri domini del settore alimentare e delle bevande.
 
 % ================================
 % Bibliografia
@@ -343,6 +311,5 @@ Nonostante la semplicità del dominio, il progetto illustra efficacemente i prin
 \addcontentsline{toc}{section}{Riferimenti bibliografici}
 \bibliographystyle{plainurl}
 \bibliography{references}
-
 
 \end{document}
