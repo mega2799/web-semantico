@@ -573,6 +573,14 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # http://www.beerecipe.com/ontology#producesBeer
 <http://www.beerecipe.com/ontology#producesBeer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
+# http://www.beerecipe.com/ontology#purpose
+<http://www.beerecipe.com/ontology#purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.beerecipe.com/ontology#purpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.beerecipe.com/ontology#Ingredient> .
+<http://www.beerecipe.com/ontology#purpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.beerecipe.com/ontology#purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the specific purpose or role of an ingredient in the recipe (e.g., bittering, aroma, dry-hopping for hops; base malt, color, body for malts; fermentation character for yeast)"@en .
+<http://www.beerecipe.com/ontology#purpose> <http://www.w3.org/2000/01/rdf-schema#label> "purpose"@en .
+<http://www.beerecipe.com/ontology#purpose> <http://www.w3.org/2004/02/skos/core#example> "Cascade hop: \"aroma and dry-hopping\"; Pale Malt: \"base malt - fermentable sugars\"; Chocolate Malt: \"color and roasted flavor\""@en .
+# 
 # http://www.beerecipe.com/ontology#quantity
 <http://www.beerecipe.com/ontology#quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.beerecipe.com/ontology#quantity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.beerecipe.com/ontology#Ingredient> .
@@ -869,6 +877,9 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.beerecipe.com/ontology#SpargeStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Rinse the grains to extract remaining sugars and increase wort yield."@en .
 <http://www.beerecipe.com/ontology#SpargeStep> <http://www.w3.org/2000/01/rdf-schema#label> "Sparge Step" .
 # 
+# http://www.beerecipe.com/ontology#Water
+<http://www.beerecipe.com/ontology#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://www.beerecipe.com/ontology#WhirlpoolStep
 <http://www.beerecipe.com/ontology#WhirlpoolStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.beerecipe.com/ontology#WhirlpoolStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.beerecipe.com/ontology#BrewingStep> .
@@ -878,6 +889,9 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://www.beerecipe.com/ontology#Yeast
 <http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.beerecipe.com/ontology#Ingredient> .
+<http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/2002/07/owl#disjointWith> <https://mega2799.github.io/web-semantico/index-en.html#Cereal> .
+<http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/2002/07/owl#disjointWith> <https://mega2799.github.io/web-semantico/index-en.html#Water> .
+<http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/2002/07/owl#disjointWith> <https://rdf.ag/o/hops#Hops> .
 <http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/2002/07/owl#disjointWith> <https://rdf.ag/o/malt#Malt> .
 <http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/2000/01/rdf-schema#comment> "Yeast is a single-celled microorganism (fungus) essential for beer fermentation. Yeast converts fermentable sugars into alcohol and carbon dioxide, while producing flavor compounds (esters, phenols) that significantly influence the beer's character. Different yeast strains produce distinct flavor profiles and are categorized primarily into ale yeasts (Saccharomyces cerevisiae) and lager yeasts (Saccharomyces pastorianus)."@en .
 <http://www.beerecipe.com/ontology#Yeast> <http://www.w3.org/2000/01/rdf-schema#label> "Yeast"@en .
@@ -900,6 +914,8 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.beerecipe.com/ontology#Recipe> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://mega2799.github.io/web-semantico/index-en.html#AdvancedRecipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.beerecipe.com/ontology#Recipe> .
+<https://mega2799.github.io/web-semantico/index-en.html#AdvancedRecipe> <http://www.w3.org/2002/07/owl#disjointWith> <https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe> .
+<https://mega2799.github.io/web-semantico/index-en.html#AdvancedRecipe> <http://www.w3.org/2002/07/owl#disjointWith> <https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe> .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe
 <https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -916,10 +932,13 @@ _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.beerecipe.com/ontology#Recipe> .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.beerecipe.com/ontology#Recipe> .
+<https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe> <http://www.w3.org/2002/07/owl#disjointWith> <https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe> .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#Cereal
 <https://mega2799.github.io/web-semantico/index-en.html#Cereal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://mega2799.github.io/web-semantico/index-en.html#Cereal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.beerecipe.com/ontology#Ingredient> .
+<https://mega2799.github.io/web-semantico/index-en.html#Cereal> <http://www.w3.org/2002/07/owl#disjointWith> <https://mega2799.github.io/web-semantico/index-en.html#Water> .
+<https://mega2799.github.io/web-semantico/index-en.html#Cereal> <http://www.w3.org/2002/07/owl#disjointWith> <https://rdf.ag/o/hops#Hops> .
 <https://mega2799.github.io/web-semantico/index-en.html#Cereal> <http://www.w3.org/2002/07/owl#disjointWith> <https://rdf.ag/o/malt#Malt> .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe
@@ -1128,6 +1147,8 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://mega2799.github.io/web-semantico/index-en.html#Water
 <https://mega2799.github.io/web-semantico/index-en.html#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://mega2799.github.io/web-semantico/index-en.html#Water> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.beerecipe.com/ontology#Ingredient> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water> <http://www.w3.org/2002/07/owl#disjointWith> <https://rdf.ag/o/hops#Hops> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water> <http://www.w3.org/2002/07/owl#disjointWith> <https://rdf.ag/o/malt#Malt> .
 # 
 # https://rdf.ag/o/MaltingActivity
 <https://rdf.ag/o/MaltingActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3442,17 +3463,6 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://rdf.ag/o/hops#HopsNelsonSauvin
 <https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://rdf.ag/o/hops#Hops> .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://rdfs.org/ns/void#inDataset> <https://rdf.ag/o/hops#datasetdefinition> .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://rdf.ag/o/hops-2021-07-30> .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2000/01/rdf-schema#label> "Nelson Sauvin™"@en .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2004/02/skos/core#definition> "Nelson Sauvin™ est un houblon néo-zélandais déposé en 2000. Son nom est un dérivé du cépage Sauvignon Blanc, auquel beaucoup comparent son arôme."@fr .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2004/02/skos/core#definition> "Nelson Sauvin™ is a trademarked hop from New Zealand that was released in 2000. Its name is a derivative of Sauvignon Blanc wine grape, to which many compare its aroma."@en .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://xmlns.com/foaf/0.1/name> "Nelson Sauvin™" .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#alphaAcidsContent> "12-13" .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#betaAcidsContent> "6-8" .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#perceivedAroma> "Fruity, Grapefruit, Gooseberry, White Wine"@en .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#perceivedAroma> "Fruité, Groseille, Pamplemousse, Vin Blanc"@fr .
-<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#totalOilContent> "1.1" .
 # 
 # https://rdf.ag/o/hops#HopsNewport
 <https://rdf.ag/o/hops#HopsNewport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -4271,14 +4281,6 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://rdf.ag/o/malt#ChocolateMalt
 <https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://rdf.ag/o/malt#RoastedMalt> .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://rdfs.org/ns/void#inDataset> <https://rdf.ag/o/malt#datasetdefinition> .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#comment> "For roasted malts, the classes Pale Chocolate Malt, Standard Chocolate Malt and Black Malt have the general ranges of EBC coloring assigned to each of these classes. It is important to note that there are significant gaps between these ranges despite all being in the same Roasted Malt class. This is due to the fact that much of the coloring is at the decretion of the operator of the roasting drum, therefore coloring may vary from malters or even between batches. In the end, it is the malters who decide under which class the product will be marketed."@en .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#comment> "Pour les malts torréfiés, les classes Malt au Chocolat Pâle, Malt au Chocolat Standard et Malt Noir ont les gammes générales de coloration EBC attribuées à chacune de ces classes. Il est important de noter qu'il existe des écarts importants entre ces gammes, bien qu'elles appartiennent toutes à la même classe de malt torréfié. Cela est dû au fait qu'une grande partie de la coloration est à la décrétion de l'opérateur du tambour de torréfaction, donc la coloration peut varier d'un malter ou même d'un lot à l'autre. En fin de compte, ce sont les malters qui décident sous quelle classe le produit sera commercialisé."@fr .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.ag/o/malt-2021-03-24> .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#label> "Chocolate Malt"@en .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#label> "Malt au Chocolat"@fr .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2004/02/skos/core#definition> "Malts torréfiés qui ont un arôme quelque peu chocolaté et dont la coloration varie de 500-1100 EBC."@fr .
-<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2004/02/skos/core#definition> "Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 500-1100 EBC."@en .
 # 
 # https://rdf.ag/o/malt#Malt
 <https://rdf.ag/o/malt#Malt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -4412,16 +4414,20 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://www.beerecipe.com/ontology#US05_Yeast> <http://www.beerecipe.com/ontology#maxAttenuation> "0.82"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <http://www.beerecipe.com/ontology#US05_Yeast> <http://www.beerecipe.com/ontology#minAttenuation> "0.78"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <http://www.beerecipe.com/ontology#US05_Yeast> <http://www.beerecipe.com/ontology#optimalTemperature> "22.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.beerecipe.com/ontology#US05_Yeast> <http://www.beerecipe.com/ontology#purpose> "fermentation - reliable dry yeast with clean profile" .
+<http://www.beerecipe.com/ontology#US05_Yeast> <http://www.beerecipe.com/ontology#quantity> "1.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <http://www.beerecipe.com/ontology#US05_Yeast> <http://www.beerecipe.com/ontology#yeastDescription> "Neutral, well-balanced American ale yeast producing clean and crisp profiles; suitable for a wide range of ales including American Pale Ale, IPA and stouts." .
 <http://www.beerecipe.com/ontology#US05_Yeast> <http://www.beerecipe.com/ontology#yeastName> "SafAle US-05" .
 <http://www.beerecipe.com/ontology#US05_Yeast> <http://www.w3.org/2000/01/rdf-schema#comment> "Clean, neutral American ale yeast producing crisp profiles with medium attenuation, ideal for hop-forward beers." .
-<http://www.beerecipe.com/ontology#US05_Yeast> <http://www.w3.org/2000/01/rdf-schema#label> "Safale US-05" .
+<http://www.beerecipe.com/ontology#US05_Yeast> <http://www.w3.org/2000/01/rdf-schema#label> "US-05 American Ale Yeast (Easy Pale Ale)" .
 # 
 # http://www.beerecipe.com/ontology#WLP001_Yeast
 <http://www.beerecipe.com/ontology#WLP001_Yeast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.beerecipe.com/ontology#WLP001_Yeast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#Yeast> .
+<http://www.beerecipe.com/ontology#WLP001_Yeast> <http://www.beerecipe.com/ontology#purpose> "fermentation - clean ale character with neutral profile" .
+<http://www.beerecipe.com/ontology#WLP001_Yeast> <http://www.beerecipe.com/ontology#quantity> "1.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <http://www.beerecipe.com/ontology#WLP001_Yeast> <http://www.w3.org/2000/01/rdf-schema#comment> "Clean, versatile ale yeast. Perfect for American IPAs" .
-<http://www.beerecipe.com/ontology#WLP001_Yeast> <http://www.w3.org/2000/01/rdf-schema#label> "WLP001 California Ale Yeast" .
+<http://www.beerecipe.com/ontology#WLP001_Yeast> <http://www.w3.org/2000/01/rdf-schema#label> "WLP001 California Ale Yeast (BrewDog Punk IPA)" .
 # 
 # http://www.beerecipe.com/ontology#WLP007_Yeast
 <http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4429,16 +4435,21 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.beerecipe.com/ontology#maxAttenuation> "80"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.beerecipe.com/ontology#minAttenuation> "70"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.beerecipe.com/ontology#optimalTemperature> "20.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.beerecipe.com/ontology#purpose> "fermentation - high gravity tolerance with neutral character" .
 <http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.beerecipe.com/ontology#yeastDescription> "Highly attenuative English ale yeast producing dry, clean finishes. Suitable for stouts and strong ales." .
 <http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.beerecipe.com/ontology#yeastName> "WLP007 Dry English Ale" .
+<http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.w3.org/2000/01/rdf-schema#comment> "Double pitch (2 vials/packs) required for high gravity (OG 1.109). Clean fermenting with excellent attenuation (75-80%). Handles alcohol stress well. Temp: 18-21°C. Fermentation: 21 days due to high gravity." .
+<http://www.beerecipe.com/ontology#WLP007_Yeast> <http://www.w3.org/2000/01/rdf-schema#label> "WLP007 Dry English Ale Yeast (Russian Imperial Stout)" .
 # 
-# https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop
-<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
-<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "6.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop> <http://www.beerecipe.com/ontology#hopName> "Ahtanum" .
-<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop> <http://www.w3.org/2000/01/rdf-schema#comment> "American hop with floral, citrus and piney notes. Used for aroma" .
-<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop> <http://www.w3.org/2000/01/rdf-schema#label> "Ahtanum" .
+# https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "6.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.beerecipe.com/ontology#hopName> "Ahtanum" .
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.beerecipe.com/ontology#purpose> "flavor and aroma - added at 15 minutes and whirlpool" .
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.beerecipe.com/ontology#quantity> "18.75"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#comment> "American hop with floral, citrus and piney notes. Used for aroma" .
+<https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#label> "Ahtanum Hop (BrewDog Punk IPA - Flavor)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#Airlock
 <https://mega2799.github.io/web-semantico/index-en.html#Airlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4456,22 +4467,6 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA> <http://www.beerecipe.com/ontology#minIBU> "40"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA> <http://www.beerecipe.com/ontology#styleDescription> "Hoppy, bitter, citrus-forward" .
 <https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA> <http://www.beerecipe.com/ontology#styleName> "American IPA" .
-# 
-# https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#BrewingStep> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min> <http://www.beerecipe.com/ontology#stepDuration> "60"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min> <http://www.beerecipe.com/ontology#stepName> "Boil" .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min> <http://www.beerecipe.com/ontology#stepOrder> "2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min> <http://www.beerecipe.com/ontology#stepTemperature> "100.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-# 
-# https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#BrewingStep> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min> <http://www.beerecipe.com/ontology#stepDuration> "45"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min> <http://www.beerecipe.com/ontology#stepName> "Mash" .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min> <http://www.beerecipe.com/ontology#stepOrder> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min> <http://www.beerecipe.com/ontology#stepTemperature> "66.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#Boil60min
 <https://mega2799.github.io/web-semantico/index-en.html#Boil60min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4498,12 +4493,12 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#Recipe> .
-<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop> .
-<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#ChinookHop> .
-<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop> .
-<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop> .
-<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasMalt> <https://mega2799.github.io/web-semantico/index-en.html#Caramalt> .
-<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasMalt> <https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt> .
+<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog> .
+<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> .
+<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog> .
+<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasHop> <https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> .
+<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasMalt> <https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog> .
+<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasMalt> <https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasStyle> <https://mega2799.github.io/web-semantico/index-en.html#IPA> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#hasYeast> <http://www.beerecipe.com/ontology#WLP001_Yeast> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#producesBeer> <https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer> .
@@ -4516,7 +4511,7 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#requiresEquipment> <https://mega2799.github.io/web-semantico/index-en.html#Sanitizer> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#requiresEquipment> <https://mega2799.github.io/web-semantico/index-en.html#Thermometer> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#requiresEquipment> <https://mega2799.github.io/web-semantico/index-en.html#WortChiller> .
-<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <https://mega2799.github.io/web-semantico/index-en.html#hasWater> <https://mega2799.github.io/web-semantico/index-en.html#Water> .
+<https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <https://mega2799.github.io/web-semantico/index-en.html#hasWater> <https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#author> "BrewDog" .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#batchSize> "20.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> <http://www.beerecipe.com/ontology#boilingTime> "60"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -4548,21 +4543,26 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat> <http://www.beerecipe.com/ontology#cerealName> "Canada winter wheat" .
 <https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat> <http://www.beerecipe.com/ontology#glutenContent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat> <http://www.beerecipe.com/ontology#purpose> "body and head retention - enhances foam stability" .
+<https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat> <http://www.beerecipe.com/ontology#quantity> "450.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat> <http://www.w3.org/2000/01/rdf-schema#label> "Canada Winter Wheat (Easy Pale Ale)" .
 # 
-# https://mega2799.github.io/web-semantico/index-en.html#Caramalt
-<https://mega2799.github.io/web-semantico/index-en.html#Caramalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#Caramalt> <http://www.beerecipe.com/ontology#maltName> "Caramalt" .
-<https://mega2799.github.io/web-semantico/index-en.html#Caramalt> <http://www.beerecipe.com/ontology#ebc> "30"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://mega2799.github.io/web-semantico/index-en.html#Caramalt> <http://www.w3.org/2000/01/rdf-schema#comment> "Crystal malt for body, sweetness and golden color" .
-<https://mega2799.github.io/web-semantico/index-en.html#Caramalt> <http://www.w3.org/2000/01/rdf-schema#label> "Caramalt" .
+# https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog
+<https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog> <http://www.beerecipe.com/ontology#maltName> "Caramalt" .
+<https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog> <http://www.beerecipe.com/ontology#ebc> "30"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog> <http://www.w3.org/2000/01/rdf-schema#comment> "Crystal malt for body, sweetness and golden color" .
+<https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog> <http://www.w3.org/2000/01/rdf-schema#label> "Caramalt_brewdog" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#CascadeHop
 <https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
 <https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "5.5"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.beerecipe.com/ontology#hopName> "Cascade" .
+<https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.beerecipe.com/ontology#purpose> "dual purpose - bittering, flavor and aroma" .
+<https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.beerecipe.com/ontology#quantity> "45.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.w3.org/2000/01/rdf-schema#comment> "Classic American aroma hop with floral and citrus (grapefruit) character, signature hop of American Pale Ales." .
-<https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.w3.org/2000/01/rdf-schema#label> "Cascade" .
+<https://mega2799.github.io/web-semantico/index-en.html#CascadeHop> <http://www.w3.org/2000/01/rdf-schema#label> "Cascade Hop (Easy Pale Ale)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat
 <https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4570,13 +4570,18 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://mega2799.github.io/web-semantico/index-en.html#RiceWheat> .
 <https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat> <http://www.beerecipe.com/ontology#cerealName> "Rice Wheat" .
 <https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat> <http://www.beerecipe.com/ontology#glutenContent> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat> <http://www.beerecipe.com/ontology#purpose> "lightness and crispness - reduces body for easy drinking" .
+<https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat> <http://www.beerecipe.com/ontology#quantity> "450.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat> <http://www.w3.org/2000/01/rdf-schema#label> "Rice Wheat (Easy Pale Ale)" .
 # 
-# https://mega2799.github.io/web-semantico/index-en.html#ChinookHop
-<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop> <http://www.beerecipe.com/ontology#hopName> "Chinook" .
-<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop> <http://www.w3.org/2000/01/rdf-schema#comment> "American hop variety with piney, spicy character. High alpha acids for bittering" .
-<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop> <http://www.w3.org/2000/01/rdf-schema#label> "Chinook" .
+# https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog
+<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> <http://www.beerecipe.com/ontology#hopName> "Chinook" .
+<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> <http://www.beerecipe.com/ontology#purpose> "bittering - added at 60 minutes" .
+<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> <http://www.beerecipe.com/ontology#quantity> "12.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#comment> "American hop variety with piney, spicy character. High alpha acids for bittering" .
+<https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#label> "Chinook Hop (BrewDog Punk IPA - Bittering)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt
 <https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4727,12 +4732,12 @@ _:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe> <http://www.beerecipe.com/ontology#servingTemperature> "8.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe> <http://www.beerecipe.com/ontology#totalBrewingTime> "360"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
-# https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt
-<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt> <http://www.beerecipe.com/ontology#maltName> "Extra Pale Malt" .
-<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt> <http://www.beerecipe.com/ontology#ebc> "5.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt> <http://www.w3.org/2000/01/rdf-schema#comment> "Base malt for pale ales and IPAs, provides fermentable sugars" .
-<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt> <http://www.w3.org/2000/01/rdf-schema#label> "Extra Pale Malt" .
+# https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog
+<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog> <http://www.beerecipe.com/ontology#maltName> "Extra Pale Malt" .
+<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog> <http://www.beerecipe.com/ontology#ebc> "5.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog> <http://www.w3.org/2000/01/rdf-schema#comment> "Base malt for pale ales and IPAs, provides fermentable sugars" .
+<https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog> <http://www.w3.org/2000/01/rdf-schema#label> "Extra Pale Malt Brewdog" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days
 <https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4756,6 +4761,10 @@ _:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#FlakedOats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#FlakedOats> <http://www.beerecipe.com/ontology#cerealName> "Flaked Oats" .
 <https://mega2799.github.io/web-semantico/index-en.html#FlakedOats> <http://www.beerecipe.com/ontology#glutenContent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://mega2799.github.io/web-semantico/index-en.html#FlakedOats> <http://www.beerecipe.com/ontology#purpose> "body and mouthfeel - enhances silky smooth texture" .
+<https://mega2799.github.io/web-semantico/index-en.html#FlakedOats> <http://www.beerecipe.com/ontology#quantity> "500.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#FlakedOats> <http://www.w3.org/2000/01/rdf-schema#comment> "Adds creamy, velvety mouthfeel and body. Essential for Imperial Stout's characteristic smooth texture. ~7% of grain bill." .
+<https://mega2799.github.io/web-semantico/index-en.html#FlakedOats> <http://www.w3.org/2000/01/rdf-schema#label> "Flaked Oats (Russian Imperial Stout)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout
 <https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4768,7 +4777,7 @@ _:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <http://www.beerecipe.com/ontology#hasStyle> <https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout> .
 <https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <http://www.beerecipe.com/ontology#hasYeast> <http://www.beerecipe.com/ontology#WLP007_Yeast> .
 <https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <http://www.beerecipe.com/ontology#producesBeer> <https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout> .
-<https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <https://mega2799.github.io/web-semantico/index-en.html#hasWater> <https://mega2799.github.io/web-semantico/index-en.html#Water> .
+<https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <https://mega2799.github.io/web-semantico/index-en.html#hasWater> <https://mega2799.github.io/web-semantico/index-en.html#Water_RIS> .
 <https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <http://www.beerecipe.com/ontology#author> "Brewing Ben (Brewer's Friend)" .
 <https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <http://www.beerecipe.com/ontology#batchSize> "5.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout> <http://www.beerecipe.com/ontology#boilingTime> "75"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -4807,14 +4816,18 @@ _:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
 <https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.5"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.beerecipe.com/ontology#hopName> "Magnum" .
+<https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.beerecipe.com/ontology#purpose> "bittering - clean bitterness to balance massive malt sweetness" .
+<https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.beerecipe.com/ontology#quantity> "40.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.w3.org/2000/01/rdf-schema#comment> "German high-alpha bittering hop with clean, neutral bitterness and mild hop aroma, excellent for high-gravity beers." .
-<https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.w3.org/2000/01/rdf-schema#label> "Magnum" .
+<https://mega2799.github.io/web-semantico/index-en.html#MagnumHop> <http://www.w3.org/2000/01/rdf-schema#label> "Magnum Hop (Russian Imperial Stout)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#MarisOtter
 <https://mega2799.github.io/web-semantico/index-en.html#MarisOtter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#MarisOtter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://mega2799.github.io/web-semantico/index-en.html#Cereal> .
+<https://mega2799.github.io/web-semantico/index-en.html#MarisOtter> <http://www.beerecipe.com/ontology#purpose> "base malt - provides fermentable sugars and rich malty character" .
+<https://mega2799.github.io/web-semantico/index-en.html#MarisOtter> <http://www.beerecipe.com/ontology#quantity> "5000.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://mega2799.github.io/web-semantico/index-en.html#MarisOtter> <http://www.w3.org/2000/01/rdf-schema#comment> "Premium British two-row spring barley variety prized for its rich, malty flavor and excellent extract efficiency." .
-<https://mega2799.github.io/web-semantico/index-en.html#MarisOtter> <http://www.w3.org/2000/01/rdf-schema#label> "Maris Otter" .
+<https://mega2799.github.io/web-semantico/index-en.html#MarisOtter> <http://www.w3.org/2000/01/rdf-schema#label> "Maris Otter (Russian Imperial Stout)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#MarisOtterMalt
 <https://mega2799.github.io/web-semantico/index-en.html#MarisOtterMalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4842,13 +4855,13 @@ _:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#MashTun> <http://www.w3.org/2000/01/rdf-schema#comment> "Insulated vessel for mashing grains at controlled temperatures to convert starches to fermentable sugars." .
 <https://mega2799.github.io/web-semantico/index-en.html#MashTun> <http://www.w3.org/2000/01/rdf-schema#label> "Mash Tun" .
 # 
-# https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop
-<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
-<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "12.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop> <http://www.beerecipe.com/ontology#hopName> "Nelson Sauvin" .
-<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop> <http://www.w3.org/2000/01/rdf-schema#comment> "New Zealand hop with distinctive white wine, gooseberry character. Signature BrewDog hop" .
-<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop> <http://www.w3.org/2000/01/rdf-schema#label> "Nelson Sauvin" .
+# https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog
+<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
+<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "12.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog> <http://www.beerecipe.com/ontology#hopName> "Nelson Sauvin" .
+<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#comment> "New Zealand hop with distinctive white wine, gooseberry character. Signature BrewDog hop" .
+<https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#label> "Nelson Sauvin Brewdog" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#NewZealand
 <https://mega2799.github.io/web-semantico/index-en.html#NewZealand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4865,6 +4878,9 @@ _:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt> <http://www.beerecipe.com/ontology#ebcColor> "6"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt> <http://www.beerecipe.com/ontology#maltName> "Pale Ale Malt" .
+<https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt> <http://www.beerecipe.com/ontology#purpose> "base malt - provides fermentable sugars and golden color" .
+<https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt> <http://www.beerecipe.com/ontology#quantity> "3600.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt> <http://www.w3.org/2000/01/rdf-schema#label> "Pale Ale Malt (Easy Pale Ale)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer
 <https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5061,6 +5077,10 @@ _:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley> <http://www.beerecipe.com/ontology#cerealName> "Roasted Barley" .
 <https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley> <http://www.beerecipe.com/ontology#glutenContent> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley> <http://www.beerecipe.com/ontology#purpose> "color and roasted flavor - coffee and dark chocolate notes" .
+<https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley> <http://www.beerecipe.com/ontology#quantity> "600.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley> <http://www.w3.org/2000/01/rdf-schema#comment> "Heavily roasted unmalted barley. Provides intense coffee, bitter chocolate and roasty character. Key for stout's black color (98 EBC). ~8.5% of grain bill." .
+<https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley> <http://www.w3.org/2000/01/rdf-schema#label> "Roasted Barley (Russian Imperial Stout)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout
 <https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5086,13 +5106,15 @@ _:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#Scotland> <http://www.w3.org/2000/01/rdf-schema#comment> "Home of BrewDog brewery in Ellon, Aberdeenshire. Known for craft beer revolution and innovative brewing techniques." .
 <https://mega2799.github.io/web-semantico/index-en.html#Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Scotland" .
 # 
-# https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop
-<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
-<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop> <http://www.beerecipe.com/ontology#hopName> "Simcoe" .
-<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop> <http://www.w3.org/2000/01/rdf-schema#comment> "American hop with passion fruit, pine and earthy character" .
-<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop> <http://www.w3.org/2000/01/rdf-schema#label> "Simcoe" .
+# https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://rdf.ag/o/hops#Hops> .
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.beerecipe.com/ontology#alphaAcidPercentage> "13.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.beerecipe.com/ontology#hopName> "Simcoe" .
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.beerecipe.com/ontology#purpose> "aroma and dry-hopping - added at whirlpool and during fermentation" .
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.beerecipe.com/ontology#quantity> "25.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#comment> "American hop with passion fruit, pine and earthy character" .
+<https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog> <http://www.w3.org/2000/01/rdf-schema#label> "Simcoe Hop (BrewDog Punk IPA - Aroma/Dry Hop)" .
 # 
 # https://mega2799.github.io/web-semantico/index-en.html#Sparge20min
 <https://mega2799.github.io/web-semantico/index-en.html#Sparge20min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -5142,6 +5164,30 @@ _:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://mega2799.github.io/web-semantico/index-en.html#Water> .
 # 
+# https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog
+<https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#Water> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog> <http://www.beerecipe.com/ontology#purpose> "solvent and medium - mashing and sparging" .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog> <http://www.beerecipe.com/ontology#quantity> "25.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog> <http://www.w3.org/2000/01/rdf-schema#comment> "~25L total water volume for 20L batch. Includes mash water (~12L) and sparge water (~13L). Water chemistry: moderately hard with elevated sulfate for hop character." .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog> <http://www.w3.org/2000/01/rdf-schema#label> "Brewing Water (BrewDog Punk IPA)" .
+# 
+# https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA
+<https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#Water> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA> <http://www.beerecipe.com/ontology#purpose> "solvent and medium - mashing and sparging" .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA> <http://www.beerecipe.com/ontology#quantity> "26.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA> <http://www.w3.org/2000/01/rdf-schema#comment> "~26L total water for 20L batch. Simple water profile: no chemistry adjustments needed for beginners. Includes mash water (~13L) and sparge water (~13L). Tap water suitable if chlorine-free." .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA> <http://www.w3.org/2000/01/rdf-schema#label> "Brewing Water (Easy Pale Ale)" .
+# 
+# https://mega2799.github.io/web-semantico/index-en.html#Water_RIS
+<https://mega2799.github.io/web-semantico/index-en.html#Water_RIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_RIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#Water> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_RIS> <http://www.beerecipe.com/ontology#purpose> "solvent and medium - mashing and sparging for high gravity wort" .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_RIS> <http://www.beerecipe.com/ontology#quantity> "12.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_RIS> <http://www.w3.org/2000/01/rdf-schema#comment> "~12L total water for 5L batch (smaller batch due to equipment limitations with high gravity). Includes thick mash (~6L) for maximum extract and concentrated sparge (~6L). Water chemistry: balanced with moderate alkalinity to support dark malts." .
+<https://mega2799.github.io/web-semantico/index-en.html#Water_RIS> <http://www.w3.org/2000/01/rdf-schema#label> "Brewing Water (Russian Imperial Stout)" .
+# 
 # https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min
 <https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.beerecipe.com/ontology#WhirlpoolStep> .
@@ -5157,6 +5203,16 @@ _:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://mega2799.github.io/web-semantico/index-en.html#WortChiller> <http://www.beerecipe.com/ontology#isRequiredBy> <https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe> .
 <https://mega2799.github.io/web-semantico/index-en.html#WortChiller> <http://www.w3.org/2000/01/rdf-schema#comment> "Immersion or counterflow chiller to rapidly cool wort from boiling to pitching temperature (18-20°C)." .
 <https://mega2799.github.io/web-semantico/index-en.html#WortChiller> <http://www.w3.org/2000/01/rdf-schema#label> "Wort Chiller" .
+# 
+# https://rdf.ag/o/hops#HopsNelsonSauvin
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.beerecipe.com/ontology#purpose> "signature aroma - dry-hopping during fermentation" .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.beerecipe.com/ontology#quantity> "31.25"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://rdf.ag/o/malt#ChocolateMalt
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.beerecipe.com/ontology#purpose> "color and flavor complexity - chocolate, nutty and roasted notes" .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.beerecipe.com/ontology#quantity> "1000.0"^^<http://www.w3.org/2001/XMLSchema#float> .
 # 
 # 
 # 
@@ -5252,5 +5308,26 @@ _:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://rdf.ag/o/cerealstoo#SWW> <http://www.w3.org/2004/02/skos/core#definition> "This class consists of all types of white wheat whose kernels have soft endosperms."@en .
 <https://rdf.ag/o/cerealstoo#SWW> <http://www.w3.org/ns/prov#hadPrimarySource> <https://rdf.ag/o/cerealstoo#USDA2014StandardsforWheat> .
 <https://rdf.ag/o/cerealstoo#SWW> <http://xmlns.com/foaf/0.1/name> "SWW" .
+# 
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://rdfs.org/ns/void#inDataset> <https://rdf.ag/o/hops#datasetdefinition> .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://rdf.ag/o/hops-2021-07-30> .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2000/01/rdf-schema#label> "Nelson Sauvin Hop (BrewDog Punk IPA - Dry Hop)" .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2004/02/skos/core#definition> "Nelson Sauvin™ est un houblon néo-zélandais déposé en 2000. Son nom est un dérivé du cépage Sauvignon Blanc, auquel beaucoup comparent son arôme."@fr .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://www.w3.org/2004/02/skos/core#definition> "Nelson Sauvin™ is a trademarked hop from New Zealand that was released in 2000. Its name is a derivative of Sauvignon Blanc wine grape, to which many compare its aroma."@en .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <http://xmlns.com/foaf/0.1/name> "Nelson Sauvin™" .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#alphaAcidsContent> "12-13" .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#betaAcidsContent> "6-8" .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#perceivedAroma> "Fruity, Grapefruit, Gooseberry, White Wine"@en .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#perceivedAroma> "Fruité, Groseille, Pamplemousse, Vin Blanc"@fr .
+<https://rdf.ag/o/hops#HopsNelsonSauvin> <https://rdf.ag/o/hops#totalOilContent> "1.1" .
+# 
+<https://rdf.ag/o/malt#ChocolateMalt> <http://rdfs.org/ns/void#inDataset> <https://rdf.ag/o/malt#datasetdefinition> .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#comment> "For roasted malts, the classes Pale Chocolate Malt, Standard Chocolate Malt and Black Malt have the general ranges of EBC coloring assigned to each of these classes. It is important to note that there are significant gaps between these ranges despite all being in the same Roasted Malt class. This is due to the fact that much of the coloring is at the decretion of the operator of the roasting drum, therefore coloring may vary from malters or even between batches. In the end, it is the malters who decide under which class the product will be marketed."@en .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#comment> "Pour les malts torréfiés, les classes Malt au Chocolat Pâle, Malt au Chocolat Standard et Malt Noir ont les gammes générales de coloration EBC attribuées à chacune de ces classes. Il est important de noter qu'il existe des écarts importants entre ces gammes, bien qu'elles appartiennent toutes à la même classe de malt torréfié. Cela est dû au fait qu'une grande partie de la coloration est à la décrétion de l'opérateur du tambour de torréfaction, donc la coloration peut varier d'un malter ou même d'un lot à l'autre. En fin de compte, ce sont les malters qui décident sous quelle classe le produit sera commercialisé."@fr .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.ag/o/malt-2021-03-24> .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#label> "Malt au Chocolat"@fr .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2000/01/rdf-schema#label> "Chocolate Malt (Russian Imperial Stout)" .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2004/02/skos/core#definition> "Malts torréfiés qui ont un arôme quelque peu chocolaté et dont la coloration varie de 500-1100 EBC."@fr .
+<https://rdf.ag/o/malt#ChocolateMalt> <http://www.w3.org/2004/02/skos/core#definition> "Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 500-1100 EBC."@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -71,7 +71,6 @@ This section provides details for each class and property defined by Beerecipe.
   <li><a href="#https://rdf.ag/o/beer#NonAlcoholicBeer" title="https://rdf.ag/o/beer#NonAlcoholicBeer">Cereal Beverage</a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsChallenger" title="https://rdf.ag/o/hops#HopsChallenger">Challenger</a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsChinook" title="https://rdf.ag/o/hops#HopsChinook">Chinook</a></li>
-  <li><a href="#https://rdf.ag/o/malt#ChocolateMalt" title="https://rdf.ag/o/malt#ChocolateMalt">Chocolate Malt</a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsCitra" title="https://rdf.ag/o/hops#HopsCitra">Citra®</a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsCluster" title="https://rdf.ag/o/hops#HopsCluster">Cluster</a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsColumbia" title="https://rdf.ag/o/hops#HopsColumbia">Columbia</a></li>
@@ -178,6 +177,7 @@ This section provides details for each class and property defined by Beerecipe.
   <li><a href="#https://rdf.ag/o/hops#HopsLiberty" title="https://rdf.ag/o/hops#HopsLiberty">Liberty</a></li>
   <li><a href="#LowAlcoholBeer" title="https://mega2799.github.io/web-semantico/index-en.html#LowAlcoholBeer"> <span>Low Alcohol Beer</span> </a></li>
   <li><a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a></li>
+  <li><a href="#https://rdf.ag/o/malt#ChocolateMalt" title="https://rdf.ag/o/malt#ChocolateMalt"> <span>Malt au Chocolat</span> </a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsMandarinaBavaria" title="https://rdf.ag/o/hops#HopsMandarinaBavaria">Mandarina Bavaria</a></li>
   <li><a href="#https://rdf.ag/o/malt#marisOtterMalt" title="https://rdf.ag/o/malt#marisOtterMalt">Maris Otter Malt</a></li>
   <li><a href="#http://www.beerecipe.com/ontology#MashStep" title="http://www.beerecipe.com/ontology#MashStep">Mash Step</a></li>
@@ -189,7 +189,7 @@ This section provides details for each class and property defined by Beerecipe.
   <li><a href="#https://rdf.ag/o/hops#HopsMountRainier" title="https://rdf.ag/o/hops#HopsMountRainier">Mount Rainier</a></li>
   <li><a href="#https://rdf.ag/o/malt#MunichMalt" title="https://rdf.ag/o/malt#MunichMalt">Munich Malt</a></li>
   <li><a href="#https://rdf.ag/o/beer#Oktoberfestbier" title="https://rdf.ag/o/beer#Oktoberfestbier">Märzen</a></li>
-  <li><a href="#https://rdf.ag/o/hops#HopsNelsonSauvin" title="https://rdf.ag/o/hops#HopsNelsonSauvin">Nelson Sauvin™</a></li>
+  <li><a href="#https://rdf.ag/o/hops#HopsNelsonSauvin" title="https://rdf.ag/o/hops#HopsNelsonSauvin"> <span>Nelson Sauvin Hop (BrewDog Punk IPA - Dry Hop)</span> </a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsNewport" title="https://rdf.ag/o/hops#HopsNewport">Newport</a></li>
   <li><a href="#https://rdf.ag/o/beer#NorthAmericanBeer" title="https://rdf.ag/o/beer#NorthAmericanBeer">North American Beer</a></li>
   <li><a href="#https://rdf.ag/o/hops#HopsNorthdown" title="https://rdf.ag/o/hops#HopsNorthdown">Northdown</a></li>
@@ -340,6 +340,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dt>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#Recipe" title="http://www.beerecipe.com/ontology#Recipe">Recipe</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BeginnerRecipe" title="https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe">Beginner Recipe</a> <sup class="type-c" title="class">c</sup>, <a href="#ExpertRecipe" title="https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe">Expert Recipe</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -930,6 +936,12 @@ This section provides details for each class and property defined by Beerecipe.
    <dd>
     <a href="#http://www.beerecipe.com/ontology#Recipe" title="http://www.beerecipe.com/ontology#Recipe">Recipe</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AdvancedRecipe" title="https://mega2799.github.io/web-semantico/index-en.html#AdvancedRecipe">Advanced Recipe</a> <sup class="type-c" title="class">c</sup>, <a href="#ExpertRecipe" title="https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe">Expert Recipe</a> <sup class="type-c" title="class">c</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://rdf.ag/o/beer#BelgianAle">
@@ -1181,7 +1193,7 @@ This section provides details for each class and property defined by Beerecipe.
     has members
    </dt>
    <dd>
-    <a href="#BeginnerBoil60min" title="https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min">Beginner Boil60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#BeginnerMash45min" title="https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min">Beginner Mash45min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#Conditioning14days">Conditioning14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CoolingToPitchTemp" title="https://mega2799.github.io/web-semantico/index-en.html#CoolingToPitchTemp">Cooling To Pitch Temp</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Boil60min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Boil60min">E P A Boil60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Conditioning14days">E P A Conditioning14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_CoolingToPitchTemp" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_CoolingToPitchTemp">E P A Cooling To Pitch Temp</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Fermentation10days" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Fermentation10days">E P A Fermentation10days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_MashOut10min">E P A Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Mash60min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Mash60min">E P A Mash60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Sparge15min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Sparge15min">E P A Sparge15min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Whirlpool10min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Whirlpool10min">E P A Whirlpool10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Fermentation7days" title="https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days">Fermentation7days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#MashOut10min">Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Boil60min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Boil60min">Punk I P A Boil60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Conditioning14days">Punk I P A Conditioning14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Cooling30min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Cooling30min">Punk I P A Cooling30min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Fermentation10days" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Fermentation10days">Punk I P A Fermentation10days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_MashOut10min">Punk I P A Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Mash65min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Mash65min">Punk I P A Mash65min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Sparge15min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Sparge15min">Punk I P A Sparge15min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Whirlpool20min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Whirlpool20min">Punk I P A Whirlpool20min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Boil90min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Boil90min">R I S Boil90min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Conditioning28days" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Conditioning28days">R I S Conditioning28days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_CoolingToPitchTemp" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_CoolingToPitchTemp">R I S Cooling To Pitch Temp</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Fermentation14days" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Fermentation14days">R I S Fermentation14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_MashOut10min">R I S Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Mash60min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Mash60min">R I S Mash60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Sparge20min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Sparge20min">R I S Sparge20min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Whirlpool15min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Whirlpool15min">R I S Whirlpool15min</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#Conditioning14days">Conditioning14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CoolingToPitchTemp" title="https://mega2799.github.io/web-semantico/index-en.html#CoolingToPitchTemp">Cooling To Pitch Temp</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Boil60min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Boil60min">E P A Boil60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Conditioning14days">E P A Conditioning14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_CoolingToPitchTemp" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_CoolingToPitchTemp">E P A Cooling To Pitch Temp</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Fermentation10days" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Fermentation10days">E P A Fermentation10days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_MashOut10min">E P A Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Mash60min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Mash60min">E P A Mash60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Sparge15min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Sparge15min">E P A Sparge15min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#EPA_Whirlpool10min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Whirlpool10min">E P A Whirlpool10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Fermentation7days" title="https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days">Fermentation7days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#MashOut10min">Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Boil60min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Boil60min">Punk I P A Boil60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Conditioning14days">Punk I P A Conditioning14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Cooling30min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Cooling30min">Punk I P A Cooling30min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Fermentation10days" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Fermentation10days">Punk I P A Fermentation10days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_MashOut10min">Punk I P A Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Mash65min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Mash65min">Punk I P A Mash65min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Sparge15min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Sparge15min">Punk I P A Sparge15min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PunkIPA_Whirlpool20min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Whirlpool20min">Punk I P A Whirlpool20min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Boil90min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Boil90min">R I S Boil90min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Conditioning28days" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Conditioning28days">R I S Conditioning28days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_CoolingToPitchTemp" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_CoolingToPitchTemp">R I S Cooling To Pitch Temp</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Fermentation14days" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Fermentation14days">R I S Fermentation14days</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_MashOut10min">R I S Mash Out10min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Mash60min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Mash60min">R I S Mash60min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Sparge20min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Sparge20min">R I S Sparge20min</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RIS_Whirlpool15min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Whirlpool15min">R I S Whirlpool15min</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1909,13 +1921,13 @@ This section provides details for each class and property defined by Beerecipe.
     has members
    </dt>
    <dd>
-    <a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">Cereal Rice Wheat</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MarisOtter" title="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter">Maris Otter</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#MarisOtter" title="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter">Maris Otter (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">Rice Wheat (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.beerecipe.com/ontology#Yeast" title="http://www.beerecipe.com/ontology#Yeast">Yeast</a> <sup class="type-c" title="class">c</sup>, <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Hops" title="https://rdf.ag/o/hops#Hops">Houblon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1991,32 +2003,6 @@ This section provides details for each class and property defined by Beerecipe.
    </dt>
    <dd>
     <a href="#https://rdf.ag/o/hops#HopsFalconersFlight" title="https://rdf.ag/o/hops#HopsFalconersFlight">Falconer's Flight®</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="https://rdf.ag/o/malt#ChocolateMalt">
-  <h3>Chocolate Malt<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://rdf.ag/o/malt#ChocolateMalt</p>
-  <div class="comment">
-   <span class="markdown">For roasted malts, the classes Pale Chocolate Malt, Standard Chocolate Malt and Black Malt have the general ranges of EBC coloring assigned to each of these classes. It is important to note that there are significant gaps between these ranges despite all being in the same Roasted Malt class. This is due to the fact that much of the coloring is at the decretion of the operator of the roasting drum, therefore coloring may vary from malters or even between batches. In the end, it is the malters who decide under which class the product will be marketed.</span>
-  </div>
-  <div class="comment">
-   <span class="markdown">Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 500-1100 EBC.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://rdf.ag/o/malt-2021-03-24">http://rdf.ag/o/malt-2021-03-24</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#https://rdf.ag/o/malt#RoastedMalt" title="https://rdf.ag/o/malt#RoastedMalt">Roasted Malt</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2834,6 +2820,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dt>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#Recipe" title="http://www.beerecipe.com/ontology#Recipe">Recipe</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AdvancedRecipe" title="https://mega2799.github.io/web-semantico/index-en.html#AdvancedRecipe">Advanced Recipe</a> <sup class="type-c" title="class">c</sup>, <a href="#BeginnerRecipe" title="https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe">Beginner Recipe</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -4140,7 +4132,7 @@ This section provides details for each class and property defined by Beerecipe.
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://rdf.ag/o/hops#HopsAdmiral" title="https://rdf.ag/o/hops#HopsAdmiral">Admiral</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAhtanum" title="https://rdf.ag/o/hops#HopsAhtanum">Ahtanum™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Rakau" title="https://rdf.ag/o/hops#Rakau">AlphAroma</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAmarillo" title="https://rdf.ag/o/hops#HopsAmarillo">Amarillo®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsApollo" title="https://rdf.ag/o/hops#HopsApollo">Apollo™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAquila" title="https://rdf.ag/o/hops#HopsAquila">Aquila</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAramis" title="https://rdf.ag/o/hops#HopsAramis">Aramis</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMotueka" title="https://rdf.ag/o/hops#HopsMotueka">B Saaz</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBanner" title="https://rdf.ag/o/hops#HopsBanner">Banner</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBelma" title="https://rdf.ag/o/hops#HopsBelma">Belma®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBobek" title="https://rdf.ag/o/hops#HopsBobek">Bobek</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBramlingCross" title="https://rdf.ag/o/hops#HopsBramlingCross">Bramling Cross</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBravo" title="https://rdf.ag/o/hops#HopsBravo">Bravo</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBrewersGold" title="https://rdf.ag/o/hops#HopsBrewersGold">Brewer's Gold</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBullion" title="https://rdf.ag/o/hops#HopsBullion">Bullion</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCalypso" title="https://rdf.ag/o/hops#HopsCalypso">Calypso™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCascade" title="https://rdf.ag/o/hops#HopsCascade">Cascade</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCashmere" title="https://rdf.ag/o/hops#HopsCashmere">Cashmere</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCeleia" title="https://rdf.ag/o/hops#HopsCeleia">Celeia</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCentennial" title="https://rdf.ag/o/hops#HopsCentennial">Centennial</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsChallenger" title="https://rdf.ag/o/hops#HopsChallenger">Challenger</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsChinook" title="https://rdf.ag/o/hops#HopsChinook">Chinook</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCitra" title="https://rdf.ag/o/hops#HopsCitra">Citra®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCluster" title="https://rdf.ag/o/hops#HopsCluster">Cluster</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsColumbia" title="https://rdf.ag/o/hops#HopsColumbia">Columbia</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsColumbus" title="https://rdf.ag/o/hops#HopsColumbus">Columbus</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsComet" title="https://rdf.ag/o/hops#HopsComet">Comet</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCrystal" title="https://rdf.ag/o/hops#HopsCrystal">Crystal</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSaaz" title="https://rdf.ag/o/hops#HopsSaaz">Czech Saaz</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsDana" title="https://rdf.ag/o/hops#HopsDana">Dana</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsDelta" title="https://rdf.ag/o/hops#HopsDelta">Delta</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsEkuanot" title="https://rdf.ag/o/hops#HopsEkuanot">Ekuanot®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsElDorado" title="https://rdf.ag/o/hops#HopsElDorado">El Dorado</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsEroica" title="https://rdf.ag/o/hops#HopsEroica">Eroica</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsFirstGold" title="https://rdf.ag/o/hops#HopsFirstGold">First Gold</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsStrisselspalt" title="https://rdf.ag/o/hops#HopsStrisselspalt">French Strisselspalt</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsFuggle" title="https://rdf.ag/o/hops#HopsFuggle">Fuggle</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGalaxy" title="https://rdf.ag/o/hops#HopsGalaxy">Galaxy™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGalena" title="https://rdf.ag/o/hops#HopsGalena">Galena</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGlacier" title="https://rdf.ag/o/hops#HopsGlacier">Glacier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGolding" title="https://rdf.ag/o/hops#HopsGolding">Golding</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGreenBullet" title="https://rdf.ag/o/hops#HopsGreenBullet">Green Bullet</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMosaic" title="https://rdf.ag/o/hops#HopsMosaic">HBC369</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHallertau" title="https://rdf.ag/o/hops#HopsHallertau">Hallertau</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTaurus" title="https://rdf.ag/o/hops#HopsTaurus">Hallertau Taurus</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker" title="https://rdf.ag/o/hops#HopsHersbrucker">Hersbrucker</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker_E" title="https://rdf.ag/o/hops#HopsHersbrucker_E">Hersbrucker E</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker_Pure" title="https://rdf.ag/o/hops#HopsHersbrucker_Pure">Hersbrucker Pure</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker_Red-Stem" title="https://rdf.ag/o/hops#HopsHersbrucker_Red-Stem">Hersbrucker Red-Stem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHorizon" title="https://rdf.ag/o/hops#HopsHorizon">Horizon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHuellMelon" title="https://rdf.ag/o/hops#HopsHuellMelon">Huell Melon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsJarrylo" title="https://rdf.ag/o/hops#HopsJarrylo">Jarrylo™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsJester" title="https://rdf.ag/o/hops#HopsJester">Jester®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsLiberty" title="https://rdf.ag/o/hops#HopsLiberty">Liberty</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMandarinaBavaria" title="https://rdf.ag/o/hops#HopsMandarinaBavaria">Mandarina Bavaria</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMeridian" title="https://rdf.ag/o/hops#HopsMeridian">Meridian®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMillennium" title="https://rdf.ag/o/hops#HopsMillennium">Millennium</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMountHood" title="https://rdf.ag/o/hops#HopsMountHood">Mount Hood</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMountRainier" title="https://rdf.ag/o/hops#HopsMountRainier">Mount Rainier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPacificJade" title="https://rdf.ag/o/hops#HopsPacificJade">NZ Pacific Jade</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNelsonSauvin" title="https://rdf.ag/o/hops#HopsNelsonSauvin">Nelson Sauvin™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNewport" title="https://rdf.ag/o/hops#HopsNewport">Newport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNorthdown" title="https://rdf.ag/o/hops#HopsNorthdown">Northdown</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNorthernBrewer" title="https://rdf.ag/o/hops#HopsNorthernBrewer">Northern Brewer</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNorthernBrewer_US" title="https://rdf.ag/o/hops#HopsNorthernBrewer_US">Northern Brewer (US)</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNugget" title="https://rdf.ag/o/hops#HopsNugget">Nugget</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsOlympic" title="https://rdf.ag/o/hops#HopsOlympic">Olympic</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPacificGem" title="https://rdf.ag/o/hops#HopsPacificGem">Pacific Gem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPerle" title="https://rdf.ag/o/hops#HopsPerle">Perle</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPerle_US" title="https://rdf.ag/o/hops#HopsPerle_US">Perle (US)</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPioneer" title="https://rdf.ag/o/hops#HopsPioneer">Pioneer</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPolaris" title="https://rdf.ag/o/hops#HopsPolaris">Polaris</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPrideofRingwood" title="https://rdf.ag/o/hops#HopsPrideofRingwood">Pride of Ringwood</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsProgress" title="https://rdf.ag/o/hops#HopsProgress">Progress</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSantiam" title="https://rdf.ag/o/hops#HopsSantiam">Santiam</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSaphir" title="https://rdf.ag/o/hops#HopsSaphir">Saphir</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSpalterSelect" title="https://rdf.ag/o/hops#HopsSpalterSelect">Select Spalt</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSimcoe" title="https://rdf.ag/o/hops#HopsSimcoe">Simcoe®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSorachiAce" title="https://rdf.ag/o/hops#HopsSorachiAce">Sorachi Ace</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSpalter" title="https://rdf.ag/o/hops#HopsSpalter">Spalt</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSummer" title="https://rdf.ag/o/hops#HopsSummer">Summer</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSummit" title="https://rdf.ag/o/hops#HopsSummit">Summit™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTarget" title="https://rdf.ag/o/hops#HopsTarget">Target</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTeamaker" title="https://rdf.ag/o/hops#HopsTeamaker">Teamaker</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTettnanger" title="https://rdf.ag/o/hops#HopsTettnanger">Tettnang</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTettnanger_CH" title="https://rdf.ag/o/hops#HopsTettnanger_CH">Tettnanger (Swiss)</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTomahawk" title="https://rdf.ag/o/hops#HopsTomahawk">Tomahawk®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTriplePearl" title="https://rdf.ag/o/hops#HopsTriplePearl">TriplePearl</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsUltra" title="https://rdf.ag/o/hops#HopsUltra">Ultra</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsVanguard" title="https://rdf.ag/o/hops#HopsVanguard">Vanguard</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWaiiti" title="https://rdf.ag/o/hops#HopsWaiiti">Wai-iti™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWaimea" title="https://rdf.ag/o/hops#HopsWaimea">Waimea™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWakatu" title="https://rdf.ag/o/hops#HopsWakatu">Wakatu</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWarrior" title="https://rdf.ag/o/hops#HopsWarrior">Warrior®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWillamette" title="https://rdf.ag/o/hops#HopsWillamette">Willamette</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsZeus" title="https://rdf.ag/o/hops#HopsZeus">Zeus</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://rdf.ag/o/hops#HopsAdmiral" title="https://rdf.ag/o/hops#HopsAdmiral">Admiral</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAhtanum" title="https://rdf.ag/o/hops#HopsAhtanum">Ahtanum™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Rakau" title="https://rdf.ag/o/hops#Rakau">AlphAroma</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAmarillo" title="https://rdf.ag/o/hops#HopsAmarillo">Amarillo®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsApollo" title="https://rdf.ag/o/hops#HopsApollo">Apollo™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAquila" title="https://rdf.ag/o/hops#HopsAquila">Aquila</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsAramis" title="https://rdf.ag/o/hops#HopsAramis">Aramis</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMotueka" title="https://rdf.ag/o/hops#HopsMotueka">B Saaz</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBanner" title="https://rdf.ag/o/hops#HopsBanner">Banner</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBelma" title="https://rdf.ag/o/hops#HopsBelma">Belma®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBobek" title="https://rdf.ag/o/hops#HopsBobek">Bobek</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBramlingCross" title="https://rdf.ag/o/hops#HopsBramlingCross">Bramling Cross</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBravo" title="https://rdf.ag/o/hops#HopsBravo">Bravo</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBrewersGold" title="https://rdf.ag/o/hops#HopsBrewersGold">Brewer's Gold</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsBullion" title="https://rdf.ag/o/hops#HopsBullion">Bullion</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCalypso" title="https://rdf.ag/o/hops#HopsCalypso">Calypso™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCascade" title="https://rdf.ag/o/hops#HopsCascade">Cascade</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCashmere" title="https://rdf.ag/o/hops#HopsCashmere">Cashmere</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCeleia" title="https://rdf.ag/o/hops#HopsCeleia">Celeia</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCentennial" title="https://rdf.ag/o/hops#HopsCentennial">Centennial</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsChallenger" title="https://rdf.ag/o/hops#HopsChallenger">Challenger</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsChinook" title="https://rdf.ag/o/hops#HopsChinook">Chinook</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCitra" title="https://rdf.ag/o/hops#HopsCitra">Citra®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCluster" title="https://rdf.ag/o/hops#HopsCluster">Cluster</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsColumbia" title="https://rdf.ag/o/hops#HopsColumbia">Columbia</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsColumbus" title="https://rdf.ag/o/hops#HopsColumbus">Columbus</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsComet" title="https://rdf.ag/o/hops#HopsComet">Comet</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsCrystal" title="https://rdf.ag/o/hops#HopsCrystal">Crystal</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSaaz" title="https://rdf.ag/o/hops#HopsSaaz">Czech Saaz</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsDana" title="https://rdf.ag/o/hops#HopsDana">Dana</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsDelta" title="https://rdf.ag/o/hops#HopsDelta">Delta</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsEkuanot" title="https://rdf.ag/o/hops#HopsEkuanot">Ekuanot®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsElDorado" title="https://rdf.ag/o/hops#HopsElDorado">El Dorado</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsEroica" title="https://rdf.ag/o/hops#HopsEroica">Eroica</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsFirstGold" title="https://rdf.ag/o/hops#HopsFirstGold">First Gold</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsStrisselspalt" title="https://rdf.ag/o/hops#HopsStrisselspalt">French Strisselspalt</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsFuggle" title="https://rdf.ag/o/hops#HopsFuggle">Fuggle</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGalaxy" title="https://rdf.ag/o/hops#HopsGalaxy">Galaxy™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGalena" title="https://rdf.ag/o/hops#HopsGalena">Galena</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGlacier" title="https://rdf.ag/o/hops#HopsGlacier">Glacier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGolding" title="https://rdf.ag/o/hops#HopsGolding">Golding</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsGreenBullet" title="https://rdf.ag/o/hops#HopsGreenBullet">Green Bullet</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMosaic" title="https://rdf.ag/o/hops#HopsMosaic">HBC369</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHallertau" title="https://rdf.ag/o/hops#HopsHallertau">Hallertau</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTaurus" title="https://rdf.ag/o/hops#HopsTaurus">Hallertau Taurus</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker" title="https://rdf.ag/o/hops#HopsHersbrucker">Hersbrucker</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker_E" title="https://rdf.ag/o/hops#HopsHersbrucker_E">Hersbrucker E</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker_Pure" title="https://rdf.ag/o/hops#HopsHersbrucker_Pure">Hersbrucker Pure</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHersbrucker_Red-Stem" title="https://rdf.ag/o/hops#HopsHersbrucker_Red-Stem">Hersbrucker Red-Stem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHorizon" title="https://rdf.ag/o/hops#HopsHorizon">Horizon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsHuellMelon" title="https://rdf.ag/o/hops#HopsHuellMelon">Huell Melon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsJarrylo" title="https://rdf.ag/o/hops#HopsJarrylo">Jarrylo™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsJester" title="https://rdf.ag/o/hops#HopsJester">Jester®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsLiberty" title="https://rdf.ag/o/hops#HopsLiberty">Liberty</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMandarinaBavaria" title="https://rdf.ag/o/hops#HopsMandarinaBavaria">Mandarina Bavaria</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMeridian" title="https://rdf.ag/o/hops#HopsMeridian">Meridian®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMillennium" title="https://rdf.ag/o/hops#HopsMillennium">Millennium</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMountHood" title="https://rdf.ag/o/hops#HopsMountHood">Mount Hood</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsMountRainier" title="https://rdf.ag/o/hops#HopsMountRainier">Mount Rainier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPacificJade" title="https://rdf.ag/o/hops#HopsPacificJade">NZ Pacific Jade</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNelsonSauvin" title="https://rdf.ag/o/hops#HopsNelsonSauvin">Nelson Sauvin Hop (BrewDog Punk IPA - Dry Hop)</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNewport" title="https://rdf.ag/o/hops#HopsNewport">Newport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNorthdown" title="https://rdf.ag/o/hops#HopsNorthdown">Northdown</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNorthernBrewer" title="https://rdf.ag/o/hops#HopsNorthernBrewer">Northern Brewer</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNorthernBrewer_US" title="https://rdf.ag/o/hops#HopsNorthernBrewer_US">Northern Brewer (US)</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsNugget" title="https://rdf.ag/o/hops#HopsNugget">Nugget</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsOlympic" title="https://rdf.ag/o/hops#HopsOlympic">Olympic</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPacificGem" title="https://rdf.ag/o/hops#HopsPacificGem">Pacific Gem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPerle" title="https://rdf.ag/o/hops#HopsPerle">Perle</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPerle_US" title="https://rdf.ag/o/hops#HopsPerle_US">Perle (US)</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPioneer" title="https://rdf.ag/o/hops#HopsPioneer">Pioneer</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPolaris" title="https://rdf.ag/o/hops#HopsPolaris">Polaris</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsPrideofRingwood" title="https://rdf.ag/o/hops#HopsPrideofRingwood">Pride of Ringwood</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsProgress" title="https://rdf.ag/o/hops#HopsProgress">Progress</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSantiam" title="https://rdf.ag/o/hops#HopsSantiam">Santiam</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSaphir" title="https://rdf.ag/o/hops#HopsSaphir">Saphir</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSpalterSelect" title="https://rdf.ag/o/hops#HopsSpalterSelect">Select Spalt</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSimcoe" title="https://rdf.ag/o/hops#HopsSimcoe">Simcoe®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSorachiAce" title="https://rdf.ag/o/hops#HopsSorachiAce">Sorachi Ace</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSpalter" title="https://rdf.ag/o/hops#HopsSpalter">Spalt</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSummer" title="https://rdf.ag/o/hops#HopsSummer">Summer</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsSummit" title="https://rdf.ag/o/hops#HopsSummit">Summit™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTarget" title="https://rdf.ag/o/hops#HopsTarget">Target</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTeamaker" title="https://rdf.ag/o/hops#HopsTeamaker">Teamaker</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTettnanger" title="https://rdf.ag/o/hops#HopsTettnanger">Tettnang</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTettnanger_CH" title="https://rdf.ag/o/hops#HopsTettnanger_CH">Tettnanger (Swiss)</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTomahawk" title="https://rdf.ag/o/hops#HopsTomahawk">Tomahawk®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsTriplePearl" title="https://rdf.ag/o/hops#HopsTriplePearl">TriplePearl</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsUltra" title="https://rdf.ag/o/hops#HopsUltra">Ultra</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsVanguard" title="https://rdf.ag/o/hops#HopsVanguard">Vanguard</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWaiiti" title="https://rdf.ag/o/hops#HopsWaiiti">Wai-iti™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWaimea" title="https://rdf.ag/o/hops#HopsWaimea">Waimea™</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWakatu" title="https://rdf.ag/o/hops#HopsWakatu">Wakatu</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWarrior" title="https://rdf.ag/o/hops#HopsWarrior">Warrior®</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsWillamette" title="https://rdf.ag/o/hops#HopsWillamette">Willamette</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#HopsZeus" title="https://rdf.ag/o/hops#HopsZeus">Zeus</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -4158,13 +4150,13 @@ This section provides details for each class and property defined by Beerecipe.
     has members
    </dt>
    <dd>
-    <a href="#AhtanumHop" title="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop">Ahtanum</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CascadeHop" title="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop">Cascade</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MagnumHop" title="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop">Magnum</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#NelsonSauvinHop" title="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop">Nelson Sauvin</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SimcoeHop" title="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop">Simcoe</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#AhtanumHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog">Ahtanum Hop (BrewDog Punk IPA - Flavor)</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CascadeHop" title="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop">Cascade Hop (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MagnumHop" title="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop">Magnum Hop (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#NelsonSauvinHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog">Nelson Sauvin Brewdog</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SimcoeHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog">Simcoe Hop (BrewDog Punk IPA - Aroma/Dry Hop)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.beerecipe.com/ontology#Yeast" title="http://www.beerecipe.com/ontology#Yeast">Yeast</a> <sup class="type-c" title="class">c</sup>, <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>, <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -4295,7 +4287,7 @@ This section provides details for each class and property defined by Beerecipe.
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasFlavorProfile" title="http://www.beerecipe.com/ontology#hasFlavorProfile">has flavor profile</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#hasOriginCountry" title="http://www.beerecipe.com/ontology#hasOriginCountry">has origin country</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#ingredientName" title="http://www.beerecipe.com/ontology#ingredientName">ingredient name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.beerecipe.com/ontology#isIngredientOf" title="http://www.beerecipe.com/ontology#isIngredientOf">is ingredient of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#isSubstituteOf" title="http://www.beerecipe.com/ontology#isSubstituteOf">is substitute of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.beerecipe.com/ontology#unit" title="http://www.beerecipe.com/ontology#unit">unit</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasFlavorProfile" title="http://www.beerecipe.com/ontology#hasFlavorProfile">has flavor profile</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#hasOriginCountry" title="http://www.beerecipe.com/ontology#hasOriginCountry">has origin country</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#ingredientName" title="http://www.beerecipe.com/ontology#ingredientName">ingredient name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.beerecipe.com/ontology#isIngredientOf" title="http://www.beerecipe.com/ontology#isIngredientOf">is ingredient of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#isSubstituteOf" title="http://www.beerecipe.com/ontology#isSubstituteOf">is substitute of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.beerecipe.com/ontology#unit" title="http://www.beerecipe.com/ontology#unit">unit</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -4615,7 +4607,25 @@ This section provides details for each class and property defined by Beerecipe.
     is disjoint with
    </dt>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#Yeast" title="http://www.beerecipe.com/ontology#Yeast">Yeast</a> <sup class="type-c" title="class">c</sup>, <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Hops" title="https://rdf.ag/o/hops#Hops">Houblon</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.beerecipe.com/ontology#Yeast" title="http://www.beerecipe.com/ontology#Yeast">Yeast</a> <sup class="type-c" title="class">c</sup>, <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>, <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Hops" title="https://rdf.ag/o/hops#Hops">Houblon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://rdf.ag/o/malt#ChocolateMalt">
+  <h3>Malt au Chocolat<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://rdf.ag/o/malt#ChocolateMalt</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://rdf.ag/o/malt#RoastedMalt" title="https://rdf.ag/o/malt#RoastedMalt">Roasted Malt</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://rdf.ag/o/malt#ChocolateMalt">named individual</a>
    </dd>
   </dl>
  </div>
@@ -4881,25 +4891,20 @@ This section provides details for each class and property defined by Beerecipe.
   </dl>
  </div>
  <div class="entity" id="https://rdf.ag/o/hops#HopsNelsonSauvin">
-  <h3>Nelson Sauvin™<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <h3>Nelson Sauvin Hop (BrewDog Punk IPA - Dry Hop)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://rdf.ag/o/hops#HopsNelsonSauvin</p>
-  <div class="comment">
-   <span class="markdown">Nelson Sauvin™ is a trademarked hop from New Zealand that was released in 2000. Its name is a derivative of Sauvignon Blanc wine grape, to which many compare its aroma.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://rdf.ag/o/hops-2021-07-30">https://rdf.ag/o/hops-2021-07-30</a>
-   </dd>
-  </dl>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
     <a href="#https://rdf.ag/o/hops#Hops" title="https://rdf.ag/o/hops#Hops">Houblon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://rdf.ag/o/hops#HopsNelsonSauvin">named individual</a>
    </dd>
   </dl>
  </div>
@@ -5550,7 +5555,7 @@ This section provides details for each class and property defined by Beerecipe.
     has members
    </dt>
    <dd>
-    <a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">Cereal Rice Wheat</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">Rice Wheat (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -5579,7 +5584,7 @@ This section provides details for each class and property defined by Beerecipe.
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://rdf.ag/o/malt#ChocolateMalt" title="https://rdf.ag/o/malt#ChocolateMalt">Chocolate Malt</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://rdf.ag/o/malt#ChocolateMalt" title="https://rdf.ag/o/malt#ChocolateMalt">Malt au Chocolat</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -6791,6 +6796,12 @@ This section provides details for each class and property defined by Beerecipe.
     <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#Yeast" title="http://www.beerecipe.com/ontology#Yeast">Yeast</a> <sup class="type-c" title="class">c</sup>, <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Hops" title="https://rdf.ag/o/hops#Hops">Houblon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
     is also defined as
    </dt>
    <dd>
@@ -7038,13 +7049,13 @@ This section provides details for each class and property defined by Beerecipe.
     has members
    </dt>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#WLP001_Yeast" title="http://www.beerecipe.com/ontology#WLP001_Yeast">WLP001 California Ale Yeast</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#WLP001_Yeast" title="http://www.beerecipe.com/ontology#WLP001_Yeast">WLP001 California Ale Yeast (BrewDog Punk IPA)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>, <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Hops" title="https://rdf.ag/o/hops#Hops">Houblon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -8039,6 +8050,7 @@ This section provides details for each class and property defined by Beerecipe.
   <li><a href="#http://www.beerecipe.com/ontology#optimalTemperature" title="http://www.beerecipe.com/ontology#optimalTemperature">optimalTemperature</a></li>
   <li><a href="#http://www.beerecipe.com/ontology#originalGravity" title="http://www.beerecipe.com/ontology#originalGravity">original gravity</a></li>
   <li><a href="#http://www.beerecipe.com/ontology#producesBeer" title="http://www.beerecipe.com/ontology#producesBeer"> <span>produces beer</span> </a></li>
+  <li><a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a></li>
   <li><a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a></li>
   <li><a href="#http://www.beerecipe.com/ontology#recipeDescription" title="http://www.beerecipe.com/ontology#recipeDescription">recipe description</a></li>
   <li><a href="#http://www.beerecipe.com/ontology#recipeName" title="http://www.beerecipe.com/ontology#recipeName">recipe name</a></li>
@@ -8885,6 +8897,37 @@ This section provides details for each class and property defined by Beerecipe.
    </dl>
   </div>
  </div>
+ <div class="entity" id="http://www.beerecipe.com/ontology#purpose">
+  <h3>purpose<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.beerecipe.com/ontology#purpose</p>
+  <div class="comment">
+   <span class="markdown">Describes the specific purpose or role of an ingredient in the recipe (e.g., bittering, aroma, dry-hopping for hops; base malt, color, body for malts; fermentation character for yeast)</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>Cascade hop: "aroma and dry-hopping"; Pale Malt: "base malt - fermentable sugars"; Chocolate Malt: "color and roasted flavor"</pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.beerecipe.com/ontology#Ingredient" title="http://www.beerecipe.com/ontology#Ingredient">Ingredient</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="http://www.beerecipe.com/ontology#quantity">
   <h3>quantity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.beerecipe.com/ontology#quantity</p>
@@ -9233,21 +9276,21 @@ This section provides details for each class and property defined by Beerecipe.
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
-  <li><a href="#AhtanumHop" title="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop">Ahtanum</a></li>
+  <li><a href="#AhtanumHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog">Ahtanum Hop (BrewDog Punk IPA - Flavor)</a></li>
   <li><a href="#Airlock" title="https://mega2799.github.io/web-semantico/index-en.html#Airlock">Airlock</a></li>
   <li><a href="#AmericanIPA" title="https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA"> <span>American I P A</span> </a></li>
-  <li><a href="#BeginnerBoil60min" title="https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min"> <span>Beginner Boil60min</span> </a></li>
-  <li><a href="#BeginnerMash45min" title="https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min"> <span>Beginner Mash45min</span> </a></li>
   <li><a href="#Boil60min" title="https://mega2799.github.io/web-semantico/index-en.html#Boil60min"> <span>Boil60min</span> </a></li>
   <li><a href="#BottlingEquipment" title="https://mega2799.github.io/web-semantico/index-en.html#BottlingEquipment">Bottling Equipment</a></li>
   <li><a href="#BrewDog_PunkIPA_Recipe" title="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"> <span>Brew Dog Punk I P A Recipe</span> </a></li>
   <li><a href="#BrewKettle" title="https://mega2799.github.io/web-semantico/index-en.html#BrewKettle">Brew Kettle</a></li>
   <li><a href="#Thermometer" title="https://mega2799.github.io/web-semantico/index-en.html#Thermometer">Brewing Thermometer</a></li>
-  <li><a href="#CanadaWinterWheat" title="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat"> <span>Canada Winter Wheat</span> </a></li>
-  <li><a href="#Caramalt" title="https://mega2799.github.io/web-semantico/index-en.html#Caramalt">Caramalt</a></li>
-  <li><a href="#CascadeHop" title="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop">Cascade</a></li>
-  <li><a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat"> <span>Cereal Rice Wheat</span> </a></li>
-  <li><a href="#ChinookHop" title="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop">Chinook</a></li>
+  <li><a href="#Water_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog">Brewing Water (BrewDog Punk IPA)</a></li>
+  <li><a href="#Water_EasyPA" title="https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA">Brewing Water (Easy Pale Ale)</a></li>
+  <li><a href="#Water_RIS" title="https://mega2799.github.io/web-semantico/index-en.html#Water_RIS">Brewing Water (Russian Imperial Stout)</a></li>
+  <li><a href="#CanadaWinterWheat" title="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat">Canada Winter Wheat (Easy Pale Ale)</a></li>
+  <li><a href="#Caramalt_BrewDog" title="https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog">Caramalt_brewdog</a></li>
+  <li><a href="#CascadeHop" title="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop">Cascade Hop (Easy Pale Ale)</a></li>
+  <li><a href="#ChinookHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog">Chinook Hop (BrewDog Punk IPA - Bittering)</a></li>
   <li><a href="#ChocolateMalt" title="https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt"> <span>Chocolate Malt</span> </a></li>
   <li><a href="#Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#Conditioning14days"> <span>Conditioning14days</span> </a></li>
   <li><a href="#CoolingToPitchTemp" title="https://mega2799.github.io/web-semantico/index-en.html#CoolingToPitchTemp"> <span>Cooling To Pitch Temp</span> </a></li>
@@ -9260,22 +9303,24 @@ This section provides details for each class and property defined by Beerecipe.
   <li><a href="#EPA_Sparge15min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Sparge15min"> <span>E P A Sparge15min</span> </a></li>
   <li><a href="#EPA_Whirlpool10min" title="https://mega2799.github.io/web-semantico/index-en.html#EPA_Whirlpool10min"> <span>E P A Whirlpool10min</span> </a></li>
   <li><a href="#EasyPaleAleRecipe" title="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"> <span>Easy Pale Ale Recipe</span> </a></li>
-  <li><a href="#ExtraPaleMalt" title="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt">Extra Pale Malt</a></li>
+  <li><a href="#ExtraPaleMalt_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog">Extra Pale Malt Brewdog</a></li>
   <li><a href="#FermentationVessel" title="https://mega2799.github.io/web-semantico/index-en.html#FermentationVessel">Fermentation Vessel</a></li>
   <li><a href="#Fermentation7days" title="https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days"> <span>Fermentation7days</span> </a></li>
-  <li><a href="#FlakedOats" title="https://mega2799.github.io/web-semantico/index-en.html#FlakedOats"> <span>Flaked Oats</span> </a></li>
+  <li><a href="#FlakedOats" title="https://mega2799.github.io/web-semantico/index-en.html#FlakedOats">Flaked Oats (Russian Imperial Stout)</a></li>
   <li><a href="#GAS_RussianImperialStout" title="https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"> <span>G A S Russian Imperial Stout</span> </a></li>
   <li><a href="#Hydrometer" title="https://mega2799.github.io/web-semantico/index-en.html#Hydrometer">Hydrometer</a></li>
   <li><a href="#IPA" title="https://mega2799.github.io/web-semantico/index-en.html#IPA">IPA</a></li>
-  <li><a href="#MagnumHop" title="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop">Magnum</a></li>
-  <li><a href="#MarisOtter" title="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter">Maris Otter</a></li>
+  <li><a href="#MagnumHop" title="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop">Magnum Hop (Russian Imperial Stout)</a></li>
+  <li><a href="#https://rdf.ag/o/malt#ChocolateMalt" title="https://rdf.ag/o/malt#ChocolateMalt"> <span>Malt au Chocolat</span> </a></li>
+  <li><a href="#MarisOtter" title="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter">Maris Otter (Russian Imperial Stout)</a></li>
   <li><a href="#MarisOtterMalt" title="https://mega2799.github.io/web-semantico/index-en.html#MarisOtterMalt"> <span>Maris Otter Malt</span> </a></li>
   <li><a href="#MashOut10min" title="https://mega2799.github.io/web-semantico/index-en.html#MashOut10min"> <span>Mash Out10min</span> </a></li>
   <li><a href="#MashTun" title="https://mega2799.github.io/web-semantico/index-en.html#MashTun">Mash Tun</a></li>
-  <li><a href="#NelsonSauvinHop" title="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop">Nelson Sauvin</a></li>
+  <li><a href="#NelsonSauvinHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog">Nelson Sauvin Brewdog</a></li>
+  <li><a href="#https://rdf.ag/o/hops#HopsNelsonSauvin" title="https://rdf.ag/o/hops#HopsNelsonSauvin"> <span>Nelson Sauvin Hop (BrewDog Punk IPA - Dry Hop)</span> </a></li>
   <li><a href="#NewZealand" title="https://mega2799.github.io/web-semantico/index-en.html#NewZealand">New Zealand</a></li>
   <li><a href="#PaleAle" title="https://mega2799.github.io/web-semantico/index-en.html#PaleAle"> <span>Pale Ale</span> </a></li>
-  <li><a href="#PaleAleMalt" title="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt"> <span>Pale Ale Malt</span> </a></li>
+  <li><a href="#PaleAleMalt" title="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt">Pale Ale Malt (Easy Pale Ale)</a></li>
   <li><a href="#PunkIPA_Boil60min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Boil60min"> <span>Punk I P A Boil60min</span> </a></li>
   <li><a href="#PunkIPA_Conditioning14days" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Conditioning14days"> <span>Punk I P A Conditioning14days</span> </a></li>
   <li><a href="#PunkIPA_Cooling30min" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Cooling30min"> <span>Punk I P A Cooling30min</span> </a></li>
@@ -9293,27 +9338,28 @@ This section provides details for each class and property defined by Beerecipe.
   <li><a href="#RIS_Mash60min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Mash60min"> <span>R I S Mash60min</span> </a></li>
   <li><a href="#RIS_Sparge20min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Sparge20min"> <span>R I S Sparge20min</span> </a></li>
   <li><a href="#RIS_Whirlpool15min" title="https://mega2799.github.io/web-semantico/index-en.html#RIS_Whirlpool15min"> <span>R I S Whirlpool15min</span> </a></li>
-  <li><a href="#RoastedBarley" title="https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley"> <span>Roasted Barley</span> </a></li>
+  <li><a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">Rice Wheat (Easy Pale Ale)</a></li>
+  <li><a href="#RoastedBarley" title="https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley">Roasted Barley (Russian Imperial Stout)</a></li>
   <li><a href="#Bran_russinaImperialStout" title="https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout">Russian Imperial Stout</a></li>
   <li><a href="#RussianImperialStout" title="https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout"> <span>Russian Imperial Stout</span> </a></li>
-  <li><a href="#http://www.beerecipe.com/ontology#US05_Yeast" title="http://www.beerecipe.com/ontology#US05_Yeast">Safale US-05</a></li>
   <li><a href="#Sanitizer" title="https://mega2799.github.io/web-semantico/index-en.html#Sanitizer">Sanitizer</a></li>
   <li><a href="#Scotland" title="https://mega2799.github.io/web-semantico/index-en.html#Scotland">Scotland</a></li>
-  <li><a href="#SimcoeHop" title="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop">Simcoe</a></li>
+  <li><a href="#SimcoeHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog">Simcoe Hop (BrewDog Punk IPA - Aroma/Dry Hop)</a></li>
   <li><a href="#Sparge20min" title="https://mega2799.github.io/web-semantico/index-en.html#Sparge20min"> <span>Sparge20min</span> </a></li>
   <li><a href="#StandardMash45min" title="https://mega2799.github.io/web-semantico/index-en.html#StandardMash45min"> <span>Standard Mash45min</span> </a></li>
   <li><a href="#TripleHoppedIPA" title="https://mega2799.github.io/web-semantico/index-en.html#TripleHoppedIPA"> <span>Triple Hopped I P A</span> </a></li>
   <li><a href="#UnitedKingdom" title="https://mega2799.github.io/web-semantico/index-en.html#UnitedKingdom">United Kingdom</a></li>
   <li><a href="#UnitedStates" title="https://mega2799.github.io/web-semantico/index-en.html#UnitedStates">United States</a></li>
-  <li><a href="#http://www.beerecipe.com/ontology#WLP007_Yeast" title="http://www.beerecipe.com/ontology#WLP007_Yeast"> <span>W L P007 Yeast</span> </a></li>
+  <li><a href="#http://www.beerecipe.com/ontology#US05_Yeast" title="http://www.beerecipe.com/ontology#US05_Yeast">US-05 American Ale Yeast (Easy Pale Ale)</a></li>
   <li><a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water"> <span>Water</span> </a></li>
   <li><a href="#Whirlpool15min" title="https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min"> <span>Whirlpool15min</span> </a></li>
-  <li><a href="#http://www.beerecipe.com/ontology#WLP001_Yeast" title="http://www.beerecipe.com/ontology#WLP001_Yeast">WLP001 California Ale Yeast</a></li>
+  <li><a href="#http://www.beerecipe.com/ontology#WLP001_Yeast" title="http://www.beerecipe.com/ontology#WLP001_Yeast">WLP001 California Ale Yeast (BrewDog Punk IPA)</a></li>
+  <li><a href="#http://www.beerecipe.com/ontology#WLP007_Yeast" title="http://www.beerecipe.com/ontology#WLP007_Yeast">WLP007 Dry English Ale Yeast (Russian Imperial Stout)</a></li>
   <li><a href="#WortChiller" title="https://mega2799.github.io/web-semantico/index-en.html#WortChiller">Wort Chiller</a></li>
  </ul>
- <div class="entity" id="AhtanumHop">
-  <h3>Ahtanum<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop</p>
+ <div class="entity" id="AhtanumHop_Brewdog">
+  <h3>Ahtanum Hop (BrewDog Punk IPA - Flavor)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog</p>
   <div class="comment">
    <span class="markdown">American hop with floral, citrus and piney notes. Used for aroma</span>
   </div>
@@ -9332,6 +9378,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hopName" title="http://www.beerecipe.com/ontology#hopName">hop name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ahtanum"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"flavor and aroma - added at 15 minutes and whirlpool"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"18.75"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -9386,60 +9438,6 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#styleName" title="http://www.beerecipe.com/ontology#styleName">style name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"American IPA"</span>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="BeginnerBoil60min">
-  <h3>Beginner Boil60min<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#BrewingStep" title="http://www.beerecipe.com/ontology#BrewingStep">Brewing Step</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepDuration" title="http://www.beerecipe.com/ontology#stepDuration">step duration</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"60"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepName" title="http://www.beerecipe.com/ontology#stepName">step name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Boil"</span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepOrder" title="http://www.beerecipe.com/ontology#stepOrder">step order</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepTemperature" title="http://www.beerecipe.com/ontology#stepTemperature">step temperature</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"100.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="BeginnerMash45min">
-  <h3>Beginner Mash45min<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#BrewingStep" title="http://www.beerecipe.com/ontology#BrewingStep">Brewing Step</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepDuration" title="http://www.beerecipe.com/ontology#stepDuration">step duration</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"45"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepName" title="http://www.beerecipe.com/ontology#stepName">step name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Mash"</span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepOrder" title="http://www.beerecipe.com/ontology#stepOrder">step order</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#stepTemperature" title="http://www.beerecipe.com/ontology#stepTemperature">step temperature</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"66.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -9508,28 +9506,28 @@ This section provides details for each class and property defined by Beerecipe.
     has facts
    </dt>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#AhtanumHop" title="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop">Ahtanum</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#AhtanumHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog">Ahtanum Hop (BrewDog Punk IPA - Flavor)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#ChinookHop" title="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop">Chinook</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#ChinookHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog">Chinook Hop (BrewDog Punk IPA - Bittering)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#NelsonSauvinHop" title="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop">Nelson Sauvin</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#NelsonSauvinHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog">Nelson Sauvin Brewdog</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#SimcoeHop" title="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop">Simcoe</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#SimcoeHop_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog">Simcoe Hop (BrewDog Punk IPA - Aroma/Dry Hop)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasMalt" title="http://www.beerecipe.com/ontology#hasMalt">has malt</a> <sup class="type-op" title="object property">op</sup> <a href="#Caramalt" title="https://mega2799.github.io/web-semantico/index-en.html#Caramalt">Caramalt</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasMalt" title="http://www.beerecipe.com/ontology#hasMalt">has malt</a> <sup class="type-op" title="object property">op</sup> <a href="#Caramalt_BrewDog" title="https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog">Caramalt_brewdog</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasMalt" title="http://www.beerecipe.com/ontology#hasMalt">has malt</a> <sup class="type-op" title="object property">op</sup> <a href="#ExtraPaleMalt" title="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt">Extra Pale Malt</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasMalt" title="http://www.beerecipe.com/ontology#hasMalt">has malt</a> <sup class="type-op" title="object property">op</sup> <a href="#ExtraPaleMalt_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog">Extra Pale Malt Brewdog</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hasStyle" title="http://www.beerecipe.com/ontology#hasStyle">has style</a> <sup class="type-op" title="object property">op</sup> <a href="#IPA" title="https://mega2799.github.io/web-semantico/index-en.html#IPA">IPA</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasYeast" title="http://www.beerecipe.com/ontology#hasYeast">has Yeast</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.beerecipe.com/ontology#WLP001_Yeast" title="http://www.beerecipe.com/ontology#WLP001_Yeast">WLP001 California Ale Yeast</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasYeast" title="http://www.beerecipe.com/ontology#hasYeast">has Yeast</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.beerecipe.com/ontology#WLP001_Yeast" title="http://www.beerecipe.com/ontology#WLP001_Yeast">WLP001 California Ale Yeast (BrewDog Punk IPA)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#producesBeer" title="http://www.beerecipe.com/ontology#producesBeer">produces beer</a> <sup class="type-op" title="object property">op</sup> <a href="#PunkIPA_Beer" title="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer">Punk IPA</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -9562,7 +9560,7 @@ This section provides details for each class and property defined by Beerecipe.
     <a href="#http://www.beerecipe.com/ontology#requiresEquipment" title="http://www.beerecipe.com/ontology#requiresEquipment">requires equipment</a> <sup class="type-op" title="object property">op</sup> <a href="#WortChiller" title="https://mega2799.github.io/web-semantico/index-en.html#WortChiller">Wort Chiller</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#hasWater" title="https://mega2799.github.io/web-semantico/index-en.html#hasWater">has Water</a> <sup class="type-op" title="object property">op</sup> <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#hasWater" title="https://mega2799.github.io/web-semantico/index-en.html#hasWater">has Water</a> <sup class="type-op" title="object property">op</sup> <a href="#Water_Brewdog" title="https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog">Brewing Water (BrewDog Punk IPA)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#author" title="http://www.beerecipe.com/ontology#author">author</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"BrewDog"</span>
@@ -9665,8 +9663,80 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="Water_Brewdog">
+  <h3>Brewing Water (BrewDog Punk IPA)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog</p>
+  <div class="comment">
+   <span class="markdown">~25L total water volume for 20L batch. Includes mash water (~12L) and sparge water (~13L). Water chemistry: moderately hard with elevated sulfate for hop character.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.beerecipe.com/ontology#Water" target="_blank" title="http://www.beerecipe.com/ontology#Water">Water</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"solvent and medium - mashing and sparging"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"25.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Water_EasyPA">
+  <h3>Brewing Water (Easy Pale Ale)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA</p>
+  <div class="comment">
+   <span class="markdown">~26L total water for 20L batch. Simple water profile: no chemistry adjustments needed for beginners. Includes mash water (~13L) and sparge water (~13L). Tap water suitable if chlorine-free.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.beerecipe.com/ontology#Water" target="_blank" title="http://www.beerecipe.com/ontology#Water">Water</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"solvent and medium - mashing and sparging"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"26.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Water_RIS">
+  <h3>Brewing Water (Russian Imperial Stout)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Water_RIS</p>
+  <div class="comment">
+   <span class="markdown">~12L total water for 5L batch (smaller batch due to equipment limitations with high gravity). Includes thick mash (~6L) for maximum extract and concentrated sparge (~6L). Water chemistry: balanced with moderate alkalinity to support dark malts.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.beerecipe.com/ontology#Water" target="_blank" title="http://www.beerecipe.com/ontology#Water">Water</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"solvent and medium - mashing and sparging for high gravity wort"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"12.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="CanadaWinterWheat">
-  <h3>Canada Winter Wheat<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Canada Winter Wheat (Easy Pale Ale)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat</p>
   <dl class="description">
    <dt>
@@ -9678,11 +9748,17 @@ This section provides details for each class and property defined by Beerecipe.
    <dd>
     <a href="#http://www.beerecipe.com/ontology#glutenContent" title="http://www.beerecipe.com/ontology#glutenContent">gluten content</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
    </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"body and head retention - enhances foam stability"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"450.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
   </dl>
  </div>
- <div class="entity" id="Caramalt">
-  <h3>Caramalt<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Caramalt</p>
+ <div class="entity" id="Caramalt_BrewDog">
+  <h3>Caramalt_brewdog<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog</p>
   <div class="comment">
    <span class="markdown">Crystal malt for body, sweetness and golden color</span>
   </div>
@@ -9699,7 +9775,7 @@ This section provides details for each class and property defined by Beerecipe.
   </dl>
  </div>
  <div class="entity" id="CascadeHop">
-  <h3>Cascade<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Cascade Hop (Easy Pale Ale)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#CascadeHop</p>
   <div class="comment">
    <span class="markdown">Classic American aroma hop with floral and citrus (grapefruit) character, signature hop of American Pale Ales.</span>
@@ -9720,35 +9796,17 @@ This section provides details for each class and property defined by Beerecipe.
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hopName" title="http://www.beerecipe.com/ontology#hopName">hop name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Cascade"</span>
    </dd>
-  </dl>
- </div>
- <div class="entity" id="Cereal_RiceWheat">
-  <h3>Cereal Rice Wheat<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
    <dd>
-    <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"dual purpose - bittering, flavor and aroma"</span>
    </dd>
    <dd>
-    <a href="#RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#RiceWheat">Rice Wheat</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#cerealName" title="http://www.beerecipe.com/ontology#cerealName">cereal name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Rice Wheat"</span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#glutenContent" title="http://www.beerecipe.com/ontology#glutenContent">gluten content</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"45.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
- <div class="entity" id="ChinookHop">
-  <h3>Chinook<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#ChinookHop</p>
+ <div class="entity" id="ChinookHop_Brewdog">
+  <h3>Chinook Hop (BrewDog Punk IPA - Bittering)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog</p>
   <div class="comment">
    <span class="markdown">American hop variety with piney, spicy character. High alpha acids for bittering</span>
   </div>
@@ -9761,6 +9819,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hopName" title="http://www.beerecipe.com/ontology#hopName">hop name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Chinook"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"bittering - added at 60 minutes"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"12.5"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -10152,22 +10216,22 @@ This section provides details for each class and property defined by Beerecipe.
     has facts
    </dt>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#CanadaWinterWheat" title="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat">Canada Winter Wheat</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#CanadaWinterWheat" title="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat">Canada Winter Wheat (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">Cereal Rice Wheat</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#Cereal_RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">Rice Wheat (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#CascadeHop" title="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop">Cascade</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#CascadeHop" title="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop">Cascade Hop (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasMalt" title="http://www.beerecipe.com/ontology#hasMalt">has malt</a> <sup class="type-op" title="object property">op</sup> <a href="#PaleAleMalt" title="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt">Pale Ale Malt</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasMalt" title="http://www.beerecipe.com/ontology#hasMalt">has malt</a> <sup class="type-op" title="object property">op</sup> <a href="#PaleAleMalt" title="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt">Pale Ale Malt (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hasStyle" title="http://www.beerecipe.com/ontology#hasStyle">has style</a> <sup class="type-op" title="object property">op</sup> <a href="#PaleAle" title="https://mega2799.github.io/web-semantico/index-en.html#PaleAle">Pale Ale</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasYeast" title="http://www.beerecipe.com/ontology#hasYeast">has Yeast</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.beerecipe.com/ontology#US05_Yeast" title="http://www.beerecipe.com/ontology#US05_Yeast">Safale US-05</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasYeast" title="http://www.beerecipe.com/ontology#hasYeast">has Yeast</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.beerecipe.com/ontology#US05_Yeast" title="http://www.beerecipe.com/ontology#US05_Yeast">US-05 American Ale Yeast (Easy Pale Ale)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#hasWater" title="https://mega2799.github.io/web-semantico/index-en.html#hasWater">has Water</a> <sup class="type-op" title="object property">op</sup> <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -10222,9 +10286,9 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
   </dl>
  </div>
- <div class="entity" id="ExtraPaleMalt">
-  <h3>Extra Pale Malt<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt</p>
+ <div class="entity" id="ExtraPaleMalt_Brewdog">
+  <h3>Extra Pale Malt Brewdog<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog</p>
   <div class="comment">
    <span class="markdown">Base malt for pale ales and IPAs, provides fermentable sugars</span>
   </div>
@@ -10298,8 +10362,11 @@ This section provides details for each class and property defined by Beerecipe.
   </dl>
  </div>
  <div class="entity" id="FlakedOats">
-  <h3>Flaked Oats<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Flaked Oats (Russian Imperial Stout)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#FlakedOats</p>
+  <div class="comment">
+   <span class="markdown">Adds creamy, velvety mouthfeel and body. Essential for Imperial Stout's characteristic smooth texture. ~7% of grain bill.</span>
+  </div>
   <dl class="description">
    <dt>
     has facts
@@ -10309,6 +10376,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#glutenContent" title="http://www.beerecipe.com/ontology#glutenContent">gluten content</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"body and mouthfeel - enhances silky smooth texture"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"500.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -10326,16 +10399,16 @@ This section provides details for each class and property defined by Beerecipe.
     has facts
    </dt>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#FlakedOats" title="https://mega2799.github.io/web-semantico/index-en.html#FlakedOats">Flaked Oats</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#FlakedOats" title="https://mega2799.github.io/web-semantico/index-en.html#FlakedOats">Flaked Oats (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#MarisOtter" title="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter">Maris Otter</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#MarisOtter" title="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter">Maris Otter (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#RoastedBarley" title="https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley">Roasted Barley</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasCereal" title="http://www.beerecipe.com/ontology#hasCereal">has cereal</a> <sup class="type-op" title="object property">op</sup> <a href="#RoastedBarley" title="https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley">Roasted Barley (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#MagnumHop" title="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop">Magnum</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasHop" title="http://www.beerecipe.com/ontology#hasHop">has hop</a> <sup class="type-op" title="object property">op</sup> <a href="#MagnumHop" title="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop">Magnum Hop (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hasMalt" title="http://www.beerecipe.com/ontology#hasMalt">has malt</a> <sup class="type-op" title="object property">op</sup> <a href="#ChocolateMalt" title="https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt">Chocolate Malt</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -10344,13 +10417,13 @@ This section provides details for each class and property defined by Beerecipe.
     <a href="#http://www.beerecipe.com/ontology#hasStyle" title="http://www.beerecipe.com/ontology#hasStyle">has style</a> <sup class="type-op" title="object property">op</sup> <a href="#RussianImperialStout" title="https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout">Russian Imperial Stout</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#hasYeast" title="http://www.beerecipe.com/ontology#hasYeast">has Yeast</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.beerecipe.com/ontology#WLP007_Yeast" title="http://www.beerecipe.com/ontology#WLP007_Yeast">W L P007 Yeast</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.beerecipe.com/ontology#hasYeast" title="http://www.beerecipe.com/ontology#hasYeast">has Yeast</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.beerecipe.com/ontology#WLP007_Yeast" title="http://www.beerecipe.com/ontology#WLP007_Yeast">WLP007 Dry English Ale Yeast (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#producesBeer" title="http://www.beerecipe.com/ontology#producesBeer">produces beer</a> <sup class="type-op" title="object property">op</sup> <a href="#Bran_russinaImperialStout" title="https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout">Russian Imperial Stout</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#hasWater" title="https://mega2799.github.io/web-semantico/index-en.html#hasWater">has Water</a> <sup class="type-op" title="object property">op</sup> <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#hasWater" title="https://mega2799.github.io/web-semantico/index-en.html#hasWater">has Water</a> <sup class="type-op" title="object property">op</sup> <a href="#Water_RIS" title="https://mega2799.github.io/web-semantico/index-en.html#Water_RIS">Brewing Water (Russian Imperial Stout)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#author" title="http://www.beerecipe.com/ontology#author">author</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Brewing Ben (Brewer's Friend)"</span>
@@ -10448,7 +10521,7 @@ This section provides details for each class and property defined by Beerecipe.
   </dl>
  </div>
  <div class="entity" id="MagnumHop">
-  <h3>Magnum<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Magnum Hop (Russian Imperial Stout)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#MagnumHop</p>
   <div class="comment">
    <span class="markdown">German high-alpha bittering hop with clean, neutral bitterness and mild hop aroma, excellent for high-gravity beers.</span>
@@ -10469,10 +10542,37 @@ This section provides details for each class and property defined by Beerecipe.
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hopName" title="http://www.beerecipe.com/ontology#hopName">hop name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Magnum"</span>
    </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"bittering - clean bitterness to balance massive malt sweetness"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"40.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://rdf.ag/o/malt#ChocolateMalt">
+  <h3>Malt au Chocolat<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://rdf.ag/o/malt#ChocolateMalt</p>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"color and flavor complexity - chocolate, nutty and roasted notes"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1000.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://rdf.ag/o/malt#ChocolateMalt">class</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="MarisOtter">
-  <h3>Maris Otter<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Maris Otter (Russian Imperial Stout)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#MarisOtter</p>
   <div class="comment">
    <span class="markdown">Premium British two-row spring barley variety prized for its rich, malty flavor and excellent extract efficiency.</span>
@@ -10483,6 +10583,15 @@ This section provides details for each class and property defined by Beerecipe.
    </dt>
    <dd>
     <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"base malt - provides fermentable sugars and rich malty character"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5000.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -10556,9 +10665,9 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
   </dl>
  </div>
- <div class="entity" id="NelsonSauvinHop">
-  <h3>Nelson Sauvin<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop</p>
+ <div class="entity" id="NelsonSauvinHop_Brewdog">
+  <h3>Nelson Sauvin Brewdog<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog</p>
   <div class="comment">
    <span class="markdown">New Zealand hop with distinctive white wine, gooseberry character. Signature BrewDog hop</span>
   </div>
@@ -10577,6 +10686,27 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hopName" title="http://www.beerecipe.com/ontology#hopName">hop name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Nelson Sauvin"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://rdf.ag/o/hops#HopsNelsonSauvin">
+  <h3>Nelson Sauvin Hop (BrewDog Punk IPA - Dry Hop)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://rdf.ag/o/hops#HopsNelsonSauvin</p>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"signature aroma - dry-hopping during fermentation"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"31.25"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://rdf.ag/o/hops#HopsNelsonSauvin">class</a>
    </dd>
   </dl>
  </div>
@@ -10614,7 +10744,7 @@ This section provides details for each class and property defined by Beerecipe.
   </dl>
  </div>
  <div class="entity" id="PaleAleMalt">
-  <h3>Pale Ale Malt<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Pale Ale Malt (Easy Pale Ale)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt</p>
   <dl class="description">
    <dt>
@@ -10625,6 +10755,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#maltName" title="http://www.beerecipe.com/ontology#maltName">malt name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Pale Ale Malt"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"base malt - provides fermentable sugars and golden color"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3600.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -11224,9 +11360,42 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="Cereal_RiceWheat">
+  <h3>Rice Wheat (Easy Pale Ale)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#RiceWheat" title="https://mega2799.github.io/web-semantico/index-en.html#RiceWheat">Rice Wheat</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#cerealName" title="http://www.beerecipe.com/ontology#cerealName">cereal name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Rice Wheat"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#glutenContent" title="http://www.beerecipe.com/ontology#glutenContent">gluten content</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"lightness and crispness - reduces body for easy drinking"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"450.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="RoastedBarley">
-  <h3>Roasted Barley<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Roasted Barley (Russian Imperial Stout)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley</p>
+  <div class="comment">
+   <span class="markdown">Heavily roasted unmalted barley. Provides intense coffee, bitter chocolate and roasty character. Key for stout's black color (98 EBC). ~8.5% of grain bill.</span>
+  </div>
   <dl class="description">
    <dt>
     has facts
@@ -11236,6 +11405,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#glutenContent" title="http://www.beerecipe.com/ontology#glutenContent">gluten content</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"color and roasted flavor - coffee and dark chocolate notes"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"600.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -11287,36 +11462,6 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.beerecipe.com/ontology#US05_Yeast">
-  <h3>Safale US-05<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.beerecipe.com/ontology#US05_Yeast</p>
-  <div class="comment">
-   <span class="markdown">Clean, neutral American ale yeast producing crisp profiles with medium attenuation, ideal for hop-forward beers.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#ingredientName" title="http://www.beerecipe.com/ontology#ingredientName">ingredient name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Safale US-05 Dry Ale Yeast"</span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#maxAttenuation" title="http://www.beerecipe.com/ontology#maxAttenuation">maxAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.82"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#minAttenuation" title="http://www.beerecipe.com/ontology#minAttenuation">minAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.78"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#optimalTemperature" title="http://www.beerecipe.com/ontology#optimalTemperature">optimalTemperature</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"22.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#yeastDescription" title="http://www.beerecipe.com/ontology#yeastDescription">yeastDescription</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Neutral, well-balanced American ale yeast producing clean and crisp profiles; suitable for a wide range of ales including American Pale Ale, IPA and stouts."</span>
-   </dd>
-   <dd>
-    <a href="#http://www.beerecipe.com/ontology#yeastName" title="http://www.beerecipe.com/ontology#yeastName">yeastName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"SafAle US-05"</span>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="Sanitizer">
   <h3>Sanitizer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#Sanitizer</p>
@@ -11359,9 +11504,9 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
   </dl>
  </div>
- <div class="entity" id="SimcoeHop">
-  <h3>Simcoe<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop</p>
+ <div class="entity" id="SimcoeHop_Brewdog">
+  <h3>Simcoe Hop (BrewDog Punk IPA - Aroma/Dry Hop)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog</p>
   <div class="comment">
    <span class="markdown">American hop with passion fruit, pine and earthy character</span>
   </div>
@@ -11380,6 +11525,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#hopName" title="http://www.beerecipe.com/ontology#hopName">hop name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Simcoe"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"aroma and dry-hopping - added at whirlpool and during fermentation"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"25.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
   </dl>
  </div>
@@ -11494,30 +11645,39 @@ This section provides details for each class and property defined by Beerecipe.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.beerecipe.com/ontology#WLP007_Yeast">
-  <h3>W L P007 Yeast<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.beerecipe.com/ontology#WLP007_Yeast</p>
+ <div class="entity" id="http://www.beerecipe.com/ontology#US05_Yeast">
+  <h3>US-05 American Ale Yeast (Easy Pale Ale)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.beerecipe.com/ontology#US05_Yeast</p>
+  <div class="comment">
+   <span class="markdown">Clean, neutral American ale yeast producing crisp profiles with medium attenuation, ideal for hop-forward beers.</span>
+  </div>
   <dl class="description">
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#ingredientName" title="http://www.beerecipe.com/ontology#ingredientName">ingredient name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"WLP007 Dry English Ale"</span>
+    <a href="#http://www.beerecipe.com/ontology#ingredientName" title="http://www.beerecipe.com/ontology#ingredientName">ingredient name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Safale US-05 Dry Ale Yeast"</span>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#maxAttenuation" title="http://www.beerecipe.com/ontology#maxAttenuation">maxAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"80"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+    <a href="#http://www.beerecipe.com/ontology#maxAttenuation" title="http://www.beerecipe.com/ontology#maxAttenuation">maxAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.82"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#minAttenuation" title="http://www.beerecipe.com/ontology#minAttenuation">minAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"70"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+    <a href="#http://www.beerecipe.com/ontology#minAttenuation" title="http://www.beerecipe.com/ontology#minAttenuation">minAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.78"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#optimalTemperature" title="http://www.beerecipe.com/ontology#optimalTemperature">optimalTemperature</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"20.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+    <a href="#http://www.beerecipe.com/ontology#optimalTemperature" title="http://www.beerecipe.com/ontology#optimalTemperature">optimalTemperature</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"22.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#yeastDescription" title="http://www.beerecipe.com/ontology#yeastDescription">yeastDescription</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Highly attenuative English ale yeast producing dry, clean finishes. Suitable for stouts and strong ales."</span>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"fermentation - reliable dry yeast with clean profile"</span>
    </dd>
    <dd>
-    <a href="#http://www.beerecipe.com/ontology#yeastName" title="http://www.beerecipe.com/ontology#yeastName">yeastName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"WLP007 Dry English Ale"</span>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#yeastDescription" title="http://www.beerecipe.com/ontology#yeastDescription">yeastDescription</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Neutral, well-balanced American ale yeast producing clean and crisp profiles; suitable for a wide range of ales including American Pale Ale, IPA and stouts."</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#yeastName" title="http://www.beerecipe.com/ontology#yeastName">yeastName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"SafAle US-05"</span>
    </dd>
   </dl>
  </div>
@@ -11530,6 +11690,12 @@ This section provides details for each class and property defined by Beerecipe.
    </dt>
    <dd>
     <a href="#Water" title="https://mega2799.github.io/web-semantico/index-en.html#Water">Water</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#Yeast" title="http://www.beerecipe.com/ontology#Yeast">Yeast</a> <sup class="type-c" title="class">c</sup>, <a href="#Cereal" title="https://mega2799.github.io/web-semantico/index-en.html#Cereal">Cereal</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/hops#Hops" title="https://rdf.ag/o/hops#Hops">Houblon</a> <sup class="type-c" title="class">c</sup>, <a href="#https://rdf.ag/o/malt#Malt" title="https://rdf.ag/o/malt#Malt">Malt</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is also defined as
@@ -11570,7 +11736,7 @@ This section provides details for each class and property defined by Beerecipe.
   </dl>
  </div>
  <div class="entity" id="http://www.beerecipe.com/ontology#WLP001_Yeast">
-  <h3>WLP001 California Ale Yeast<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>WLP001 California Ale Yeast (BrewDog Punk IPA)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.beerecipe.com/ontology#WLP001_Yeast</p>
   <div class="comment">
    <span class="markdown">Clean, versatile ale yeast. Perfect for American IPAs</span>
@@ -11581,6 +11747,48 @@ This section provides details for each class and property defined by Beerecipe.
    </dt>
    <dd>
     <a href="#http://www.beerecipe.com/ontology#Yeast" title="http://www.beerecipe.com/ontology#Yeast">Yeast</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"fermentation - clean ale character with neutral profile"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#quantity" title="http://www.beerecipe.com/ontology#quantity">quantity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.beerecipe.com/ontology#WLP007_Yeast">
+  <h3>WLP007 Dry English Ale Yeast (Russian Imperial Stout)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.beerecipe.com/ontology#WLP007_Yeast</p>
+  <div class="comment">
+   <span class="markdown">Double pitch (2 vials/packs) required for high gravity (OG 1.109). Clean fermenting with excellent attenuation (75-80%). Handles alcohol stress well. Temp: 18-21°C. Fermentation: 21 days due to high gravity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#ingredientName" title="http://www.beerecipe.com/ontology#ingredientName">ingredient name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"WLP007 Dry English Ale"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#maxAttenuation" title="http://www.beerecipe.com/ontology#maxAttenuation">maxAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"80"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#minAttenuation" title="http://www.beerecipe.com/ontology#minAttenuation">minAttenuation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"70"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#optimalTemperature" title="http://www.beerecipe.com/ontology#optimalTemperature">optimalTemperature</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"20.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#purpose" title="http://www.beerecipe.com/ontology#purpose">purpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"fermentation - high gravity tolerance with neutral character"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#yeastDescription" title="http://www.beerecipe.com/ontology#yeastDescription">yeastDescription</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Highly attenuative English ale yeast producing dry, clean finishes. Suitable for stouts and strong ales."</span>
+   </dd>
+   <dd>
+    <a href="#http://www.beerecipe.com/ontology#yeastName" title="http://www.beerecipe.com/ontology#yeastName">yeastName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"WLP007 Dry English Ale"</span>
    </dd>
   </dl>
  </div>
