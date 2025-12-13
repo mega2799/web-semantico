@@ -1432,6 +1432,9 @@
 
     <owl:Class rdf:about="http://www.beerecipe.com/ontology#Yeast">
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
+        <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
+        <owl:disjointWith rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:comment xml:lang="en">Yeast is a single-celled microorganism (fungus) essential for beer fermentation. Yeast converts fermentable sugars into alcohol and carbon dioxide, while producing flavor compounds (esters, phenols) that significantly influence the beer&apos;s character. Different yeast strains produce distinct flavor profiles and are categorized primarily into ale yeasts (Saccharomyces cerevisiae) and lager yeasts (Saccharomyces pastorianus).</rdfs:comment>
         <rdfs:label xml:lang="en">Yeast</rdfs:label>
@@ -1457,6 +1460,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe"/>
+        <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe"/>
     </owl:Class>
     
 
@@ -1476,6 +1481,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe"/>
     </owl:Class>
     
 
@@ -1484,6 +1490,8 @@
 
     <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Cereal">
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
+        <owl:disjointWith rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
     </owl:Class>
     
@@ -1740,6 +1748,8 @@
 
     <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water">
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <owl:disjointWith rdf:resource="https://rdf.ag/o/hops#Hops"/>
+        <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
     </owl:Class>
     
 
@@ -6160,30 +6170,6 @@
         <ontology:minIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</ontology:minIBU>
         <ontology:styleDescription>Hoppy, bitter, citrus-forward</ontology:styleDescription>
         <ontology:styleName>American IPA</ontology:styleName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min -->
-
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BeginnerBoil60min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
-        <ontology:stepName>Boil</ontology:stepName>
-        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontology:stepOrder>
-        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</ontology:stepTemperature>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min -->
-
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BeginnerMash45min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</ontology:stepDuration>
-        <ontology:stepName>Mash</ontology:stepName>
-        <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
-        <ontology:stepTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66.0</ontology:stepTemperature>
     </owl:NamedIndividual>
     
 
