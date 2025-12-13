@@ -984,6 +984,18 @@
     
 
 
+    <!-- http://www.beerecipe.com/ontology#purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#purpose">
+        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Describes the specific purpose or role of an ingredient in the recipe (e.g., bittering, aroma, dry-hopping for hops; base malt, color, body for malts; fermentation character for yeast)</rdfs:comment>
+        <rdfs:label xml:lang="en">purpose</rdfs:label>
+        <skos:example xml:lang="en">Cascade hop: &quot;aroma and dry-hopping&quot;; Pale Malt: &quot;base malt - fermentable sugars&quot;; Chocolate Malt: &quot;color and roasted flavor&quot;</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.beerecipe.com/ontology#quantity -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#quantity">
@@ -1415,6 +1427,12 @@
         <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
         <rdfs:label>Sparge Step</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.beerecipe.com/ontology#Water -->
+
+    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Water"/>
     
 
 
@@ -4835,17 +4853,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#HopsNelsonSauvin">
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/hops#Hops"/>
-        <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
-        <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
-        <rdfs:label xml:lang="en">Nelson Sauvin™</rdfs:label>
-        <skos:definition xml:lang="fr">Nelson Sauvin™ est un houblon néo-zélandais déposé en 2000. Son nom est un dérivé du cépage Sauvignon Blanc, auquel beaucoup comparent son arôme.</skos:definition>
-        <skos:definition xml:lang="en">Nelson Sauvin™ is a trademarked hop from New Zealand that was released in 2000. Its name is a derivative of Sauvignon Blanc wine grape, to which many compare its aroma.</skos:definition>
-        <foaf:name>Nelson Sauvin™</foaf:name>
-        <hops:alphaAcidsContent>12-13</hops:alphaAcidsContent>
-        <hops:betaAcidsContent>6-8</hops:betaAcidsContent>
-        <hops:perceivedAroma xml:lang="en">Fruity, Grapefruit, Gooseberry, White Wine</hops:perceivedAroma>
-        <hops:perceivedAroma xml:lang="fr">Fruité, Groseille, Pamplemousse, Vin Blanc</hops:perceivedAroma>
-        <hops:totalOilContent>1.1</hops:totalOilContent>
     </owl:Class>
     
 
@@ -5900,14 +5907,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#ChocolateMalt">
         <rdfs:subClassOf rdf:resource="https://rdf.ag/o/malt#RoastedMalt"/>
-        <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
-        <rdfs:comment xml:lang="en">For roasted malts, the classes Pale Chocolate Malt, Standard Chocolate Malt and Black Malt have the general ranges of EBC coloring assigned to each of these classes. It is important to note that there are significant gaps between these ranges despite all being in the same Roasted Malt class. This is due to the fact that much of the coloring is at the decretion of the operator of the roasting drum, therefore coloring may vary from malters or even between batches. In the end, it is the malters who decide under which class the product will be marketed.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Pour les malts torréfiés, les classes Malt au Chocolat Pâle, Malt au Chocolat Standard et Malt Noir ont les gammes générales de coloration EBC attribuées à chacune de ces classes. Il est important de noter qu&apos;il existe des écarts importants entre ces gammes, bien qu&apos;elles appartiennent toutes à la même classe de malt torréfié. Cela est dû au fait qu&apos;une grande partie de la coloration est à la décrétion de l&apos;opérateur du tambour de torréfaction, donc la coloration peut varier d&apos;un malter ou même d&apos;un lot à l&apos;autre. En fin de compte, ce sont les malters qui décident sous quelle classe le produit sera commercialisé.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
-        <rdfs:label xml:lang="en">Chocolate Malt</rdfs:label>
-        <rdfs:label xml:lang="fr">Malt au Chocolat</rdfs:label>
-        <skos:definition xml:lang="fr">Malts torréfiés qui ont un arôme quelque peu chocolaté et dont la coloration varie de 500-1100 EBC.</skos:definition>
-        <skos:definition xml:lang="en">Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 500-1100 EBC.</skos:definition>
     </owl:Class>
     
 
@@ -6109,8 +6108,10 @@
         <ontology:yeastDescription>Neutral, well-balanced American ale yeast producing clean and crisp profiles; suitable for a wide range of ales including American Pale Ale, IPA and stouts.</ontology:yeastDescription>
         <ontology:yeastName>SafAle US-05</ontology:yeastName>
         <rdfs:comment>Clean, neutral American ale yeast producing crisp profiles with medium attenuation, ideal for hop-forward beers.</rdfs:comment>
-        <rdfs:label>Safale US-05</rdfs:label>
-    </owl:NamedIndividual>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ontology:quantity>
+        <ontology:purpose>fermentation - reliable dry yeast with clean profile</ontology:purpose>
+        <rdfs:label>US-05 American Ale Yeast (Easy Pale Ale)</rdfs:label> 
+           </owl:NamedIndividual>
     
 
 
@@ -6118,8 +6119,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#WLP001_Yeast">
         <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+        <ontology:purpose>fermentation - clean ale character with neutral profile</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ontology:quantity>
         <rdfs:comment>Clean, versatile ale yeast. Perfect for American IPAs</rdfs:comment>
-        <rdfs:label>WLP001 California Ale Yeast</rdfs:label>
+        <rdfs:label>WLP001 California Ale Yeast (BrewDog Punk IPA)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6131,20 +6134,25 @@
         <ontology:maxAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</ontology:maxAttenuation>
         <ontology:minAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</ontology:minAttenuation>
         <ontology:optimalTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:optimalTemperature>
+        <ontology:purpose>fermentation - high gravity tolerance with neutral character</ontology:purpose>
         <ontology:yeastDescription>Highly attenuative English ale yeast producing dry, clean finishes. Suitable for stouts and strong ales.</ontology:yeastDescription>
         <ontology:yeastName>WLP007 Dry English Ale</ontology:yeastName>
+        <rdfs:comment>Double pitch (2 vials/packs) required for high gravity (OG 1.109). Clean fermenting with excellent attenuation (75-80%). Handles alcohol stress well. Temp: 18-21°C. Fermentation: 21 days due to high gravity.</rdfs:comment>
+        <rdfs:label>WLP007 Dry English Ale Yeast (Russian Imperial Stout)</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Ahtanum</ontology:hopName>
+        <ontology:purpose>flavor and aroma - added at 15 minutes and whirlpool</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.75</ontology:quantity>
         <rdfs:comment>American hop with floral, citrus and piney notes. Used for aroma</rdfs:comment>
-        <rdfs:label>Ahtanum</rdfs:label>
+        <rdfs:label>Ahtanum Hop (BrewDog Punk IPA - Flavor)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6212,12 +6220,12 @@
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe">
         <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop"/>
-        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop"/>
-        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop"/>
-        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop"/>
-        <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Caramalt"/>
-        <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt"/>
+        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog"/>
+        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog"/>
+        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog"/>
+        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog"/>
+        <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog"/>
+        <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog"/>
         <ontology:hasStyle rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#IPA"/>
         <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#WLP001_Yeast"/>
         <ontology:producesBeer rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer"/>
@@ -6230,7 +6238,7 @@
         <ontology:requiresEquipment rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Sanitizer"/>
         <ontology:requiresEquipment rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Thermometer"/>
         <ontology:requiresEquipment rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#WortChiller"/>
-        <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
+        <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog"/>
         <ontology:author>BrewDog</ontology:author>
         <ontology:batchSize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:batchSize>
         <ontology:boilingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:boilingTime>
@@ -6270,17 +6278,21 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat">
         <ontology:cerealName>Canada winter wheat</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:glutenContent>
+                <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450.0</ontology:quantity>
+        <ontology:purpose>body and head retention - enhances foam stability</ontology:purpose>
+        <rdfs:label>Canada Winter Wheat (Easy Pale Ale)</rdfs:label>
+
     </owl:NamedIndividual>
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#Caramalt -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Caramalt">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog">
         <ontology:maltName>Caramalt</ontology:maltName>
         <ontology:ebc rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:ebc>
         <rdfs:comment>Crystal malt for body, sweetness and golden color</rdfs:comment>
-        <rdfs:label>Caramalt</rdfs:label>
+        <rdfs:label>Caramalt_brewdog</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6292,7 +6304,9 @@
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</ontology:alphaAcidPercentage>
         <ontology:hopName>Cascade</ontology:hopName>
         <rdfs:comment>Classic American aroma hop with floral and citrus (grapefruit) character, signature hop of American Pale Ales.</rdfs:comment>
-        <rdfs:label>Cascade</rdfs:label>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</ontology:quantity>
+        <ontology:purpose>dual purpose - bittering, flavor and aroma</ontology:purpose>
+        <rdfs:label>Cascade Hop (Easy Pale Ale)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6304,17 +6318,23 @@
         <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#RiceWheat"/>
         <ontology:cerealName>Rice Wheat</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:glutenContent>
+                <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450.0</ontology:quantity>
+        <ontology:purpose>lightness and crispness - reduces body for easy drinking</ontology:purpose>
+        <rdfs:label>Rice Wheat (Easy Pale Ale)</rdfs:label>
+
     </owl:NamedIndividual>
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#ChinookHop -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog">
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Chinook</ontology:hopName>
+        <ontology:purpose>bittering - added at 60 minutes</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</ontology:quantity>
         <rdfs:comment>American hop variety with piney, spicy character. High alpha acids for bittering</rdfs:comment>
-        <rdfs:label>Chinook</rdfs:label>
+        <rdfs:label>Chinook Hop (BrewDog Punk IPA - Bittering)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6520,13 +6540,13 @@
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog">
         <ontology:maltName>Extra Pale Malt</ontology:maltName>
         <ontology:ebc rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</ontology:ebc>
         <rdfs:comment>Base malt for pale ales and IPAs, provides fermentable sugars</rdfs:comment>
-        <rdfs:label>Extra Pale Malt</rdfs:label>
+        <rdfs:label>Extra Pale Malt Brewdog</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6562,6 +6582,10 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#FlakedOats">
         <ontology:cerealName>Flaked Oats</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:glutenContent>
+        <ontology:purpose>body and mouthfeel - enhances silky smooth texture</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</ontology:quantity>
+        <rdfs:comment>Adds creamy, velvety mouthfeel and body. Essential for Imperial Stout&apos;s characteristic smooth texture. ~7% of grain bill.</rdfs:comment>
+        <rdfs:label>Flaked Oats (Russian Imperial Stout)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6578,7 +6602,7 @@
         <ontology:hasStyle rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout"/>
         <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#WLP007_Yeast"/>
         <ontology:producesBeer rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout"/>
-        <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
+        <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water_RIS"/>
         <ontology:author>Brewing Ben (Brewer&apos;s Friend)</ontology:author>
         <ontology:batchSize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ontology:batchSize>
         <ontology:boilingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</ontology:boilingTime>
@@ -6629,8 +6653,10 @@
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.5</ontology:alphaAcidPercentage>
         <ontology:hopName>Magnum</ontology:hopName>
+        <ontology:purpose>bittering - clean bitterness to balance massive malt sweetness</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</ontology:quantity>
         <rdfs:comment>German high-alpha bittering hop with clean, neutral bitterness and mild hop aroma, excellent for high-gravity beers.</rdfs:comment>
-        <rdfs:label>Magnum</rdfs:label>
+        <rdfs:label>Magnum Hop (Russian Imperial Stout)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6639,8 +6665,10 @@
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter">
         <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
+        <ontology:purpose>base malt - provides fermentable sugars and rich malty character</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5000.0</ontology:quantity>
         <rdfs:comment>Premium British two-row spring barley variety prized for its rich, malty flavor and excellent extract efficiency.</rdfs:comment>
-        <rdfs:label>Maris Otter</rdfs:label>
+        <rdfs:label>Maris Otter (Russian Imperial Stout)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6685,14 +6713,14 @@
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Nelson Sauvin</ontology:hopName>
         <rdfs:comment>New Zealand hop with distinctive white wine, gooseberry character. Signature BrewDog hop</rdfs:comment>
-        <rdfs:label>Nelson Sauvin</rdfs:label>
+        <rdfs:label>Nelson Sauvin Brewdog</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6721,6 +6749,10 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt">
         <ontology:ebcColor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:ebcColor>
         <ontology:maltName>Pale Ale Malt</ontology:maltName>
+                <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3600.0</ontology:quantity>
+        <ontology:purpose>base malt - provides fermentable sugars and golden color</ontology:purpose>
+        <rdfs:label>Pale Ale Malt (Easy Pale Ale)</rdfs:label>
+
     </owl:NamedIndividual>
     
 
@@ -6993,6 +7025,10 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley">
         <ontology:cerealName>Roasted Barley</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontology:glutenContent>
+        <ontology:purpose>color and roasted flavor - coffee and dark chocolate notes</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">600.0</ontology:quantity>
+        <rdfs:comment>Heavily roasted unmalted barley. Provides intense coffee, bitter chocolate and roasty character. Key for stout&apos;s black color (98 EBC). ~8.5% of grain bill.</rdfs:comment>
+        <rdfs:label>Roasted Barley (Russian Imperial Stout)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7033,14 +7069,16 @@
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
         <ontology:hopName>Simcoe</ontology:hopName>
+        <ontology:purpose>aroma and dry-hopping - added at whirlpool and during fermentation</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</ontology:quantity>
         <rdfs:comment>American hop with passion fruit, pine and earthy character</rdfs:comment>
-        <rdfs:label>Simcoe</rdfs:label>
+        <rdfs:label>Simcoe Hop (BrewDog Punk IPA - Aroma/Dry Hop)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7121,6 +7159,37 @@
     
 
 
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog -->
+
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
+        <ontology:purpose>solvent and medium - mashing and sparging</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</ontology:quantity>
+        <rdfs:comment>~25L total water volume for 20L batch. Includes mash water (~12L) and sparge water (~13L). Water chemistry: moderately hard with elevated sulfate for hop character.</rdfs:comment>
+        <rdfs:label>Brewing Water (BrewDog Punk IPA)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Water_RIS -->
+
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_RIS">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
+        <ontology:purpose>solvent and medium - mashing and sparging for high gravity wort</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:quantity>
+        <rdfs:comment>~12L total water for 5L batch (smaller batch due to equipment limitations with high gravity). Includes thick mash (~6L) for maximum extract and concentrated sparge (~6L). Water chemistry: balanced with moderate alkalinity to support dark malts.</rdfs:comment>
+        <rdfs:label>Brewing Water (Russian Imperial Stout)</rdfs:label>
+    </owl:NamedIndividual>
+    
+ <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">26.0</ontology:quantity>
+        <ontology:purpose>solvent and medium - mashing and sparging</ontology:purpose>
+        <rdfs:label>Brewing Water (Easy Pale Ale)</rdfs:label>
+        <rdfs:comment>~26L total water for 20L batch. Simple water profile: no chemistry adjustments needed for beginners. Includes mash water (~13L) and sparge water (~13L). Tap water suitable if chlorine-free.</rdfs:comment>
+    </owl:NamedIndividual>
+
+
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min">
@@ -7141,6 +7210,24 @@
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Immersion or counterflow chiller to rapidly cool wort from boiling to pitching temperature (18-20°C).</rdfs:comment>
         <rdfs:label>Wort Chiller</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rdf.ag/o/hops#HopsNelsonSauvin -->
+
+    <owl:NamedIndividual rdf:about="https://rdf.ag/o/hops#HopsNelsonSauvin">
+        <ontology:purpose>signature aroma - dry-hopping during fermentation</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">31.25</ontology:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rdf.ag/o/malt#ChocolateMalt -->
+
+    <owl:NamedIndividual rdf:about="https://rdf.ag/o/malt#ChocolateMalt">
+        <ontology:purpose>color and flavor complexity - chocolate, nutty and roasted notes</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</ontology:quantity>
     </owl:NamedIndividual>
     
 
@@ -7257,6 +7344,29 @@
         <skos:definition xml:lang="en">This class consists of all types of white wheat whose kernels have soft endosperms.</skos:definition>
         <prov:hadPrimarySource rdf:resource="https://rdf.ag/o/cerealstoo#USDA2014StandardsforWheat"/>
         <foaf:name>SWW</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://rdf.ag/o/hops#HopsNelsonSauvin">
+        <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
+        <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
+        <rdfs:label>Nelson Sauvin Hop (BrewDog Punk IPA - Dry Hop)</rdfs:label>
+        <skos:definition xml:lang="fr">Nelson Sauvin™ est un houblon néo-zélandais déposé en 2000. Son nom est un dérivé du cépage Sauvignon Blanc, auquel beaucoup comparent son arôme.</skos:definition>
+        <skos:definition xml:lang="en">Nelson Sauvin™ is a trademarked hop from New Zealand that was released in 2000. Its name is a derivative of Sauvignon Blanc wine grape, to which many compare its aroma.</skos:definition>
+        <foaf:name>Nelson Sauvin™</foaf:name>
+        <hops:alphaAcidsContent>12-13</hops:alphaAcidsContent>
+        <hops:betaAcidsContent>6-8</hops:betaAcidsContent>
+        <hops:perceivedAroma xml:lang="en">Fruity, Grapefruit, Gooseberry, White Wine</hops:perceivedAroma>
+        <hops:perceivedAroma xml:lang="fr">Fruité, Groseille, Pamplemousse, Vin Blanc</hops:perceivedAroma>
+        <hops:totalOilContent>1.1</hops:totalOilContent>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://rdf.ag/o/malt#ChocolateMalt">
+        <void:inDataset rdf:resource="https://rdf.ag/o/malt#datasetdefinition"/>
+        <rdfs:comment xml:lang="en">For roasted malts, the classes Pale Chocolate Malt, Standard Chocolate Malt and Black Malt have the general ranges of EBC coloring assigned to each of these classes. It is important to note that there are significant gaps between these ranges despite all being in the same Roasted Malt class. This is due to the fact that much of the coloring is at the decretion of the operator of the roasting drum, therefore coloring may vary from malters or even between batches. In the end, it is the malters who decide under which class the product will be marketed.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Pour les malts torréfiés, les classes Malt au Chocolat Pâle, Malt au Chocolat Standard et Malt Noir ont les gammes générales de coloration EBC attribuées à chacune de ces classes. Il est important de noter qu&apos;il existe des écarts importants entre ces gammes, bien qu&apos;elles appartiennent toutes à la même classe de malt torréfié. Cela est dû au fait qu&apos;une grande partie de la coloration est à la décrétion de l&apos;opérateur du tambour de torréfaction, donc la coloration peut varier d&apos;un malter ou même d&apos;un lot à l&apos;autre. En fin de compte, ce sont les malters qui décident sous quelle classe le produit sera commercialisé.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rdf.ag/o/malt-2021-03-24"/>
+        <rdfs:label>Chocolate Malt (Russian Imperial Stout)</rdfs:label>
+        <rdfs:label xml:lang="fr">Malt au Chocolat</rdfs:label>
+        <skos:definition xml:lang="fr">Malts torréfiés qui ont un arôme quelque peu chocolaté et dont la coloration varie de 500-1100 EBC.</skos:definition>
+        <skos:definition xml:lang="en">Roasted malts that that have a somewhat chocolatey aroma and whose coloring varies from 500-1100 EBC.</skos:definition>
     </rdf:Description>
 </rdf:RDF>
 
