@@ -6105,13 +6105,13 @@
         <ontology:maxAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.82</ontology:maxAttenuation>
         <ontology:minAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.78</ontology:minAttenuation>
         <ontology:optimalTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</ontology:optimalTemperature>
+        <ontology:purpose>fermentation - reliable dry yeast with clean profile</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ontology:quantity>
         <ontology:yeastDescription>Neutral, well-balanced American ale yeast producing clean and crisp profiles; suitable for a wide range of ales including American Pale Ale, IPA and stouts.</ontology:yeastDescription>
         <ontology:yeastName>SafAle US-05</ontology:yeastName>
         <rdfs:comment>Clean, neutral American ale yeast producing crisp profiles with medium attenuation, ideal for hop-forward beers.</rdfs:comment>
-        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ontology:quantity>
-        <ontology:purpose>fermentation - reliable dry yeast with clean profile</ontology:purpose>
-        <rdfs:label>US-05 American Ale Yeast (Easy Pale Ale)</rdfs:label> 
-           </owl:NamedIndividual>
+        <rdfs:label>US-05 American Ale Yeast (Easy Pale Ale)</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -6273,15 +6273,14 @@
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat_EPA -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat_EPA">
         <ontology:cerealName>Canada winter wheat</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:glutenContent>
-                <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450.0</ontology:quantity>
         <ontology:purpose>body and head retention - enhances foam stability</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450.0</ontology:quantity>
         <rdfs:label>Canada Winter Wheat (Easy Pale Ale)</rdfs:label>
-
     </owl:NamedIndividual>
     
 
@@ -6297,31 +6296,30 @@
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#CascadeHop -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#CascadeHop_EPA -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop_EPA">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</ontology:alphaAcidPercentage>
         <ontology:hopName>Cascade</ontology:hopName>
-        <rdfs:comment>Classic American aroma hop with floral and citrus (grapefruit) character, signature hop of American Pale Ales.</rdfs:comment>
-        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</ontology:quantity>
         <ontology:purpose>dual purpose - bittering, flavor and aroma</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</ontology:quantity>
+        <rdfs:comment>Classic American aroma hop with floral and citrus (grapefruit) character, signature hop of American Pale Ales.</rdfs:comment>
         <rdfs:label>Cascade Hop (Easy Pale Ale)</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat_EPA -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat_EPA">
         <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
         <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#RiceWheat"/>
         <ontology:cerealName>Rice Wheat</ontology:cerealName>
         <ontology:glutenContent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontology:glutenContent>
-                <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450.0</ontology:quantity>
         <ontology:purpose>lightness and crispness - reduces body for easy drinking</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">450.0</ontology:quantity>
         <rdfs:label>Rice Wheat (Easy Pale Ale)</rdfs:label>
-
     </owl:NamedIndividual>
     
 
@@ -6513,13 +6511,13 @@
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe">
         <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat"/>
-        <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat"/>
-        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop"/>
-        <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt"/>
+        <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat_EPA"/>
+        <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat_EPA"/>
+        <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop_EPA"/>
+        <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt_EPA"/>
         <ontology:hasStyle rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#PaleAle"/>
         <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#US05_Yeast"/>
-        <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
+        <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA"/>
         <ontology:author>Unknown</ontology:author>
         <ontology:batchSize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:batchSize>
         <ontology:boilingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:boilingTime>
@@ -6744,15 +6742,14 @@
     
 
 
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt_EPA -->
 
-    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt">
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt_EPA">
         <ontology:ebcColor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:ebcColor>
         <ontology:maltName>Pale Ale Malt</ontology:maltName>
-                <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3600.0</ontology:quantity>
         <ontology:purpose>base malt - provides fermentable sugars and golden color</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3600.0</ontology:quantity>
         <rdfs:label>Pale Ale Malt (Easy Pale Ale)</rdfs:label>
-
     </owl:NamedIndividual>
     
 
@@ -7171,6 +7168,18 @@
     
 
 
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA -->
+
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA">
+        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
+        <ontology:purpose>solvent and medium - mashing and sparging</ontology:purpose>
+        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">26.0</ontology:quantity>
+        <rdfs:comment>~26L total water for 20L batch. Simple water profile: no chemistry adjustments needed for beginners. Includes mash water (~13L) and sparge water (~13L). Tap water suitable if chlorine-free.</rdfs:comment>
+        <rdfs:label>Brewing Water (Easy Pale Ale)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Water_RIS -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_RIS">
@@ -7181,13 +7190,6 @@
         <rdfs:label>Brewing Water (Russian Imperial Stout)</rdfs:label>
     </owl:NamedIndividual>
     
- <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
-        <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">26.0</ontology:quantity>
-        <ontology:purpose>solvent and medium - mashing and sparging</ontology:purpose>
-        <rdfs:label>Brewing Water (Easy Pale Ale)</rdfs:label>
-        <rdfs:comment>~26L total water for 20L batch. Simple water profile: no chemistry adjustments needed for beginners. Includes mash water (~13L) and sparge water (~13L). Tap water suitable if chlorine-free.</rdfs:comment>
-    </owl:NamedIndividual>
 
 
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min -->
