@@ -19,6 +19,53 @@
     <owl:Ontology rdf:about="https://mega2799.github.io/web-semantico/index-en.html">
         <rdfs:label>Beerecipe</rdfs:label>
         <index-en:description>An ontology to follow and study about beer-recipes</index-en:description>
+
+         <!-- Titolo -->
+    <dcterms:title xml:lang="en">Beer Recipe Ontology</dcterms:title>
+    <dcterms:title xml:lang="it">Ontologia delle Ricette Birrarie</dcterms:title>
+    
+    <!-- Descrizione estesa -->
+    <dcterms:description xml:lang="en">
+        A comprehensive ontology for modeling beer brewing recipes, including ingredients 
+        (malts, hops, yeasts, cereals), brewing steps, equipment, styles, and their relationships.
+    </dcterms:description>
+    <dcterms:description xml:lang="it">
+        Un'ontologia completa per modellare ricette di birra, includendo ingredienti, 
+        fasi di produzione, attrezzature, stili e le loro relazioni.
+    </dcterms:description>
+    
+    <!-- Abstract breve -->
+    <dcterms:abstract xml:lang="en">
+        An OWL ontology to represent beer brewing recipes with semantic web technologies
+    </dcterms:abstract>
+    
+    <!-- Autore -->
+    <dcterms:creator>Matteo Santoro</dcterms:creator>
+    <dcterms:creator rdf:resource="https://github.com/mega2799"/>
+    
+    <!-- Versione -->
+    <owl:versionInfo>1.0.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://mega2799.github.io/web-semantico/1.0.0/"/>
+    
+    <!-- Licenza -->
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Namespace preferito -->
+    <vann:preferredNamespacePrefix>beerecipe</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceURI>https://mega2799.github.io/web-semantico/index-en.html#</vann:preferredNamespaceURI>
+    
+    <!-- Riferimenti -->
+    <dcterms:references rdf:resource="https://www.bjcp.org/"/>
+    <dcterms:references rdf:resource="https://rdf.ag/o/hops"/>
+    
+    <!-- Keywords -->
+    <dcterms:subject>beer</dcterms:subject>
+    <dcterms:subject>brewing</dcterms:subject>
+    <dcterms:subject>recipe</dcterms:subject>
+    <dcterms:subject>ontology</dcterms:subject>
+    
+    <!-- Fonte di ispirazione -->
+    <prov:hadPrimarySource rdf:resource="https://www.brewersfriend.com/"/>
     </owl:Ontology>
     
 
