@@ -1,0 +1,35 @@
+<h2>Introduction</h2>
+
+<h3>Motivation</h3>
+<p>
+Homebrewing and craft beer production generate vast amounts of recipe data across forums, 
+applications, and brewing software. However, this knowledge remains fragmented and difficult to 
+query semantically. The Beer Recipe Ontology addresses this gap by providing a formal, 
+machine-readable representation of brewing knowledge.
+</p>
+
+<h3>Scope and Coverage</h3>
+<p>The ontology covers:</p>
+<ul>
+    <li><strong>Ingredients</strong>: Detailed modeling of malts, hops (with alpha acids), yeasts (fermentation characteristics), cereals, and water profiles</li>
+    <li><strong>Recipes</strong>: Complete recipe specifications with measurements, brewing parameters (OG, FG, ABV, IBU, EBC)</li>
+    <li><strong>Brewing Process</strong>: Sequential steps (mashing, boiling, fermentation, conditioning) with time and temperature parameters</li>
+    <li><strong>Beer Styles</strong>: BJCP-inspired style classifications with acceptable parameter ranges</li>
+    <li><strong>Equipment</strong>: Brewing equipment requirements with transitive dependencies</li>
+</ul>
+
+<h3>Key Features</h3>
+<ul>
+    <li><strong>Property Chain Axioms</strong>: Automatic inference of beer style from recipe (hasBeerStyle inferred from isProducedBy ∘ hasStyle)</li>
+    <li><strong>Defined Classes</strong>: SessionBeer, StrongBeer, and BeginnerRecipe with automatic classification based on ABV and difficulty</li>
+    <li><strong>Cardinality Constraints</strong>: Recipes must have at least 1 malt, 1 hop, 1 cereal, 1 water, and exactly 1 yeast</li>
+    <li><strong>Symmetric Properties</strong>: Ingredient substitution and recipe similarity</li>
+</ul>
+
+<h3>Target Users</h3>
+<ul>
+    <li>Homebrewers seeking recipe recommendations</li>
+    <li>Brewing software developers building semantic search features</li>
+    <li>Researchers studying beer styles and ingredient interactions</li>
+    <li>Semantic web practitioners interested in food/beverage ontologies</li>
+</ul>

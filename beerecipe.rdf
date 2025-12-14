@@ -2,6 +2,8 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/matte/beerecipe/"
      xml:base="http://www.semanticweb.org/matte/beerecipe/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
