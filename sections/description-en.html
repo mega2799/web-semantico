@@ -1,6 +1,15 @@
 <h2 id="desc" class="list">Beerecipe: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
 <span class="markdown">
-        A comprehensive ontology for modeling beer brewing recipes, including ingredients 
-        (malts, hops, yeasts, cereals), brewing steps, equipment, styles, and their relationships.
-    </span>
+MOTIVATION: The craft beer and homebrewing communities generate vast amounts of recipe data across brewing forums, recipe sharing platforms, and specialized software applications. However, this knowledge remains fragmented in proprietary formats and unstructured text, making it difficult to perform semantic queries, discover recipe patterns, or build intelligent recommendation systems. The Beer Recipe Ontology addresses this gap by providing a formal, standardized, machine-readable representation of brewing knowledge that enables data integration, semantic search, and automated reasoning.
+
+SCOPE: This ontology covers the complete lifecycle of beer recipe creation and execution, from ingredient selection through final product characterization. It models the relationships between ingredients and their properties, the sequential nature of brewing processes with precise parameters, the classification of beer styles with acceptable ranges, and the equipment requirements for recipe execution. The ontology is designed to support both professional brewers documenting production recipes and homebrewers sharing and discovering community recipes.
+
+KEY FEATURES: The ontology implements several advanced semantic web patterns including property chain axioms that automatically infer beer style from recipe characteristics (hasBeerStyle inferred from isProducedBy composed with hasStyle), defined classes using equivalence axioms for automatic recipe classification (SessionBeer, StrongBeer, BeginnerRecipe), cardinality restrictions ensuring recipe completeness (minimum one malt, hop, cereal, water; exactly one yeast), symmetric properties for bidirectional relationships (ingredient substitution, recipe similarity), and transitive properties for dependency propagation (equipment requirements).
+
+TARGET USERS: This ontology serves multiple user communities including homebrewers seeking recipe recommendations based on available ingredients or desired beer characteristics, professional brewers documenting production processes and ensuring consistency across batches, brewing software developers building semantic search and recommendation features, researchers studying relationships between ingredients and beer styles or analyzing flavor profile patterns, and semantic web practitioners interested in food and beverage domain modeling.
+
+INTEGRATION: The ontology maintains compatibility with existing brewing knowledge bases by integrating external vocabularies including the hops ontology (rdf.ag/o/hops) for detailed hop variety characterization, the malt ontology (rdf.ag/o/malt) for malt specifications, FOODON for general food ingredient classification, and PROV-O for provenance tracking. This integration ensures that the ontology can participate in the broader linked data ecosystem and leverage existing brewing data sources.
+
+EXTENSIBILITY: The modular design allows for future extensions including sensory evaluation vocabularies for linking recipes to tasting notes and flavor profiles, commercial brewing extensions for production planning and inventory management, historical beer style documentation for preserving traditional brewing knowledge, and regional ingredient databases for terroir-based recipe recommendations.
+</span>
