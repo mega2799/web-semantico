@@ -14,7 +14,7 @@
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:index-en="https://mega2799.github.io/web-semantico/index-en.html#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:ontology="http://www.beerecipe.com/ontology#"
+     xmlns:ontology="https://mega2799.github.io/web-semantico/index-en.html#"
      xmlns:untitled-ontology-4="http://www.semanticweb.org/matte/ontologies/2025/10/untitled-ontology-4#">
     <owl:Ontology rdf:about="https://mega2799.github.io/web-semantico/index-en.html">
         <rdfs:label>Beerecipe</rdfs:label>
@@ -57,9 +57,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#ebc -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#ebc -->
 
-    <owl:AnnotationProperty rdf:about="http://www.beerecipe.com/ontology#ebc"/>
+    <owl:AnnotationProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ebc"/>
     
 
 
@@ -192,14 +192,14 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasBeerStyle -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasBeerStyle -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasBeerStyle">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasBeerStyle">
         <rdfs:domain rdf:resource="https://rdf.ag/o/beer#Beer"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isProducedBy"/>
-            <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasStyle"/>
+            <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isProducedBy"/>
+            <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasStyle"/>
         </owl:propertyChainAxiom>
         <rdfs:comment>Style of the beer, inferred from the recipe that produces it</rdfs:comment>
         <rdfs:label>has beer style</rdfs:label>
@@ -207,271 +207,271 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasBrewingStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasBrewingStep -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasBrewingStep">
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isStepOf"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasBrewingStep">
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isStepOf"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasCereal -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasCereal -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasCereal">
-        <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isCerealOf"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasCereal">
+        <rdfs:subPropertyOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasIngredient"/>
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isCerealOf"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasDifficultyLevel -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasDifficultyLevel -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasDifficultyLevel">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasDifficultyLevel">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#DifficultyLevel"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#DifficultyLevel"/>
         <rdfs:comment>Connects a recipe to its difficulty level classification</rdfs:comment>
         <rdfs:label>has difficulty level</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasFlavorProfile -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasFlavorProfile -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasFlavorProfile">
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isFlavorOf"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasFlavorProfile">
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isFlavorOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#FlavorProfile"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#FlavorProfile"/>
         <rdfs:comment>Connects an ingredient to its flavor profile (citrus, pine, floral, etc.)</rdfs:comment>
         <rdfs:label>has flavor profile</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasHop -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasHop -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasHop">
-        <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isHopOf"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasHop">
+        <rdfs:subPropertyOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasIngredient"/>
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isHopOf"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="https://rdf.ag/o/hops#Hops"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasIngredient -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasIngredient -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasIngredient">
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isIngredientOf"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasIngredient">
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isIngredientOf"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasMalt -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasMalt -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasMalt">
-        <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isMaltOf"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasMalt">
+        <rdfs:subPropertyOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasIngredient"/>
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isMaltOf"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="https://rdf.ag/o/malt#Malt"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasOriginCountry -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasOriginCountry -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasOriginCountry">
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isOriginOf"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasOriginCountry">
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isOriginOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Country"/>
         <rdfs:comment>Connects an ingredient to its country of origin</rdfs:comment>
         <rdfs:label>has origin country</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasStyle -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasStyle -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasStyle">
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isStyleOf"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasStyle">
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isStyleOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasYeast -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasYeast -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#hasYeast">
-        <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#isYeastOf"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasYeast">
+        <rdfs:subPropertyOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasIngredient"/>
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#isYeastOf"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isCerealOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isCerealOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isCerealOf">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isCerealOf">
         <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isFlavorOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isFlavorOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isFlavorOf">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#FlavorProfile"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isFlavorOf">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#FlavorProfile"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:comment>Indicates which ingredients have this flavor profile</rdfs:comment>
         <rdfs:label>is flavor of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isHopOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isHopOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isHopOf">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isHopOf">
         <rdfs:domain rdf:resource="https://rdf.ag/o/hops#Hops"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isIngredientOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isIngredientOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isIngredientOf">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isIngredientOf">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isMaltOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isMaltOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isMaltOf">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isMaltOf">
         <rdfs:domain rdf:resource="https://rdf.ag/o/malt#Malt"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isOriginOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isOriginOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isOriginOf">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Country"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isOriginOf">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Country"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isProducedBy -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isProducedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isProducedBy">
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#producesBeer"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isProducedBy">
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#producesBeer"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isRequiredBy -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isRequiredBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isRequiredBy">
-        <owl:inverseOf rdf:resource="http://www.beerecipe.com/ontology#requiresEquipment"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isRequiredBy">
+        <owl:inverseOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#requiresEquipment"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isSimilarTo -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isSimilarTo -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isSimilarTo">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isSimilarTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isStepOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isStepOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isStepOf">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isStepOf">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isStyleOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isStyleOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isStyleOf">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isStyleOf">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isSubstituteOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isSubstituteOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isSubstituteOf">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isSubstituteOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:comment>Indicates that one ingredient can substitute another. This is a symmetric property.</rdfs:comment>
         <rdfs:label>is substitute of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isSuitableFor -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isSuitableFor -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isSuitableFor">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#DietaryRequirement"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isSuitableFor">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#DietaryRequirement"/>
         <rdfs:comment>Indicates dietary requirements that a recipe is suitable for (vegan, gluten-free, etc.)</rdfs:comment>
         <rdfs:label>is suitable for</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isYeastOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isYeastOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#isYeastOf">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isYeastOf">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#producesBeer -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#producesBeer -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#producesBeer">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#producesBeer">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="https://rdf.ag/o/beer#Beer"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#requiresEquipment -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#requiresEquipment -->
 
-    <owl:ObjectProperty rdf:about="http://www.beerecipe.com/ontology#requiresEquipment">
+    <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#requiresEquipment">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
+        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <rdfs:comment>Connects a recipe to the equipment required</rdfs:comment>
         <rdfs:label>requires equipment</rdfs:label>
     </owl:ObjectProperty>
@@ -481,8 +481,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#hasWater -->
 
     <owl:ObjectProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasWater">
-        <rdfs:subPropertyOf rdf:resource="http://www.beerecipe.com/ontology#hasIngredient"/>
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subPropertyOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasIngredient"/>
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
     </owl:ObjectProperty>
     
@@ -499,9 +499,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#additionTime -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#additionTime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#additionTime">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#additionTime">
         <rdfs:domain rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Time of addition in minutes from start of boil (e.g., 60, 15, 0)</rdfs:comment>
@@ -510,9 +510,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#alphaAcidPercentage -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#alphaAcidPercentage -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#alphaAcidPercentage">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#alphaAcidPercentage">
         <rdfs:domain rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Alpha acid percentage of the hop</rdfs:comment>
@@ -521,10 +521,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#author -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#author -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#author">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#author">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The author or creator of the recipe</rdfs:comment>
         <rdfs:label>author</rdfs:label>
@@ -532,10 +532,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#batchSize -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#batchSize -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#batchSize">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#batchSize">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Volume of beer produced in liters</rdfs:comment>
         <rdfs:label>batch size</rdfs:label>
@@ -543,10 +543,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#boilingTime -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#boilingTime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#boilingTime">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#boilingTime">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Duration of the boiling step in minutes</rdfs:comment>
         <rdfs:label>boiling time</rdfs:label>
@@ -554,9 +554,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#cerealName -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#cerealName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#cerealName">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#cerealName">
         <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the cereal</rdfs:comment>
@@ -565,9 +565,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#cerealType -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#cerealType -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#cerealType">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#cerealType">
         <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The type of the cereal, possible values: &quot;barley&quot;, &quot;wheat&quot;, &quot;oats&quot;, &quot;rice&quot;, &quot;rye&quot;, &quot;corn&quot; </rdfs:comment>
@@ -576,10 +576,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#conditioningDuration -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#conditioningDuration -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#conditioningDuration">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#conditioningDuration">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Duration of conditioning in days</rdfs:comment>
         <rdfs:label>conditioning duration</rdfs:label>
@@ -587,10 +587,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#creationDate -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#creationDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#creationDate">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#creationDate">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment>The date when the recipe was created</rdfs:comment>
         <rdfs:label>creation date</rdfs:label>
@@ -598,10 +598,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#difficultyLevel -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#difficultyLevel -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#difficultyLevel">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#difficultyLevel">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Difficulty level: beginner, intermediate, advanced, or expert</rdfs:comment>
         <rdfs:label>difficulty level</rdfs:label>
@@ -609,9 +609,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#ebcColor -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#ebcColor -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#ebcColor">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ebcColor">
         <rdfs:domain rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Color contribution in EBC units</rdfs:comment>
@@ -620,10 +620,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#estimatedABV -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#estimatedABV -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#estimatedABV">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#estimatedABV">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Estimated Alcohol By Volume percentage</rdfs:comment>
         <rdfs:label>estimated ABV</rdfs:label>
@@ -631,10 +631,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#estimatedEBC -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#estimatedEBC -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#estimatedEBC">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#estimatedEBC">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Estimated color in European Brewery Convention units</rdfs:comment>
         <rdfs:label>estimated EBC</rdfs:label>
@@ -642,10 +642,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#estimatedIBU -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#estimatedIBU -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#estimatedIBU">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#estimatedIBU">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Estimated International Bitterness Units</rdfs:comment>
         <rdfs:label>estimated IBU</rdfs:label>
@@ -653,10 +653,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#fermentationDuration -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#fermentationDuration -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#fermentationDuration">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#fermentationDuration">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Duration of fermentation in days</rdfs:comment>
         <rdfs:label>fermentation duration</rdfs:label>
@@ -664,10 +664,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#finalGravity -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#finalGravity -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#finalGravity">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#finalGravity">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Final gravity of the beer after fermentation</rdfs:comment>
         <rdfs:label>final gravity</rdfs:label>
@@ -675,9 +675,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#glutenContent -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#glutenContent -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#glutenContent">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#glutenContent">
         <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Indicates if the cereal contains gluten</rdfs:comment>
@@ -686,18 +686,18 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasStyle -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#hasStyle -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasStyle">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasStyle">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#ingredientName -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#ingredientName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#ingredientName">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ingredientName">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the ingredient</rdfs:comment>
         <rdfs:label>ingredient name</rdfs:label>
@@ -705,10 +705,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isGlutenFree -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isGlutenFree -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isGlutenFree">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isGlutenFree">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Indicates if the recipe is gluten-free</rdfs:comment>
         <rdfs:label>is gluten free</rdfs:label>
@@ -716,16 +716,16 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isIngredientOf -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isIngredientOf -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isIngredientOf"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isIngredientOf"/>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isVegan -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#isVegan -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isVegan">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isVegan">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Indicates if the recipe is suitable for vegans</rdfs:comment>
         <rdfs:label>is vegan</rdfs:label>
@@ -733,9 +733,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#maltName -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#maltName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#maltName">
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#maltName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the malt</rdfs:comment>
         <rdfs:label>malt name</rdfs:label>
@@ -743,10 +743,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#mashingTime -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#mashingTime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#mashingTime">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#mashingTime">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Duration of the mashing step in minutes</rdfs:comment>
         <rdfs:label>mashing time</rdfs:label>
@@ -754,10 +754,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#maxABV -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#maxABV -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#maxABV">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#maxABV">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Maximum ABV for this beer style</rdfs:comment>
         <rdfs:label>maximum ABV</rdfs:label>
@@ -765,10 +765,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#maxAttenuation -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#maxAttenuation -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#maxAttenuation">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#maxAttenuation">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Maximum expected attenuation as percentage (numeric value).</rdfs:comment>
         <rdfs:label xml:lang="en">maxAttenuation</rdfs:label>
@@ -776,10 +776,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#maxIBU -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#maxIBU -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#maxIBU">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#maxIBU">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Maximum IBU for this beer style</rdfs:comment>
         <rdfs:label>maximum IBU</rdfs:label>
@@ -787,10 +787,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#minABV -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#minABV -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#minABV">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#minABV">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Minimum ABV for this beer style</rdfs:comment>
         <rdfs:label>minimum ABV</rdfs:label>
@@ -798,10 +798,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#minAttenuation -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#minAttenuation -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#minAttenuation">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#minAttenuation">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Minimum expected attenuation as percentage (numeric value, e.g. 68 or 0.68 depending on convention).</rdfs:comment>
         <rdfs:label xml:lang="en">minAttenuation</rdfs:label>
@@ -809,10 +809,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#minIBU -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#minIBU -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#minIBU">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#minIBU">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Minimum IBU for this beer style</rdfs:comment>
         <rdfs:label>minimum IBU</rdfs:label>
@@ -820,10 +820,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#optimalTemperature -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#optimalTemperature -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#optimalTemperature">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#optimalTemperature">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment xml:lang="en">Optimal fermentation temperature (degrees Celsius).</rdfs:comment>
         <rdfs:label xml:lang="en">optimalTemperature</rdfs:label>
@@ -831,10 +831,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#originalGravity -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#originalGravity -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#originalGravity">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#originalGravity">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Original gravity of the wort before fermentation</rdfs:comment>
         <rdfs:label>original gravity</rdfs:label>
@@ -842,10 +842,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#purpose -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#purpose -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#purpose">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#purpose">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Describes the specific purpose or role of an ingredient in the recipe (e.g., bittering, aroma, dry-hopping for hops; base malt, color, body for malts; fermentation character for yeast)</rdfs:comment>
         <rdfs:label xml:lang="en">purpose</rdfs:label>
@@ -854,10 +854,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#quantity -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#quantity -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#quantity">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#quantity">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Quantity of ingredient used</rdfs:comment>
         <rdfs:label>quantity</rdfs:label>
@@ -865,10 +865,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#recipeDescription -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#recipeDescription -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#recipeDescription">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#recipeDescription">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>A textual description of the recipe</rdfs:comment>
         <rdfs:label>recipe description</rdfs:label>
@@ -876,10 +876,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#recipeName -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#recipeName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#recipeName">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#recipeName">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the recipe</rdfs:comment>
         <rdfs:label>recipe name</rdfs:label>
@@ -887,10 +887,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#servingTemperature -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#servingTemperature -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#servingTemperature">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#servingTemperature">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Recommended serving temperature in Celsius</rdfs:comment>
         <rdfs:label>serving temperature</rdfs:label>
@@ -898,10 +898,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#stepDuration -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#stepDuration -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#stepDuration">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#stepDuration">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Duration of the step in minutes</rdfs:comment>
         <rdfs:label>step duration</rdfs:label>
@@ -909,10 +909,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#stepInstructions -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#stepInstructions -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#stepInstructions">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#stepInstructions">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Detailed instructions for the brewing step</rdfs:comment>
         <rdfs:label>step instructions</rdfs:label>
@@ -920,10 +920,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#stepName -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#stepName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#stepName">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#stepName">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the brewing step</rdfs:comment>
         <rdfs:label>step name</rdfs:label>
@@ -931,10 +931,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#stepOrder -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#stepOrder -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#stepOrder">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#stepOrder">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Order of the step in the brewing process (1, 2, 3...)</rdfs:comment>
         <rdfs:label>step order</rdfs:label>
@@ -942,10 +942,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#stepTemperature -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#stepTemperature -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#stepTemperature">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#stepTemperature">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Temperature of the step in Celsius</rdfs:comment>
         <rdfs:label>step temperature</rdfs:label>
@@ -953,10 +953,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#styleDescription -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#styleDescription -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#styleDescription">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#styleDescription">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Description of the beer style characteristics</rdfs:comment>
         <rdfs:label>style description</rdfs:label>
@@ -964,10 +964,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#styleName -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#styleName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#styleName">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#styleName">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the beer style</rdfs:comment>
         <rdfs:label>style name</rdfs:label>
@@ -975,10 +975,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#totalBrewingTime -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#totalBrewingTime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#totalBrewingTime">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#totalBrewingTime">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment>Total brewing time in minutes</rdfs:comment>
         <rdfs:label>total brewing time</rdfs:label>
@@ -986,10 +986,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#unit -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#unit -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#unit">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#unit">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Unit of measurement: grams, kg, liters, ml, oz, lbs</rdfs:comment>
         <rdfs:label>unit</rdfs:label>
@@ -997,10 +997,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#yeastDescription -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#yeastDescription -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#yeastDescription">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#yeastDescription">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Short description of yeast characteristics, flavors and typical uses.</rdfs:comment>
         <rdfs:label xml:lang="en">yeastDescription</rdfs:label>
@@ -1008,10 +1008,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#yeastName -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#yeastName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#yeastName">
-        <rdfs:domain rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:DatatypeProperty rdf:about="https://mega2799.github.io/web-semantico/index-en.html#yeastName">
+        <rdfs:domain rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Human-readable name of the yeast strain.</rdfs:comment>
         <rdfs:label xml:lang="en">yeastName</rdfs:label>
@@ -1066,9 +1066,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#BeerStyle -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#BeerStyle -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BeerStyle">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle">
         <rdfs:comment xml:lang="en">A beer style is a classification of beer based on various factors including appearance, flavor, ingredients, production method, history, and origin. Beer styles provide guidelines for acceptable ranges of characteristics such as color, bitterness, alcohol content, and aroma.</rdfs:comment>
         <rdfs:label xml:lang="en">Beer Style</rdfs:label>
         <skos:definition xml:lang="en">A categorization system for beer that defines characteristic ranges for properties like ABV, IBU, color (EBC/SRM), and typical flavor profiles. Styles are often defined by brewing organizations like BJCP or Brewers Association.</skos:definition>
@@ -1078,19 +1078,19 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#BoilStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#BoilStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BoilStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BoilStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:comment xml:lang="en">Step where wort is boiled to sterilize and isomerize hop alpha acids.</rdfs:comment>
         <rdfs:label>Boil Step</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#BrewingStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#BrewingStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#BrewingStep">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep">
         <rdfs:comment xml:lang="en">A brewing step represents a specific stage in the beer production process. Each step has defined parameters including duration, temperature, and specific instructions. Common steps include mashing, lautering, boiling, fermentation, and conditioning.</rdfs:comment>
         <rdfs:label xml:lang="en">Brewing Step</rdfs:label>
         <skos:definition xml:lang="en">An individual procedural stage in the brewing process, characterized by specific time duration, temperature, order of execution, and detailed instructions that must be followed to achieve desired beer characteristics.</skos:definition>
@@ -1100,29 +1100,29 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#ConditioningStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#ConditioningStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#ConditioningStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ConditioningStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:comment xml:lang="en">Maturation phase where beer flavors develop, clarifies, and stabilizes.</rdfs:comment>
         <rdfs:label>Conditioning Step</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#CoolingStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#CoolingStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#CoolingStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CoolingStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:comment xml:lang="en">Step to cool wort to yeast pitching temperature.</rdfs:comment>
         <rdfs:label>Cooling Step</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Country -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Country -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Country">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Country">
         <rdfs:comment xml:lang="en">A country represents a geographical and political entity that is the origin of brewing ingredients, beer styles, or brewing traditions. Different countries have distinct brewing histories, indigenous ingredients, and characteristic beer styles.</rdfs:comment>
         <rdfs:label xml:lang="en">Country</rdfs:label>
         <skos:definition xml:lang="en">A nation state or geographical region that serves as the origin or source for brewing ingredients (hops, malts, yeast strains) or beer styles, often influencing the characteristics and traditions of beer production.</skos:definition>
@@ -1132,9 +1132,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#DietaryRequirement -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#DietaryRequirement -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#DietaryRequirement">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#DietaryRequirement">
         <rdfs:comment xml:lang="en">Dietary requirements represent specific nutritional, health, or ethical restrictions that individuals may have regarding food and beverage consumption. In brewing, this includes considerations for allergens, animal products, and specific ingredients that certain populations avoid.</rdfs:comment>
         <rdfs:label xml:lang="en">Dietary Requirement</rdfs:label>
         <skos:definition xml:lang="en">A classification of dietary restrictions or preferences that a beer recipe may satisfy, including but not limited to vegan, gluten-free, organic, low-calorie, or allergen-free requirements.</skos:definition>
@@ -1144,9 +1144,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#DifficultyLevel -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#DifficultyLevel -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#DifficultyLevel">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#DifficultyLevel">
         <rdfs:comment xml:lang="en">The difficulty level of a beer recipe indicates the complexity of the brewing process, the precision required, the equipment needed, and the brewing experience necessary to successfully execute the recipe. It helps brewers select appropriate recipes for their skill level.</rdfs:comment>
         <rdfs:label xml:lang="en">Difficulty Level</rdfs:label>
         <skos:definition xml:lang="en">A classification of brewing complexity typically ranging from beginner to expert, based on factors such as number of ingredients, precision of temperature control required, complexity of brewing steps, fermentation management, and specialized equipment needs.</skos:definition>
@@ -1156,9 +1156,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Equipment -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Equipment -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Equipment">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Equipment">
         <rdfs:comment xml:lang="en">Brewing equipment encompasses all tools, vessels, and instruments required to execute a beer recipe. Equipment ranges from basic household items for beginner brewing to specialized professional-grade machinery for advanced techniques and commercial production.</rdfs:comment>
         <rdfs:label xml:lang="en">Equipment</rdfs:label>
         <skos:definition xml:lang="en">Physical tools, vessels, instruments, and machinery used in the beer brewing process, including items for mashing, boiling, fermentation, temperature control, filtration, carbonation, and packaging.</skos:definition>
@@ -1168,19 +1168,19 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#FermentationStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#FermentationStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#FermentationStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#FermentationStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:comment xml:lang="en">Yeast converts sugars into alcohol and CO2; primary fermentation phase.</rdfs:comment>
         <rdfs:label>Fermentation Step</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#FlavorProfile -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#FlavorProfile -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#FlavorProfile">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#FlavorProfile">
         <rdfs:comment xml:lang="en">A flavor profile describes the characteristic tastes, aromas, and sensory attributes of an ingredient or finished beer. For ingredients, it indicates the contribution they make to the final beer. Flavor profiles help brewers select appropriate ingredients to achieve desired beer characteristics.</rdfs:comment>
         <rdfs:label xml:lang="en">Flavor Profile</rdfs:label>
         <skos:definition xml:lang="en">A structured description of sensory characteristics including taste (bitter, sweet, sour, salty, umami), aroma compounds (fruity, floral, piney, spicy, earthy), mouthfeel, and overall flavor impression contributed by an ingredient or present in a finished beer.</skos:definition>
@@ -1190,9 +1190,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Ingredient -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Ingredient -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Ingredient">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Ingredient">
         <rdfs:comment xml:lang="en">An ingredient is any substance added during the brewing process that contributes to the final beer&apos;s characteristics. The four essential ingredients are water, malt (or other fermentable grains), hops, and yeast, though many additional ingredients can be used for flavor, color, or functional purposes.</rdfs:comment>
         <rdfs:label xml:lang="en">Ingredient</rdfs:label>
         <skos:definition xml:lang="en">A component substance used in beer production that contributes to flavor, aroma, color, body, fermentable sugars, bitterness, preservation, or other characteristics of the finished beer. Ingredients include malted and unmalted grains, hops, yeast, water, and adjuncts.</skos:definition>
@@ -1202,23 +1202,23 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#MashOutStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#MashOutStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#MashOutStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#MashOutStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <rdfs:comment xml:lang="en">Step to stop enzymatic activity and raise mash temperature before lautering.</rdfs:comment>
         <rdfs:label>MashOut Step</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#MashStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#MashStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#MashStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#MashStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#stepTemperature"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1228,25 +1228,25 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Recipe -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Recipe -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Recipe">
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasCereal"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasCereal"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasHop"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasHop"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://rdf.ag/o/hops#Hops"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasMalt"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasMalt"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://rdf.ag/o/malt#Malt"/>
                     </owl:Restriction>
@@ -1256,18 +1256,18 @@
                         <owl:onClass rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasYeast"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasYeast"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+                        <owl:onClass rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasStyle"/>
+                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasStyle"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+                <owl:onClass rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A beer recipe describes the complete process and ingredients needed to produce a specific type of beer. It includes information about malts, hops, yeast, water chemistry, brewing steps, and expected characteristics of the final product.</rdfs:comment>
@@ -1278,36 +1278,36 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#SpargeStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#SpargeStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#SpargeStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#SpargeStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:comment xml:lang="en">Rinse the grains to extract remaining sugars and increase wort yield.</rdfs:comment>
         <rdfs:label>Sparge Step</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Water -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Water -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Water"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#WhirlpoolStep -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#WhirlpoolStep -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#WhirlpoolStep">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#WhirlpoolStep">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <rdfs:comment xml:lang="en">Clarifies wort by separating hops and trub after boiling.</rdfs:comment>
         <rdfs:label>Whirlpool Step</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Yeast -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#Yeast -->
 
-    <owl:Class rdf:about="http://www.beerecipe.com/ontology#Yeast">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+    <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Yeast">
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal"/>
         <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
         <owl:disjointWith rdf:resource="https://rdf.ag/o/hops#Hops"/>
@@ -1327,15 +1327,15 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#difficultyLevel"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#difficultyLevel"/>
                         <owl:hasValue>advanced</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeginnerRecipe"/>
         <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe"/>
     </owl:Class>
@@ -1348,15 +1348,15 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#difficultyLevel"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#difficultyLevel"/>
                         <owl:hasValue>beginner</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <owl:disjointWith rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ExpertRecipe"/>
     </owl:Class>
     
@@ -1365,17 +1365,17 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Cereal -->
 
     <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Cereal">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Ingredient"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#cerealType"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#cerealType"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#glutenContent"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#glutenContent"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1394,15 +1394,15 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#difficultyLevel"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#difficultyLevel"/>
                         <owl:hasValue>expert</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1410,7 +1410,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#FoodIngredient -->
 
     <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#FoodIngredient">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
     </owl:Class>
     
 
@@ -1421,12 +1421,12 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasCereal"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasCereal"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#glutenContent"/>
+                                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#glutenContent"/>
                                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
                             </owl:Restriction>
                         </owl:someValuesFrom>
@@ -1434,7 +1434,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1442,13 +1442,13 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#IPARecipe -->
 
     <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#IPARecipe">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hasHop"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#hasHop"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://rdf.ag/o/hops#Hops"/>
                     </owl:Restriction>
@@ -1465,9 +1465,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#estimatedABV"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#estimatedABV"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -1482,7 +1482,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1493,15 +1493,15 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#difficultyLevel"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#difficultyLevel"/>
                         <owl:hasValue>intermediate</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1512,9 +1512,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#estimatedABV"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#estimatedABV"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -1529,7 +1529,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1548,9 +1548,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#estimatedABV"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#estimatedABV"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -1568,7 +1568,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1579,9 +1579,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#estimatedABV"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#estimatedABV"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -1599,7 +1599,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1610,9 +1610,9 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Recipe"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#estimatedABV"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#estimatedABV"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -1630,7 +1630,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
     </owl:Class>
     
 
@@ -1638,7 +1638,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Water -->
 
     <owl:Class rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <owl:disjointWith rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
     </owl:Class>
@@ -3049,7 +3049,7 @@
     <!-- https://rdf.ag/o/hops#Hops -->
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#Hops">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -5787,17 +5787,17 @@
     <!-- https://rdf.ag/o/malt#Malt -->
 
     <owl:Class rdf:about="https://rdf.ag/o/malt#Malt">
-        <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Ingredient"/>
+                    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Ingredient"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#ebcColor"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ebcColor"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#maltName"/>
+                        <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#maltName"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -5986,10 +5986,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#US05_Yeast -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#US05_Yeast -->
 
-    <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#US05_Yeast">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#US05_Yeast">
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <ontology:ingredientName>Safale US-05 Dry Ale Yeast</ontology:ingredientName>
         <ontology:maxAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.82</ontology:maxAttenuation>
         <ontology:minAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.78</ontology:minAttenuation>
@@ -6005,10 +6005,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#WLP001_Yeast -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#WLP001_Yeast -->
 
-    <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#WLP001_Yeast">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#WLP001_Yeast">
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <ontology:purpose>fermentation - clean ale character with neutral profile</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ontology:quantity>
         <ontology:unit>pack</ontology:unit>
@@ -6018,10 +6018,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#WLP007_Yeast -->
+    <!-- https://mega2799.github.io/web-semantico/index-en.html#WLP007_Yeast -->
 
-    <owl:NamedIndividual rdf:about="http://www.beerecipe.com/ontology#WLP007_Yeast">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Yeast"/>
+    <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#WLP007_Yeast">
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
         <ontology:ingredientName>WLP007 Dry English Ale</ontology:ingredientName>
         <ontology:maxAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</ontology:maxAttenuation>
         <ontology:minAttenuation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</ontology:minAttenuation>
@@ -6053,7 +6053,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Airlock -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Airlock">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>One-way valve allowing CO2 to escape during fermentation while preventing oxygen and contaminants from entering.</rdfs:comment>
         <rdfs:label>Airlock</rdfs:label>
@@ -6064,7 +6064,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#AmericanIPA">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <ontology:maxABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</ontology:maxABV>
         <ontology:maxIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70</ontology:maxIBU>
         <ontology:minABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</ontology:minABV>
@@ -6078,7 +6078,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Boil60min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Boil60min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BoilStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
         <ontology:stepName>Boil</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:stepOrder>
@@ -6091,7 +6091,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#BottlingEquipment -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BottlingEquipment">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Bottles, caps, capper, and bottling wand for packaging finished beer. Alternative: kegging system.</rdfs:comment>
         <rdfs:label>Bottling Equipment</rdfs:label>
@@ -6112,7 +6112,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog"/>
         <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog"/>
         <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog"/>
@@ -6120,7 +6120,7 @@
         <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Caramalt_BrewDog"/>
         <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ExtraPaleMalt_Brewdog"/>
         <ontology:hasStyle rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#IPA"/>
-        <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#WLP001_Yeast"/>
+        <ontology:hasYeast rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#WLP001_Yeast"/>
         <ontology:producesBeer rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Beer"/>
         <ontology:requiresEquipment rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Airlock"/>
         <ontology:requiresEquipment rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BottlingEquipment"/>
@@ -6158,7 +6158,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#BrewKettle -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BrewKettle">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Large pot or kettle for boiling wort with hops. Typically 25-30L capacity for homebrewing.</rdfs:comment>
         <rdfs:label>Brew Kettle</rdfs:label>
@@ -6256,8 +6256,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Conditioning14days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Conditioning14days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ConditioningStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">336</ontology:stepDuration>
         <ontology:stepName>Conditioning</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
@@ -6270,8 +6270,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#CoolingToPitchTemp -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CoolingToPitchTemp">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CoolingStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:stepDuration>
         <ontology:stepName>Cooling</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontology:stepOrder>
@@ -6284,8 +6284,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_Boil60min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_Boil60min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BoilStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
         <ontology:stepName>Boil</ontology:stepName>
@@ -6299,8 +6299,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_Conditioning14days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_Conditioning14days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ConditioningStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20160</ontology:stepDuration>
         <ontology:stepName>Conditioning</ontology:stepName>
@@ -6314,8 +6314,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_CoolingToPitchTemp -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_CoolingToPitchTemp">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CoolingStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
         <ontology:stepName>Cooling</ontology:stepName>
@@ -6329,8 +6329,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_Fermentation10days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_Fermentation10days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#FermentationStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14400</ontology:stepDuration>
         <ontology:stepName>Fermentation</ontology:stepName>
@@ -6344,11 +6344,11 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_Mash60min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_Mash60min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#stepTemperature"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdf:type>
@@ -6365,12 +6365,12 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_MashOut10min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_MashOut10min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashOutStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashOutStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#stepTemperature"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdf:type>
@@ -6387,8 +6387,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_Sparge15min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_Sparge15min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#SpargeStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
         <ontology:stepName>Sparge</ontology:stepName>
@@ -6402,8 +6402,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EPA_Whirlpool10min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EPA_Whirlpool10min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#WhirlpoolStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40320</ontology:stepDuration>
@@ -6418,13 +6418,13 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#EasyPaleAleRecipe">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CanadaWinterWheat_EPA"/>
         <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Cereal_RiceWheat_EPA"/>
         <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop_EPA"/>
         <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#PaleAleMalt_EPA"/>
         <ontology:hasStyle rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#PaleAle"/>
-        <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#US05_Yeast"/>
+        <ontology:hasYeast rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#US05_Yeast"/>
         <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA"/>
         <ontology:author>Unknown</ontology:author>
         <ontology:batchSize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ontology:batchSize>
@@ -6463,8 +6463,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Fermentation7days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#FermentationStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10080</ontology:stepDuration>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">168</ontology:stepDuration>
         <ontology:stepName>Fermentation</ontology:stepName>
@@ -6478,7 +6478,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#FermentationVessel -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#FermentationVessel">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Airtight container (plastic bucket or glass carboy) for primary fermentation. Must hold at least 25L for this batch size.</rdfs:comment>
         <rdfs:label>Fermentation Vessel</rdfs:label>
@@ -6505,14 +6505,14 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Recipe"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Recipe"/>
         <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#FlakedOats"/>
         <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MarisOtter"/>
         <ontology:hasCereal rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#RoastedBarley"/>
         <ontology:hasHop rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop"/>
         <ontology:hasMalt rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ChocolateMalt"/>
         <ontology:hasStyle rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout"/>
-        <ontology:hasYeast rdf:resource="http://www.beerecipe.com/ontology#WLP007_Yeast"/>
+        <ontology:hasYeast rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#WLP007_Yeast"/>
         <ontology:producesBeer rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Bran_russinaImperialStout"/>
         <index-en:hasWater rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water_RIS"/>
         <ontology:author>Brewing Ben (Brewer&apos;s Friend)</ontology:author>
@@ -6541,7 +6541,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Hydrometer -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Hydrometer">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Instrument to measure specific gravity of wort/beer, essential for calculating ABV and monitoring fermentation.</rdfs:comment>
         <rdfs:label>Hydrometer</rdfs:label>
@@ -6552,7 +6552,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#IPA -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#IPA">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <rdfs:comment>India Pale Ale: hop-forward beer style with pronounced bitterness and citrus/tropical fruit aromas, typically 5.5-7.5% ABV.</rdfs:comment>
         <rdfs:label>IPA</rdfs:label>
     </owl:NamedIndividual>
@@ -6601,11 +6601,11 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#MashOut10min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#MashOut10min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#stepTemperature"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdf:type>
@@ -6621,7 +6621,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#MashTun -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#MashTun">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Insulated vessel for mashing grains at controlled temperatures to convert starches to fermentable sugars.</rdfs:comment>
         <rdfs:label>Mash Tun</rdfs:label>
@@ -6644,7 +6644,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#NewZealand -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#NewZealand">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Country"/>
         <rdfs:comment>Origin of Nelson Sauvin hop variety with distinctive white wine character. Known for unique southern hemisphere hop varieties.</rdfs:comment>
         <rdfs:label>New Zealand</rdfs:label>
     </owl:NamedIndividual>
@@ -6654,7 +6654,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PaleAle -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PaleAle">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <ontology:styleName>Pale Ale</ontology:styleName>
     </owl:NamedIndividual>
     
@@ -6687,8 +6687,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Boil60min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Boil60min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BoilStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</ontology:stepDuration>
         <ontology:stepName>Boil</ontology:stepName>
@@ -6702,8 +6702,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Conditioning14days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Conditioning14days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ConditioningStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20160</ontology:stepDuration>
         <ontology:stepName>Conditioning</ontology:stepName>
@@ -6717,8 +6717,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Cooling30min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Cooling30min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CoolingStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</ontology:stepDuration>
         <ontology:stepName>Cooling</ontology:stepName>
@@ -6732,8 +6732,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Fermentation10days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Fermentation10days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#FermentationStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14400</ontology:stepDuration>
         <ontology:stepName>Fermentation</ontology:stepName>
@@ -6747,8 +6747,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Mash65min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Mash65min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</ontology:stepDuration>
         <ontology:stepName>Mash</ontology:stepName>
@@ -6762,9 +6762,9 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_MashOut10min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_MashOut10min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashOutStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashOutStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</ontology:stepDuration>
         <ontology:stepName>MashOut</ontology:stepName>
@@ -6778,8 +6778,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Sparge15min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Sparge15min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#SpargeStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
         <ontology:stepName>Sparge</ontology:stepName>
@@ -6793,8 +6793,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Whirlpool20min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#PunkIPA_Whirlpool20min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#WhirlpoolStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
         <ontology:stepName>Whirlpool</ontology:stepName>
@@ -6808,8 +6808,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_Boil90min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_Boil90min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BoilStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BoilStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</ontology:stepDuration>
         <ontology:stepName>Boil</ontology:stepName>
@@ -6823,8 +6823,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_Conditioning28days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_Conditioning28days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#ConditioningStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#ConditioningStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40320</ontology:stepDuration>
         <ontology:stepName>Conditioning</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontology:stepOrder>
@@ -6837,8 +6837,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_CoolingToPitchTemp -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_CoolingToPitchTemp">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#CoolingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#CoolingStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</ontology:stepDuration>
         <ontology:stepName>Cooling</ontology:stepName>
@@ -6852,8 +6852,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_Fermentation14days -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_Fermentation14days">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#FermentationStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#FermentationStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20160</ontology:stepDuration>
         <ontology:stepName>Fermentation</ontology:stepName>
@@ -6867,11 +6867,11 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_Mash60min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_Mash60min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#stepTemperature"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdf:type>
@@ -6888,12 +6888,12 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_MashOut10min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_MashOut10min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashOutStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashOutStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#stepTemperature"/>
+                <owl:onProperty rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#stepTemperature"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdf:type>
@@ -6910,8 +6910,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_Sparge20min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_Sparge20min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#SpargeStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
         <ontology:stepName>Sparge</ontology:stepName>
@@ -6925,8 +6925,8 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RIS_Whirlpool15min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RIS_Whirlpool15min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BrewingStep"/>
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#WhirlpoolStep"/>
         <ontology:isStepOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#GAS_RussianImperialStout"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
         <ontology:stepName>Whirlpool</ontology:stepName>
@@ -6956,7 +6956,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#RussianImperialStout">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#BeerStyle"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BeerStyle"/>
         <ontology:maxABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:maxABV>
         <ontology:maxIBU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</ontology:maxIBU>
         <ontology:minABV rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ontology:minABV>
@@ -6970,7 +6970,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Sanitizer -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Sanitizer">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>No-rinse sanitizer (e.g., Star San) essential for sanitizing all equipment that contacts wort/beer post-boil.</rdfs:comment>
         <rdfs:label>Sanitizer</rdfs:label>
@@ -6981,7 +6981,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Scotland -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Scotland">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Country"/>
         <ontology:isOriginOf rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Home of BrewDog brewery in Ellon, Aberdeenshire. Known for craft beer revolution and innovative brewing techniques.</rdfs:comment>
         <rdfs:label>Scotland</rdfs:label>
@@ -7006,7 +7006,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Sparge20min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Sparge20min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#SpargeStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#SpargeStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:stepDuration>
         <ontology:stepName>Sparge</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontology:stepOrder>
@@ -7019,7 +7019,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#StandardMash45min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#StandardMash45min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#MashStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#MashStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</ontology:stepDuration>
         <ontology:stepName>Mash</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontology:stepOrder>
@@ -7032,7 +7032,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Thermometer -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Thermometer">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Digital or analog thermometer (range 0-110°C) for monitoring mash, boil, and fermentation temperatures.</rdfs:comment>
         <rdfs:label>Brewing Thermometer</rdfs:label>
@@ -7054,7 +7054,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#UnitedKingdom -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#UnitedKingdom">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Country"/>
         <rdfs:comment>Origin of pale ale malt varieties and traditional British brewing techniques. Home to Maris Otter barley.</rdfs:comment>
         <rdfs:label>United Kingdom</rdfs:label>
     </owl:NamedIndividual>
@@ -7064,7 +7064,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#UnitedStates -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#UnitedStates">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Country"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Country"/>
         <rdfs:comment>Origin of American hop varieties (Chinook, Simcoe, Ahtanum) and American IPA style. Major craft beer innovation hub.</rdfs:comment>
         <rdfs:label>United States</rdfs:label>
     </owl:NamedIndividual>
@@ -7082,7 +7082,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_Brewdog">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
         <ontology:purpose>solvent and medium - mashing and sparging</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</ontology:quantity>
         <ontology:unit>liters</ontology:unit>
@@ -7095,7 +7095,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_EasyPA">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
         <ontology:purpose>solvent and medium - mashing and sparging</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">26.0</ontology:quantity>
         <ontology:unit>liters</ontology:unit>
@@ -7108,7 +7108,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Water_RIS -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water_RIS">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Water"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
         <ontology:purpose>solvent and medium - mashing and sparging for high gravity wort</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:quantity>
         <ontology:unit>liters</ontology:unit>
@@ -7121,7 +7121,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Whirlpool15min">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#WhirlpoolStep"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#WhirlpoolStep"/>
         <ontology:stepDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:stepDuration>
         <ontology:stepName>Whirlpool</ontology:stepName>
         <ontology:stepOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:stepOrder>
@@ -7134,7 +7134,7 @@
     <!-- https://mega2799.github.io/web-semantico/index-en.html#WortChiller -->
 
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#WortChiller">
-        <rdf:type rdf:resource="http://www.beerecipe.com/ontology#Equipment"/>
+        <rdf:type rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#Equipment"/>
         <ontology:isRequiredBy rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewDog_PunkIPA_Recipe"/>
         <rdfs:comment>Immersion or counterflow chiller to rapidly cool wort from boiling to pitching temperature (18-20°C).</rdfs:comment>
         <rdfs:label>Wort Chiller</rdfs:label>
@@ -7160,11 +7160,11 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasStyle">
+    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#hasStyle">
         <rdfs:comment>Connects a recipe to its beer style (IPA, Stout, Lager, etc.)</rdfs:comment>
         <rdfs:label>has style</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isIngredientOf">
+    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#isIngredientOf">
         <rdfs:comment>Indicates that an ingredient is part of a recipe</rdfs:comment>
         <rdfs:label>is ingredient of</rdfs:label>
     </rdf:Description>
