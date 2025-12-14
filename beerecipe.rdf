@@ -169,24 +169,6 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#Cereal -->
-
-    <rdfs:Datatype rdf:about="http://www.beerecipe.com/ontology#Cereal"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#Hop -->
-
-    <rdfs:Datatype rdf:about="http://www.beerecipe.com/ontology#Hop"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#Malt -->
-
-    <rdfs:Datatype rdf:about="http://www.beerecipe.com/ontology#Malt"/>
-    
-
-
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
@@ -196,24 +178,6 @@
     <!-- http://www.w3.org/2001/XMLSchema#float -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
-    
-
-
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#BrewingStep -->
-
-    <rdfs:Datatype rdf:about="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
-    
-
-
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#Water -->
-
-    <rdfs:Datatype rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water"/>
-    
-
-
-    <!-- https://mega2799.github.io/web-semantico/index-en.html#Yeast -->
-
-    <rdfs:Datatype rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Yeast"/>
     
 
 
@@ -722,59 +686,10 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#hasBrewingStep -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasBrewingStep">
-        <rdfs:range rdf:resource="https://mega2799.github.io/web-semantico/index-en.html#BrewingStep"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#hasCereal -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasCereal">
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Cereal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#hasHop -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasHop">
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Hop"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#hasIngredient -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasIngredient"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#hasMalt -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasMalt">
-        <rdfs:range rdf:resource="http://www.beerecipe.com/ontology#Malt"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.beerecipe.com/ontology#hasStyle -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hasStyle">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#hopName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#hopName">
-        <rdfs:domain rdf:resource="https://rdf.ag/o/hops#Hops"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>The name of the hop variety</rdfs:comment>
-        <rdfs:label>hop name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -790,12 +705,6 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isCerealOf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isCerealOf"/>
-    
-
-
     <!-- http://www.beerecipe.com/ontology#isGlutenFree -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isGlutenFree">
@@ -807,57 +716,9 @@
     
 
 
-    <!-- http://www.beerecipe.com/ontology#isHopOf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isHopOf"/>
-    
-
-
     <!-- http://www.beerecipe.com/ontology#isIngredientOf -->
 
     <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isIngredientOf"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isMaltOf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isMaltOf"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isOriginOf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isOriginOf"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isProducedBy -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isProducedBy"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isRequiredBy -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isRequiredBy"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isSimilarTo -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isSimilarTo"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isStepOf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isStepOf"/>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isStyleOf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isStyleOf"/>
     
 
 
@@ -869,12 +730,6 @@
         <rdfs:comment>Indicates if the recipe is suitable for vegans</rdfs:comment>
         <rdfs:label>is vegan</rdfs:label>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#isYeastOf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#isYeastOf"/>
     
 
 
@@ -983,14 +838,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Original gravity of the wort before fermentation</rdfs:comment>
         <rdfs:label>original gravity</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.beerecipe.com/ontology#producesBeer -->
-
-    <owl:DatatypeProperty rdf:about="http://www.beerecipe.com/ontology#producesBeer">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -3203,21 +3050,6 @@
 
     <owl:Class rdf:about="https://rdf.ag/o/hops#Hops">
         <rdfs:subClassOf rdf:resource="http://www.beerecipe.com/ontology#Ingredient"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#Ingredient"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#alphaAcidPercentage"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.beerecipe.com/ontology#hopName"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://rdf.ag/o/malt#Malt"/>
         <void:inDataset rdf:resource="https://rdf.ag/o/hops#datasetdefinition"/>
         <rdfs:isDefinedBy rdf:resource="https://rdf.ag/o/hops-2021-07-30"/>
@@ -6209,7 +6041,6 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#AhtanumHop_Brewdog">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ontology:alphaAcidPercentage>
-        <ontology:hopName>Ahtanum</ontology:hopName>
         <ontology:purpose>flavor and aroma - added at 15 minutes and whirlpool</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.75</ontology:quantity>
         <ontology:unit>grams</ontology:unit>
@@ -6369,7 +6200,6 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#CascadeHop_EPA">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</ontology:alphaAcidPercentage>
-        <ontology:hopName>Cascade</ontology:hopName>
         <ontology:purpose>dual purpose - bittering, flavor and aroma</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</ontology:quantity>
         <ontology:unit>grams</ontology:unit>
@@ -6400,7 +6230,6 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#ChinookHop_Brewdog">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
-        <ontology:hopName>Chinook</ontology:hopName>
         <ontology:purpose>bittering - added at 60 minutes</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</ontology:quantity>
         <ontology:unit>grams</ontology:unit>
@@ -6735,7 +6564,6 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#MagnumHop">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.5</ontology:alphaAcidPercentage>
-        <ontology:hopName>Magnum</ontology:hopName>
         <ontology:purpose>bittering - clean bitterness to balance massive malt sweetness</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</ontology:quantity>
         <ontology:unit>grams</ontology:unit>
@@ -6806,7 +6634,6 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#NelsonSauvinHop_Brewdog">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ontology:alphaAcidPercentage>
-        <ontology:hopName>Nelson Sauvin</ontology:hopName>
         <ontology:unit>grams</ontology:unit>
         <rdfs:comment>New Zealand hop with distinctive white wine, gooseberry character. Signature BrewDog hop</rdfs:comment>
         <rdfs:label>Nelson Sauvin Brewdog</rdfs:label>
@@ -7167,7 +6994,6 @@
     <owl:NamedIndividual rdf:about="https://mega2799.github.io/web-semantico/index-en.html#SimcoeHop_Brewdog">
         <rdf:type rdf:resource="https://rdf.ag/o/hops#Hops"/>
         <ontology:alphaAcidPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</ontology:alphaAcidPercentage>
-        <ontology:hopName>Simcoe</ontology:hopName>
         <ontology:purpose>aroma and dry-hopping - added at whirlpool and during fermentation</ontology:purpose>
         <ontology:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</ontology:quantity>
         <ontology:unit>grams</ontology:unit>
@@ -7334,81 +7160,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasBrewingStep">
-        <rdfs:comment>Connects a recipe to its brewing steps</rdfs:comment>
-        <rdfs:label>has brewing step</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasCereal">
-        <rdfs:comment>Connects a recipe to the cereals used, especially for gluten-free recipes</rdfs:comment>
-        <rdfs:label>has cereal</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasHop">
-        <rdfs:comment>Connects a recipe to the hops used</rdfs:comment>
-        <rdfs:label>has hop</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasIngredient">
-        <rdfs:comment>Connects a recipe to its ingredients</rdfs:comment>
-        <rdfs:label>has ingredient</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasMalt">
-        <rdfs:comment>Connects a recipe to the malts used</rdfs:comment>
-        <rdfs:label>has malt</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.beerecipe.com/ontology#hasStyle">
         <rdfs:comment>Connects a recipe to its beer style (IPA, Stout, Lager, etc.)</rdfs:comment>
         <rdfs:label>has style</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isCerealOf">
-        <rdfs:comment>Indicates that a cereal is used in a recipe</rdfs:comment>
-        <rdfs:label>is cereal of</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isHopOf">
-        <rdfs:comment>Indicates that a hop is used in a recipe</rdfs:comment>
-        <rdfs:label>is hop of</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isIngredientOf">
         <rdfs:comment>Indicates that an ingredient is part of a recipe</rdfs:comment>
         <rdfs:label>is ingredient of</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isMaltOf">
-        <rdfs:comment>Indicates that a malt is used in a recipe</rdfs:comment>
-        <rdfs:label>is malt of</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isOriginOf">
-        <rdfs:comment>Indicates ingredients that originate from this country</rdfs:comment>
-        <rdfs:label>is origin of</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isProducedBy">
-        <rdfs:comment>Indicates that a beer is produced by a specific recipe</rdfs:comment>
-        <rdfs:label>is produced by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isRequiredBy">
-        <rdfs:comment>Indicates which recipes require this equipment</rdfs:comment>
-        <rdfs:label>is required by</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isSimilarTo">
-        <rdfs:comment>Indicates that two recipes are similar. This is a symmetric and transitive property.</rdfs:comment>
-        <rdfs:label>is similar to</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isStepOf">
-        <rdfs:comment>Indicates that a brewing step belongs to a recipe</rdfs:comment>
-        <rdfs:label>is step of</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isStyleOf">
-        <rdfs:comment>Indicates recipes that belong to this beer style</rdfs:comment>
-        <rdfs:label>is style of</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#isYeastOf">
-        <rdfs:comment>Indicates that a yeast is used in a recipe</rdfs:comment>
-        <rdfs:label>is yeast of</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.beerecipe.com/ontology#producesBeer">
-        <rdfs:comment>Connects a recipe to the beer it produces. A recipe produces exactly one type of beer.</rdfs:comment>
-        <rdfs:label>produces beer</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://mega2799.github.io/web-semantico/index-en.html#Water">
-        <rdfs:comment>Brewing water - the primary ingredient in beer, comprising 90-95% of the final product. Water chemistry significantly affects beer flavor.</rdfs:comment>
-        <rdfs:label>Water</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://rdf.ag/o/cerealstoo#EasternCanadaWheat">
         <void:inDataset rdf:resource="https://rdf.ag/o/cerealstoo#datasetdefinition"/>
