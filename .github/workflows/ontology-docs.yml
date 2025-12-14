@@ -34,8 +34,6 @@ jobs:
                   -getOntologyMetadata \
                   -rewriteAll \
                   -webVowl \
-                  -abstract sections/abstract-en.html \
-                  -introduction sections/introduction-en.html \
                   -includeImportedOntologies
 
             - name: Deploy to GitHub Pages
@@ -43,5 +41,6 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./docs
+
 
 
